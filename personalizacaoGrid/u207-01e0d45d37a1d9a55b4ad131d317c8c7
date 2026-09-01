@@ -1,0 +1,15 @@
+colunaValor [T006_Descricao_Produto]
+colunaTitulo [Produto]
+colunaOrdem [6]
+---
+colunaValor [unPadrao.D037_Unidade]
+colunaTitulo [Un]
+colunaOrdem [9]
+---
+colunaValor [Pedido]
+colunaOrdem [8]
+---
+colunaValor [T006_Quantidade_OC]
+colunaTitulo [OC]
+colunaOrdem [7]
+---

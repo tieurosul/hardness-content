@@ -1,0 +1,23 @@
+colunaValor [D001_Id]
+titulo [D001_Id]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D001_Codigo_Produto]
+titulo [D001_Codigo_Produto]
+exibir [S]
+---
+colunaValor [D001A_Id]
+titulo [D001A_Id]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D001A_D187_Id]
+titulo [D001A_D187_Id]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D187_Id]
+titulo [D187_Id]
+exibir [S]
+---

@@ -1,0 +1,12 @@
+colunaValor [T075_Id]
+titulo [Id]
+exibir [S]
+---
+colunaValor [T007_Data_Emissao]
+titulo [Data NF-e]
+exibir [S]
+---
+colunaValor [T075_CNPJ_Importador]
+titulo [T075_CNPJ_Importador]
+exibir [S]
+---

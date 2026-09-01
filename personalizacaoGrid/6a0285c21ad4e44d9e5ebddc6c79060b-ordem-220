@@ -1,0 +1,14 @@
+countLinha
+excluirLinha
+T066_Id
+D004_Local
+D004_Flag_Somar_Estoque_Fisico
+D146_Descricao
+	T066A_Data_Validade
+T066_Quantidade_Estoque
+Pedidos
+T066_Quantidade_Estoque_Liquido
+T066_Minimo
+T066_Maximo
+limparLocacao
+addColuna

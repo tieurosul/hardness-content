@@ -1,0 +1,9 @@
+<?php
+/**
+ * Código executado para preencher a opção "select" de campos "type [select]" 
+ * Variáveis:
+ *      $array['campoAtual'], $g, $array[var]
+ */
+//return gGeraSelect(...);
+//return array(...);
+return array(array("title" => "...", "value" => ""),  array("title" => "SIM", "value" => "N"), array("title" => "NÃO", "value" => "S"));

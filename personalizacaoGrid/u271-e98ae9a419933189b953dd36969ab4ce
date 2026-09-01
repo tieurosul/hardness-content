@@ -1,0 +1,20 @@
+colunaValor [T008_T066_Id]
+colunaTitulo [Locação]
+colunaOrdem [13]
+---
+colunaValor [D004_Local]
+colunaTitulo [Locação]
+colunaOrdem [48]
+---
+colunaValor [T008A_Situacao_Tributaria_CBS_IBS]
+colunaOrdem [22]
+---
+colunaValor [T008A_Classificacao_Tributaria_CBS_IBS]
+colunaOrdem [23]
+---
+colunaValor [T008_Percentual_Comissao]
+colunaOrdem [64]
+---
+colunaValor [T008_Aliquota_ICMS_ST]
+colunaOrdem [24]
+---

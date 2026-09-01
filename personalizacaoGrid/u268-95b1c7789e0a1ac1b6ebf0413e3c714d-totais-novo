@@ -1,0 +1,25 @@
+nome [Unitrio_ME_]
+valor [T294_Valor_Custo_Unitario]
+titulo [Unitário ME]
+exibir [S]
+totalizador [soma]
+---
+nome [Total_ME_]
+valor [T294_Valor_Total_Custo]
+titulo [Total ME]
+exibir [S]
+totalizador [soma]
+---
+nome [Unitrio_ME_Count]
+valor [T294_Valor_Custo_Unitario]
+titulo [Registros]
+exibir [S]
+totalizador [count]
+callbackParameter [0]
+---
+nome [Quantidade_]
+valor [T294_Quantidade]
+titulo [ Quantidade]
+exibir [S]
+totalizador [soma]
+---

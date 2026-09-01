@@ -1,0 +1,4 @@
+<?php
+namespace hardness;
+
+return $numeroLote = date("YmdHi") . rand(1000, 9999);

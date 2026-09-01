@@ -1,0 +1,14 @@
+colunaValor [D024_Dias_Envio_Email_Orc_Apos_Emissao]
+titulo [Dias email orc. apos emissão]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D024_Valor_Limite]
+titulo [Valor Limite]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D024_Flag_Lista_Preco]
+titulo [Lista Preço]
+exibir [S]
+---

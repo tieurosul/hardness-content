@@ -1,0 +1,9 @@
+colunaValor [D049_Quantidade_Minima_Compra]
+titulo [Compra<br>mínima]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D009_Quantidade_Consumo]
+titulo [Vendido]
+exibir [S]
+---

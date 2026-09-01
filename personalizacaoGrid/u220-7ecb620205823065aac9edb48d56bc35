@@ -1,0 +1,11 @@
+colunaValor [etiquetaDespacho]
+colunaTitulo [Despacho]
+colunaTipo [livre]
+colunaAlinhar [center]
+callback [personalizado-619661910f11d]
+colunaExibir [S]
+---
+colunaValor [impressaoEtiqueta]
+colunaExibir [S]
+colunaTitulo [IE]
+---

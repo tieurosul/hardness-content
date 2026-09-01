@@ -1,0 +1,21 @@
+<?php
+namespace hardness;
+
+mysql_query("START TRANSACTION");
+
+$sql = "UPDATE D024 SET 
+            D024_C007_Vendedor_Externo = D024_C007_Vendedor_Interno
+        WHERE D024_C007_Vendedor_Externo <> D024_C007_Vendedor_Interno
+            AND D024_Flag_Ativo = 'S'";
+
+echo $sql."<br><br>";
+
+mysql_query($sql);
+if ($erro = mysql_error()) {
+    mysql_query("ROLLBACK");
+    echo $erro . "<br><br><br>";
+    die();
+}
+
+mysql_query("COMMIT");
+echo "deu boa 👍";

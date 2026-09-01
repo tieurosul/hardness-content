@@ -1,0 +1,92 @@
+colunaValor [D009_Id]
+colunaTitulo [D009_Id]
+colunaExibir []
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaTitulo [D009_Quantidade_Estoque]
+colunaExibir []
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Código]
+---
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Descrição]
+---
+colunaValor [D009_Data_Reprocessa_Historico]
+colunaTitulo [Ult. Atualização Estoque]
+callback [gCorrigeData]
+colunaOrdem [3]
+---
+colunaValor [D009_C004_Id]
+colunaTitulo [D009_C004_Id]
+colunaExibir []
+---
+colunaValor [D009_Valor_Preco_Tabela]
+colunaTitulo [D009_Valor_Preco_Tabela]
+colunaExibir []
+---
+colunaValor [D009_Valor_Custo_Medio_Unitario]
+colunaTitulo [Custo Médio]
+colunaExibir []
+---
+colunaValor [D009_Valor_Custo_Ultima_Compra]
+colunaTitulo [Custo Últ.Compra]
+colunaExibir []
+---
+colunaValor [D009_Valor_Custo_Tabela]
+colunaTitulo [Custo Tabela]
+colunaExibir []
+---
+colunaValor [D009_Valor_Custo_Unitario]
+colunaTitulo [Custo]
+colunaAlinhar [right]
+colunaCasasDecimais [5]
+style [width: 1%]
+---
+colunaValor [D009_Preco_1]
+colunaTitulo [Preço 1 (Base)]
+colunaAlinhar [right]
+colunaCasasDecimais [4]
+style [background-color: var(--celula-amarelo-claro);width:1%]
+---
+colunaValor [D009_IPT_3]
+colunaTitulo [IPT 3]
+colunaAlinhar [center]
+colunaCasasDecimais [4]
+style [background-color: var(--celula-amarelo-claro);width:1%]
+---
+colunaValor [D009_Preco_3]
+colunaTitulo [Preço 3]
+colunaAlinhar [right]
+colunaCasasDecimais [4]
+style [background-color: var(--celula-amarelo-claro);width:1%]
+---
+colunaValor [ROUND((D009_Preco_1*D009_IPT_3),10)]
+colunaTitulo [Preço 3 Certo]
+colunaCasasDecimais [4]
+colunaAlinhar [right]
+style [background-color: var(--celula-verde);width:1%]
+---
+colunaValor [D009_IPT_4]
+colunaTitulo [IPT 4]
+colunaAlinhar [center]
+colunaCasasDecimais [4]
+style [background-color: var(--celula-amarelo-claro);width:1%]
+---
+colunaValor [D009_Preco_4]
+colunaTitulo [Preço 4]
+colunaAlinhar [right]
+colunaCasasDecimais [4]
+style [background-color: var(--celula-amarelo-claro);width:1%]
+---
+colunaValor [ROUND((D009_Preco_1*D009_IPT_4),10)]
+colunaTitulo [Preço 4 Certo]
+colunaCasasDecimais [4]
+colunaAlinhar [right]
+style [background-color: var(--celula-verde);width:1%]
+---
+
+
+
+
+

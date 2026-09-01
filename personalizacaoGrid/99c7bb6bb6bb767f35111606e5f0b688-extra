@@ -1,0 +1,13 @@
+left join T005 on T006_T005_Id=T005_Id
+left join D009 on T006_D009_Id=D009_Id
+left join D049 on D009_D049_Id=D049_Id
+left join D001 on D049_D001_Id=D001_Id
+left join D005 on D001_D005_Id=D005_Id
+left join C008 on D001_C008_Id=C008_Id
+left join D082 on D049_D082_Id=D082_Id
+left join D037 on D001_D037_Id=D037_Id
+left join D024 on D024_Id=T005_D024_Id
+left join T066 on T066_D009_Id=D009_Id
+left join D004 on D004_Id=T066_D004_Id
+WHERE T005_C004_Id='[[g-empresaAtual]]' AND T005_Flag_Status = '2'
+GROUP BY T006_Id

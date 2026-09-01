@@ -1,0 +1,10 @@
+a:5:{s:4:"nome";s:5:"teste";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"a4d32138ba5a4ad9b2317b80de879452";s:6:"codigo";s:174:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+mysql_query("CALL TST000_testeProcedure()");
+
+if($erro = mysql_error()) {
+    echo $erro;
+}
+
+echo '<br>teste';";s:3:"md5";s:32:"46d99c5d4bdde1cc6bce24a381ed3b14";}

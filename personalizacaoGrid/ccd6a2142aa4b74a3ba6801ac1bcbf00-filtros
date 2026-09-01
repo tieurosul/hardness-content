@@ -1,0 +1,26 @@
+colunaValor [D085_Data]
+titulo [Contato]
+tipo [data]
+---
+colunaValor [D046_Nome]
+titulo [Grupo]
+tipo [texto]
+---
+colunaValor [D024_Data_Ultima_Compra]
+titulo [Data Ultima Compra]
+tipo [data]
+exibir [S]
+---
+colunaValor [D024_Data_Cadastro]
+titulo [Data Cadastro]
+tipo [data]
+exibir [S]
+---
+colunaValor [D024_Flag_Cliente]
+titulo [Flag Cliente]
+exibir [S]
+---
+colunaValor [D024_Flag_Fornecedor]
+titulo [Flag Fornecedor]
+exibir [S]
+---

@@ -1,0 +1,15 @@
+colunaValor [limparLocacao]
+colunaOrdem [10]
+---
+colunaValor [D004_Local]
+colunaOrdem [8]
+---
+colunaValor [T066_Quantidade_Estoque]
+colunaOrdem [6]
+---
+colunaValor [T066_Quantidade_Estoque_Liquido]
+colunaOrdem [7]
+---
+colunaValor [T066A_Data_Validade]
+colunaOrdem [9]
+---

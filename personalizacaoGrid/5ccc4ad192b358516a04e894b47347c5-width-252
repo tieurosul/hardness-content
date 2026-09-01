@@ -1,0 +1,1 @@
+a:5:{s:21:"T015_Numero_Documento";s:3:"382";s:7:"T015_Id";s:2:"54";s:21:"T015_Numero_Duplicata";s:9:"255.77778";s:70:"IF(D154_Id>0,CONCAT(D154_Descricao," - ",D014_SubConta),D014_SubConta)";s:9:"443.77778";s:17:"D024_Nome_Empresa";s:9:"190.77778";}

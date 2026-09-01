@@ -1,0 +1,13 @@
+a:1:{i:0;a:13:{s:2:"id";s:13:"6696e0f8e55af";s:6:"titulo";s:14:"ajusta estoque";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:3:"100";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:507:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+
+    $D009_Id = $array['todosCampos']['D009_Id'];
+    mysqli_query("UPDATE D009A SET D009A_Flag_Atualizar_Estoque = 'S'
+                             WHERE D009A_D009_Id = '{$D009_Id}'");
+}";}}

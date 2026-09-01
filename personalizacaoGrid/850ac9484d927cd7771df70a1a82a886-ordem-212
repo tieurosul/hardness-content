@@ -1,0 +1,16 @@
+countLinha
+excluirLinha
+T019_Id
+T019_Data_Lancamento
+IF(D154_Id>0,CONCAT(D154_Descricao," - ",D014_SubConta),D014_SubConta)
+T019_Referente
+T019_Complemento
+T019_Valor_Lancamento
+T019_Saldo
+T019_Conciliado
+	T019_Observacao
+IF(D027_Id > 0, D027_Portador, D031_Portador)
+T216_T215_Id
+T216_Id
+D024_Nome_Empresa
+addColuna

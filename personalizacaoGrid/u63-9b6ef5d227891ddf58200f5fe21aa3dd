@@ -1,0 +1,20 @@
+colunaValor [T055_Aliquota_COFINS]
+colunaExibir [S]
+colunaTitulo [T055_Aliquota_COFINS]
+---
+colunaValor [T055_Aliquota_PIS]
+colunaExibir [S]
+colunaTitulo [T055_Aliquota_PIS]
+---
+colunaValor [T055_T296_Id]
+colunaExibir [S]
+colunaTitulo [T055_T296_Id]
+---
+colunaValor [T055_Aliquota_ICMS_Presumido]
+colunaExibir [S]
+colunaTitulo [T055_Aliquota_ICMS_Presumido]
+---
+colunaValor [T055_T075_Id]
+colunaExibir [S]
+colunaTitulo [T055_T075_Id]
+---

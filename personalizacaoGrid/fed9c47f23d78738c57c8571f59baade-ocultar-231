@@ -1,0 +1,20 @@
+D049_Modelo	|	Sub-Item
+D083_Codigo_Barras	|	EAN - Forn
+D001_Codigo_Barras	|	EAN
+T014_Id_Duplicado	|	Id Dupl
+Duplicar	|	Duplicar
+T014_Valor_Base_FCP_ST	|	Base FCP ST
+T014_Valor_Base_COFINS	|	Base COFINS
+T014_Valor_Base_PIS	|	Base PIS
+T014_Valor_Base_ICMS_Substituicao	|	Base ST R$
+T014_Valor_Base_IPI	|	Base IPI R$
+T014_Valor_Base_ICMS	|	Base ICMS R$
+T014_Percentual_FCP_ST	|	%FCP ST
+T014_Aliquota_COFINS	|	%COFINS
+T014_Aliquota_PIS	|	%PIS
+T014_MVA_Ajustada	|	MVA
+T014_Aliquota_ICMS_Interno	|	%ICM Int
+T014_ICMS_Inter_Estadual	|	%ICM IE
+T014A_Codigo_Barras_Tributavel	|	EAN Tributavel XML
+T014_Codigo_Barras	|	EAN XML
+Original.D006_Codigo_CFOP	|	CFOP

@@ -1,0 +1,1 @@
+a:11:{s:4:"nome";s:16:"p003_tipos_falha";s:6:"modulo";s:0:"";s:5:"opcao";s:0:"";s:6:"estilo";s:6:"normal";s:3:"md5";s:32:"bc25d1a227d7404d87944d357f9c9da5";s:4:"from";s:4:"P003";s:5:"extra";s:0:"";s:4:"grid";a:1:{i:0;a:2:{s:11:"colunaValor";s:7:"P003_Id";s:12:"colunaTitulo";s:7:"P003_Id";}}s:3:"sql";s:24:"select P003_Id from P003";s:10:"clickhouse";b:0;s:12:"criadoViaSQL";b:1;}

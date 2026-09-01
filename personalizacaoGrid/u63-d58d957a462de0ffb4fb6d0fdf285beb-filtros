@@ -1,0 +1,21 @@
+colunaValor [T014_Situacao_Tributaria_IPI]
+titulo [CST IPI]
+exibir [S]
+tipo [numero]
+---
+colunaValor [T014_Flag_Situacao_Tributaria]
+titulo [T014_Flag_Situacao_Tributaria]
+exibir [S]
+---
+colunaValor [D001_Flag_Tipo_Item]
+titulo [Tipo Item]
+exibir [S]
+---
+colunaValor [T014_Id]
+titulo [T014_Id]
+exibir [S]
+---
+colunaValor [T007_Numero_Nota_Fiscal]
+titulo [NF Saida]
+tipo [numero]
+---

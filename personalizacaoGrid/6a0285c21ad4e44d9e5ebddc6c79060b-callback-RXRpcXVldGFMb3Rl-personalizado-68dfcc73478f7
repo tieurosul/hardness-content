@@ -1,0 +1,10 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['EtiquetaLote']
+    // $array['totais']['Nome_Total']
+    return "<a href=\"#\" onclick=\"opcaoEtiquetaLote('{$array['todosCampos']['D009_Id']}','{$array['todosCampos']['T066_Id']}')\"><span class='ui-icon ui-icon-tag'></span></a>";
+}

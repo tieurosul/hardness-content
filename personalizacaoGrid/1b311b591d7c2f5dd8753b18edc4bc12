@@ -1,0 +1,30 @@
+colunaValor [T008_Id]
+colunaTitulo [T008_Id]
+---
+colunaValor [T007_Id]
+colunaTitulo [T007_Id]
+---
+colunaValor [D024_Nome_Fantasia]
+colunaTitulo [D024_Nome_Fantasia]
+---
+colunaValor [T008_Codigo_Produto]
+colunaTitulo [T008_Codigo_Produto]
+---
+colunaValor [T008_Descricao_Produto]
+colunaTitulo [T008_Descricao_Produto]
+---
+colunaValor [D018_UF]
+colunaTitulo [D018_UF]
+---
+colunaValor [T008_Quantidade]
+colunaTitulo [T008_Quantidade]
+---
+colunaValor [T008_Valor_Preco_Sem_Desconto_Unitario]
+colunaTitulo [T008_Valor_Preco_Sem_Desconto_Unitario]
+---
+colunaValor [T008_Valor_Total_Preco_Sem_Desconto]
+colunaTitulo [T008_Valor_Total_Preco_Sem_Desconto]
+---
+colunaValor [Vendedor.C007_Primeiro_Nome]
+colunaTitulo [Vendedor.C007_Primeiro_Nome]
+---

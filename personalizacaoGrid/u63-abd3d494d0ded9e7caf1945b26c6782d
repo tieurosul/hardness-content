@@ -1,0 +1,12 @@
+colunaValor [T144_D001_Id]
+colunaTitulo [T144_D001_Id]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [D001_Codigo_Produto]
+---
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [D001_Descricao_Produto]
+---
+colunaValor [T144_Url]
+colunaTitulo [T144_Url]
+---

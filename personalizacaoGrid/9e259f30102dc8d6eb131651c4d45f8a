@@ -1,0 +1,11 @@
+colunaValor [RMA001_Id]
+colunaTitulo [ID]
+colunaExibir []
+chavePrimaria [S]
+---
+colunaValor [T182_Id]
+colunaTitulo [ID T182]
+colunaExibir [S]
+chavePrimaria [S]
+colunaOrdem [2]
+---

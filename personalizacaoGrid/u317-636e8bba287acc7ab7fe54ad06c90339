@@ -1,0 +1,12 @@
+colunaValor [T006_Quantidade_OC]
+colunaOrdem [16]
+---
+colunaValor [D009_Quantidade_Estoque_Fora]
+colunaOrdem [15]
+---
+colunaValor [T006_Quantidade]
+colunaOrdem [18]
+---
+colunaValor [T006_Valor_Preco_Sem_Desconto_Unitario]
+colunaOrdem [19]
+---

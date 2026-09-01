@@ -1,0 +1,66 @@
+colunaValor [T066_Id]
+colunaTitulo [T066_Id]
+colunaExibir []
+---
+colunaValor [D001_Id]
+colunaTitulo [D001_Id]
+colunaExibir []
+---
+colunaValor [foto]
+colunaTitulo [Foto]
+colunaTipo [livre]
+callback [mostrarImagemProdutoPequena]
+colunaExibir [S]
+style [width:0px]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Código]
+style [width: 1%;]
+---
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Código]
+---
+colunaValor [D082_Marca]
+colunaTitulo [Marca]
+style [width: 1%;]
+---
+colunaValor [D004_Local]
+colunaTitulo [Locação]
+style [width: 150px;]
+---
+colunaValor [T066A_Data_Validade]
+colunaTitulo [Data Validade]
+callback [gCorrigeData]
+colunaAlinhar [center]
+style [width: 1%;background: var(--celula-vermelho);]
+---
+colunaValor [datediff(T066A_Data_Validade,curdate())]
+colunaTitulo [Dias Vencer]
+colunaAlinhar [center]
+style [width:1px;background: var(--celula-vermelho);]
+callback [personalizado-65e783510fbef]
+---
+colunaValor [T066_Quantidade_Estoque]
+colunaTitulo [Estoque]
+colunaAlinhar [right]
+callback [gCorrigeNumero]
+style [width:1px;background: var(--celula-azul);]
+---
+colunaValor [D009_Quantidade_Pedido_Por_Locacao(T066_D009_Id,T066_Id) as pedidos]
+colunaTitulo [Pedidos]
+colunaAlinhar [right]
+callback [gCorrigeNumero]
+style [width:1px;background: var(--celula-azul);]
+---
+colunaValor [T066_Quantidade_Estoque_Liquido]
+colunaTitulo [Estoque Líquido]
+colunaAlinhar [right]
+callback [gCorrigeNumero]
+style [width:1px;background: var(--celula-azul);]
+---
+colunaValor [D009_Data_Ultima_Entrada]
+colunaTitulo [Últ. Entrada]
+callback [gCorrigeData]
+colunaAlinhar [center]
+style [width: 1%;]
+---

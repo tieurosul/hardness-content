@@ -1,0 +1,1 @@
+a:1:{s:127:"group_concat(concat(D001_Codigo_Produto,' - ',D001_Descricao_Produto,' - Qte: ',T066.T066_Quantidade_Estoque) SEPARATOR '<br>')";s:3:"895";}

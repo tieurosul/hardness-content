@@ -1,0 +1,26 @@
+colunaValor [PrecoComIPIeST]
+colunaOrdem [22]
+---
+colunaValor [T004_Valor_ICMS_Credito]
+colunaTitulo [Valor ICM Créd]
+colunaOrdem [30]
+---
+colunaValor [T004_Aliquota_ICMS_Credito]
+colunaTitulo [%ICM Créd]
+colunaOrdem [7]
+---
+colunaValor [D004_Local]
+colunaTitulo [Locação]
+colunaOrdem [6]
+---
+colunaValor [LinkProduto]
+colunaOrdem [27]
+---
+colunaValor [SUBSTRING(D082_Marca,1,15)]
+colunaTitulo [Marca]
+colunaOrdem [5]
+---
+colunaValor [D009_Quantidade_Estoque_Fora]
+colunaTitulo [Fora]
+colunaOrdem [12]
+---

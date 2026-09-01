@@ -1,0 +1,20 @@
+<?php
+/**
+* Código Fonte
+* 
+* Copie e cole o "Array()" do codigo fonte para a variável "$codigo" (e modifique o que precisar). Exemplo:
+*
+* 	$codigo = array('name' => 'Consulta_T117_D007_Id', 'label' => 'Banco', 'type' => 'select','extra' => "onchange=\"preencheCampos(this, '{$g['divId']}')\"", 'select' => 
+*		gGeraSelect('D007', 'D007_Id', 'D007_Nome_Banco','left join D062 on D062_Id=D007_D062_Id where D062_Id is not null and D007_C004_Id=' . $g['empresaAtual'] . ' order by D007_Id', true)
+*	);
+*/
+
+$codigo = array('name' => 'T005_Flag_Destino_Produto','label'=>'Destino', 'type' => 'select',
+                        'select' => array(
+                            array('title' => '...', 'value' => "", 'selected' => true),
+                            array('title' => '1 - INDUSTRIALIZAÇÃO', 'value' => "1"),
+                            array('title' => '2 - REVENDA', 'value' => "2"),
+                            array('title' => '3 - CONSUMO', 'value' => "3"),
+                            array('title' => '4 - ESPECIAL', 'value' => "4"),
+                        )
+                    );

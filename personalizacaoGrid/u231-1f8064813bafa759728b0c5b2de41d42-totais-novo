@@ -1,0 +1,8 @@
+nome [Valor_ICMS_]
+titulo [ICMS R$]
+tipo [sql]
+valor [T007_Valor_Total_ICMS]
+exibir [S]
+totalizador [soma]
+callbackParameter [2]
+---

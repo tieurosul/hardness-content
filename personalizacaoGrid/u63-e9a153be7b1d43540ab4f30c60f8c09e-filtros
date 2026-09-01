@@ -1,0 +1,20 @@
+colunaValor [(SELECT COUNT(*) FROM T006 WHERE T006_T005_Id = T005_Id)]
+titulo [itens]
+tipo [numero]
+---
+colunaValor [D022_Nome_Empresa]
+titulo [Transportadora]
+tipo [texto]
+---
+colunaValor [T007_Id]
+titulo [T007_Id]
+exibir [S]
+---
+colunaValor [T005_D036_Id]
+titulo [Tipo Transp Ped]
+exibir [S]
+---
+colunaValor [Vendedor.C007_Primeiro_Nome]
+titulo [Vendedor]
+exibir [S]
+---

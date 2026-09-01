@@ -1,0 +1,12 @@
+nome [Custo_Imp_]
+valor [Custo]
+titulo [Custo Imp]
+exibir [S]
+totalizador [soma]
+---
+nome [Preo_]
+valor [D009_Preco_1]
+titulo [ Preço 1]
+exibir [S]
+totalizador [soma]
+---

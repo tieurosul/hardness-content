@@ -1,0 +1,15 @@
+colunaValor [T004_Valor_Total_Preco]
+colunaTitulo [Preço]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---
+colunaValor [T004_Valor_Preco_Sem_Desconto_Unitario]
+colunaTitulo [Custo]
+colunaCasasDecimais []
+colunaAlinhar [right]
+style [font-weight:bold;background:#B6F9B1]
+---
+colunaValor [D003_Nome_Linha]
+colunaExibir [S]
+colunaTitulo [Grupo]
+---

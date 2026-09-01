@@ -1,0 +1,16 @@
+D009_Clientes_Consumo	|	Client
+D049_Modelo	|	Sub-Item
+D009_Quantidade_Estoque_Loja	|	EstqLoja
+D009_Flag_Cotar	|	
+D049_Quantidade_Embalagem_Compra	|	Embalagem
+D049_Quantidade_Minima_Compra	|	Compramínima
+colunaFornecedores	|	Fornecedores
+D009_Quantidade_Estoque_Tabela	|	EstqTabela
+D009_Quantidade_Estoque_Similar	|	EstqSimilar
+D009_Quantidade_Estoque_Fora	|	EstqFora
+D001_Especificacoes	|	Especificações
+datediff(curdate(),T001_Data_Lancamento)	|	Dias
+datediff(curdate(),D009_Data_Ultima_Venda)	|	Dias
+if((D009_Quantidade_Estoque_Liquido+D009_Quantidade_OC)>0,0,(D009_Quantidade_Estoque_Liquido+D009_Quantidade_OC)*-1)	|	Emergência
+D049_Flag_Tipo	|	TP
+infoCustoVendaProduto	|

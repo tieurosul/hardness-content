@@ -1,0 +1,7 @@
+tab [geral]
+field [T182_C007_Id]
+name [T182_C007_Id]
+label [Usuário]
+type [select]
+disabled []
+---

@@ -1,0 +1,26 @@
+colunaValor [T005_Id]
+callback [abrirJanela]
+callbackParameter [array('Pedido', '/ven/ven002/content/ven002content02/', 'T005_Id', '1000,615', false, false, '&tabela=T005')]
+---
+colunaValor [T005_Observacao_1]
+colunaTitulo [Observação]
+style [color:red;max-width:200px;white-space:normal;]
+colunaEditar[1]
+---
+colunaValor [D024_Observacao_Comercial]
+colunaTitulo [Obs. Comercial]
+style [max-width:200px;white-space:normal;]
+colunaOrdem [13]
+---
+colunaValor [T005A_Data_Hora_Etapa_Expedicao]
+colunaExibir []
+---
+colunaValor [T005_Flag_Status]
+colunaExibir [S]
+colunaTitulo [T005_Flag_Status]
+colunaEditarTodos [S]
+---
+colunaValor [campoRetornarExpedicao]
+colunaExibirNivel [1]
+colunaExibirCallbackNivel [1]
+---

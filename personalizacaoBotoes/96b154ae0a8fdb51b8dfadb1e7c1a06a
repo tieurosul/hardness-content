@@ -1,0 +1,26 @@
+a:1:{i:0;a:13:{s:2:"id";s:13:"65e615f0d68c9";s:6:"titulo";s:22:"atualiza D001A_D187_Id";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:1:"5";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:1065:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+    $D187_Id = $array['todosCampos']['D187_Id'];
+    $D001_Id = $array['todosCampos']['D001_Id'];
+    $D001A_Id = $array['todosCampos']['D001A_Id'];
+
+    log("qual e o D187_Id ".$D187_Id);
+        log("qual e o D001A_Id ".$D001A_Id);
+
+
+    if($D001A_Id > 0){
+        mysqli_query("UPDATE D001A SET D001A_D187_Id = '{$D187_Id}' WHERE D001A_Id = '{$D001A_Id}' AND D001A_D187_Id != '{$D187_Id}'");
+        log("UPDATE D001A SET D001A_D187_Id = '{$D187_Id}' WHERE D001A_Id = '{$D001A_Id}' AND D001A_D187_Id != '{$D187_Id}'");
+        log("deu erro: ".mysqli_error());
+    }  else {
+        mysqli_query("INSERT INTO D001A (D001A_D001_Id,D001A_D187_Id) VALUES ('{$D001_Id}', '{$D187_Id}')");
+    } 
+
+    return array('code' => true, 'data' => 'Ok');
+}";}}

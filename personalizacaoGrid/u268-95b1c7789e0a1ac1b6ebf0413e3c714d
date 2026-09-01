@@ -1,0 +1,15 @@
+colunaValor [D082_Marca]
+colunaTitulo [Marca]
+colunaOrdem [9]
+---
+colunaValor [T294_Quantidade]
+colunaTitulo [Quantidade]
+colunaOrdem [6]
+---
+colunaValor [T294_Valor_Custo_Unitario]
+colunaTitulo [Unitário ME]
+colunaOrdem [7]
+---
+colunaValor [T294_Peso_Kg_Liquido_Unitario]
+colunaOrdem [8]
+---

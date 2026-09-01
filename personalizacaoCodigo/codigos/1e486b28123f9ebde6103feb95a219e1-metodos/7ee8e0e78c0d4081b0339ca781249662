@@ -1,0 +1,41 @@
+a:5:{s:4:"nome";s:34:"inativar item class. uso e consumo";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"1e486b28123f9ebde6103feb95a219e1";s:6:"codigo";s:1854:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+$g['empresaAtual'] = $array['todosCampos']['C004_Id'];
+require_once('bibliotecas/classes/INDEX.php');
+$INDEX = new INDEX();
+$INDEX->carragaVARSGlobal();
+
+// Busca produtos da classificação 23 (USO E CONSUMO) que estão ativos e com estoque <= 0.
+$D001 = mysql_query("SELECT D001_Id,
+                            D009_Id
+                       FROM D001 
+                  LEFT JOIN D049 ON D001_Id = D049_D001_Id
+                  LEFT JOIN D009 ON D049_Id = D009_D049_Id AND D009_C004_Id = '1'
+                      WHERE D001_D002_Id = 23
+                        AND D001_Flag_Ativo = 'S'
+                        AND D009_Quantidade_Estoque <= 0");
+$count = 0;                      
+while($mD001 = mysql_fetch_array($D001)){
+    $count++;
+
+    // Verifica se houve entrada (T001_Flag_Operacao = 'E') do produto no ultimo ano.
+    // Se houver movimentacao recente de entrada, o produto nao sera inativado.
+    $sql = mysql_query("SELECT T001_Id FROM T001 
+        WHERE T001_D009_Id = '{$mD001['D009_Id']}'
+        AND T001_Flag_Operacao = 'E' 
+        AND  T001_Data_Lancamento > DATE_SUB(CURDATE(), INTERVAL 1 YEAR)");
+
+    if(mysql_num_rows($sql) > 0){
+        continue;
+    }
+    
+    // Inativa o produto na D001 por nao ter estoque e nao ter entrada no ultimo ano.
+    mysqli_query("UPDATE D001 SET D001_Flag_Ativo = 'N' WHERE D001_Id = '{$mD001['D001_Id']}'");
+
+    // Registra o motivo da inativacao na tabela complementar D001A.
+    mysqli_query("UPDATE D001A SET D001A_Motivo_Inativado = 'Inativado pelo crontab(11): classifição Uso e Consumo (23), estoque fisico zerado e sem entrada no ultimo ano'
+                   WHERE D001A_D001_Id = '{$mD001['D001_Id']}'");
+}
+
+return "Inativado {$count} produtos por com estoque fisico zerado e com classificação de USO E CONSUMO";";s:3:"md5";s:32:"dc91ef2118eafdd6c97ff7a07033e06f";}

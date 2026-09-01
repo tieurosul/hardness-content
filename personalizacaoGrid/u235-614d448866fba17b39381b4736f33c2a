@@ -1,0 +1,31 @@
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Produto]
+colunaOrdem [8]
+---
+colunaValor [locacoes]
+colunaOrdem [4]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Código]
+colunaOrdem [6]
+---
+colunaValor [subItem]
+colunaOrdem [9]
+---
+colunaValor [D082_Marca]
+colunaTitulo [Marca]
+colunaOrdem [13]
+---
+colunaValor [Disp]
+colunaOrdem [12]
+---
+colunaValor [T048_Observacao]
+colunaTitulo [Observação]
+colunaOrdem [13]
+---
+colunaValor [atalhoDocumentoProduto]
+colunaOrdem [12]
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaOrdem [10]
+---

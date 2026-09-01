@@ -1,0 +1,23 @@
+colunaValor [D009_Flag_Cotar]
+colunaTitulo [Solicitar Compra]
+---
+colunaValor [D049_Flag_Nao_Comprar]
+colunaTitulo [N Comprar?]
+---
+colunaValor [D049_Flag_Tipo]
+colunaTitulo [TP]
+colunaCorDeFundo []
+---
+colunaValor [D009_Id]
+colunaTitulo [ID]
+chavePrimaria [1]
+colunaExibir [s]
+---
+colunaValor [D009_Flag_Custo_Utilizado]
+colunaExibir [S]
+colunaTitulo [D009 Id]
+---
+colunaValor [D009_Quantidade_Consumo]
+colunaTitulo [Vendido]
+colunaCorDeFundo [#b7e8feff,#92b9cb]
+---

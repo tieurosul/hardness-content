@@ -1,0 +1,12 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['locacao']
+    // $array['totais']['Nome_Total']
+    global $g;
+        $loc = "Lote: <b>{$array['todosCampos']['D004_Local']}</b> Qtd: <b>{$array['todosCampos']['T066_Quantidade_Estoque_Liquido']}</b>";
+    return $loc;
+}

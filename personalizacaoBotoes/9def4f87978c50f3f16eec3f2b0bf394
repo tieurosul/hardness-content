@@ -1,0 +1,34 @@
+a:1:{i:0;a:14:{s:2:"id";s:13:"68346379845ae";s:6:"titulo";s:15:"Limpar log/resp";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:1:"0";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:591:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+
+    global $g; 
+    
+    $caminho = "{$g['pathDados']}/logs/resp.txt";
+
+    $h = fopen($caminho, "w");
+    fwrite($h, date('d/m/Y H:i:s') . "\n\n");
+    fwrite($h, "Arquivo limpado! \n\n");
+    fclose($h);
+
+    return array('code' => true, 'data' => 'Arquivo Limpado');
+}";s:14:"exibirCallback";s:232:"<?php
+namespace hardness;
+
+function callback($array) {
+    // retornar true ou false
+    // $array['{parametro}']
+
+    global $g;
+
+    if ($g['usuarioAtual'] == '63') {
+        return true;
+    } else {
+        return false;
+    }
+}";}}

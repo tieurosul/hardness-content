@@ -1,0 +1,20 @@
+colunaValor [T008_Valor_Preco_Sem_Desconto_Unitario]
+colunaTitulo [Preço]
+colunaCasasDecimais [2]
+colunaOrdem [11]
+---
+colunaValor [vendedor.C007_Primeiro_Nome]
+colunaOrdem [8]
+---
+colunaValor [D006_Codigo_CFOP]
+colunaOrdem [17]
+---
+colunaValor [T008_Classificacao_Fiscal]
+colunaOrdem [18]
+---
+colunaValor [T008_Valor_Comissao]
+colunaOrdem [16]
+---
+colunaValor [T008_Valor_Total_Preco_Sem_Desconto]
+colunaOrdem [12]
+---

@@ -1,0 +1,16 @@
+D001_Flag_Ativo
+D001_Flag_Pre_Cadastro
+D001_Codigo_Produto
+D001_Descricao_Produto
+	D001_D005_Id
+D049_D082_Id
+D001_D037_Id
+D009_Quantidade_Estoque
+	Custo
+	CustoME
+	D009_Preco_1
+D005_Aliquota_IPI
+IF('A'='A',D001_Foto,'A')
+T144_Url
+D001_Descricao_Ingles
+rowData

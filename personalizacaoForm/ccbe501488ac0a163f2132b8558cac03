@@ -1,0 +1,12 @@
+tab[geral]
+field[P004_Id]
+name[P004_Id]
+type[text]
+label[Id]
+---
+tab[geral]
+field[P004_Setor]
+name[P004_Setor]
+type[text]
+label[Setor Erro]
+---

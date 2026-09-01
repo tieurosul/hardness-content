@@ -1,0 +1,12 @@
+colunaValor [T015_Valor_Total]
+colunaTitulo [Total]
+colunaOrdem [6]
+---
+colunaValor [T015_Data_Emissao]
+colunaTitulo [Emissão]
+colunaOrdem [7]
+---
+colunaValor [D024_Nome_Empresa]
+colunaTitulo [Fornecedor]
+colunaOrdem [8]
+---

@@ -1,0 +1,21 @@
+<?php
+namespace hardness;
+
+$T005 = mysql_query("SELECT D024_Cnpj FROM D024 WHERE D024_Id = '595'");
+$mT005 = mysql_fetch_array($T005);
+
+$filtroSaldo = "SUBSTR(D024_Cnpj,1,10) = SUBSTR('{$mT005['D024_Cnpj']}',1,10)";
+//$msg .= $filtroSaldo;
+
+                $filtroSaldo = "SUBSTR(D024_Cnpj,1,10) = SUBSTR('{$mT005['D024_Cnpj']}',1,10)";
+                //$msg .= $filtroSaldo;
+
+                $dadosLimite = mysql_query("SELECT SUM(D024_Valor_Limite) AS D024_Valor_Limite, 
+                                        SUM(D024_Valor_Credito_Antecipado) AS D024_Valor_Credito_Antecipado, 
+                                        SUM(D024_Valor_Credito_Troca) AS D024_Valor_Credito_Troca 
+                                        FROM D024 
+                                        WHERE $filtroSaldo");
+                $dadosLimite = mysql_fetch_array($dadosLimite);
+                $mT005['D024_Valor_Limite'] = $dadosLimite['D024_Valor_Limite'];
+
+echo 'qual o limite '.$mT005['D024_Valor_Limite'];

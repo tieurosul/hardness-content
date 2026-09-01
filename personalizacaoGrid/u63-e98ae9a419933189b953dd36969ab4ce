@@ -1,0 +1,61 @@
+colunaValor [T008_Percentual_Partilha_ICMS]
+colunaTitulo [% Partilha]
+colunaCasasDecimais [4]
+colunaExibir [S]
+style [background: var(--celula-amarelo);]
+colunaAlinhar [right]
+colunaOrdem [33]
+---
+colunaValor [T008_Valor_Custo_Unitario]
+colunaExibir [S]
+---
+colunaValor [T008_Percentual_Base_Operacao_Propria]
+colunaExibir [S]
+colunaTitulo [T008_Percentual_Base_Operacao_Propria]
+---
+colunaValor [T008_Numero_Adicao]
+colunaExibir [S]
+colunaTitulo [T008_Numero_Adicao]
+---
+colunaValor [T008_Numero_Sequencia_Adicao]
+colunaExibir [S]
+colunaTitulo [T008_Numero_Sequencia_Adicao]
+---
+colunaValor [T008_Quantidade]
+colunaTitulo [Qtde]
+colunaOrdem [11]
+---
+colunaValor [T008_Valor_Total_Preco_Sem_Desconto]
+colunaTitulo [Total]
+colunaOrdem [12]
+---
+colunaValor [T008_Valor_Preco_Sem_Desconto_Unitario]
+colunaTitulo [Preço]
+colunaOrdem [10]
+---
+colunaValor [T008_Valor_Preco_Original]
+colunaTitulo [Tabela]
+colunaOrdem [8]
+colunaEditarOculto [S]
+colunaEditar []
+---
+colunaValor [T008_Percentual_Desconto]
+colunaTitulo [Desc %]
+colunaOrdem [9]
+---
+colunaValor [T008_Data_Desembaraco]
+colunaExibir [S]
+colunaTitulo [T008_Data_Desembaraco]
+callback [gCorrigeData]
+colunaEditarTodos [S]
+---
+colunaValor [T008_Unidade_Tributavel]
+colunaExibir [S]
+colunaTitulo [T008_Unidade_Tributavel]
+---
+colunaValor [T008_T066_Id]
+colunaTitulo [Locação]
+callback [T008_T066_Id_Local]
+colunaAlinhar [center]
+colunaExibirCodigo []
+---

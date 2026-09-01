@@ -1,0 +1,30 @@
+colunaValor [D005_Classificacao_Fiscal]
+colunaOrdem [26]
+---
+colunaValor [PrecoComIPIeST]
+colunaOrdem [79]
+---
+colunaValor [T004_Valor_ICMS_Credito]
+colunaTitulo [Valor ICM Créd]
+colunaOrdem [77]
+---
+colunaValor [T004_Valor_Preco_Tabela]
+colunaTitulo [Forn]
+colunaOrdem [18]
+---
+colunaValor [T004_Percentual_Desconto]
+colunaTitulo [% Desc]
+colunaOrdem [19]
+---
+colunaValor [T004_Quantidade]
+colunaTitulo [Qtde]
+colunaOrdem [7]
+---
+colunaValor [T004_Quantidade_Confirmada]
+colunaTitulo [Conf]
+colunaOrdem [8]
+---
+colunaValor [T004_Codigo_Substituto]
+colunaTitulo [Cód.Cli]
+colunaOrdem [3]
+---

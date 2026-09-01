@@ -1,0 +1,15 @@
+<?php
+/**
+ * Código executado ao alterar o valor de um campo
+ * Variáveis:
+ *      $array['campoAtual'], $array['todosCampos'], $g, $array['{parametro}'], $array['acaoId']
+ * Funções:
+ *      jsRecarregarCampo('campo', array('var' => 'valor'))
+ *      jsAlterarCampoValor($campo, $valor)
+ *      jsExecutarCodigo($codigo)
+ *      jsAbrirJanela($url, $titulo, $parametros, $tamanho = '[900,600]')
+ */
+// Se o status for Concluído, adiciona data de conclusão
+if ($array['campoAtual'] == 2) {
+    return jsAlterarCampoValor("RMA001_Data_Conclusao", date("d/m/Y"));
+}

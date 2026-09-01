@@ -1,0 +1,9 @@
+colunaValor [T268_Data_Hora_Postagem]
+titulo [Data postagem]
+exibir [S]
+tipo [data]
+---
+colunaValor [D024_Nome_Empresa]
+titulo [Destinatário]
+exibir [S]
+---

@@ -1,0 +1,10 @@
+-- JOIN
+    LEFT JOIN D049 ON D049_D001_Id = D001_Id
+    LEFT JOIN D009 ON D009_D049_Id = D049_Id
+    LEFT JOIN D002 ON D001_D002_Id = D002_Id
+-- WHERE
+WHERE
+    (D009_C004_Id = '1' or D009_Id is null)
+    AND (D001_Flag_Ativo != 'N' or D001_Flag_Ativo is null)
+-- GROUP BY 
+GROUP BY D001_Id

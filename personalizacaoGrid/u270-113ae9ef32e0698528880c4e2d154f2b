@@ -1,0 +1,41 @@
+colunaValor [D001_Peso_Unitario_Bruto]
+colunaOrdem [34]
+---
+colunaValor [D001_Peso_Unitario_Kg]
+colunaOrdem [33]
+---
+colunaValor [D001A_Altura]
+colunaOrdem [30]
+---
+colunaValor [D001A_Largura]
+colunaOrdem [31]
+---
+colunaValor [D001A_Comprimento]
+colunaOrdem [29]
+---
+colunaValor [D001_Codigo_Barras]
+colunaTitulo [EAN]
+colunaOrdem [25]
+---
+colunaValor [D049_Flag_Curva_ABC_Qtd]
+colunaTitulo [ABC(Q)]
+colunaOrdem [8]
+---
+colunaValor [D049_Flag_Curva_ABC]
+colunaTitulo [ABC(V)]
+colunaOrdem [23]
+---
+colunaValor [D001_Flag_Pre_Cadastro]
+colunaTitulo [Pré]
+colunaOrdem [6]
+---
+colunaValor [D001_Id]
+colunaTitulo [Id]
+chavePrimaria [1]
+colunaAlinhar [center]
+colunaExibir [S]
+---
+colunaValor [D001_Id]
+colunaExibir [S]
+colunaTitulo [D001_Id]
+---

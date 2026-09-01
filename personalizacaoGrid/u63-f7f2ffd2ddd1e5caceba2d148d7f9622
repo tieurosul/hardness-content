@@ -1,0 +1,4 @@
+colunaValor [(SELECT COUNT(*) FROM T303 WHERE T303_T140_Id = T140_Id)]
+colunaExibir [S]
+colunaTitulo [Produtos]
+---

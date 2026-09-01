@@ -1,0 +1,8 @@
+tab [geral]
+field [T005_C007_Id_Vendedor_Interno]
+name [T005_C007_Id_Vendedor_Interno]
+label [Vendedor]
+type [select]
+extra []
+readonly [S]
+---

@@ -1,0 +1,9 @@
+colunaValor [T007_Numero_Nota_Fiscal]
+colunaOrdem [8]
+---
+colunaValor [T007_Codigo_Rastreio]
+colunaOrdem [12]
+---
+colunaValor [campoOpcoesColetadoRetornar]
+colunaOrdem [1]
+---

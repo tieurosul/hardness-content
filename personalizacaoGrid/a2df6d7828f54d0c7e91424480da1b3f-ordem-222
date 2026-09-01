@@ -1,0 +1,29 @@
+D001_Codigo_Produto
+D001_Descricao_Produto
+D082_Marca
+D009_Quantidade_Estoque
+	D009_Quantidade_Consumo
+	D009_Quantidade_Comprar_Calculada
+Pedido
+D009_Quantidade_Estoque_Fora
+	D009_Meses_MMF
+D009_Quantidade_Estoque_Similar
+D009_Quantidade_OC
+D009_Quantidade_Estoque_Tabela(D009_Id)
+vendas
+vendas
+vendas
+vendas
+	D009_Quantidade_Estoque_Loja
+(select sum(T055_Quantidade) from T055 left join T075 on T075_Id=T055_T075_Id where T055_D009_Id=D009_Id and ifnull(T075_Data_Estoque,'0000-00-00')='0000-00-00' and T075_Data_Previsao>='2020-06-1' and T075_Data_Previsao<='2020-06-30' and T075_Flag_MP != 1)
+(select sum(T055_Quantidade) from T055 left join T075 on T075_Id=T055_T075_Id where T055_D009_Id=D009_Id and ifnull(T075_Data_Estoque,'0000-00-00')='0000-00-00' and T075_Data_Previsao>='2020-07-1' and T075_Data_Previsao<='2020-07-31' and T075_Flag_MP != 1)
+(select sum(T055_Quantidade) from T055 left join T075 on T075_Id=T055_T075_Id where T055_D009_Id=D009_Id and ifnull(T075_Data_Estoque,'0000-00-00')='0000-00-00' and T075_Data_Previsao>='2020-08-1' and T075_Data_Previsao<='2020-08-31' and T075_Flag_MP != 1)
+(select sum(T055_Quantidade) from T055 left join T075 on T075_Id=T055_T075_Id where T055_D009_Id=D009_Id and ifnull(T075_Data_Estoque,'0000-00-00')='0000-00-00' and T075_Data_Previsao>='2020-09-1' and T075_Data_Previsao<='2020-09-30' and T075_Flag_MP != 1)
+(SELECT IFNULL(T232_Quantidade,0) FROM T232 WHERE T232_D009_Id=D009_Id AND T232_MesAno = '2020-06-01')
+(SELECT IFNULL(T232_Quantidade,0) FROM T232 WHERE T232_D009_Id=D009_Id AND T232_MesAno = '2020-07-01')
+(SELECT IFNULL(T232_Quantidade,0) FROM T232 WHERE T232_D009_Id=D009_Id AND T232_MesAno = '2020-08-01')
+(SELECT IFNULL(T232_Quantidade,0) FROM T232 WHERE T232_D009_Id=D009_Id AND T232_MesAno = '2020-09-01')
+D049_Quantidade_Embalagem_Compra
+D049_Quantidade_Minima_Compra
+D009_Quantidade_Comprar
+D009_Flag_Cotar

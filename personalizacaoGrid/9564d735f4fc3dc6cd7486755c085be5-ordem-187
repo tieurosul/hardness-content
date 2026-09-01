@@ -1,0 +1,21 @@
+campoExclusao
+validaCampoExtratoCliente
+	T002_Data_Emissao
+D024_Id
+substr(D024_Nome_Empresa,1,20)
+T002_Numero_Duplicata
+T002_Data_Vencimento
+Atraso
+T002_Data_Recebimento
+T002_Valor_Duplicata
+	T002_Valor_Recebido
+	(T007_Valor_Total_IPI/T002_Total_Parcelas)
+	(T007_Valor_ICMS_Substituicao_Retencao/T002_Total_Parcelas)
+	IF(T007_Valor_Total_IPI>0,(T002_Valor_Recebido-(T007_Valor_Total_IPI/T002_Total_Parcelas)-(T007_Valor_ICMS_Substituicao_Retencao/T002_Total_Parcelas)), T002_Valor_Recebido)
+	D021_Percentual_Comissao
+	(T002_Valor_Recebido-(T007_Valor_Total_IPI/T002_Total_Parcelas)-(T007_Valor_ICMS_Substituicao_Retencao/T002_Total_Parcelas))*(D021_Percentual_Comissao/100)
+T002_Valor_Juros
+T002_D027_Id
+	T002_Observacao
+C007_Nome
+T005_Id

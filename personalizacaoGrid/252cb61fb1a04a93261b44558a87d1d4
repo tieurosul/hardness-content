@@ -1,0 +1,162 @@
+colunaValor [T007_Id]
+colunaTitulo [Produto]
+chavePrimaria [1]
+colunaExibir []
+---
+colunaValor [T008_Codigo_Produto]
+colunaTitulo [Cod]
+colunaDimensao [S]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Cod]
+colunaExibir [s]
+---
+colunaValor [T008_Quantidade]
+colunaTitulo [Qtde]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+style [width:1%;font-weight:bold]
+colunaMetrica [S]
+---
+colunaValor [T008_Valor_Preco_Sem_Desconto_Unitario]
+colunaTitulo [Preço Unit]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+style [width:1%;font-weight:bold]
+---
+colunaValor [T005_T003_Id]
+colunaTitulo [Orçam]
+colunaAlinhar [center]
+style [width:1%]
+callback[abrirJanela]
+callbackParameter[array('Orçamento', '/ven/ven001/content/ven001ContentEditarOrcamento/', 'T005_T003_Id', '990,605')]
+---
+colunaValor [T005_Id]
+colunaTitulo [Pedido]
+chavePrimaria [1]
+callback[abrirJanela]
+callbackParameter[array('Pedido', '/ven/ven002/content/ven002content02/', 'T005_Id', '990,605')]
+colunaExibir[S]
+---
+colunaValor [Danfe]
+colunaTitulo [Danfe]
+colunaTipo [livre]
+callback [ValidaCampoDanfe]
+---
+colunaValor [D018_UF]
+colunaTitulo [UF]
+colunaExibir[S]
+---
+colunaValor [T008_Valor_ICMS_Substituicao_Retencao]
+colunaTitulo [ST R$]
+colunaExibir[S]
+colunaCasasDecimais[2]
+colunaAlinhar[right]
+---
+colunaValor [T075_Numero_DI]
+colunaTitulo [Número DI]
+style [font-weight:bold;width:1%]
+---
+colunaValor [T008_Flag_Situacao_Tributaria]
+colunaTitulo [ST]
+colunaAlinhar [center]
+colunaExibir [S]
+---
+colunaValor [T008_Valor_Partilha_ICMS_Destino]
+colunaTitulo [Partilha ICMS]
+colunaExibir[S]
+colunaCasasDecimais[2]
+colunaAlinhar[right]
+---
+colunaValor [T008_Valor_Base_ICMS]
+colunaTitulo [Base ICM]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---
+colunaValor [T008_Flag_Destino_Produto]
+colunaTitulo [Destino]
+colunaAlinhar [center]
+---
+colunaValor [substring(T008_Flag_Situacao_Tributaria,1,1)]
+colunaExibir [S]
+colunaTitulo [Origem]
+---
+colunaValor [D149_Flag_Parana_Competitivo]
+colunaExibir [S]
+colunaTitulo [Parana Competitivo]
+---
+colunaValor [T008_D059_Id]
+callback [personalizado-67dd6774654ee]
+---
+colunaValor [T008_D059_Id]
+colunaExibir [S]
+colunaTitulo [CST ICMS]
+---
+colunaValor [T008_Situacao_Tributaria_PIS]
+callback [personalizado-67dd90c62262c]
+---
+colunaValor [T008_Situacao_Tributaria_COFINS]
+callback [personalizado-67dd91fc357c4]
+---
+colunaValor [T008_Situacao_Tributaria_PIS]
+colunaExibir [S]
+colunaTitulo [Situacao Tributaria PIS]
+---
+colunaValor [T008_Situacao_Tributaria_COFINS]
+colunaExibir [S]
+colunaTitulo [Situacao Tributaria COFINS]
+---
+colunaValor [EstNF.D004_Local]
+colunaTitulo [Locação]
+colunaExibir []
+---
+colunaValor [D004_Local]
+colunaTitulo [Locação]
+colunaExibir []
+colunaTipo [livre]
+---
+colunaValor [CONCAT(EstHist.D004_Local, ' - ', LocacaoHist.T066_Id)]
+colunaTitulo [Local]
+colunaOrdem [7]
+---
+colunaValor [T008_Valor_Partilha_ICMS_Destino]
+colunaExibir [S]
+colunaTitulo [Valor Partilha ICMS Destino]
+---
+colunaValor [T008_Valor_FCP]
+colunaExibir [S]
+colunaTitulo [Valor FCP]
+---
+colunaValor [UsuarioGerouNF.C007_Nome]
+colunaTitulo [Gerou NF]
+colunaExibir [S]
+callback [personalizado-69a6e8455b281]
+---
+colunaValor [D006_Flag_Estoque]
+colunaTitulo [Estoque]
+colunaAlinhar [center]
+callback [personalizado-69a1c67c4dea7]
+---
+colunaValor [IFNULL(UsuarioGerouNF.C007_Nome, D024_Nome_Empresa) AS Gerou_NF]
+callback [personalizado-69a6e802ec05f]
+---
+colunaValor [T008_Valor_Base_ICMS_Impresso]
+colunaExibir [S]
+colunaTitulo [T008_Valor_Base_ICMS_Impresso]
+---
+colunaValor [D022_Nome_Empresa]
+colunaExibir [S]
+colunaTitulo [transportadora]
+---
+colunaValor [D001A_Altura]
+colunaExibir [S]
+colunaTitulo [Altura]
+---
+colunaValor [D001A_Largura]
+colunaExibir [S]
+colunaTitulo [Largura]
+---
+colunaValor [D001A_Comprimento]
+colunaExibir [S]
+colunaTitulo [Comprimento]
+---

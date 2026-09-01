@@ -1,0 +1,31 @@
+colunaValor [D009_Id]
+colunaTitulo [D009_Id]
+---
+colunaValor [D009_IPT_1]
+colunaTitulo [D009_IPT_1]
+---
+colunaValor [D009_IPT_2]
+colunaTitulo [D009_IPT_2]
+---
+colunaValor [D009_IPT_3]
+colunaTitulo [D009_IPT_3]
+---
+colunaValor [D009_IPT_4]
+colunaTitulo [D009_IPT_4]
+---
+colunaValor [D009_Preco_1]
+colunaTitulo [D009_Preco_1]
+---
+colunaValor [D009_Preco_2]
+colunaTitulo [D009_Preco_2]
+---
+colunaValor [D009_Preco_3]
+colunaTitulo [D009_Preco_3]
+---
+colunaValor [D009_Preco_4]
+colunaTitulo [D009_Preco_4]
+---
+colunaValor [D009_Preco_1 - D009_Preco_3]
+colunaExibir [S]
+colunaTitulo [dif]
+---

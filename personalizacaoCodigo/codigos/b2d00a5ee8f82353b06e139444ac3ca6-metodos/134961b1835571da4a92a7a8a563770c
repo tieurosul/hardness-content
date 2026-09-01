@@ -1,0 +1,42 @@
+a:5:{s:4:"nome";s:17:"vencimento pedido";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"b2d00a5ee8f82353b06e139444ac3ca6";s:6:"codigo";s:1316:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+$g['empresaAtual'] = $array['todosCampos']['C004_Id'];
+
+require_once('bibliotecas/classes/INDEX.php');
+$INDEX = new INDEX();
+
+$INDEX->carragaVARSGlobal();
+
+if($g['C031']['diasVencPedido'] == '0' || $g['C031']['diasVencPedido'] == ''){
+    return "Processo não habilitado para empresa: {$g['empresaAtual']}";
+} 
+
+require_once("bibliotecas/classes/VEN002.php");
+$VEN002 = new VEN002();
+
+$T005 = mysql_query("SELECT T005_Id,
+                            T005_data_Emissao
+                       FROM T005
+                      WHERE T005_C004_Id='{$g['empresaAtual']}'
+                        AND datediff(curdate(),T005_Data_Emissao)>'{$g['C031']['diasVencPedido']}'
+                        AND (T005_Flag_Status=''
+                         OR T005_Flag_Status='0'
+                         OR T005_Flag_Status IS NULL
+                         OR T005_Flag_Status = 9
+                         OR T005_Flag_Status = 14
+                         OR T005_Flag_Status = 15)");
+
+$count = 0;
+
+while($mT005 = mysql_fetch_array($T005)) {
+    $retorno  = $VEN002->VEN002ProcessarVencidos($mT005);
+
+    if($retorno !== true) {
+        return $retorno;
+    }
+
+    $count++;
+}
+
+return "Vencidos {$count} pedidos com as configurações da empresa {$g['empresaAtual']}";";s:3:"md5";s:32:"076ecb9ed2dc0a810e36ceafb7300497";}

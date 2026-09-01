@@ -1,0 +1,75 @@
+colunaValor [D009_Flag_Cotar]
+colunaTitulo [Solicitar<BR> Compra]
+---
+colunaValor [D049_Flag_Nao_Comprar]
+colunaTitulo [N <BR>Comprar?]
+colunaOrdem [1]
+---
+colunaValor [D049_Flag_Tipo]
+colunaTitulo [TP]
+colunaCorDeFundo []
+---
+colunaValor [D009_Id]
+colunaTitulo [ID]
+chavePrimaria [1]
+colunaExibir []
+---
+colunaValor [D009_Flag_Custo_Utilizado]
+colunaExibir [S]
+colunaTitulo [D009 Id]
+---
+colunaValor [D009_Quantidade_Consumo]
+colunaTitulo [Ven<BR>dido]
+colunaCorDeFundo []
+colunaOrdem [21]
+---
+colunaValor [D009_Quantidade_OC]
+colunaTitulo [Qtde<BR>OC]
+colunaCorDeFundo [#f8feb6ff,#c6cb91]
+colunaOrdem [20]
+---
+colunaValor [D009_Meses_Compra]
+colunaTitulo [Meses<BR> Compra]
+colunaOrdem [18]
+---
+colunaValor [D009_Meses_MMF]
+colunaTitulo [Meses<BR>MMF]
+colunaOrdem [17]
+---
+colunaValor [D009_Meses_Compra]
+colunaTitulo [Meses<BR>Compra]
+colunaOrdem [18]
+---
+colunaValor [D009_Meses_Reposicao]
+colunaTitulo [Meses<BR>Reposição]
+colunaOrdem [19]
+---
+colunaValor [D009A_Quantidade_Meses_Estoque]
+colunaTitulo [Meses<br>Estq]
+colunaCorDeFundo [#c8fafeff,#a0c8cb]
+colunaExibir [S]
+colunaOrdem [22]
+---
+colunaValor [Pedido]
+colunaTitulo [Estq<br>Líquido]
+colunaCorDeFundo [#b9fed5ff,#94cbaa]
+---
+colunaValor [D009_Quantidade_Minima_Estoque]
+colunaOrdem [31]
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaTitulo [Estq<BR>Físico]
+colunaOrdem [11]
+---
+colunaValor [D009A_Quantidade_Orcada]
+colunaTitulo [Qtd Orc]
+colunaOrdem [23]
+---
+colunaValor [D009_Quantidade_Estoque_Similar]
+colunaTitulo [Estq<BR>Similar]
+colunaOrdem [29]
+---
+colunaValor [D009_Quantidade_Estoque_Tabela]
+colunaTitulo [Estq</br>Tabela]
+colunaOrdem [29]
+---

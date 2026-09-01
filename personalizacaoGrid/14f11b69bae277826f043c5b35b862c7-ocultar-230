@@ -1,0 +1,11 @@
+T013_Valor_ICMS_Substituicao	|	ICMS ST
+T013_Valor_Frete	|	Frete
+T013_Numero_Controle	|	Contr
+T013_Flag_Estoque_Finalizado	|	Recebido
+T013_Id	|	Id
+group_concat(distinct T225_T224_Id)	|	OC
+D024_Id	|	Código
+group_concat(distinct substr(Comprador.C007_Primeiro_Nome,1,10))	|	Comprador
+T013_Numero_Protocolo_Nfe	|	Protocoloo NFe
+T013_Retorno_Nfe	|	Retorno SEFAZ
+Comprador.C007_Primeiro_Nome	|	Comprador

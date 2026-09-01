@@ -1,0 +1,22 @@
+colunaValor [T008_Descricao_Produto]
+colunaTitulo [Descrição]
+colunaOrdem [6]
+---
+colunaValor [D082_Marca]
+colunaTitulo [Marca]
+colunaOrdem [7]
+---
+colunaValor [T008_Valor_Total_Preco_Sem_Desconto]
+colunaExibir [S]
+colunaTitulo [PreÃ§o Total]
+---
+colunaValor [(select T055_Valor_Custo_Final_Unitario from T055 where T055_D009_Id=T008_D009_Id and T055_Valor_Custo_Final_Unitario>0 order by T055_Id desc  limit 1) as Custo]
+colunaTitulo [Custo Unit]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+style [width:1%;font-weight:bold;color:red;]
+colunaExibir [S]
+---
+colunaValor [Custo]
+colunaOrdem [10]
+---

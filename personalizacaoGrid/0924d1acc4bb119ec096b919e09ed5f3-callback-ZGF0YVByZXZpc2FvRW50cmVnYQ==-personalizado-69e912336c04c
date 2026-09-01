@@ -1,0 +1,25 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['dataPrevisaoEntrega']
+    // $array['totais']['Nome_Total']
+
+    global $g;
+    $dataPrevisao = '';
+
+	if (!empty($array['todosCampos']['dataPrevisaoEntrega'])) {
+		$dataPrevisao = $array['todosCampos']['dataPrevisaoEntrega'];
+	} else if (!empty($array['todosCampos']['dataPrevisao'])) {
+		$dataPrevisao = $array['todosCampos']['dataPrevisao'];
+	}
+
+	$dataCorrigida = gCorrigeData($dataPrevisao, true);
+	if (empty($dataCorrigida)) {
+		return '';
+	}
+
+	return $dataCorrigida . ' | ' . lcfirst(gPegaDiaSemana($dataPrevisao));
+}

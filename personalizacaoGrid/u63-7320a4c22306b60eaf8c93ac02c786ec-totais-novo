@@ -1,0 +1,13 @@
+nome [DId_]
+valor [D009_Id]
+titulo [D009_Id]
+exibir [S]
+totalizador [soma]
+---
+nome [DId_Count]
+valor [D009_Id]
+titulo [Registros]
+exibir [S]
+totalizador [count]
+callbackParameter [0]
+---

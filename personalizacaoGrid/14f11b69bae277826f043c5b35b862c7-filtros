@@ -1,0 +1,10 @@
+colunaValor [T013_Flag_Finalidade_NFe]
+titulo [Finalidade]
+tipo [texto]
+---
+colunaValor [D024_Cnpj]
+titulo [CNPJ]
+---
+colunaValor [D024_Cnpj_Matriz]
+titulo [CNPJ Matriz]
+---

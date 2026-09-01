@@ -1,0 +1,88 @@
+colunaValor [T006_Id]
+colunaTitulo [Id]
+chavePrimaria [1]
+colunaExibir []
+---
+colunaValor [T005_T003_Id]
+colunaTitulo [Orçam]
+colunaAlinhar [center]
+style [width:1%]
+callback[abrirJanela]
+callbackParameter[array('Orçamento', '/ven/ven001/content/ven001ContentEditarOrcamento/', 'T005_T003_Id', '990,605')]
+colunaExibir[S]
+---
+colunaValor [T005_Id]
+colunaTitulo [Pedido]
+chavePrimaria [1]
+callback[abrirJanela]
+callbackParameter[array('Pedido', '/ven/ven002/content/ven002content02/', 'T005_Id', '990,605')]
+colunaExibir[S]
+style [width:1%]
+---
+colunaValor [T006_Codigo_Produto]
+colunaTitulo [Código]
+colunaAlinhar [left]
+style [font-weight:bold; width: 1%;]
+---
+colunaValor [T006_Descricao_Produto]
+colunaTitulo [Produto]
+style [font-weight:bold;width:1%]
+---
+colunaValor [D024_Nome_Empresa]
+colunaTitulo [Cliente]
+style [font-weight:normal;width:1%]
+---
+colunaValor [D082_Marca]
+colunaTitulo [Marca]
+style [width: 1%;]
+---
+colunaValor [D037_Unidade]
+colunaTitulo [UN]
+colunaAlinhar [center]
+style [width: 1%;]
+---
+colunaValor [T006_Quantidade_Estoque]
+colunaTitulo [Estoque]
+colunaAlinhar [right]
+colunaExibir[S]
+style [width: 1%;]
+callback[verificaEstoqueVermelho]
+---
+colunaValor [T006_Quantidade]
+colunaTitulo [Qtd]
+colunaAlinhar [right]
+colunaCasasDecimais [2]
+style [font-weight:bold]
+style [width: 1%;]
+---
+colunaValor [T006_Valor_Preco_Sem_Desconto_Unitario]
+colunaTitulo [Preço Unit.]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+style [font-weight:bold; width: 1%;]
+---
+colunaValor [D024_Nome_Empresa]
+colunaTitulo[Cliente]
+colunaExibir[S]
+style [width: 100%;]
+---
+colunaValor [T006_T206_Id]
+colunaExibir []
+---
+colunaValor [T006_Hora_Entrega]
+colunaTitulo [Entrega]
+colunaAlinhar [center]
+colunaExibir []
+---
+colunaValor [T006_Quantidade_Separacao]
+colunaTitulo [Separado]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+colunaExibir []
+---
+colunaValor [(T006_Valor_Preco_Sem_Desconto_Unitario*T006_Quantidade)]
+colunaTitulo [Preço Total]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+colunaExibir [S]
+---

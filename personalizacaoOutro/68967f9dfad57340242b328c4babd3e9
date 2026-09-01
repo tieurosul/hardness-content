@@ -1,0 +1,23 @@
+<?php
+namespace hardness;
+
+header('Content-Type: text/plain');
+
+// desativa buffers
+while (ob_get_level()) ob_end_flush();
+ob_implicit_flush(true);
+
+$cmd = "tail -f /tmp/crontab-sistema 2>&1";
+$handle = popen($cmd, "r");
+
+if (!$handle) {
+    echo "Erro ao executar comando";
+    exit;
+}
+
+while (!feof($handle)) {
+    echo fgets($handle);
+    flush();
+}
+
+pclose($handle);

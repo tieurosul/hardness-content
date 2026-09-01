@@ -1,0 +1,46 @@
+colunaValor [T002_Valor_Duplicata]
+colunaTitulo [Valor]
+colunaOrdem [30]
+---
+colunaValor [T002_Valor_Recebido]
+colunaTitulo [Recebido]
+colunaOrdem [23]
+---
+colunaValor [T002_Valor_Saldo]
+colunaTitulo [Saldo]
+colunaOrdem [19]
+---
+colunaValor [T002_Valor_Total]
+colunaTitulo [Total]
+colunaOrdem [17]
+---
+colunaValor [T002_Valor_Taxas]
+colunaTitulo [Taxas]
+colunaOrdem [25]
+---
+colunaValor [T002_Data_Recebimento]
+colunaTitulo [Recebimento]
+colunaOrdem [20]
+---
+colunaValor [T002_D027_Id]
+colunaTitulo [Portador]
+colunaOrdem [22]
+---
+colunaValor [C007_Nome]
+colunaTitulo [Vendedor]
+colunaOrdem [28]
+---
+colunaValor [Valor_Juros]
+colunaOrdem [21]
+---
+colunaValor [T002_Data_Baixa]
+colunaTitulo [Baixa]
+colunaOrdem [18]
+---
+colunaValor [Atraso]
+colunaOrdem [16]
+---
+colunaValor [T002_Valor_Juros]
+colunaTitulo [Juros]
+colunaOrdem [25]
+---

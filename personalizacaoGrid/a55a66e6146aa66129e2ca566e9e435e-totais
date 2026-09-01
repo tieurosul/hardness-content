@@ -1,0 +1,49 @@
+<?php
+namespace hardness;
+
+		$sqlTotal = mysql_query("select D009_Quantidade_Estoque,
+                                    D009_Quantidade_Estoque_Liquido,
+                                    D009_Quantidade_OC,
+                                    D009_Quantidade_Estoque_Fora
+                                from D001
+                                 $extra");
+
+        $itens = 0 ;
+        $estoque = 0;
+        $estoqueLiquido = 0;
+        $estoque = 0;
+        $oc = 0;
+        $estoqueFora = 0;
+        while ($mTotal = mysql_fetch_array($sqlTotal)) {
+              $itens ++;
+              $estoque += $mTotal['D009_Quantidade_Estoque'];
+              $estoqueLiquido += $mTotal['D009_Quantidade_Estoque_Liquido'];
+              $oc += $mTotal['D009_Quantidade_OC'];
+              $estoqueFora += $mTotal['D009_Quantidade_Estoque_Fora'];
+        }
+
+				$estoque_ = gCorrigeNumero($estoque);
+				$estoqueLiquido_ = gCorrigeNumero($estoqueLiquido);
+				$oc_ = gCorrigeNumero($oc);
+				$estoqueFora_ = gCorrigeNumero($estoqueFora);
+
+				echo <<<EOT
+				<div class="buttonsBottomTop">
+					<span class="item" style="text-align:right">Itens<br><input type="text" value="{$itens}" class="whiteBg" id="" size="11" readonly></span>
+					<span class="item" style="text-align:right">Estoque físico<br><input type="text" value="{$estoque_}" class="whiteBg" id="" size="11" readonly></span>
+					<span class="item" style="text-align:right">Estoque líquido<br><input type="text" value="{$estoqueLiquido_}" class="whiteBg" id="" size="11" readonly></span>
+					<span class="item" style="text-align:right">OC<br><input type="text" value="{$oc_}" class="whiteBg" id="" size="11" readonly></span>
+					<span class="item" style="text-align:right">Estoque fora<br><input type="text" value="{$estoqueFora_}" class="whiteBg" id="" size="11" readonly></span>
+					<div style="clear:both;"></div>
+				</div>
+EOT;
+
+if ($estoque<=0)  {
+   $estoque = 1;
+}
+
+if ($estoqueLiquido<=0) {
+    $estoqueLiquido = 1;
+}
+
+?>

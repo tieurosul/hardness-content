@@ -1,0 +1,8 @@
+nome [Custo_unit_R_]
+valor [T055_Valor_Custo_Final_Unitario]
+titulo [Custo unit R$]
+exibir []
+totalizador [soma]
+tipo [sql]
+callbackParameter [2]
+---

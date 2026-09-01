@@ -1,0 +1,8 @@
+colunaValor [D001_Codigo_Produto]
+titulo [D001_Codigo_Produto]
+exibir [S]
+---
+colunaValor [D049_Flag_Nao_Comprar]
+titulo [D049_Flag_Nao_Comprar]
+exibir [S]
+---

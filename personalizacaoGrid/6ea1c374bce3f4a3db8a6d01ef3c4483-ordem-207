@@ -1,0 +1,34 @@
+countLinha
+excluirCheckbox
+T004_Item
+T004_Codigo_Produto
+T004_Codigo_Substituto
+T004_Descricao_Produto
+SUBSTRING(D082_Marca,1,15)
+D037_Unidade
+D009_Quantidade_OC
+Pedido
+T004_Quantidade
+T004_Quantidade_Confirmada
+T004_Valor_Preco_Original
+T004_Percentual_Desconto
+T004_Valor_Preco_Unitario
+	T004_Aliquota_IPI
+	T004_Aliquota_ICMS
+T004_Valor_Total_Preco
+D006_Codigo_CFOP
+D005_Classificacao_Fiscal
+T004_Flag_Origem_Produto
+	T004_Flag_ST
+	T004_Numero_Pedido_Compra
+	T004_Item_Pedido_Compra
+	LinkProduto
+T004_Percentual_Partilha_ICMS_Destino 
+T004_Percentual_Partilha_ICMS_Origem 
+T004_Valor_Partilha_ICMS_Destino
+T004_Valor_Partilha_ICMS_Origem
+T004_Valor_ICMS_Desonerado
+T006_T005_Id
+T004_Aliquota_ICMS_Credito
+T004_Valor_ICMS_Credito
+addColuna

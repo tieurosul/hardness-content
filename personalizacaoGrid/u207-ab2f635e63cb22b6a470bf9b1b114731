@@ -1,0 +1,3 @@
+colunaValor [IFNULL(IF(T003_Status_Retorno_Email='RETORNAR',CONCAT('<font style="color: var(--BGVermelho)">',T003_Status_Retorno_Email,'</font>'),T003_Status_Retorno_Email), '<font style="color: var(--BGVermelho)">--</font>')]
+colunaOrdem [18]
+---

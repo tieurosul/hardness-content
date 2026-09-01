@@ -1,0 +1,22 @@
+colunaValor [D024_Flag_Lista_Preco]
+colunaTitulo [Lista$]
+colunaOrdem [5]
+---
+colunaValor [D020_Nome_Cidade]
+colunaTitulo [Cidade]
+colunaOrdem [7]
+---
+colunaValor [D024_D046_Id]
+colunaTitulo [Grupo]
+colunaOrdem [9]
+---
+colunaValor [D024_CNPJ]
+colunaTitulo [CNPJ]
+colunaOrdem [10]
+---
+colunaValor [D024_Flag_Ativo]
+colunaTitulo [ Ativo/Inat]
+---
+colunaValor [D024_Percentual_Comissao]
+colunaTitulo [%Comi Repr]
+---

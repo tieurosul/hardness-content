@@ -1,0 +1,28 @@
+a:1:{i:0;a:13:{s:2:"id";s:13:"69b2a3bd6b493";s:6:"titulo";s:16:"Excluir Romaneio";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:1:"1";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:1222:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+
+    $sql = "SELECT T007_Id, T007_Flag_Imprimir_Romaneio, T007_T005_Id FROM T007 WHERE T007_T005_Id = '{$array['todosCampos']['T005_Id']}' AND T007_Flag_Imprimir_Romaneio = 'S'";
+    $row = mysqli_query($sql);
+    $retorno = true;
+    
+    if (mysql_num_rows($row) > 0) {
+        $T007 = mysql_fetch_assoc($row);
+        
+        require_once('bibliotecas/classes/EST002.php');
+        $EST002 = new EST002();
+        $retorno = $EST002->excluirRomaneio($array['todosCampos']['T005_Id'], $array['todosCampos']['T005_T275_Id']);
+
+        $updt = "UPDATE T007 SET T007_Flag_Imprimir_Romaneio = 'N' WHERE T007_Id='{$T007['T007_Id']}'";
+        if(!mysqli_query($updt)) {
+            return array('code' => false, 'data' => "Erro ao limpar campo selecionado.");
+        }
+    }
+
+    return array('code' => ($retorno != true) ? false : true, 'data' => ($retorno != true) ? $retorno : "Romaneio excluido!");
+}";}}

@@ -1,0 +1,52 @@
+colunaValor [D013_Data_Nascimento]
+colunaTitulo [Nascimento]
+colunaEditarTodos [S]
+---
+colunaValor [D013A_Data_Ultima_Alteracao]
+colunaTitulo [Ultima Alteração]
+callback [gCorrigeData]
+---
+colunaValor [D024_D046_Id]
+colunaExibir [S]
+colunaTitulo [Grupo]
+callback [personalizado-68d1b415582bb]
+---
+colunaValor [D046_Nome]
+colunaExibir []
+colunaTitulo [Grupo]
+---
+colunaValor [D024_Data_Ultima_Compra]
+colunaExibir [S]
+colunaTitulo [D024_Data_Ultima_Compra]
+---
+colunaValor [D024_Data_Ultima_Compra]
+colunaExibir [S]
+colunaTitulo [Data Ultima Compra]
+callback [gCorrigeData]
+---
+colunaValor [D024_Data_Cadastro]
+colunaExibir [S]
+callback [gCorrigeData]
+colunaTitulo [Data Cadastro]
+---
+colunaValor [D024_Flag_Cliente]
+colunaExibir [S]
+colunaTitulo [Flag Cliente]
+---
+colunaValor [D024_Flag_Fornecedor]
+colunaExibir [S]
+colunaTitulo [Flag Fornecedor]
+---
+colunaValor [D024_C007_Vendedor_Interno]
+colunaExibir [S]
+colunaTitulo [Responsavel]
+---
+colunaValor [D024_Cnpj_Matriz]
+colunaExibir [S]
+colunaTitulo [CNPJ]
+---
+colunaValor [D085_Data]
+colunaExibir [S]
+colunaTitulo [Último Contato]
+callback [gCorrigeData]
+---

@@ -1,0 +1,21 @@
+colunaValor [T014A_Quantidade]
+colunaOrdem [67]
+---
+colunaValor [T014_Quantidade]
+colunaOrdem [14]
+---
+colunaValor [T014A_Codigo_Barras_Tributavel]
+colunaOrdem [26]
+---
+colunaValor [T014_Descricao_Produto]
+colunaOrdem [12]
+---
+colunaValor [T014_T066_Id]
+colunaOrdem [13]
+---
+colunaValor [T014_Codigo_Barras]
+colunaOrdem [20]
+---
+colunaValor [D083_Codigo_Barras]
+colunaOrdem [19]
+---

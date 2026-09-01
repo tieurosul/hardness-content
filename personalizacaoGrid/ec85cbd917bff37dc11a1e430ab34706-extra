@@ -1,0 +1,22 @@
+left join D049 on D049_D001_Id=D001_Id 
+left join D003 on D003_Id=D001_D003_Id
+left join D041 on D041_D049_Id=D049_Id 
+left join D009 on D009_D049_Id=D049_Id
+left join C008 on D001_C008_Id=C008_Id
+left join D082 on D049_D082_Id=D082_Id
+left join D024 on D024_Id=D049_D024_Id
+left join D060 on D001_D060_Id=D060_Id
+left join D002 on D001_D002_Id=D002_Id
+left join D015 on D001_D015_Id=D015_Id
+left join D037 on D001_D037_Id=D037_Id
+left join D005 on D001_D005_Id=D005_Id
+left join D072 on D072_D001_Id=D001_Id
+left join T144  on  T144_D001_Id =D001_Id
+left join D149 on D149_D005_Id=D005_Id and D149_C004_Id='[[g-empresaAtual]]'
+where
+(D009_C004_Id='[[g-empresaAtual]]'
+or 
+D009_Id is null)
+AND (D001_Flag_Ativo != 'N' or D001_Flag_Ativo is null)
+GROUP BY D009_Id
+ORDER BY D001_Codigo_Produto

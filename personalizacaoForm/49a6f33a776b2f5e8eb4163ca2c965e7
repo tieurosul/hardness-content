@@ -1,0 +1,12 @@
+tab [geral]
+field [C007_Id_Pipe_Drive]
+name [C007_Id_Pipe_Drive]
+label [Id Pipe Drive]
+type [text]
+---
+tab [geral]
+field [C007_Token_Pipe_Drive]
+name [C007_Token_Pipe_Drive]
+label [Token Pipe Drive]
+type [text]
+---

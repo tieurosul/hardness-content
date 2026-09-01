@@ -1,0 +1,17 @@
+tab [orcamentos]
+field [T003A_P002_Id]
+name [T003A_P002_Id]
+label [Tipo Orç]
+type [select]
+---
+tab [orcamentos]
+field [T003A_Referencia_Orcamento]
+name [T003A_Referencia_Orcamento]
+label [Referencia Orç]
+type [text]
+---
+tab [orcamentos]
+field [T003_Data_Emissao]
+name [T003_Data_Emissao]
+disabled [disabled]
+---

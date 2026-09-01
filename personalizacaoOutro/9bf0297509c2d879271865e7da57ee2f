@@ -1,0 +1,38 @@
+<?php
+namespace hardness;
+
+$cmd = 'tail /var/log/apache2/error.log';
+
+$output = shell_exec($cmd);
+
+if ($output === null) {
+    echo "shell_exec retornou null";
+} else {
+    echo "<pre>" . htmlspecialchars($output) . "</pre>";
+}
+
+// $dir = "dados_usuarios/e211_novo/personalizacaoBotoes/000fcf2053d6235d2441568e443a15d6";
+// echo nl2br(htmlspecialchars(file_get_contents($dir, false, null, 0, 500)));
+
+// $dir = "dados_usuarios/e211_novo/personalizacaoBotoes/113ae9ef32e0698528880c4e2d154f2b";
+// if (!is_readable($dir)) {
+//     die('Arquivo não encontrado ou sem permissão.');
+// }
+
+// // lê tudo na memória — cuidado com arquivos grandes
+// $content = file_get_contents($dir);
+
+// // exibe em <pre> e escapa HTML
+// echo '<pre>' . htmlspecialchars($content, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . '</pre>';
+
+
+// $dir = "dados_usuarios/e211_novo/personalizacaoBotoes/113ae9ef32e0698528880c4e2d154f2b";
+// // novo conteúdo que você quer salvar
+// $novoConteudo = "";
+
+// // sobrescreve o arquivo inteiro
+// if (file_put_contents($dir, $novoConteudo) !== false) {
+//     echo "Arquivo reescrito com sucesso!";
+// } else {
+//     echo "Erro ao reescrever o arquivo!";
+// }

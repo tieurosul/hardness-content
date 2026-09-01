@@ -1,0 +1,12 @@
+colunaValor [T005_Data_Entrega]
+colunaTitulo [Prazo entrega]
+callback [gCorrigeData]
+colunaOrdem [44]
+---
+colunaValor [T007_Data_Entrega]
+colunaTitulo [Data Entrega]
+colunaOrdem [43]
+---
+colunaValor [observacoes]
+colunaOrdem [46]
+---

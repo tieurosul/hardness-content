@@ -1,0 +1,31 @@
+colunaValor [T140_Flag_Marcado]
+colunaEditarTodos [S]
+colunaEditarTipo [flag]
+colunaEditarExtra [S|N]
+callback [gCheckbox]
+callbackParameter [array('T140_Flag_Marcado', 'N|S')]
+style [width: 1%;]
+colunaOrdem [5]
+colunaExibir [S]
+---
+colunaValor [T140_Numero_Serie]
+colunaTitulo [Serie]
+style [width: 1%;]
+colunaOrdem [3]
+colunaExibir []
+---
+colunaValor [T140_Data_Validade]
+colunaTitulo [Validade]
+callback [gCorrigeData]
+style [width: 1%;]
+---
+colunaValor [T140_Data_Hora_Upload]
+colunaTitulo [Upload]
+style [width: 1%;]
+callback [gCorrigeData]
+---
+colunaValor [T140_Data_Hora_Alteracao]
+colunaTitulo [Alteracao]
+style [width: 1%;]
+callback [gCorrigeData]
+---

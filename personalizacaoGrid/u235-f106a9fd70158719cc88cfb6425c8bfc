@@ -1,0 +1,12 @@
+colunaValor [T001_Valor_Custo_Mes_Anterior]
+colunaTitulo [Custo mês anterior]
+colunaOrdem [7]
+---
+colunaValor [T001_Quantidade_Saldo_Mes_Anterior]
+colunaTitulo [Saldo mês anterior]
+colunaOrdem [11]
+---
+colunaValor [T001_Quantidade_Saldo]
+colunaTitulo [Saldo]
+colunaOrdem [10]
+---

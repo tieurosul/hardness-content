@@ -1,0 +1,2 @@
+T008_Valor_Total_Preco_Sem_Desconto	|	Preço Total
+CONCAT(EstHist.D004_Local, ' - ', LocacaoHist.T066_Id)	|	Local

@@ -1,0 +1,12 @@
+colunaValor [T007_Numero_Nota_Fiscal]
+colunaTitulo [NF]
+colunaCongelar [S]
+---
+colunaValor [T007_Data_Emissao]
+colunaTitulo [Data Emissão]
+colunaCongelar [S]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Cod]
+colunaCongelar [S]
+---

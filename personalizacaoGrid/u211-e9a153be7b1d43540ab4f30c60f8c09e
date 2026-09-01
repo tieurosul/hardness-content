@@ -1,0 +1,12 @@
+colunaValor [Vendedor.C007_Primeiro_Nome]
+colunaOrdem [12]
+---
+colunaValor [Status2]
+colunaOrdem [13]
+---
+colunaValor [T005_Id_Pedido_Externo]
+colunaOrdem [19]
+---
+colunaValor [Supervisor]
+colunaOrdem [14]
+---

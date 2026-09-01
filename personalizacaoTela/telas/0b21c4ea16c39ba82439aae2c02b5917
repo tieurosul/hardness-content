@@ -1,0 +1,9 @@
+a:14:{s:4:"nome";s:23:"etiqueta produto 100x40";s:9:"descricao";s:0:"";s:6:"modulo";s:32:"62a0a3692e74c52254528453e1c0062f";s:5:"opcao";s:32:"33482d23fc6f5e8efddc5594a86edac2";s:6:"codigo";s:64:"/sistema/personalizacao/codigo/4961494b76faf54b4f430cf51cbc6614/";s:10:"pdfLargura";s:3:"100";s:9:"pdfAltura";s:2:"40";s:3:"css";s:0:"";s:3:"md5";s:32:"f74bb201f540ab976742e4801a17ff7d";s:12:"quebraPagina";s:1:"S";s:13:"loopPorPagina";s:1:"S";s:13:"htmlCabecalho";s:0:"";s:9:"htmlCorpo";s:1216:"<div class="telaItem telaItemQuadro telaItem-sfxH5QJ6K9Tul" unique="sfxH5QJ6K9Tul" caminho-url="" style="position: absolute; top: 2px; left: 0px; width: 361px; height: 132px; border: 4px solid black; border-radius: 5px;"></div>
+    
+    <div class="telaItem telaItemTexto telaItem-0Eo90JdPiHtB7" unique="0Eo90JdPiHtB7" style="position: absolute; top: 14px; left: 10px; width: 330px; font-size: 15px; font-weight: bold;"><span class="texto">COD: [codigo] 
+</span></div>
+    
+    
+
+<div class="telaItem telaItemBarcode2 telaItem-JXp5hTHuxB5Ap" unique="JXp5hTHuxB5Ap" style="position: absolute; top: 78px; left: 83px; height: 39px; width: 199px; font-weight: bold;"><span class="texto">[D001_Codigo_Barras]</span></div><div class="telaItem telaItemTexto telaItem-3NTLS8Vv8DdV9" unique="3NTLS8Vv8DdV9" style="position: absolute; top: 118px; left: 83px; width: 199px; text-align: center; font-size: 13px; font-weight: bold;"><span class="texto">[D001_Codigo_Barras]</span></div>
+<div class="telaItem telaItemTexto telaItem-cIdx6pqkPQCP1" unique="cIdx6pqkPQCP1" style="position: absolute; top: 35px; left: 10px; width: 350px; font-size: 15px; font-weight: bold;"><span class="texto">[D001_Descricao_Produto_1]</span></div>";s:10:"htmlRodape";s:0:"";}

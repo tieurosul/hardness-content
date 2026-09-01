@@ -1,0 +1,69 @@
+a:2:{i:0;a:13:{s:2:"id";s:13:"67a0f6e7d3b52";s:6:"titulo";s:23:"Buscar medidas cadastro";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:1:"1";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:1536:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+
+    $sqlSelect = "  SELECT D001A_Largura, D001A_Altura, D001A_Comprimento
+                            FROM D009
+                                LEFT JOIN D049 ON D049_Id = D009_D049_Id
+                                LEFT JOIN D001 ON D001_Id = D049_D001_Id
+                                LEFT JOIN D001A ON D001_Id = D001A_D001_Id
+                            WHERE D009_Id = '{$array['todosCampos']['T055_D009_Id']}'";
+    $D009 = mysql_query($sqlSelect);
+    $mD009 = mysql_fetch_assoc($D009);
+    log("select:".$sqlSelect);
+
+    $sqlUpdate = "UPDATE T055A SET
+                            T055A_Largura = '{$mD009['D001A_Largura']}',
+                            T055A_Altura = '{$mD009['D001A_Altura']}',
+                            T055A_Comprimento = '{$mD009['D001A_Comprimento']}'
+                        WHERE
+                            T055A_Id = '{$array['todosCampos']['T055A_Id']}'";
+    $T055A = mysql_query($sqlUpdate);
+
+    log("update:".$sqlUpdate);
+
+    $error = mysql_error();
+    if(!empty($error)){
+        return array('code' => false, 'data' => "Houve um erro ao tentar atualizar as medidas!<br>$error");
+    }
+
+    return array('code' => true, 'data' => "Medidas atualizadas com sucesso!");
+}";}i:1;a:15:{s:2:"id";s:13:"62951af45e67e";s:6:"titulo";s:22:"Finalizar conferência";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:18:"&acaoId=[[acaoId]]";s:10:"recarregar";b:1;s:4:"lote";s:1:"0";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:837:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+
+    require_once('bibliotecas/classes/IMP003.php');
+    $IMP003 = new IMP003;
+    require_once('bibliotecas/classes/IMP005.php');
+    $IMP005 = new IMP005;
+    //Vai dar entrada no estoque da importação
+    $retorno = $IMP003->imp007Finalizar($array['acaoId']);
+    if ($retorno !== true) {
+        $retornoFuncao = $retorno;
+        $retorno = array();
+        $retorno['code'] = false;
+        $retorno['data'] = '<br><br>' . str_replace("\n","<br>", $retornoFuncao);
+        return $retorno;
+    } 
+    //Vai assinar a PO como conferida 
+    $IMP005->conferenciaPO($array['acaoId']);
+    
+    return array('code' => true, 'data' => 'Estoque finalizado com sucesso');
+
+}";s:14:"exibirCallback";s:138:"<?php
+namespace hardness;
+
+function callback($array) {
+    // retornar true ou false
+    // $array['{parametro}']
+    return true;      
+}";s:11:"confirmacao";s:58:"As observações de entrega e inspeção foram conferidas?";}}

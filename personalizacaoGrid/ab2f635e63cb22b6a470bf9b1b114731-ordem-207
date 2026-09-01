@@ -1,0 +1,11 @@
+campoCancelamentoOrcamento
+T003_Id
+T003_Data_Emissao
+T003_D024_Id
+substr(D024_Nome_Empresa,1,15)
+Contato
+	Pedido
+	Status
+	NF
+T003_Valor_Total
+T003_Valor_Pendente

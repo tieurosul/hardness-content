@@ -1,0 +1,4 @@
+T219_T218_Id	|	Cotação
+Liberou.C007_Primeiro_Nome	|	Analista comercial
+T139_Id	|	Mail
+IFNULL(IF(T003_Status_Retorno_Email='RETORNAR',CONCAT('<font style="color: var(--BGVermelho)">',T003_Status_Retorno_Email,'</font>'),T003_Status_Retorno_Email), '<font style="color: var(--BGVermelho)">--</font>')	|	Agenda

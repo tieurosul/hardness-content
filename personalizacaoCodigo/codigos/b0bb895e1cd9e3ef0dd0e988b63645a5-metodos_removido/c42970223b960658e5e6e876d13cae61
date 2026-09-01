@@ -1,0 +1,23 @@
+a:5:{s:4:"nome";s:9:"apc teste";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"b0bb895e1cd9e3ef0dd0e988b63645a5";s:6:"codigo";s:1016:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+// $sqlD024 = mysql_query("SELECT D024_Id, 
+//                                        IFNULL(D024_Data_Cadastro, '0000-00-00') as D024_Data_Cadastro, 
+//                                        IFNULL(D024_Data_Ativo, '0000-00-00') as D024_Data_Ativo 
+//                                   FROM D024 
+//                                  WHERE D024_Flag_Ativo='S'
+//                                  LIMIT 9000");
+// $count = 0;
+// while($rowCache = mysql_fetch_array($sqlD024)){
+//     $cache[$count]['D024_Id']= $rowCache['D024_Id'];
+//     $cache[$count]['D024_Data_Cadastro']= $rowCache['D024_Data_Cadastro'];
+//     $cache[$count]['D024_Data_Ativo']= $rowCache['D024_Data_Ativo'];
+//     $count++;
+// }
+// apc_delete("cacheD024-teste-{$g['usuarioAtual']}");
+// $retorno = apc_store("cacheD024-teste-{$g['usuarioAtual']}", serialize($cache));
+
+// echo "RETORNO";
+// var_dump($retorno);
+
+// var_dump(apc_delete("cacheD024-teste-{$g['usuarioAtual']}"));";s:3:"md5";s:32:"e775301c10c1b0761c8cd36b60d2787c";}

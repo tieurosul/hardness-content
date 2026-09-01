@@ -1,0 +1,6 @@
+nome [Valor_sIPI_]
+valor [IF(IFNULL(T007_Valor_Total_IPI,0)>0,(IFNULL(T002_Valor_Total,0)-(IFNULL(T007_Valor_Total_IPI,0)/IFNULL(T002_Total_Parcelas,0))-(IFNULL(T007_Valor_ICMS_Substituicao_Retencao,0)/IFNULL(T002_Total_Parcelas,0))), IFNULL(T002_Valor_Total,0))]
+titulo [ Valor s/IPI]
+exibir [S]
+totalizador [soma]
+---

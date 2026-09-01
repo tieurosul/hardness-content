@@ -1,0 +1,13 @@
+D001_Codigo_Barras	|	EAN
+D001_Flag_Ativo	|	Ativo
+D049_Flag_Curva_ABC	|	ABC(V)
+D001_Flag_Pre_Cadastro	|	Pré
+D049_Flag_Curva_ABC_Qtd	|	ABC(Q)
+D049_Origem_Mercadoria	|	Origem
+D009_Quantidade_Estoque_Loja	|	Loja
+D009_Quantidade_Estoque_Fora	|	Fora
+D009_Quantidade_Estoque_Similar	|	Similar
+infoCustoVendaProduto	|	
+D049A_Data_Alteracao	|	Alteração
+D049_Data_Cadastro	|	Cadastro
+ifnull(D069_D070_Id,"_")	|	Tab

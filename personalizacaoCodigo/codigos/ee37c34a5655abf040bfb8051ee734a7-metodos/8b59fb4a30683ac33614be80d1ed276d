@@ -1,0 +1,37 @@
+a:5:{s:4:"nome";s:23:"crontab verificar email";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"ee37c34a5655abf040bfb8051ee734a7";s:6:"codigo";s:1726:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+$g['usuarioAtual'] = $array['todosCampos']['C007_Id'];
+$g['C007'] = $array['todosCampos'];
+$g['empresaAtual'] = 1;
+
+require_once('bibliotecas/classes/INDEX.php');
+$INDEX = new INDEX();
+$INDEX->carragaVARSGlobal();
+require_once('sistema/comunicacaoEmail.php');
+
+echo "\n\nEntrou Atualiza email usuario {$g['C007']['C007_Id']} - {$g['C007']['C007_Primeiro_Nome']}\n";
+
+// Se algum dos campos estiver vazio ou o usuário estiver inativo, não atualiza o email
+if ($g['C007']['C007_Ativo'] != 'S') {
+	echo "Usuario {$g['C007']['C007_Id']} inativo\n";
+
+} else if (empty($g['C007']['C007_Email']) ||
+		   empty($g['C007']['C007_Email_SMTP_Usuario']) ||
+		   empty($g['C007']['C007_Email_SMTP_Senha']) ||
+		   empty($g['C007']['C007_Email_POP_Servidor']) ||
+		   empty($g['C007']['C007_Email_SMTP_Servidor']) ||
+		   empty($g['C007']['C007_Email_SMTP_Autenticacao']) ||
+		   empty($g['C007']['C007_Email_SMTP_Seguranca']) ||
+		   $g['C007']['C007_Email_SMTP_Porta'] <= 0 ||
+		   $g['C007']['C007_Email_POP_Porta'] <= 0
+	) {
+	echo "Usuario {$g['C007']['C007_Id']} - sem C007_Email_POP_Servidor ou C007_Email_POP_Porta.\n";
+	return "Usuario {$g['C007']['C007_Id']} - {$g['C007']['C007_Primeiro_Nome']} não possui email configurado.";
+	
+} else {
+	$mail = new comunicacaoEmail($g['C007']['C007_Email_POP_Servidor'], $g['C007']['C007_Email_SMTP_Usuario'], $g['C007']['C007_Email_SMTP_Senha'], 'E', false, $g['C007']['C007_Email_POP_Porta']);
+	$mail->atualizarEmails();
+	echo "Atualizado email do usuario {$g['C007']['C007_Id']} - {$g['C007']['C007_Primeiro_Nome']}.\n";
+	return "Atualizado email do usuário {$g['C007']['C007_Id']} - {$g['C007']['C007_Primeiro_Nome']}.";
+}";s:3:"md5";s:32:"c174d4bf1b90fd96d5f92b300acf3106";}

@@ -1,0 +1,12 @@
+nome [Total_ME_]
+valor [T296_Valor_Total_Custo]
+titulo [Total ME]
+exibir [S]
+totalizador [soma]
+---
+nome [Quantidade_]
+valor [T296_Quantidade]
+titulo [ Quantidade]
+exibir [S]
+totalizador [soma]
+---

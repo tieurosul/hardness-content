@@ -1,0 +1,39 @@
+T004_Numero_Pedido_Compra	|	Num.OC
+D009_Quantidade_Estoque_Fora	|	Fora
+D009_Quantidade_Estoque_Similar	|	Similar
+D049_Flag_Tipo	|	TP
+T004_Flag_Origem_Produto	|	Orig
+D049_Modelo	|	Sub-item
+T004_Codigo_Substituto	|	Cód.Cli
+T004_Valor_Total_Preco	|	Total
+D009_Quantidade_OC	|	OC
+D005_Classificacao_Fiscal	|	NCM
+T004_Flag_Destino_Produto	|	Dest
+T004_Aliquota_ICMS	|	%ICM
+T004_Percentual_Reducao_ICMS	|	%Red
+(round(T004_Valor_ST,2)/(round(T004_Valor_Total_Preco,2)+round(T004_Valor_IPI,2)))*100	|	%ST
+T004_Aliquota_PIS	|	%PIS
+T004_Aliquota_COFINS	|	%COFINS
+T004_Aliquota_IRPJ	|	%IRPJ
+T004_Aliquota_CSLL	|	%CSLL
+T004_Valor_ICMS	|	ICMS R$
+T004_Valor_ST	|	ST R$
+T004_Valor_IPI	|	IPI R$
+T004_Valor_PIS	|	PIS R$
+T004_Valor_COFINS	|	COFINS R$
+T004_Valor_IRPJ	|	IRPJ R$
+T004_Valor_CSLL	|	CSLL R$
+T004_Flag_ST	|	ST
+T004_ICMS_Inter_Estadual	|	ICMS IE
+T004_ST_ICMS_Interno	|	ICMS Int
+T004_ST_VA	|	MVA
+T004_Percentual_Reducao_ICMS_ST	|	%Red Base
+T004_Valor_Base_ICMS	|	Base ICM
+T004_Valor_Base_ST	|	Base ST
+T004_Valor_Base_IPI	|	Base IPI
+T004_Valor_Base_PIS	|	Base PIS
+T004_Valor_Base_COFINS	|	Base COFINS
+T004_Valor_Base_IRPJ	|	Base IRPJ
+T004_Valor_Base_CSLL	|	Base CSLL
+T004_Item_Pedido_Compra	|	Item.OC
+T006_T005_Id	|	Ped

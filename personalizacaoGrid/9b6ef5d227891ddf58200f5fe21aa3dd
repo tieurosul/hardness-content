@@ -1,0 +1,10 @@
+colunaValor [T055_Valor_Custo_Final_Unitario]
+colunaTitulo [Custo unit R$]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+style [font-weight:bold;color:red;]
+---
+colunaValor [foto]
+colunaExibir [S]
+colunaTitulo [Foto]
+---

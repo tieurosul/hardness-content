@@ -1,0 +1,9 @@
+colunaValor [T006_Quantidade]
+colunaOrdem [12]
+---
+colunaValor [Pedido]
+colunaOrdem [11]
+---
+colunaValor [T006_Valor_Preco_Sem_Desconto_Unitario]
+colunaOrdem [14]
+---

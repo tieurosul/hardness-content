@@ -1,0 +1,33 @@
+campoCancelamento
+DividirPedidoCliente
+	T005_Flag_Marcado
+	T005_Data_Emissao
+	T005_T003_Id
+T005_Id
+	NF
+	D006_Codigo_CFOP
+	T005_D024_Id
+	substr(D024_Nome_Empresa,1,15)
+T005_Ordem_Compra
+T005_Data_Entrega
+	vendedor.C007_Primeiro_Nome
+Contato
+D018_UF
+T005_Valor_Total_Produtos_Sem_Desconto
+(T005_Valor_Desconto/T005_Valor_Total_Produtos_Sem_Desconto)*100
+T005_Valor_Desconto
+T005_Valor_Total
+T005_Percentual_Estoque_Disponivel
+T005_Prazos(T005_Id)
+Status2
+T005_Percentual_Comissao
+T005_Valor_Total_Comissao
+T005_D021_Id
+T005_Percentual_Comissao_Representante
+T005_Valor_Comissao_Representante
+externo.C007_Primeiro_Nome
+Supervisor
+T005_Observacao_Comercial
+T005_Flag_Alcada
+liberou.C007_Primeiro_Nome
+liberouOrcamento.C007_Primeiro_Nome

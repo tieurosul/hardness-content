@@ -1,0 +1,27 @@
+colunaValor [D001_Id]
+colunaTitulo [D001_Id]
+tipo [numero]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [D001_Codigo_Produto]
+---
+colunaValor [D001A_Id]
+colunaTitulo [D001A_Id]
+---
+colunaValor [D001_Flag_Tipo_Item]
+colunaTitulo [D001_Flag_Tipo_Item]
+---
+colunaValor [D187_Id]
+colunaTitulo [D187_Id]
+---
+colunaValor [D187_Codigo_Plano_Conta_Contabil]
+colunaTitulo [D187_Codigo_Plano_Conta_Contabil]
+---
+colunaValor [D001A_D187_Id]
+colunaTitulo [D001A_D187_Id]
+---
+colunaValor [if(D187_Id != D001A_D187_Id, 1, 0) as dif]
+colunaTitulo [Dif]
+exibir [S]
+tipo [numero]
+---

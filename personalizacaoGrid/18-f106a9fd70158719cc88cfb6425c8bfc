@@ -1,0 +1,9 @@
+---
+colunaValor [CampoCadastro]
+colunaTitulo []
+colunaTipo [livre]
+callback [editarHistorico]
+colunaAlinhar [center]
+style [width: 16px;]
+colunaExibirNivel [2]
+---

@@ -1,0 +1,3 @@
+D001_Flag_Pre_Cadastro	|	Pré
+D001_Flag_Ativo	|	Ativo
+SUBSTR(D001_Descricao_Produto,1,50)	|	Descrição português

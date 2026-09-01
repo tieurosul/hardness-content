@@ -1,0 +1,7 @@
+nome [TId_Count]
+valor [T030_Id]
+titulo [Registros]
+exibir [S]
+totalizador [count]
+callbackParameter [0]
+---

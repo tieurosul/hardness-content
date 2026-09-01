@@ -1,0 +1,1 @@
+a:6:{s:7:"T140_Id";s:2:"51";s:7:"produto";s:3:"181";s:18:"D024_Nome_Fantasia";s:2:"69";s:49:"IF(T140_Link != "", T140_Link, T140_Nome_Arquivo)";s:3:"258";s:18:"T140_Certificadora";s:3:"113";s:17:"T140_Data_Emissao";s:9:"59.181818";}

@@ -1,0 +1,15 @@
+D006_Codigo_CFOP	|	CFOP
+D082_Marca	|	Marca
+T008_Aliquota_PIS	|	% PIS
+T008_Peso_Total	|	Peso total
+T008_Peso_Unitario	|	Peso unit
+T075_Numero_DI	|	Número DI
+T008_Valor_ICMS_Substituicao_Retencao	|	ST R$
+T008_Valor_IPI	|	IPI R$
+T008_Valor_COFINS	|	COFINS R$
+T008_Valor_PIS	|	PIS R$
+T008_Valor_ICMS	|	ICMS R$
+T008_Aliquota_COFINS	|	% COFINS
+T008_Aliquota_IPI	|	% IPI
+T008_Aliquota_ICMS	|	% ICMS
+T008_Flag_Situacao_Tributaria	|	ST

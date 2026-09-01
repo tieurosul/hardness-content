@@ -1,0 +1,12 @@
+---
+colunaValor [T055_Valor_Total_Preco_Nota_Fiscal]
+colunaTitulo [Valor NFe R$]
+colunaAlinhar [right]
+colunaCasasDecimais [2]
+style [width:1%]
+---
+colunaValor [T055_Valor_Total_Despesas_Aduaneira]
+colunaTitulo [SISCOMEX R$]
+colunaCasasDecimais [4]
+colunaAlinhar [right]
+---

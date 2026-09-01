@@ -1,0 +1,14 @@
+a:5:{s:4:"nome";s:26:"atualizaca sugestao compra";s:9:"descricao";s:149:"alguns itens estavam ficando com o valor de sugestao de compra errado, verificamos mas nao identificamos oque era, criado esse processo para corrigir";s:8:"codigoId";s:32:"bcbb978185214783c6f74db0e8d757a2";s:6:"codigo";s:359:"<?php
+// $g, $array[var], executarCodigo(id, vars[])
+
+$g['empresaAtual'] = $array['todosCampos']['D009_C004_Id'];
+
+require_once('bibliotecas/classes/INDEX.php');
+$INDEX = new INDEX();
+
+$INDEX->carragaVARSGlobal();
+
+
+require_once('bibliotecas/classes/CAD002.php');
+$CAD002 = new CAD002();
+$CAD002->atualizarEstatisticasCompra($array['todosCampos']['D009_Id']);";s:3:"md5";s:32:"a759499b94d9bd864bdfcd74561d9858";}

@@ -1,0 +1,13 @@
+nome [Cdigo_Distinct]
+valor [T007_D024_Id]
+titulo [Clientes]
+exibir [S]
+totalizador [distinct]
+callbackParameter [0]
+---
+nome [Valor_total_comprabrlt_meses_]
+valor [SUM(T007_Valor_Total_Produtos)]
+titulo [R$ Total últ. 12 meses]
+exibir [S]
+totalizador [soma]
+---

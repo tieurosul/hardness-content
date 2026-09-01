@@ -1,0 +1,99 @@
+colunaValor [T002_Valor_Total]
+colunaTitulo [Total]
+colunaOrdem [22]
+---
+colunaValor [T002_Valor_Saldo]
+colunaTitulo [Saldo]
+colunaOrdem [24]
+---
+colunaValor [T002_D027_Id]
+colunaTitulo [Portador]
+colunaOrdem [26]
+---
+colunaValor [Valor_Juros]
+colunaOrdem [20]
+---
+colunaValor [Parcelas]
+colunaOrdem [10]
+---
+colunaValor [T002_Numero_Duplicata]
+colunaOrdem [9]
+---
+colunaValor [substr(D024_Nome_Empresa,1,40)]
+colunaOrdem [8]
+---
+colunaValor [T002_D024_Id]
+colunaOrdem [33]
+---
+colunaValor [D024_Cnpj]
+colunaOrdem [7]
+---
+colunaValor [T002_Data_Emissao]
+colunaOrdem [11]
+---
+colunaValor [Prazo]
+colunaOrdem [12]
+---
+colunaValor [T002_Data_Vencimento]
+colunaOrdem [13]
+---
+colunaValor [Atraso]
+colunaOrdem [14]
+---
+colunaValor [T002_Data_Recebimento]
+colunaOrdem [15]
+---
+colunaValor [T002_Data_Baixa]
+colunaOrdem [16]
+---
+colunaValor [T002_Valor_Duplicata]
+colunaOrdem [17]
+---
+colunaValor [T002_Valor_Juros]
+colunaOrdem [18]
+---
+colunaValor [T002_Valor_Desconto]
+colunaOrdem [19]
+---
+colunaValor [T002_Valor_Taxas]
+colunaOrdem [21]
+---
+colunaValor [T002_Valor_Recebido]
+colunaOrdem [23]
+---
+colunaValor [T002_Percentual_Comissao]
+colunaOrdem [25]
+---
+colunaValor [T002_Valor_Comissao]
+colunaOrdem [27]
+---
+colunaValor [T117_Nosso_Numero]
+colunaOrdem [28]
+---
+colunaValor [T002_Observacao]
+colunaOrdem [29]
+---
+colunaValor [C007_Nome]
+colunaOrdem [30]
+---
+colunaValor [T002_Data_Previsao_Recebimento]
+colunaOrdem [31]
+---
+colunaValor [T002_D014_Id]
+colunaOrdem [36]
+---
+colunaValor [IF(IFNULL(T007_Valor_Total_IPI,0)>0,(IFNULL(T002_Valor_Total,0)-(IFNULL(T007_Valor_Total_IPI,0)/IFNULL(T002_Total_Parcelas,0))-(IFNULL(T007_Valor_ICMS_Substituicao_Retencao,0)/IFNULL(T002_Total_Parcelas,0))), IFNULL(T002_Valor_Total,0))]
+colunaOrdem [32]
+---
+colunaValor [T002_D032_Id]
+colunaOrdem [34]
+---
+colunaValor [T002_Total_Parcelas]
+colunaOrdem [35]
+---
+colunaValor [T002_Flag_Baixar_Lote]
+colunaOrdem [4]
+---
+colunaValor [T002_Flag_Reparcelar]
+colunaOrdem [3]
+---

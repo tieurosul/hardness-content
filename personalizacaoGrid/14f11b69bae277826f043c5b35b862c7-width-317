@@ -1,0 +1,1 @@
+a:2:{s:64:"group_concat(distinct substr(Comprador.C007_Primeiro_Nome,1,10))";s:8:"78.77778";s:17:"D024_Nome_Empresa";s:9:"375.77778";}

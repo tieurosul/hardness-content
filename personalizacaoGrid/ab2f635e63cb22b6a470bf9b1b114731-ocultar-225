@@ -1,0 +1,6 @@
+T003_Valor_Pendente	|	Val. Pend.
+(T003_Valor_Desconto/T003_Valor_Total_Produtos_Sem_Desconto)*100	|	% Descto
+externo.C007_Primeiro_Nome	|	Externo
+T003_Flag_Alcada	|	Alcada
+IFNULL(IF(T003_Status_Retorno_Email='RETORNAR',CONCAT('<font style="color:red">',T003_Status_Retorno_Email,'</font>'),T003_Status_Retorno_Email), '<font style="color:red">--</font>')	|	Agenda
+T219_T218_Id	|	Cotação

@@ -1,0 +1,17 @@
+a:1:{i:0;a:13:{s:2:"id";s:13:"66f1c5497b390";s:6:"titulo";s:14:"atualiza custo";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:0;s:4:"lote";s:1:"1";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:939:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+
+    $T001_Id = $array['todosCampos']['T001_Id'];
+    $T008_Id = $array['todosCampos']['T008_Id'];
+    $T055_Valor_Custo_Final_Unitario = $array['todosCampos']['T055_Valor_Custo_Final_Unitario'];
+    log("tenho acesso T001_Id : ".$T001_Id);
+    log("tenho acesso T008_Id : ".$T008_Id);
+    mysqli_query("update T001 SET T001_Valor_Custo_Unitario = '{$T055_Valor_Custo_Final_Unitario}' WHERE T001_Id = '{$T001_Id}' AND T001_Valor_Custo_Unitario <= 0");
+    mysqli_query("update T008 SET T008_Valor_Custo_Unitario = '{$T055_Valor_Custo_Final_Unitario}' WHERE T008_Id = '{$T008_Id}' AND T008_Valor_Custo_Unitario <= 0 ");
+}";}}

@@ -1,0 +1,19 @@
+excluirLinha
+	T007_Data_Emissao
+T008_Descricao_Produto
+	T008_Quantidade
+	Custo
+	T008_Valor_Preco_Sem_Desconto_Unitario
+	T008_Valor_Total_Preco_Sem_Desconto
+	D037_Unidade
+	D024_Nome_Fantasia
+	T005_Id
+	T005_T003_Id
+	T007_Numero_Nota_Fiscal
+	D006_Codigo_CFOP
+	Danfe
+Vendedor.C007_Primeiro_Nome
+T008_Valor_COFINS
+T008_Peso_Unitario
+T008_Peso_Total
+T055_Valor_Preco_Unitario_Nota_Fiscal

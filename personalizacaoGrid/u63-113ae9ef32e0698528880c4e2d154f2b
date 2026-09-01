@@ -1,0 +1,14 @@
+colunaValor [D001_Id]
+colunaTitulo [D001_Id]
+colunaOrdem [1]
+colunaExibir [S]
+---
+colunaValor [D009_Id]
+colunaTitulo [D009_Id]
+colunaOrdem [2]
+colunaExibir [S]
+---
+colunaValor [D009A_Id]
+colunaTitulo [D009A_Id]
+chavePrimaria [1]
+---

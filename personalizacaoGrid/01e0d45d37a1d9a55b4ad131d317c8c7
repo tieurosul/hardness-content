@@ -1,0 +1,9 @@
+colunaValor [(T006_Valor_Total_Preco_Sem_Desconto) + (T006_Valor_IPI) + (T006_Valor_ICMS_Substituicao_Retencao)]
+colunaExibir [S]
+colunaTitulo [Valor Total com ST + IPI]
+---
+colunaValor [locacao]
+colunaTitulo [Lote]
+colunaTipo [livre]
+callback [personalizado-69bd9853055d5]
+---

@@ -1,0 +1,6 @@
+D009_Quantidade_Estoque_Similar	|	Similar
+D009_Quantidade_Estoque_Fora	|	Fora
+T004_Flag_Origem_Produto	|	Orig
+T004_Flag_Destino_Produto	|	Dest
+T004_Codigo_Substituto	|	Cód.Cli
+D049_Modelo	|	Sub-item

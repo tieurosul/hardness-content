@@ -1,0 +1,8 @@
+nome [NF]
+titulo [NFs]
+tipo [sql]
+valor [COUNT(T007_Id)]
+exibir [S]
+totalizador [soma]
+callbackParameter [0]
+---

@@ -1,0 +1,5 @@
+LEFT JOIN T005 ON T003_Id = T005_T003_Id
+WHERE
+    datediff(curdate(),T003_Data_Emissao)>'15' 
+    AND T003_Flag_Status_Orcamento = 'P'
+    AND (T005_Id <= 0 OR T005_Id IS NULL OR T005_Id = '')

@@ -1,0 +1,12 @@
+tab [geral]
+field [RMA002_P003_Id]
+name [RMA002_P003_Id]
+label [Tipo Falha]
+type [select]
+---
+tab [geral]
+field [RMA002_P004_Id]
+name [RMA002_P004_Id]
+label [Setor]
+type [select]
+---

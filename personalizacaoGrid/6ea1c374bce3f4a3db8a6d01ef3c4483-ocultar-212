@@ -1,0 +1,18 @@
+T004_Descricao_Produto	|	Produto
+infoCustoVendaProduto	|	
+excluirCheckbox	|	
+T004_Valor_ICMS_Credito	|	Valor ICM Créd
+T004_Aliquota_ICMS_Credito	|	%ICM Créd
+T004_Percentual_Comissao	|	%Comiss
+T004_Valor_Comissao	|	Comissão
+T004_Preco_Pauta_ST	|	Pauta
+T004_Percentual_Reducao_ICMS	|	%Red
+(round(T004_Valor_ST,2)/(round(T004_Valor_Total_Preco,2)+round(T004_Valor_IPI,2)))*100	|	%ST
+T004_Item_Pedido_Compra	|	Item.OC
+T004_Percentual_Partilha_ICMS_Destino 	|	%Difal Dest
+T004_Percentual_Partilha_ICMS_Destino 	|	%Difal Dest
+T004_Percentual_Partilha_ICMS_Destino 	|	%Difal Dest
+T004_Percentual_Partilha_ICMS_Destino 	|	%Difal Dest
+T004_Valor_Base_ST	|	Base ST
+T004_Valor_Preco_Tabela	|	Forn
+T006_T005_Id	|	Ped

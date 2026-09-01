@@ -1,0 +1,42 @@
+colunaValor [D001_Id]
+colunaExibir [S]
+---
+colunaValor [(select group_concat(D004_Local SEPARATOR ', ') from D004 left join T066 on T066_D004_Id=D004_Id where T066_D009_Id=D009_Id) as D004_Local]
+colunaTitulo[Local]
+colunaExibir [S]
+style [max-width:150px;white-space:normal;]
+---
+colunaValor[D001_C008_Id]
+colunaTitulo[Departamento]
+colunaEditar[S]
+colunaEditarTodos[S]
+callback[campoMostraDepartamento]
+callbackParameter[C008_Tipo]
+colunaExibir[S]
+---
+colunaValor [D001_Flag_Ecommerce]
+colunaTitulo [E-co]
+colunaExibir [S]
+---
+colunaValor [floor(D001_Codigo_Produto)]
+colunaTitulo [Cód.Numérico]
+colunaExibir [S]
+---
+colunaValor [D001_D060_Id]
+colunaTitulo [Setor]
+style [font-weight:normal]
+colunaEditar [1]
+colunaEditarTodos [1]
+colunaEditarNivel [2]
+colunaExibir [S]
+callback [campoMostraSetor]
+---
+colunaValor [D002_Descricao_Produto]
+colunaTitulo [Sub-Grupo]
+colunaEditar[S]
+colunaEditarTodos[S]
+callback[campoMostraSub-Grupo]
+callbackParameter[D002_Tipo]
+colunaAlinhar [left]
+colunaExibir [S]
+---

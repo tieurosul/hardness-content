@@ -1,0 +1,12 @@
+excluirLinha
+T075_Data_Emissao_DI
+T075_Numero_DI
+T007_Numero_Nota_Fiscal
+T075_D024_Id
+FORNECEDOR.D024_Nome_Empresa
+T055_Codigo_Produto
+T055_Descricao_Produto
+T055_Quantidade
+	T055_Valor_Custo_Final_Unitario
+	T055_Valor_Preco_Unitario_Nota_Fiscal
+T055_Valor_Custo_Unitario

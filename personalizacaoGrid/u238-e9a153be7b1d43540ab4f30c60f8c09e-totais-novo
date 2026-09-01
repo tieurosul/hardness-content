@@ -1,0 +1,8 @@
+nome [Valor_Tabela]
+titulo [Tabela R$]
+tipo [sql]
+valor [T005_Valor_Total_Produtos_Sem_Desconto]
+exibir [S]
+totalizador [soma]
+callbackParameter [2]
+---

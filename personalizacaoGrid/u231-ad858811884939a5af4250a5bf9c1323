@@ -1,0 +1,8 @@
+colunaValor [(SELECT GROUP_CONCAT(DISTINCT(IF(T225_T075_Id>0,"MP","PE"))) FROM T225 WHERE T225_T224_Id=T224_Id) as Estoque]
+colunaExibir [S]
+colunaTitulo [Estoque]
+---
+colunaValor [T224_Observacao_1]
+colunaExibir [S]
+colunaTitulo [Almoxarifado]
+---

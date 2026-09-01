@@ -1,0 +1,51 @@
+colunaValor [T075_Flag_MP]
+colunaTitulo [Vender?]
+callback [gCheckbox]
+colunaAlinhar [center]
+style [width:1%]
+colunaExibir [S]
+---
+colunaValor [T075_Cotacao_ME]
+colunaExibir [S]
+colunaTitulo [Cotacao ME]
+colunaCasasDecimais [4]
+---
+colunaValor [T075_Valor_Imposto_Importacao]
+colunaExibir [S]
+colunaTitulo [Valor R$ I.I]
+---
+colunaValor [T075_Valor_PIS]
+colunaExibir [S]
+colunaTitulo [Valor PIS]
+---
+colunaValor [T075_Valor_IPI]
+colunaExibir [S]
+colunaTitulo [Valor IPI]
+---
+colunaValor [T075_Valor_ICMS]
+colunaExibir [S]
+colunaTitulo [Valor ICMS]
+---
+colunaValor [T075_Valor_VMLE]
+colunaExibir [S]
+colunaTitulo [Valor VMLE]
+colunaOrdem [30]
+---
+colunaValor [T075_Valor_COFINS]
+colunaExibir [S]
+colunaTitulo [Valor COFINS]
+---
+colunaValor [T075_Valor_SISCOMEX]
+colunaExibir [S]
+colunaTitulo [Valor SISCOMEX]
+---
+colunaValor [T075_Valor_AFRMM]
+colunaExibir [S]
+colunaTitulo [Valor AFRMM]
+---
+colunaValor [T295_Data_Emissao]
+colunaTitulo [Emissão PO]
+callback [gCorrigeData]
+colunaAlinhar [center]
+style [width:1%]
+---

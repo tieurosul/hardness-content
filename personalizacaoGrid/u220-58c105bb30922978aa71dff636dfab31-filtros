@@ -1,0 +1,8 @@
+colunaValor [Produtos_Real]
+titulo [Produtos R$]
+exibir [S]
+---
+colunaValor [T075_Id]
+titulo [Id]
+exibir [S]
+---

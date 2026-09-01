@@ -1,0 +1,24 @@
+colunaValor [T140_D001_Id]
+colunaTitulo [T140_D001_Id]
+---
+colunaValor [T140_Data_Emissao]
+colunaTitulo [T140_Data_Emissao]
+---
+colunaValor [T140_Data_Validade]
+colunaTitulo [T140_Data_Validade]
+---
+colunaValor [T140_Tipo_Certificado]
+colunaTitulo [T140_Tipo_Certificado]
+---
+colunaValor [T140_Certificadora]
+colunaTitulo [T140_T140_Certificadora]
+---
+colunaValor [T140_Nome_Arquivo]
+colunaTitulo [T140_Nome_Arquivo]
+---
+colunaValor [T140_Link]
+colunaTitulo [T140_Link]
+---
+colunaValor [T140_Tipo_Documento]
+colunaTitulo [T140_Tipo_Documento]
+---

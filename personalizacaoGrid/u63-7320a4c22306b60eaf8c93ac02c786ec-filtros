@@ -1,0 +1,8 @@
+colunaValor [D009_Data_Ultima_Venda]
+titulo [D009_Data_Ultima_Venda]
+exibir [S]
+---
+colunaValor [D009_Data_Reprocessa_Historico]
+titulo [D009_Data_Reprocessa_Historico]
+exibir [S]
+---

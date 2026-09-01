@@ -1,0 +1,45 @@
+a:5:{s:4:"nome";s:19:"trigger insert t007";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"d7a2eacb0fd7484c5c6c9153b12972f2";s:6:"codigo";s:1458:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+$chaveValor = $array['chaveValor'];
+
+if (empty($chaveValor)) {
+    return "Não foi possivel encontra o chaveValor";
+}
+
+$nf = mysql_query("SELECT T007_Data_Emissao, 
+                        UFCliente.D018_Prazo_Transporte AS D024_PrazoTransporte,
+                        UFClienteEntrega.D018_Prazo_Transporte  AS D148_PrazoTransporte
+                    FROM T007
+                        LEFT JOIN D024 ON D024_Id=T007_D024_Id
+                        LEFT JOIN D018 AS UFCliente ON UFCliente.D018_Id=D024_D018_Id
+                        LEFT JOIN D148 ON D148_Id=T007_D148_Id_Entrega
+                        LEFT JOIN D018 AS UFClienteEntrega ON UFClienteEntrega.D018_Id=D148_D018_Id
+                    WHERE T007_Id='{$chaveValor}'");
+
+if (mysql_num_rows($nf) > 0) {
+    $nf = mysql_fetch_array($nf);
+
+    $data = new \DateTime($nf['T007_Data_Emissao']);
+    $dias = 0;
+
+    if(!empty($nf['D024_PrazoTransporte'])) {
+        $prazoTranporte = $nf['D024_PrazoTransporte'];
+    } else {
+        $prazoTranporte = $nf['D148_PrazoTransporte'];
+    }
+
+    while ($dias < $prazoTranporte) {
+        $data->modify('+1 day');
+        $diaSemana = $data->format('N'); // 6 = sábado, 7 = domingo
+        $dataStr = $data->format('Y-m-d');
+
+        if ($diaSemana < 6 && !gValidaFeriado($dataStr)) {
+            $dias++;
+        }
+    }
+
+    return $data->format('Y-m-d');
+} else {
+    return false;
+}";s:3:"md5";s:32:"28de266b60e323e4177655cc5e191d5c";}

@@ -1,0 +1,32 @@
+campoExclusao
+validaCampoExtratoCliente
+T002_Id
+T002_Numero_Documento
+T002_Flag_Enviar_Banco
+T002_Flag_Baixar_Lote
+T002_Flag_Reparcelar
+D024_Id
+substr(D024_Nome_Empresa,1,20)
+T002_Numero_Duplicata
+Parcelas
+T002_Data_Emissao
+Prazo
+T002_Data_Vencimento
+Atraso
+T002_Data_Recebimento
+T002_Data_Baixa
+T002_Valor_Duplicata
+T002_Valor_Juros
+T002_Valor_Desconto
+T002_Valor_Taxas
+T002_Valor_Total
+T002_Valor_Recebido
+T002_Valor_Saldo
+T002_Percentual_Comissao
+	T002_D032_Id
+	T002_D014_Id
+T002_Valor_Comissao
+T002_D027_Id
+T117_Nosso_Numero
+T002_Observacao
+C007_Nome

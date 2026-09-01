@@ -1,0 +1,10 @@
+	countLinha
+T007_Flag_Enviar
+T007_Data_Emissao
+	T007_Cliente_Razao
+PedNfe
+IF(T007_Flag_ACP=6,'NF-e', 'NFC-e')
+T007_Codigo_CFOP
+T007_Valor_Total
+txSefaz
+addColuna

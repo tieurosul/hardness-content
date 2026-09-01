@@ -1,0 +1,54 @@
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Descrição]
+colunaOrdem [3]
+---
+colunaValor [D037_Unidade]
+colunaTitulo [Un]
+colunaOrdem [4]
+---
+colunaValor [D004_Local]
+colunaTitulo [Locação]
+colunaOrdem [5]
+---
+colunaValor [T066_Quantidade_Balanco]
+colunaTitulo [Quantidade]
+colunaOrdem [7]
+---
+colunaValor [T066_Quantidade_Estoque]
+colunaTitulo [Estq.Loc]
+colunaOrdem [8]
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaTitulo [Estq.Fís]
+colunaOrdem [9]
+---
+colunaValor [Pedido]
+colunaOrdem [10]
+---
+colunaValor [D009_Quantidade_Estoque_Fora]
+colunaTitulo [Estq.Fora]
+colunaOrdem [11]
+---
+colunaValor [T066_Data_Balanco]
+colunaTitulo [Ult. Balanço]
+colunaOrdem [15]
+---
+colunaValor [substr(D082_Marca,1,15)]
+colunaTitulo [Marca]
+colunaOrdem [13]
+---
+colunaValor [D009_Quantidade_OC]
+colunaTitulo [Qte.OC]
+colunaOrdem [12]
+---
+colunaValor [D049_D024_Id]
+colunaTitulo [Fornecedor]
+colunaOrdem [14]
+---
+colunaValor [D009_Frequencia_Apos_Balanco]
+colunaTitulo [Freq. após balanço]
+colunaOrdem [16]
+---
+colunaValor [T066_Flag_Balanco]
+colunaOrdem [6]
+---

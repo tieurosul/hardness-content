@@ -1,0 +1,9 @@
+T014_Flag_Origem_Produto	|	O
+D049_Modelo	|	Sub-Item
+D001_Codigo_Barras	|	EAN
+IF(Informada.D006_Flag_Venda_Compra_Outros="C",T225_T224_Id,T007_Numero_Nota_Fiscal)	|	OC/NF
+D083_Codigo_Barras	|	EAN - Forn
+D001_Flag_Pre_Cadastro	|	Pré
+T014_Flag_Conferencia_Cega	|	Conf
+T014_Valor_Desconto_Unitario*-1	|	Desconto R$
+T013_Flag_Estoque_Finalizado	|	Travar estoque

@@ -1,0 +1,8 @@
+colunaValor [D024_Nome_Empresa]
+titulo [Cliente]
+exibir []
+---
+colunaValor [campoOpcoesAguardandoEntrega2]
+titulo [Pedido]
+exibir [S]
+---

@@ -1,0 +1,20 @@
+colunaValor [D009_Flag_Custo_Utilizado]
+colunaExibir [S]
+colunaTitulo [D009_Flag_Custo_Utilizado]
+---
+colunaValor [D009_Data_Ultima_Venda]
+colunaTitulo [Ult.Venda]
+callback [gCorrigeData]
+colunaAlinhar [center]
+colunaExibir [1]
+---
+colunaValor [D009_Data_Ultima_Saida]
+colunaTitulo [Ult.Saida]
+callback [gCorrigeData]
+colunaAlinhar [center]
+colunaExibir [1]
+---
+colunaValor [D009A_Flag_Atualizar_Estoque]
+colunaTitulo [Att. Estoque]
+colunaEditarTodos [S]
+---

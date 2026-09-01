@@ -1,0 +1,145 @@
+<?php
+namespace hardness;
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+error_log("vai executar o codigo");
+set_time_limit(0);
+
+/* $mes     = 12;
+$xLast12 = date('Y-m-d');
+$xLast12 = new DateTime($xLast12);
+$xLast12 -> modify('-'.$mes.' months');
+$xLast12 = $xLast12->format('Y-m-d'); */
+
+$xLast12 = date('Y-m-d', strtotime("-12 months"));
+
+//pega os valores dos parâmetros da curva
+if(!empty($g['C031']['curvaABCclientes'])){
+
+    $parametrosCurvaABC = explode(",", str_replace(" ", "", trim($g['C031']['curvaABCclientes'],",")));
+    //Calcula os percentuais da curva
+    $pCurvaA = ($parametrosCurvaABC[0]/100);
+    $pCurvaB = ($parametrosCurvaABC[1]/100);
+    $pCurvaC = ($parametrosCurvaABC[2]/100);
+
+}
+
+//mysqli_query("UPDATE D024 SET D024_Flag_Curva_ABC = 'D', D024_Flag_Curva_ABC_Qtd = 'D'");
+
+//$produtos = array();
+
+$T007=mysqli_query("SELECT T007_D024_Id,
+                           SUM(T007_Valor_Total_Produtos) AS Total
+                      FROM T007
+                 LEFT JOIN D006 on D006_Id=T007_D006_Id
+                 LEFT JOIN C007 on C007_Id=T007_C007_Id_Vendedor_Interno
+                     WHERE T007_Data_Emissao >= '{$xLast12}' 
+                       AND T007_Flag_Cancelada != 'S'
+                       AND D006_Flag_Venda_Compra_Outros = 'V'                        
+                  GROUP BY T007_D024_Id
+               ORDER BY SUM(T007_Valor_Total_Produtos) DESC");
+
+$erro=mysql_error();
+if (!empty($erro))
+{
+   return '1 - Houve um erro na busca dos documentos';
+}
+
+$T007Total=mysqli_query("SELECT SUM(T007_Valor_Total_Produtos) AS Total
+                           FROM T007
+                      LEFT JOIN D006 on D006_Id=T007_D006_Id
+                      LEFT JOIN C007 on C007_Id=T007_C007_Id_Vendedor_Interno
+                      LEFT JOIN T008 on T007_Id=T008_T007_Id
+                          WHERE T007_Data_Emissao >= '{$xLast12}' 
+                            AND T007_Flag_Cancelada!='S'
+                            AND D006_Flag_Venda_Compra_Outros='V'");
+
+$erro=mysql_error();
+if (!empty($erro))
+{
+   return '2 - Houve um erro na busca dos documentos';
+}
+
+$mT007Total = mysql_fetch_array($T007Total);
+
+$Curva_A = $mT007Total['Total'] * $pCurvaA;
+$Curva_B = $mT007Total['Total'] * $pCurvaB;
+$Curva_C = $mT007Total['Total'] * $pCurvaC;
+
+while ($mT007=mysql_fetch_array($T007)) {
+
+    if ($mT007Total['Total'] > $Curva_B){
+        $Curva = 'A';
+    } else if ($mT007Total['Total']>$Curva_C){
+        $Curva = 'B';
+    } else if ($mT007Total['Total']>0){
+        $Curva = 'C';
+    }else{
+        $Curva = 'D';
+    }
+   
+    $mT007Total['Total'] -= $mT007['Total'];
+
+/*     mysqli_query("UPDATE D024 SET D024_Flag_Curva_ABC='{$Curva}' 
+                            WHERE D024_Id='{$mT007['T007_D024_Id']}'"); */
+}
+
+//--------------------------------------------------------------------------------------------------------------
+//calcula o valor da curva ABC pela quantidade
+
+$T007Qtd=mysqli_query("SELECT T007_D024_Id,
+                              SUM(T008_Quantidade) AS QtdTotal
+                         FROM T007
+                    LEFT JOIN D006 on D006_Id=T007_D006_Id
+                    LEFT JOIN C007 on C007_Id=T007_C007_Id_Vendedor_Interno
+                    LEFT JOIN T008 on T008_T007_Id=T007_Id
+                        WHERE T007_Data_Emissao >= '{$xLast12}'
+                          AND T007_Flag_Cancelada != 'S'
+                          AND D006_Flag_Venda_Compra_Outros = 'V'                           
+                     GROUP BY T007_D024_Id
+                     ORDER BY sum(T008_Valor_Preco_Unitario*T008_Quantidade) DESC");
+
+$erro=mysql_error();
+if (!empty($erro)){
+   return '3 - Houve um erro na busca dos documentos';
+}
+
+$T007TotalQtd=mysqli_query("SELECT SUM(T008_Quantidade) AS QtdTotal
+                              FROM T007
+                         LEFT JOIN D006 ON D006_Id=T007_D006_Id
+                         LEFT JOIN C007 ON C007_Id=T007_C007_Id_Vendedor_Interno
+                         LEFT JOIN T008 ON T008_T007_Id=T007_Id
+                             WHERE T007_Data_Emissao >= '{$xLast12}'
+                               AND T007_Flag_Cancelada != 'S'
+                               AND D006_Flag_Venda_Compra_Outros='V'");
+
+$erro=mysql_error();
+if (!empty($erro)){
+   return '4 - Houve um erro na busca dos documentos';
+}
+
+$mT007TotalQtd = mysql_fetch_array($T007TotalQtd);
+
+$Curva_A = $mT007TotalQtd['QtdTotal'] * $pCurvaA;
+$Curva_B = $mT007TotalQtd['QtdTotal'] * $pCurvaB;
+$Curva_C = $mT007TotalQtd['QtdTotal'] * $pCurvaC;
+
+while ($mT007Qtd=mysql_fetch_array($T007Qtd)) {
+    
+    if ($mT007TotalQtd['QtdTotal']>$Curva_B){
+        $Curva='A';
+    } else if ($mT007TotalQtd['QtdTotal']>$Curva_C){
+        $Curva='B';
+    } else if ($mT007TotalQtd['QtdTotal']>0){
+        $Curva='C';
+    }else{
+        $Curva='D';
+    }
+   
+
+    $mT007TotalQtd['QtdTotal'] -= $mT007Qtd['QtdTotal'];
+
+/*     mysqli_query("UPDATE D024 SET D024_Flag_Curva_ABC_Qtd = '{$Curva}' 
+                            WHERE D024_Id = '{$mT007Qtd['T007_D024_Id']}'"); */
+}
+
+echo 'chegou ao fim';

@@ -1,0 +1,38 @@
+colunaValor [D024_Data_Ultima_Compra]
+titulo [Ult.Compra]
+exibir [S]
+tipo [data]
+---
+colunaValor [D024_Valor_Limite]
+titulo [Valor Limite]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D024_Observacao_Comercial]
+titulo [Obs. Comercial]
+exibir [S]
+---
+colunaValor [D024A_Instrucao_Entrega]
+titulo [D024A_Instrucao_Entrega]
+tipo [texto]
+---
+colunaValor [D024_Id_Matriz]
+titulo [D024_Id_Matriz]
+tipo [texto]
+---
+colunaValor [D024_Cnpj_Matriz]
+titulo [D024_Cnpj_Matriz]
+tipo [texto]
+---
+colunaValor [D024A_Id]
+titulo [D024A_Id]
+exibir [S]
+---
+colunaValor [D024_D046_Id]
+titulo [D024_D046_Id]
+exibir [S]
+---
+colunaValor [D024_C007_Vendedor_Interno]
+titulo [D024_C007_Vendedor_Interno]
+exibir [S]
+---

@@ -1,0 +1,15 @@
+colunaValor [T005_Id_Pedido_Externo]
+colunaTitulo [ID Ecommerce]
+colunaOrdem [19]
+---
+colunaValor [DividirPedidoCliente]
+colunaOrdem [19]
+---
+colunaValor [IF(DiasFaltantes_T005_Prazo_Entrega = 0 AND T005_Flag_Status = 5, 'OK', DiasFaltantes_T005_Prazo_Entrega)]
+colunaTitulo [Dias faltantes]
+colunaOrdem [19]
+---
+colunaValor [D024_Nome_Fantasia]
+colunaTitulo [Nome Fantasia]
+colunaOrdem [9]
+---

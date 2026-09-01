@@ -1,0 +1,15 @@
+colunaValor [T001_Data_Hora_Insercao]
+colunaTitulo [Data/hora Insert]
+---
+colunaValor [T001A_Id]
+colunaTitulo [T001A_Id]
+---
+colunaValor [T001_Id]
+colunaTitulo [T001_Id]
+colunaExibir [S]
+---
+colunaValor [T001_Flag_Operacao]
+colunaTitulo [Operacao]
+colunaAlinhar [center]
+style [background: var(--celula-verde);]
+---

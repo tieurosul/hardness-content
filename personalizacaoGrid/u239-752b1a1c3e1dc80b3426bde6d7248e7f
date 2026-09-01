@@ -1,0 +1,12 @@
+colunaValor [T030_Quantidade]
+colunaTitulo [T030_Quantidade]
+colunaCasasDecimais [2]
+---
+colunaValor [T030_Valor_Custo_Unitario]
+colunaTitulo [T030_Valor_Custo_Unitario]
+colunaCasasDecimais [2]
+---
+colunaValor [T030_Valor_Custo_Unitario_Origem]
+colunaTitulo [T030_Valor_Custo_Unitario_Origem]
+colunaCasasDecimais [2]
+---

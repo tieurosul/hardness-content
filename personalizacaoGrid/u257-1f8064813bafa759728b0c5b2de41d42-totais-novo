@@ -1,0 +1,28 @@
+nome [Data_Entrega_Count]
+valor [T007_Data_Entrega]
+titulo [Registros]
+exibir []
+totalizador [count]
+callbackParameter [0]
+---
+nome [Prazo_entrega_Distinct]
+valor [T005_Data_Entrega]
+titulo [Qtd Prazo entrega]
+exibir [S]
+totalizador [count]
+callbackParameter [0]
+tipo [sql]
+---
+nome [Data_Entrega_Media]
+valor [T007_Data_Entrega]
+titulo [Média Data Entrega]
+exibir [S]
+totalizador [media]
+---
+nome [Data_Entrega_Distinct]
+valor [T007_Data_Entrega]
+titulo [Qtd Data Entrega]
+exibir [S]
+totalizador [distinct]
+callbackParameter [0]
+---

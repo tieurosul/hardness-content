@@ -1,0 +1,11 @@
+colunaValor [T071_T066_Id]
+colunaTitulo [Lote]
+callback [T071_T066_Id_Local]
+colunaAlinhar [center]
+---
+colunaValor [T066A_Numero_Lote]
+colunaExibir []
+---
+colunaValor [T066A_Data_Validade]
+colunaExibir []
+---

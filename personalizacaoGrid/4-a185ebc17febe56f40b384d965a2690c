@@ -1,0 +1,8 @@
+---
+colunaValor [T004_Valor_Custo_Unitario]
+colunaTitulo [Custo]
+colunaAlinhar [right]
+colunaCasasDecimais [4]
+style [width:1%]
+colunaExibir []
+---

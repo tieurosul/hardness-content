@@ -1,0 +1,11 @@
+a:2:{i:0;a:13:{s:2:"id";s:13:"69668b4380647";s:6:"titulo";s:7:"Incluir";s:4:"tipo";s:6:"janela";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:17:"Incluir Documento";s:13:"janelaTamanho";s:9:"[400,230]";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:0;s:4:"lote";s:0:"";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:9:"janelaUrl";s:62:"/sistema/personalizacao/form/e6b42a80c690bb41c46b6b165acf2857/";}i:1;a:13:{s:2:"id";s:13:"69668c6575d76";s:6:"titulo";s:17:"Imprimir Marcados";s:4:"tipo";s:8:"codigojs";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:0;s:4:"lote";s:0:"";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:463:"<?php
+namespace hardness;
+
+function callback($array){
+    // Retornar código JS que será executado ao clicar no botão
+    return <<<EOT
+        // Exemplo: abrirJanela
+        // abrirJanela(data, '{$g['divIdRoot']}', '{$g['divId']}', unique(), '', 'Título janela', 'URL', '&teste=1', [980,550]);
+        nova_janela('/sistema/personalizacao/outro/8e23d4802a10fc7498ebf4b94fdb215f/?ajax=true',0,0,750,500,'yes','no','no','no','yes','no','Certificado');
+EOT;
+}";}}

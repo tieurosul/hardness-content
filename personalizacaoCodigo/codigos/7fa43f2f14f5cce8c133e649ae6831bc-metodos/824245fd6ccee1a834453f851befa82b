@@ -1,0 +1,42 @@
+a:5:{s:4:"nome";s:22:"documentos por produto";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"7fa43f2f14f5cce8c133e649ae6831bc";s:6:"codigo";s:1752:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+$sql = "SELECT
+            D0011.D001_Id,
+            D0012.D001_Id,
+            IFNULL(D0012.D001_Codigo_Produto, D0011.D001_Codigo_Produto) AS 'codigo_produto',
+            IFNULL(D0012.D001_Descricao_Produto, D0011.D001_Descricao_Produto) AS 'descricao_produto',
+            T140_Tipo_Certificado AS 'tipo_certificado',
+            T140_Certificadora AS 'certificadora',
+            IF(T140_Data_Emissao = '0000-00-00' OR T140_Data_Emissao IS NULL,'',T140_Data_Emissao) AS 'emissao_documento',
+            IF(T140_Data_Validade = '0000-00-00' OR T140_Data_Validade IS NULL,'',T140_Data_Validade) AS 'validade_documento',
+            D024_Nome_Fantasia AS 'fornecedor',
+            IF(T140_Link != '', T140_Link, T140_Nome_Arquivo) AS 'arquivo',
+            T140_Id
+        FROM T140
+            LEFT JOIN D024 ON D024_Id = T140_D024_Id
+            LEFT JOIN T303 ON T140_Id = T303_T140_Id
+            LEFT JOIN D001 AS D0011 ON D0011.D001_Id = T303_D001_Id
+            LEFT JOIN D001 AS D0012 ON D0012.D001_Id = T140_D001_Id
+        WHERE
+            #(T140_Data_Validade >= '2012-01-01 00:00:00' AND T140_Data_Validade <= '2050-12-31 23:59:59')
+            (D0011.D001_Id > 0 OR D0012.D001_Id > 0)
+        GROUP BY
+            T140_Id
+        ORDER BY
+            (SELECT COUNT(*) FROM T303 WHERE T303_T140_Id = T140_Id) DESC";
+
+$resultado = mysql_query($sql);
+if($erro = mysql_error()){
+    return $erro;
+}
+
+$linhas = array();
+
+while ($linha = mysql_fetch_assoc($resultado)) {
+    $linha['link_arquivo'] = "http://eurosul.hardness.com.br//hardness3/dados_usuarios/e211_novo/certificados/{$linha['T140_Id']}.pdf";
+    $linhas[] = $linha;
+}
+
+$json = json_encode($linhas);
+return $json;";s:3:"md5";s:32:"37dc605c07d9524e9dd57e2c1ee5ff0f";}

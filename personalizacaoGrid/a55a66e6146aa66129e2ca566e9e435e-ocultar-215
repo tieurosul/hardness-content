@@ -1,0 +1,4 @@
+D049_Modelo	|	Sub-item
+D001_Codigo_Barras	|	EAN
+D009_Quantidade_Estoque_Loja	|	Estq.Loja
+(D009_Quantidade_Estoque/$estoque)*100	|	%Fis

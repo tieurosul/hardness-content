@@ -1,0 +1,15 @@
+<?php
+/**
+* camposValorPadrao
+* 
+* Defina valores padrão para campos no formulário de inclusão.
+*/
+
+// Criar/modificar valor padrão: 
+//$conf['camposValorPadrao']['T003_Validade_Proposta'] = '30 DIAS OU CONFORME DISPONIBILIDADE EM ESTOQUE';
+
+// Modificar valor padrão de acordo com o chamado 39315:
+$conf['camposValorPadrao']['T003_Validade_Proposta'] = '15 DIAS OU CONFORME DISPONIBILIDADE EM ESTOQUE';
+
+// Remover valor padrão:
+//unset($conf['camposValorPadrao']['T003_Validade_Proposta']);

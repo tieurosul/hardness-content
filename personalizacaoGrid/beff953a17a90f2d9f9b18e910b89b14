@@ -1,0 +1,11 @@
+colunaValor [T075_Numero_DI]
+colunaTitulo [Número DI]
+style [font-weight:bold;width:1%]
+---
+colunaValor [T001_Flag_Operacao]
+colunaExibirNivel [1]
+---
+colunaValor [D009_Id]
+colunaTitulo [D009_Id]
+colunaExibir [S]
+---

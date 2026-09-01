@@ -1,0 +1,33 @@
+colunaValor [D006_Id]
+colunaTitulo [ID CFOP]
+style [background:#FCDAC2;font-size:12px]
+---
+colunaValor [T008_Valor_Preco_Sem_Desconto_Unitario]
+colunaTitulo [Preço]
+colunaCasasDecimais [6]
+colunaAlinhar [right]
+colunaEditar [1]
+style [font-weight:bold;background:#B6F9B1]
+colunaEditarJSCallback [colunaEditarCallbackJS_T008_Percentual_Desconto]
+---
+colunaValor [T008_Valor_FCP]
+colunaTitulo [FCP R$]
+colunaCasasDecimais [4]
+colunaAlinhar [right]
+---
+colunaValor [D001_D003_Id]
+colunaTitulo [Grupo]
+style [font-weight:normal]
+colunaExibir [S]
+---
+colunaValor [(T008_Valor_Total_Preco_Sem_Desconto) + (T008_Valor_IPI) + (T008_Valor_ICMS_Substituicao_Retencao)]
+colunaExibir [S]
+colunaTitulo [Total com impostos ST + IPI]
+colunaOrdem [13]
+---
+colunaValor [T008_Data_Desembaraco]
+colunaExibir [S]
+colunaTitulo [T008_Data_Desembaraco]
+callback [gCorrigeData]
+colunaEditarTodos [S]
+---

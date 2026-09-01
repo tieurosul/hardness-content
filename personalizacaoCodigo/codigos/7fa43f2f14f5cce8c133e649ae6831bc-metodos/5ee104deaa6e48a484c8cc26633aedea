@@ -1,0 +1,100 @@
+a:5:{s:4:"nome";s:25:"nova notas saida produtos";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"7fa43f2f14f5cce8c133e649ae6831bc";s:6:"codigo";s:3691:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+//
+// Executado via: /api/rel/get/AppApi?API_AUTH=...&codigoApp=<hash>
+//                &DATAINICIAL=2026-02-19&DATAFINAL=2027-02-20
+// Itens (produtos) das NFs de saida, com lote interno e locacao de estoque.
+
+$resposta = array('code' => true, 'data' => array());
+
+$filtroTermo = array();
+$filtroTermo[] = "T007_Flag_Entrada_Saida = 'S'";
+$filtroTermo[] = "T007_Flag_Cancelada != 'S'";
+
+if (!empty($_GET['DATAINICIAL'])) {
+    $filtroTermo[] = "T007_Data_Emissao >= '" . mysql_real_escape_string($_GET['DATAINICIAL']) . "'";
+}
+if (!empty($_GET['DATAFINAL'])) {
+    $filtroTermo[] = "T007_Data_Emissao <= '" . mysql_real_escape_string($_GET['DATAFINAL']) . "'";
+}
+if (!empty($_GET['T007_Id'])) {
+    $filtroTermo[] = "T008_T007_Id = '" . mysql_real_escape_string($_GET['T007_Id']) . "'";
+}
+if (!empty($_GET['D001_Id'])) {
+    $filtroTermo[] = "D001_Id = '" . mysql_real_escape_string($_GET['D001_Id']) . "'";
+}
+
+$where  = ' WHERE ' . implode(' AND ', $filtroTermo);
+$limite = !empty($_GET['LIMITE']) ? (int) $_GET['LIMITE'] : 45000;
+
+$sql = "
+    SELECT
+        T008_Id,
+        T008_T007_Id,
+        T008_T006_Id,
+        T008_Quantidade,
+        T008_Valor_Preco_Unitario,
+        T008_Percentual_Margem,
+        T008_Valor_Total_Preco,
+        T008_IPV,
+
+        IF(T007_Data_Emissao = '0000-00-00', '', T007_Data_Emissao) AS T007_Data_Emissao,
+
+        D001_Id,
+        D006_Id,
+        D006_Flag_Venda_Compra_Outros,
+
+        T001_Id,
+        T001A_Numero_Lote,
+
+        T066_Id,
+        D004_Local
+    FROM T008
+    LEFT JOIN T007  ON T007_Id  = T008_T007_Id
+    LEFT JOIN D009  ON D009_Id  = T008_D009_Id
+    LEFT JOIN D049  ON D049_Id  = D009_D049_Id
+    LEFT JOIN D001  ON D001_Id  = D049_D001_Id
+    LEFT JOIN D006  ON D006_Id  = T008_D006_Id
+    LEFT JOIN T001  ON T001_T008_Id = T008_Id AND T001_Flag_Operacao != 'C'
+    LEFT JOIN T001A ON T001A_T001_Id = T001_Id
+    LEFT JOIN T066  ON T066_Id = T001_T066_Id
+    LEFT JOIN D004  ON D004_Id = T001_D004_Id
+    {$where}
+    ORDER BY T008_T007_Id, T008_Id
+    LIMIT {$limite}
+";
+
+$result = mysql_query($sql);
+
+if ($result === false) {
+    $resposta['code']  = false;
+    $resposta['error'] = 'Erro na consulta: ' . mysql_error();
+    return json_encode($resposta, JSON_UNESCAPED_UNICODE);
+}
+
+while ($row = mysql_fetch_assoc($result)) {
+    $resposta['data'][] = array(
+        'id_item_nf_saida'           => (int)    $row['T008_Id'],
+        'id_nf_saida'                => (int)    $row['T008_T007_Id'],
+        'id_item_pedido'             => (int)    $row['T008_T006_Id'],
+        'data_emissao_nf_saida'      => (string) $row['T007_Data_Emissao'],
+
+        'id_produto'                 => (int)    $row['D001_Id'],
+        'quantidade_nf_saida'        => (float)  $row['T008_Quantidade'],
+        'valor_unitario_nf_saida'    => (float)  $row['T008_Valor_Preco_Unitario'],
+        'percentual_margem_nf_saida' => (float)  $row['T008_Percentual_Margem'],
+        'valor_total_nf_saida'       => (float)  $row['T008_Valor_Total_Preco'],
+        'ipv_produto'                => (float)  $row['T008_IPV'],
+
+        'tipo_cfop'                  => (string) $row['D006_Flag_Venda_Compra_Outros'],
+        'id_cfop'                    => (int)    $row['D006_Id'],
+
+        'id_movimentacao_estoque'    => $row['T001_Id'] === null ? null : (int) $row['T001_Id'],
+        'numero_lote'                => (string) $row['T001A_Numero_Lote'],
+
+        'id_locacao'                 => $row['T066_Id'] === null ? null : (int) $row['T066_Id'],
+        'local_estoque'              => (string) $row['D004_Local'],
+    );
+}
+
+return json_encode($resposta, JSON_UNESCAPED_UNICODE);";s:3:"md5";s:32:"6c3b23b717ba57f2c467344c2938aa1c";}

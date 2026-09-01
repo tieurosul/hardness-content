@@ -1,0 +1,15 @@
+colunaValor [T014_Descricao_Produto]
+colunaOrdem [3]
+---
+colunaValor [T014_T066_Id]
+colunaOrdem [4]
+---
+colunaValor [Etiqueta]
+colunaOrdem [2]
+---
+colunaValor [T014_Quantidade]
+colunaOrdem [5]
+---
+colunaValor [D001_Codigo_Produto]
+colunaOrdem [1]
+---

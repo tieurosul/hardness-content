@@ -1,0 +1,14 @@
+colunaValor [D046_Nome]
+colunaTitulo [Grupo]
+colunaExibir [s]'
+colunaOrdem [3]
+---
+colunaValor [D024_Flag_Lista_Preco]
+colunaTitulo [Lista Preço]
+callback [mostrarListaPreco]
+colunaExibir [S]
+---
+colunaValor [D024_CNPJ_Matriz]
+colunaTitulo [CNPJ Matriz]
+colunaExibir [S]
+---

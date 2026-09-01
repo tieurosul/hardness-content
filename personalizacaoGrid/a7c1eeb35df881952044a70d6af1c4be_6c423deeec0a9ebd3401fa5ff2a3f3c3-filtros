@@ -1,0 +1,8 @@
+colunaValor [D001A_Codigo_IMPA]
+titulo [Cód.Impa]
+tipo [texto]
+---
+colunaValor [D001_Observacao_Compra]
+titulo [Obs.Venda]
+tipo [texto]
+---

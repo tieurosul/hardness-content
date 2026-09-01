@@ -1,0 +1,18 @@
+colunaValor [RMA001_Data_Conclusao]
+colunaOrdem [4]
+---
+colunaValor [C004_Nome_Empresa]
+colunaOrdem [17]
+---
+colunaValor [(SELECT GROUP_CONCAT(DISTINCT D197_Motivo, "") FROM RMA002 LEFT JOIN D197 ON D197_Id = RMA002_D197_Id WHERE RMA002_RMA001_Id = RMA001_Id)]
+colunaOrdem [11]
+---
+colunaValor [D024_Nome_Empresa]
+colunaOrdem [5]
+---
+colunaValor [C007criador.C007_Login]
+colunaOrdem [16]
+---
+colunaValor [SUM(RMA002_Quantidade*IF(RMA001_Tipo_Documento = "T007", T008_Valor_Preco_Sem_Desconto_Unitario, T006_Valor_Preco_Unitario))]
+colunaOrdem [9]
+---

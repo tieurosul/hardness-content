@@ -1,0 +1,20 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['D006_Flag_Estoque']
+    // $array['totais']['Nome_Total']
+    switch($array['campoAtual']) {
+        case 'N':
+            return "Não altera estoque";
+        break;
+        case 'D':
+            return "Credita";
+        break;
+        case 'C':
+            return "Debita";
+        break;
+    }
+}

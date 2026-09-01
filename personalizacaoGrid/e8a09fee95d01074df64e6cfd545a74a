@@ -1,0 +1,6 @@
+colunaValor [T103_Valor_Recebido_]
+colunaTitulo [Valor Recebido]
+callback [baixarTitulosValorRecebido]
+colunaTipo [livre]
+colunaExibir [S]
+---

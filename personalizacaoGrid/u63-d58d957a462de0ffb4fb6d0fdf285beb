@@ -1,0 +1,12 @@
+colunaValor [T014_Situacao_Tributaria_IPI]
+colunaExibir [S]
+colunaTitulo [CST IPI]
+---
+colunaValor [T014_Flag_Situacao_Tributaria]
+colunaExibir [S]
+colunaTitulo [T014_Flag_Situacao_Tributaria]
+---
+colunaValor [T014_Id]
+colunaExibir [S]
+colunaTitulo [T014_Id]
+---

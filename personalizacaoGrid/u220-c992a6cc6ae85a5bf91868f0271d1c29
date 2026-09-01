@@ -1,0 +1,20 @@
+colunaValor [D069_IPV]
+colunaTitulo [IPV]
+colunaCasasDecimais [4]
+colunaAlinhar [right]
+style [background:#A1FCA9]
+colunaExibir [S]
+colunaEditar[S]
+---
+colunaValor [D069_Valor_Preco_Venda]
+colunaTitulo [Preço venda]
+colunaCasasDecimais [4]
+colunaAlinhar [right]
+colunaExibir [S]
+colunaEditar[S]
+style [background:#A1FCA9;font-weight:bold]
+---
+colunaValor [D069_Descricao_Produto]
+colunaTitulo [Descrição]
+colunaExibir [S]
+---

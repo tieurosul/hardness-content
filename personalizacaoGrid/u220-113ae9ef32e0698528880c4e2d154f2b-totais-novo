@@ -1,0 +1,12 @@
+nome [Lquido_]
+valor [Pedido]
+titulo [Líquido]
+exibir [S]
+totalizador [soma]
+---
+nome [Fsico_]
+valor [D009_Quantidade_Estoque]
+titulo [ Físico]
+exibir [S]
+totalizador [soma]
+---

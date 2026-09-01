@@ -1,0 +1,28 @@
+a:11:{s:4:"nome";s:32:"verifica preço 3 e 4 divergente";s:6:"modulo";s:0:"";s:5:"opcao";s:0:"";s:6:"estilo";s:6:"normal";s:3:"md5";s:32:"4dfd4a188a1e4ff2da4c4879368f450a";s:4:"from";s:4:"D009";s:5:"extra";s:350:"LEFT JOIN D049 ON D049_Id=D009_D049_Id 
+    LEFT JOIN D001 ON D001_Id=D049_D001_Id
+WHERE 
+    D009_Preco_1 > 0
+    AND ((D009_Preco_3 != ROUND((D009_Preco_1*D009_IPT_3),10) AND D009_IPT_3 > 0)
+    OR (D009_Preco_4 != ROUND((D009_Preco_1*D009_IPT_4),10) AND D009_IPT_4 > 0))
+    AND (D001_Flag_Ativo != 'N' OR D001_Flag_Ativo IS NULL)
+GROUP BY D009_Id";s:4:"grid";a:11:{i:0;a:2:{s:11:"colunaValor";s:7:"D009_Id";s:12:"colunaTitulo";s:7:"D009_Id";}i:1;a:2:{s:11:"colunaValor";s:19:"D001_Codigo_Produto";s:12:"colunaTitulo";s:19:"D001_Codigo_Produto";}i:2;a:2:{s:11:"colunaValor";s:22:"D001_Descricao_Produto";s:12:"colunaTitulo";s:22:"D001_Descricao_Produto";}i:3;a:2:{s:11:"colunaValor";s:12:"D009_C004_Id";s:12:"colunaTitulo";s:12:"D009_C004_Id";}i:4;a:2:{s:11:"colunaValor";s:23:"D009_Valor_Preco_Tabela";s:12:"colunaTitulo";s:23:"D009_Valor_Preco_Tabela";}i:5;a:2:{s:11:"colunaValor";s:31:"D009_Valor_Custo_Medio_Unitario";s:12:"colunaTitulo";s:31:"D009_Valor_Custo_Medio_Unitario";}i:6;a:2:{s:11:"colunaValor";s:30:"D009_Valor_Custo_Ultima_Compra";s:12:"colunaTitulo";s:30:"D009_Valor_Custo_Ultima_Compra";}i:7;a:2:{s:11:"colunaValor";s:23:"D009_Valor_Custo_Tabela";s:12:"colunaTitulo";s:23:"D009_Valor_Custo_Tabela";}i:8;a:2:{s:11:"colunaValor";s:25:"D009_Valor_Custo_Unitario";s:12:"colunaTitulo";s:25:"D009_Valor_Custo_Unitario";}i:9;a:2:{s:11:"colunaValor";s:23:"D009_Quantidade_Estoque";s:12:"colunaTitulo";s:23:"D009_Quantidade_Estoque";}i:10;a:2:{s:11:"colunaValor";s:30:"D009_Data_Reprocessa_Historico";s:12:"colunaTitulo";s:30:"D009_Data_Reprocessa_Historico";}}s:3:"sql";s:715:"SELECT /*+max_execution_time(30000)*/ 
+    D009_Id,
+    D001_Codigo_Produto,
+    D001_Descricao_Produto,
+    D009_C004_Id,
+    D009_Valor_Preco_Tabela,
+    D009_Valor_Custo_Medio_Unitario,
+    D009_Valor_Custo_Ultima_Compra, 
+    D009_Valor_Custo_Tabela,
+    D009_Valor_Custo_Unitario,
+    D009_Quantidade_Estoque,
+    D009_Data_Reprocessa_Historico
+FROM D009 
+    LEFT JOIN D049 ON D049_Id=D009_D049_Id 
+    LEFT JOIN D001 ON D001_Id=D049_D001_Id
+WHERE 
+    D009_Preco_1 > 0
+    AND ((D009_Preco_3 != ROUND((D009_Preco_1*D009_IPT_3),10) AND D009_IPT_3 > 0)
+    OR (D009_Preco_4 != ROUND((D009_Preco_1*D009_IPT_4),10) AND D009_IPT_4 > 0))
+    AND (D001_Flag_Ativo != 'N' OR D001_Flag_Ativo IS NULL)
+GROUP BY D009_Id";s:10:"clickhouse";b:0;s:12:"criadoViaSQL";b:1;}

@@ -1,0 +1,12 @@
+colunaValor [group_concat(distinct T075_Id SEPARATOR '|')]
+titulo [DI]
+exibir [S]
+---
+colunaValor [T295_Nome_Status]
+titulo [Status]
+exibir [S]
+---
+colunaValor [T295_Flag_Transporte_DI]
+titulo [Forma transporte]
+exibir [S]
+---

@@ -1,0 +1,16 @@
+colunaValor [T005A_Id]
+colunaTitulo [T005A_Id]
+chavePrimaria [1]
+colunaExibir []
+style [width:1%;]
+---
+colunaValor [maiorPrevisao]
+colunaExibir [S]
+---
+colunaValor [Liberou_Credito.C007_Primeiro_Nome as Nome_Liberou]
+colunaExibir [S]
+colunaTitulo [Liberou]
+---
+colunaValor [T005_Id_Pedido_Externo]
+colunaExibir [S]
+---

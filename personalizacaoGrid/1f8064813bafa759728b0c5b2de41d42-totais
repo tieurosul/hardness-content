@@ -1,0 +1,31 @@
+<?
+namespace hardness;
+
+ $valorTotal = $g['sqlAuto']->pegarSqlCampo("count(*)", $from, $extra);
+ $valorTotal1 = gCorrigeNumero($g['sqlAuto']->pegarSqlCampo("sum(T007_Valor_Total_Produtos)", $from, $extra));
+ $valorTotal2 = gCorrigeNumero($g['sqlAuto']->pegarSqlCampo("sum(T007_Valor_Total) Total", $from, $extra));
+ $valorTotal3 = gCorrigeNumero($g['sqlAuto']->pegarSqlCampo("sum(T007_Valor_Total_Comissao) Comissao", $from, $extra));
+ $valorIPI = gCorrigeNumero($g['sqlAuto']->pegarSqlCampo("sum(T007_Valor_Total_IPI)", $from, $extra));
+ $valorICM = gCorrigeNumero($g['sqlAuto']->pegarSqlCampo("sum(T007_Valor_Total_ICMS)", $from, $extra));
+ $valorST = gCorrigeNumero($g['sqlAuto']->pegarSqlCampo("sum(T007_Valor_ICMS_Substituicao_Retencao)", $from, $extra));
+ $valorDesc = gCorrigeNumero($g['sqlAuto']->pegarSqlCampo("sum(T007_Valor_Desconto)", $from, $extra));
+ $valorFrete = gCorrigeNumero($g['sqlAuto']->pegarSqlCampo("sum(T007_Valor_Frete)", $from, $extra));
+ $valorDesp = gCorrigeNumero($g['sqlAuto']->pegarSqlCampo("sum(T007_Valor_Despesas_Acessorias)", $from, $extra));
+			
+ echo $totais = <<<EOT
+				<div class="buttonsBottomTop">
+					<span class="item" style="text-align:right">Notas Emitidas..<br><input type="text" value="{$valorTotal}" class="whiteBg" id="" size="11" readonly></span>
+					<span class="item" style="text-align:right">Valor Produtos<br><input type="text" value="{$valorTotal1}" class="whiteBg" id="" size="11" readonly></span>
+					<span class="item" style="text-align:right">Valor IPI<br><input type="text" value="{$valorIPI}" class="whiteBg" id="" size="11" readonly></span>
+					<span class="item" style="text-align:right">Valor ICMS<br><input type="text" value="{$valorICM}" class="whiteBg" id="" size="11" readonly></span>
+					<span class="item" style="text-align:right">Valor ST<br><input type="text" value="{$valorST}" class="whiteBg" id="" size="11" readonly></span>
+                                        <span class="item" style="text-align:right">Valor Frete<br><input type="text" value="{$valorFrete}" class="whiteBg" id="" size="11" readonly></span>
+					<span class="item" style="text-align:right">Valor Despesas<br><input type="text" value="{$valorTotal3}" class="whiteBg" id="" size="11" readonly></span>
+					<span class="item" style="text-align:right">Valor Desconto<br><input type="text" value="{$valorDesc}" class="whiteBg" id="" size="11" readonly></span>
+					<span class="item" style="text-align:right">Valor Total<br><input type="text" value="{$valorTotal2}" class="whiteBg" id="" size="11" readonly></span>
+					<span class="item" style="text-align:right">Valor comissões<br><input type="text" value="{$valorTotal3}" class="whiteBg" id="" size="11" readonly></span>
+					<div style="clear:both;"></div>
+				</div>
+EOT;
+      $g['smarty']->assign('totais', $totais);
+?>

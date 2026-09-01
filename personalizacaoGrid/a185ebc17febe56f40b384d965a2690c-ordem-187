@@ -1,0 +1,21 @@
+T003_Data_Emissao
+T003_Id
+	D018_UF
+D024_Nome_Empresa
+T004_Descricao_Produto
+	T004_Codigo_Produto
+D037_Unidade
+T004_Quantidade
+	D009_Quantidade_Estoque_Liquido
+	T004_Valor_Preco_Sem_Desconto_Unitario
+T004_Valor_Custo_Unitario
+	vendedor.C007_Primeiro_Nome
+T004_Valor_Preco_Original
+	T004_Percentual_Desconto
+	Status
+T004_Valor_Total_Preco
+T004_Observacao_Entrega
+T004_Observacao
+T004_Aliquota_IPI
+T004_Valor_IPI
+D004_Local

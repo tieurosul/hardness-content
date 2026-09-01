@@ -1,0 +1,17 @@
+left join D024 as Forn on Forn.D024_Id=T001_D024_Id
+left join D024 as Cli on Cli.D024_Id=T001_D024_Id_Cliente
+left join D006 on D006_Id=T001_D006_Id
+left join D009 on D009_Id=T001_D009_Id
+left join D049 on D049_Id=D009_D049_Id
+left join D001 on D001_Id=D049_D001_Id
+left join C004 on C004_Id=D009_C004_Id
+left join T066 on T066_Id=T001_T066_Id
+left join D004 on D004_Id=T001_D004_Id
+left join T014 on T014_Id=T001_T014_Id
+left join T013 on T013_Id=T014_T013_Id
+left join T008 on T008_Id=T001_T008_Id
+left join T007 on T007_Id=T008_T007_Id
+left join T075 ON T075_Id=T007_T075_Id
+where D009_C004_Id='[[g-empresaAtual]]'
+group by D009_Id
+order by T001_Data_Lancamento desc,T001_Id desc

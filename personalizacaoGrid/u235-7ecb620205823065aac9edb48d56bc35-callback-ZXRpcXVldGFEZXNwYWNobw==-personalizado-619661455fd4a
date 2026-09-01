@@ -1,0 +1,10 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['etiquetaDespacho']
+    // $array['totais']['Nome_Total']
+	return "<a href=\"#\" onclick=\"etiquetaDespacho('{$array['todosCampos']['T007_Id']}')\">Imprimir</a>";
+}

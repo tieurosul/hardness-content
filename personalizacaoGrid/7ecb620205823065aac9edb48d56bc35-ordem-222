@@ -1,0 +1,24 @@
+campoOpcoesAguardandoEntrega1
+T007_Flag_Imprimir_Romaneio
+T007_Flag_Marcado
+campoOpcoesAguardandoEntrega2
+coletaEtiquetaCorreio
+T005_Id
+	D006_Codigo_CFOP
+	T007_Numero_Nota_Fiscal
+	D024_Nome_Empresa
+	UFCliente.D018_UF
+	Nome_Vendedor
+	T005_Data_Emissao
+T005_Data_Entrega
+	T005_Data_Saida
+	imprimirMinutaDeDespacho
+	impressaoEtiqueta
+	retornarPedidoViaCupom
+T005_Observacao_1
+	UFClienteEntrega.D018_UF
+D022_Nome_Empresa
+	Tipo_Documento
+T005_Data_Hora_Almoxarifado
+Nome_Liberou
+Nome_Conferiu

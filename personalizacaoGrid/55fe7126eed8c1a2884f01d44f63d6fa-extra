@@ -1,0 +1,7 @@
+-- JOIN
+LEFT JOIN D001 ON T140_D001_Id = D001_Id
+LEFT JOIN C007 ON T140_C007_Id = C007_Id
+-- WHERE
+WHERE
+    T140_Tipo_Documento = '1'
+    AND T140_D001_Id = '[[r_D001_Id]]'

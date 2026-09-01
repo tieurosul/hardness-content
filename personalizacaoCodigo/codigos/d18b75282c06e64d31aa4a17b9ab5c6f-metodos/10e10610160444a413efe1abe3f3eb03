@@ -1,0 +1,27 @@
+a:5:{s:4:"nome";s:5:"dados";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"d18b75282c06e64d31aa4a17b9ab5c6f";s:6:"codigo";s:945:"<?php
+namespace hardness;
+global $confUsuario;
+
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+log($array['acaoId']);
+$retorno = array();
+
+$T075 = mysql_query("select C004_Logo_Marca,
+                            T007_Data_Emissao,
+                            T075_Numero_DI,
+                            T007_Numero_Nota_Fiscal
+                       from T075
+                  left join T007 on T007_T075_Id = T075_Id
+                  left join C004 on T075_C004_Id = C004_Id
+                      where T075_Id='{$array['acaoId']}'");
+
+$mT075 = mysql_fetch_assoc($T075);
+
+$retorno['acaoId']    = $array['acaoId'];
+$retorno['logo']      = "/hardness3/dados_usuarios/{$confUsuario['dbDatabase']}/imagens/logo/" . $mT075['C004_Logo_Marca'];
+$retorno['data']      = gCorrigeData($mT075['T007_Data_Emissao']);
+$retorno['numero_di'] = $mT075['T075_Numero_DI'];
+$retorno['numero_nf'] = $mT075['T007_Numero_Nota_Fiscal'];
+
+
+return $retorno;";s:3:"md5";s:32:"4d037a31466e8a2b97d531cf3f16d6e0";}

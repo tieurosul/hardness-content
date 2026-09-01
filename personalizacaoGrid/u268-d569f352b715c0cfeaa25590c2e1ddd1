@@ -1,0 +1,24 @@
+colunaValor [T055_Descricao_Produto_Ingles]
+colunaTitulo [Descrição Inglês]
+colunaOrdem [9]
+---
+colunaValor [T055_Quantidade]
+colunaTitulo [Quantidade]
+colunaOrdem [11]
+---
+colunaValor [T055_Valor_Custo_Unitario]
+colunaTitulo [Unitário ME]
+colunaOrdem [12]
+---
+colunaValor [T055_T066_Id]
+colunaOrdem [4]
+---
+colunaValor [T055_Valor_Total_Custo]
+colunaOrdem [13]
+---
+colunaValor [T270_Numero_LI]
+colunaOrdem [15]
+---
+colunaValor [D005_Classificacao_Fiscal]
+colunaOrdem [10]
+---

@@ -1,0 +1,8 @@
+colunaValor [D004_Flag_Tipo]
+colunaExibir [S]
+colunaTitulo [Tipo]
+colunaEditar [1]
+colunaEditarTodos [1]
+colunaEditarNivel [2]
+callback [campoMostraValor]
+---

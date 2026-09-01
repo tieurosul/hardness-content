@@ -1,0 +1,3 @@
+colunaValor [substr(D024_Nome_Empresa,1,40)]
+colunaOrdem [10]
+---

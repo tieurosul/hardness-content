@@ -1,0 +1,10 @@
+colunaValor [T007_Data_Entrega]
+titulo [T007_Data_Entrega]
+exibir [S]
+tipo [data]
+---
+colunaValor [T007_Numero_Nota_Fiscal]
+titulo [T007_Numero_Nota_Fiscal]
+exibir [S]
+tipo [numero]
+---

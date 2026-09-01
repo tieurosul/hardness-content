@@ -1,0 +1,3 @@
+a:5:{s:4:"nome";s:8:"php info";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"b0bb895e1cd9e3ef0dd0e988b63645a5";s:6:"codigo";s:78:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+echo phpinfo();";s:3:"md5";s:32:"88d243cd70510bd06002ed092e3fac11";}

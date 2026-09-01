@@ -1,0 +1,6 @@
+colunaValor [ROUND(T004_Valor_Preco_Unitario * T004_Quantidade,2) as valorCalculado]
+colunaTitulo [valorCalculado]
+---
+colunaValor [(ROUND(T004_Valor_Preco_Unitario * T004_Quantidade,2) - T004_Valor_Total_Preco) as diferenca]
+colunaTitulo [diferenca]
+---

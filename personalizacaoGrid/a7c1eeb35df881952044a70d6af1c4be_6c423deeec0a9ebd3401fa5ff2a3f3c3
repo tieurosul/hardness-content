@@ -1,0 +1,15 @@
+colunaValor [D001_Descricao_Ingles]
+colunaExibir [S]
+---
+colunaValor [T198_Quantidade]
+colunaOrdem [2]
+---
+colunaValor [D001A_Id]
+colunaTitulo [D001A_Id]
+colunaExibir []
+---
+colunaValor [D001A_Apelido_Produto]
+colunaTitulo [Apelido Produto]
+callback [cadastraApelidoProduto]
+colunaExibir [S]
+---

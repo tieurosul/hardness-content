@@ -1,0 +1,22 @@
+colunaValor [D085_Data]
+colunaExibir [S]
+colunaTitulo [D085_Data]
+callback [gCorrigeData]
+---
+colunaValor [D085_Data]
+colunaExibir [S]
+colunaTitulo [Data]
+---
+colunaValor [D013_Data_Nascimento]
+colunaTitulo [Nascimento]
+colunaEditarTodos [S]
+---
+colunaValor [D024_Data_Ultima_Compra]
+colunaExibir [S]
+colunaTitulo [D024_Data_Ultima_Compra]
+---
+colunaValor [D024_Data_Ultima_Compra]
+colunaExibir [S]
+colunaTitulo [Data Ultima Compra]
+callback [gCorrigeData]
+---

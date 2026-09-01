@@ -1,0 +1,3 @@
+-- WHERE (replace)
+where D001_Flag_Tipo_Item = '08'
+AND (D009_C004_Id='[[g-empresaAtual]]' or D009_Id is null)

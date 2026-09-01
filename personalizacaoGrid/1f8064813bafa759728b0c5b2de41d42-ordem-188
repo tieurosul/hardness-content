@@ -1,0 +1,30 @@
+excluirLinha
+impressaoEtiqueta
+T007_Flag_Impresso
+T007_Numero_Nota_Fiscal
+T007_Flag_ACP
+T007_Data_Emissao
+T005_Id
+T007_D024_Id
+D024_Nome_Empresa
+D018_UF
+D006_Codigo_CFOP
+T007_Valor_Total
+	T007_Valor_Total+T007_Valor_Total_IPI
+T007_Data_Envio_XML
+Danfe
+CCe
+T007_Flag_Cancelada
+XML
+	D022_Nome_Empresa
+T007_Valor_Total_ICMS
+T007_Valor_ICMS_Substituicao_Retencao
+T007_Valor_Total_IPI
+Retorno Sefaz
+T007_Numero_Protocolo_Nfe
+T007_Chave_Acesso_Nfe
+	T007_C007_Id_Vendedor_Interno
+T005_T003_Id
+T007_Valor_Frete
+	T007_Numero_Protocolo_Cancelamento_Nfe
+T007_Valor_Despesas_Acessorias

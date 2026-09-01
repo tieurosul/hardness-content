@@ -1,0 +1,14 @@
+nome [ICMS_Interno_Distinct]
+valor [D053_ST_ICMS_Interno]
+titulo [Qtd ICMS Interno]
+exibir [S]
+totalizador [distinct]
+callbackParameter [0]
+---
+nome [ICMS_InterEstadual_Distinct]
+valor [D053_ST_ICMS_Inter_Estadual]
+titulo [Qtd ICMS Inter-Estadual]
+exibir [S]
+totalizador [distinct]
+callbackParameter [0]
+---

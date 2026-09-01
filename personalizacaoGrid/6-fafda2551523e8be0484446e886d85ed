@@ -1,0 +1,25 @@
+colunaValor [D024_Valor_Limite]
+colunaTitulo [Valor Limite]
+colunaAlinhar [right]
+colunaCasasDecimais [2]
+colunaEditarOculto [1]
+style [font-weight:bold; width: 1%;]
+---
+colunaValor [D024_E_Mail]
+colunaTitulo [E-Mail]
+colunaEditarOculto [1]
+colunaExibir[S]
+colunaEditar[S]
+---
+colunaValor [D024_E_Mail_Nota]
+colunaTitulo [E-Mail Nota]
+colunaEditarOculto [1]
+colunaExibir[S]
+colunaEditar[S]
+---
+colunaValor [D024_E_Mail_Boleto]
+colunaTitulo [E-Mail_Boleto]
+colunaEditarOculto [1]
+colunaExibir[S]
+colunaEditar[S]
+---

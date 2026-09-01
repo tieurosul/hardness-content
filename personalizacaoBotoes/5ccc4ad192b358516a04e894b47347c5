@@ -1,0 +1,53 @@
+a:1:{i:0;a:14:{s:2:"id";s:13:"6a85990f8a992";s:6:"titulo";s:20:"Excluir Selecionados";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:1:"0";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:1766:"<?php
+namespace hardness;
+
+function callback($array){
+    global $g;
+
+    if (!isset($g['c029Ids'][111])) {
+        return array('code' => false, 'data' => 'Você não tem permissão para excluir títulos.');
+    }
+
+    require_once('bibliotecas/classes/FIN002.php');
+    $FIN002 = new FIN002();
+
+    $sql  = " SELECT T015_Id, T015_Numero_Duplicata, D024_Nome_Empresa ";
+    $sql .= " FROM T015 ";
+    $sql .= " LEFT JOIN D024 ON D024_Id=T015_D024_Id ";
+    $sql .= " WHERE T015_Data_Pagamento='0000-00-00' ";
+    $sql .= "   AND T015_Flag_Cancelada!='S' ";
+    $sql .= "   AND T015_Flag_Reparcelar='S' ";
+    $sql .= "   AND (T015_T015_Id_Agrupado<=0 OR T015_T015_Id_Agrupado IS NULL) ";
+    $sql .= "   AND T015_C004_Id='{$g['empresaAtual']}' ";
+
+    $sqlReturn = mysql_query($sql);
+    $itens = array();
+    while ($row = mysql_fetch_assoc($sqlReturn)) {
+        $itens[] = $row;
+    }
+
+    if (count($itens) == 0) {
+        return array('code' => false, 'data' => 'Não foram selecionados títulos para excluir...');
+    }
+
+    $excluidos = 0;
+    $erros = array();
+
+    foreach ($itens as $item) {
+        $retorno = $FIN002->excluir($item['T015_Id']);
+        if ($retorno === true) {
+            $excluidos++;
+        } else {
+            $dupl = $item['T015_Numero_Duplicata'] != '' ? $item['T015_Numero_Duplicata'] : $item['T015_Id'];
+            $erros[] = $dupl . ' - ' . $item['D024_Nome_Empresa'] . ': ' . $retorno;
+            $FIN002->updateT015_Flag_Reparcelar($item['T015_Id'], 'N');
+        }
+    }
+
+    $msg = $excluidos . ' título(s) excluído(s).';
+    if (count($erros) > 0) {
+        $msg .= '<br><br>' . count($erros) . ' não puderam ser excluídos:<br>' . implode('<br>', $erros);
+    }
+
+    return array('code' => true, 'data' => $msg);
+}";s:11:"confirmacao";s:86:"Tem certeza que irá excluir os títulos marcados no Rp? Este comando não tem backup.";}}

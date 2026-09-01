@@ -1,0 +1,29 @@
+a:11:{s:4:"nome";s:18:"verifica preco orc";s:6:"modulo";s:0:"";s:5:"opcao";s:0:"";s:6:"estilo";s:6:"normal";s:3:"md5";s:32:"af176b9e794b344037f1acd2312ee2df";s:4:"from";s:4:"T004";s:5:"extra";s:459:"LEFT JOIN T003 ON T003_Id = T004_T003_Id
+LEFT JOIN D006 ON D006_Id = T004_D006_Id
+LEFT JOIN T004A ON T004_Id = T004A_T004_Id
+ WHERE T003_Data_Emissao >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH)
+   AND (T004_Valor_Desconto_Unitario >= 0.05 OR T004_Valor_Desconto_Unitario <= -0.05) 
+   AND T004_Percentual_Desconto = 0
+   AND ROUND((T004_Valor_Preco_Unitario * T004_Quantidade),2) != T004_Valor_Total_Preco
+   GROUP BY T003_Id
+   ORDER BY T004_Codigo_Produto DESC";s:4:"grid";a:11:{i:0;a:2:{s:11:"colunaValor";s:7:"T004_Id";s:12:"colunaTitulo";s:7:"T004_Id";}i:1;a:2:{s:11:"colunaValor";s:12:"T004_T003_Id";s:12:"colunaTitulo";s:12:"T004_T003_Id";}i:2;a:2:{s:11:"colunaValor";s:17:"T003_Data_Emissao";s:12:"colunaTitulo";s:17:"T003_Data_Emissao";}i:3;a:2:{s:11:"colunaValor";s:12:"T003_C004_Id";s:12:"colunaTitulo";s:12:"T003_C004_Id";}i:4;a:2:{s:11:"colunaValor";s:19:"T004_Codigo_Produto";s:12:"colunaTitulo";s:19:"T004_Codigo_Produto";}i:5;a:2:{s:11:"colunaValor";s:25:"T004_Valor_Preco_Original";s:12:"colunaTitulo";s:25:"T004_Valor_Preco_Original";}i:6;a:2:{s:11:"colunaValor";s:25:"T004_Valor_Preco_Unitario";s:12:"colunaTitulo";s:25:"T004_Valor_Preco_Unitario";}i:7;a:2:{s:11:"colunaValor";s:24:"T004_Percentual_Desconto";s:12:"colunaTitulo";s:24:"T004_Percentual_Desconto";}i:8;a:2:{s:11:"colunaValor";s:28:"T004_Valor_Desconto_Unitario";s:12:"colunaTitulo";s:28:"T004_Valor_Desconto_Unitario";}i:9;a:2:{s:11:"colunaValor";s:15:"T004_Quantidade";s:12:"colunaTitulo";s:15:"T004_Quantidade";}i:10;a:2:{s:11:"colunaValor";s:22:"T004_Valor_Total_Preco";s:12:"colunaTitulo";s:22:"T004_Valor_Total_Preco";}}s:3:"sql";s:775:"SELECT T004_Id,
+       T004_T003_Id,
+       T003_Data_Emissao,
+       T003_C004_Id,
+       T004_Codigo_Produto,
+       T004_Valor_Preco_Original,
+       T004_Valor_Preco_Unitario,
+       T004_Percentual_Desconto,
+       T004_Valor_Desconto_Unitario,
+       T004_Quantidade,
+       T004_Valor_Total_Preco
+  FROM T004
+LEFT JOIN T003 ON T003_Id = T004_T003_Id
+LEFT JOIN D006 ON D006_Id = T004_D006_Id
+LEFT JOIN T004A ON T004_Id = T004A_T004_Id
+ WHERE T003_Data_Emissao >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH)
+   AND (T004_Valor_Desconto_Unitario >= 0.05 OR T004_Valor_Desconto_Unitario <= -0.05) 
+   AND T004_Percentual_Desconto = 0
+   AND ROUND((T004_Valor_Preco_Unitario * T004_Quantidade),2) != T004_Valor_Total_Preco
+   GROUP BY T003_Id
+   ORDER BY T004_Codigo_Produto DESC";s:10:"clickhouse";b:0;s:12:"criadoViaSQL";b:1;}

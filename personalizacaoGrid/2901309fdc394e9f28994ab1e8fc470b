@@ -1,0 +1,7 @@
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Código]
+style [width:1%;]
+---
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Descrição]
+---

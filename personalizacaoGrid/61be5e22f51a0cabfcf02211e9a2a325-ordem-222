@@ -1,0 +1,11 @@
+livre
+D013_Nome_Contato
+D013_E_Mail
+	D013_Senha
+	cliente
+	IF(D013_Flag_Ativo = 'S', 'SIM', 'NÃO')
+	D013_Telefone_2
+D013_Telefone_1
+D013_Celular
+D013_Data_Nascimento
+D013_Tipo_Contato

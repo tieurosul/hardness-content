@@ -1,0 +1,16 @@
+colunaValor [D009A_Quantidade_Orcada]
+titulo [Qtd Orc]
+exibir [S]
+---
+colunaValor [D009A_Quantidade_Meses_Estoque]
+titulo [Meses<br>Estq]
+exibir [S]
+---
+colunaValor [D009_Quantidade_Consumo]
+titulo [Ven<BR>dido]
+exibir [S]
+---
+colunaValor [D049_Data_Cadastro]
+titulo [Cadastro]
+tipo [data]
+---

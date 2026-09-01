@@ -1,0 +1,10 @@
+colunaValor [D009_Valor_Preco_Tabela]
+colunaTitulo [Custo Manual]
+colunaEditarOculto [1]
+colunaEditarTodos [1]
+---
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Descrição português]
+colunaEditarOculto [1]
+colunaEditarTodos [1]
+---

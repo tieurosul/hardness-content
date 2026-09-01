@@ -1,0 +1,9 @@
+T001_Data_Lancamento
+	T001_Descricao_Operacao
+	D006_Codigo_CFOP
+D001_Codigo_Produto
+D001_Descricao_Produto
+	T001_Quantidade
+	Preco
+	T001_Quantidade_Saldo
+Cliente

@@ -1,0 +1,34 @@
+colunaValor [D001_Id]
+colunaTitulo [D001_Id]
+chavePrimaria [S]
+colunaExibir []
+style [width: 1%;]
+---
+colunaValor [D009_Id]
+colunaTitulo [D009_Id]
+chavePrimaria [S]
+colunaExibir []
+style [width: 1%;]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Cod.]
+callback [abrirJanela]
+callbackParameter [array('Produto', '/cad/cad002/content/form2/', 'D001_Id', '1000,583')]
+style [width: 1%;]
+---
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Desc.]
+style [width: 1%;]
+---
+colunaValor [D002_Descricao_Produto]
+colunaTitulo [Classificação]
+style [width: 1%;]
+---
+colunaValor [D001_Flag_Visualizar_Site]
+colunaTitulo [Item<br>Site]
+style [width: 1%;]
+---
+colunaValor [(SELECT GROUP_CONCAT( DISTINCT IF( T140_Link IS NOT NULL AND T140_Link <> '', T140_Link, CONCAT('<b>Arquivo: ', T140_Nome_Arquivo, '</b>') ) SEPARATOR ' ;<br>' ) FROM T140 WHERE T140_D001_Id = D001.D001_Id AND T140_Tipo_Documento <> '1')]
+colunaTitulo [Docs.]
+style [width: 1%;]
+---

@@ -1,0 +1,123 @@
+a:1:{i:0;a:14:{s:2:"id";s:13:"69eb99d360087";s:6:"titulo";s:25:"preencher desc ingl e ncm";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:1:"1";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:3008:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+
+    global $g;
+    $T055_Id = 0;
+
+    if (isset($array['todosCampos']['T055_Id'])) {
+        $T055_Id = (int) $array['todosCampos']['T055_Id'];
+    }
+
+    if ($T055_Id <= 0) {
+        return array(
+            'code' => false,
+            'data' => 'T055_Id nao informado.'
+        );
+    }
+
+    $sqlValidacao = <<<EOT
+        SELECT T055_Id
+          FROM T055
+         WHERE T055_Id = '{$T055_Id}'
+           AND (
+               IFNULL(T055_Descricao_Produto_Ingles, '') = ''
+               OR IFNULL(T055_D005_Id, 0) <= 0
+           )
+         LIMIT 1
+EOT;
+
+    $validacao = mysql_query($sqlValidacao);
+
+    if (!$validacao) {
+        return array(
+            'code' => false,
+            'data' => 'Erro ao validar T055: ' . mysql_error()
+        );
+    }
+
+    if (mysql_num_rows($validacao) <= 0) {
+        $mensagem = 'Os campos ja estao preenchidos, nenhuma atualizacao foi realizada.';
+
+        if ($T055_Id > 0) {
+            $mensagem .= ' T055_Id: ' . $T055_Id . '.';
+        }
+
+        return array(
+            'code' => true,
+            'data' => $mensagem
+        );
+    }
+
+    $sqlDados = <<<EOT
+        SELECT IFNULL(D001_Descricao_Ingles, '') AS D001_Descricao_Ingles,
+               IFNULL(D001_D005_Id, 0) AS D001_D005_Id
+          FROM T055
+     LEFT JOIN D009 ON D009_Id = T055_D009_Id
+     LEFT JOIN D049 ON D049_Id = D009_D049_Id
+     LEFT JOIN D001 ON D001_Id = D049_D001_Id
+         WHERE T055_Id = '{$T055_Id}'
+         LIMIT 1
+EOT;
+
+    $dados = mysql_query($sqlDados);
+
+    if (!$dados) {
+        return array(
+            'code' => false,
+            'data' => 'Erro ao buscar dados do produto: ' . mysql_error()
+        );
+    }
+
+    if (mysql_num_rows($dados) <= 0) {
+        return array(
+            'code' => false,
+            'data' => 'Nenhum registro encontrado para o T055_Id informado.'
+        );
+    }
+
+    $row = mysql_fetch_assoc($dados);
+    $descricaoIngles = mysql_real_escape_string($row['D001_Descricao_Ingles']);
+    $D005_Id = (int) $row['D001_D005_Id'];
+
+    $sqlAtualizar = <<<EOT
+        UPDATE T055
+           SET T055_Descricao_Produto_Ingles = '{$descricaoIngles}',
+               T055_D005_Id = '{$D005_Id}'
+         WHERE T055_Id = '{$T055_Id}'
+EOT;
+
+    $ok = mysql_query($sqlAtualizar);
+
+    if (!$ok) {
+        return array(
+            'code' => false,
+            'data' => 'Erro ao atualizar T055: ' . mysql_error()
+        );
+    }
+
+    $mensagem = 'Atualizacao concluida com sucesso. ';
+    $mensagem .= 'Linhas afetadas: ' . mysql_affected_rows() . '.';
+
+    if ($T055_Id > 0) {
+        $mensagem .= ' T055_Id: ' . $T055_Id . '.';
+    }
+
+    return array(
+        'code' => true,
+        'data' => $mensagem
+    );
+}";s:14:"exibirCallback";s:185:"<?php
+namespace hardness;
+
+function callback($array) {
+    // retornar true ou false
+    // $array['{parametro}']
+    global $g;
+    return ($g['usuarioAtual'] == 63) ? false : false;
+}";}}

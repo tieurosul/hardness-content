@@ -1,0 +1,25 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['locacao']
+    // $array['totais']['Nome_Total']
+    global $g;
+
+    $sql = "SELECT T238_Id, D004_Local, ROUND(T238_Quantidade_Separacao, 2) as qtdSep, T066_Id
+            FROM T238 
+                LEFT JOIN T066 ON T066_Id = T238_T066_Id 
+                LEFT JOIN D004 ON D004_Id = T238_D004_Id
+            WHERE T238_T006_Id = '{$array['todosCampos']['T006_Id']}'";
+    $sql = mysqli_query($sql);
+
+    $loc = '';
+    while ($sep = mysql_fetch_assoc($sql)) {
+        $loc .= ($loc) ? '<br>' : '';
+        $loc .= "Lote: <b>{$sep['D004_Local']}</b> Qtd: <b>{$sep['qtdSep']}</b> Id: {$sep['T066_Id']}";
+    }
+
+    return $loc;
+}

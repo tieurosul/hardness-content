@@ -1,0 +1,40 @@
+a:5:{s:4:"nome";s:20:"vencimento orcamento";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"b2d00a5ee8f82353b06e139444ac3ca6";s:6:"codigo";s:1392:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+$g['empresaAtual'] = $array['todosCampos']['C004_Id'];
+
+require_once('bibliotecas/classes/INDEX.php');
+$INDEX = new INDEX();
+
+$INDEX->carragaVARSGlobal();
+
+if($g['C031']['diasMaxOrcamentoPendente'] == '0' || $g['C031']['diasMaxOrcamentoPendente'] == '' || $g['C031']['venceOrcamento'] == 'N'){
+    return "Processo não habilitado para empresa: {$g['empresaAtual']}";
+} 
+
+$T003 = mysql_query("SELECT T003_Id,
+                            T003_Data_Emissao,
+                            T003_Flag_Perdido
+                       FROM T003
+                  LEFT JOIN T005 ON T003_Id = T005_T003_Id
+                      WHERE T003_C004_Id='{$g['empresaAtual']}'
+                        AND T003_Flag_Status_Orcamento = 'P'
+                        AND datediff(curdate(),T003_Data_Emissao)>'{$g['C031']['diasMaxOrcamentoPendente']}'
+                        AND T005_Id IS NULL");
+
+$count = 0;
+
+while($mT003 = mysql_fetch_array($T003)) {
+    if ($mT003['T003_Flag_Perdido']=='S'){
+		continue;
+	} else {
+        mysqli_query("UPDATE T003 SET T003_Flag_Status_Orcamento = 'V' WHERE T003_Id = '{$mT003['T003_Id']}'");
+        $error = mysql_error();
+        if(!empty($error)) {
+            return $error;
+        }
+        $count++;
+    }
+}
+
+return "Vencidos {$count} orçamentos com as configurações da empresa {$g['empresaAtual']}";";s:3:"md5";s:32:"1cc05eedc9b087aec9e0a93a6f049e38";}

@@ -1,0 +1,60 @@
+a:5:{s:4:"nome";s:13:"rma 2.0 custo";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"7fa43f2f14f5cce8c133e649ae6831bc";s:6:"codigo";s:2138:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+$dataInicial = $array['DATAINICIAL'];
+$dataFinal = $array['DATAFINAL'];
+
+$itensJson = array();
+
+$qT312 = "SELECT T312_T182_Id AS 'id_rma',
+                 D198_Descricao AS 'descricao',
+                 ROUND(T312_Valor,2) AS 'valor',
+                 T312_Flag_Reversao AS 'revertido'
+            FROM T312
+       LEFT JOIN D198 ON D198_Id = T312_D198_Id
+	   LEFT JOIN T182 ON T182_Id = T312_T182_Id
+           WHERE T182_Data >= '$dataInicial' 
+             AND T182_Data <= '$dataFinal'";
+$T312 = mysql_query($qT312);
+if($erro = mysql_error()){$erro = "Erro na query T312: $erro -> Query[$qT312]"; return $erro;}
+
+$qRMA003 = "SELECT RMA001_T182_Id AS 'id_rma',
+                   D198_Descricao AS 'descricao',
+                   ROUND(RMA003_Valor,2) AS 'valor',
+                   IFNULL(RMA003_Flag_Reversao, 'N') AS 'revertido'
+              FROM RMA003
+         LEFT JOIN D198 ON D198_Id = RMA003_D198_Id
+	     LEFT JOIN RMA001 ON RMA001_Id = RMA003_RMA001_Id
+             WHERE RMA001_Data_Abertura >= '$dataInicial' 
+               AND RMA001_Data_Conclusao <= '$dataFinal'
+               AND RMA001_Flag_Cancelado = 'N'";
+$RMA003 = mysql_query($qRMA003);
+if($erro = mysql_error()){$erro = "Erro na query RMA003: $erro -> Query[$qRMA003]"; return $erro;}
+
+/* JUNTA OS REGISTROS DO T312 NUM ARRAY */
+    while($mT312 = mysql_fetch_assoc($T312)) {
+        if($mT312['valor'] > 0) {
+            $chave_64 = base64_encode("{$mT312['id_rma']}-{$mT312['descricao']}");
+            $itensJson[$chave_64] = $mT312;
+        }
+      
+    }
+/* ------------------------------------ */
+
+/* JUNTA OS REGISTROS DO RMA003 NUM ARRAY */
+    while($mRMA003 = mysql_fetch_assoc($RMA003)) {
+        if($mRMA003['valor'] > 0) {
+            $chave_64 = base64_encode("{$mRMA003['id_rma']}-{$mRMA003['descricao']}");
+            $itensJson[$chave_64] = $mRMA003;
+        }
+    }
+/* -------------------------------------- */
+
+if (empty($itensJson)) {
+    return "Nenhum valor preenchido";
+}
+
+$itensJson = array_values($itensJson);
+$itensJson = json_encode($itensJson);
+
+return $itensJson;";s:3:"md5";s:32:"05919ea8b588fbf8caf20fee92cef00b";}

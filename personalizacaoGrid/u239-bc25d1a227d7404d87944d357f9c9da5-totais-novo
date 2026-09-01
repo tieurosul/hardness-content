@@ -1,0 +1,7 @@
+nome [ID_Distinct]
+valor [P003_Id]
+titulo [Qtd ID]
+exibir [S]
+totalizador [distinct]
+callbackParameter [0]
+---

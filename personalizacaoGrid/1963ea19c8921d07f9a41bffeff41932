@@ -1,0 +1,83 @@
+colunaValor [T005_Id]
+colunaTitulo [Pedido]
+chavePrimaria [1]
+colunaAlinhar [center]
+style [width:1%;]
+---
+colunaValor [T005A_Id]
+colunaTitulo [T005A_Id]
+chavePrimaria [1]
+colunaExibir []
+style [width:1%;]
+---
+colunaValor [D024_Id]
+colunaTitulo [D024_Id]
+chavePrimaria [1]
+colunaExibir []
+colunaAlinhar [center]
+style [width:1%]
+---
+colunaValor [T005_T003_Id]
+colunaTitulo [Orç]
+colunaAlinhar [center]
+style [width:1%]
+---
+colunaValor [GROUP_CONCAT(DISTINCT T007_Numero_Nota_Fiscal SEPARATOR ", ") AS NF]
+colunaTitulo [NF]
+callback [validaCampoNFOrcamentos]
+style [width:1%]
+---
+colunaValor [T005_Data_Emissao]
+colunaTitulo [Emissão]
+callback [gCorrigeData]
+colunaAlinhar [center]
+style [width:1%]
+---
+colunaValor [T005A_Data_Hora_Analise_Credito]
+colunaTitulo [Análise Crédito]
+colunaExibir [S]
+callback [gCorrigeData]
+colunaAlinhar [center]
+style [width:1%]
+---
+colunaValor [T005A_Data_Hora_Aprovacao_Credito]
+colunaTitulo [Aprovação Crédito]
+colunaExibir [S]
+callback [gCorrigeData]
+colunaAlinhar [center]
+style [width:1%]
+---
+colunaValor [T005_D024_Id]
+colunaTitulo [Cod]
+colunaAlinhar [center]
+style [width:1%]
+---
+colunaValor [SUBSTR(D024_Nome_Empresa,1,15)]
+colunaTitulo [CLIENTE]
+style [width:1%]
+---
+colunaValor [GROUP_CONCAT(DISTINCT '<span style="">', T005_Status_Pedido(T005_Flag_Status,1), '</span> ', IF(T005_Flag_Status=8, CONCAT('<br/>', T005_Observacao_Pedido_Perdido), if(T005_Flag_Status=9, T005_Motivo_Nao_Liberado,''))) AS STATUS]
+colunaTitulo [Status]
+colunaAlinhar [center]
+style [width:1%]
+---
+colunaValor [UFCliente.D018_UF]
+colunaTitulo [UF]
+colunaAlinhar [center]
+style [width:1%]
+---
+colunaValor [D006_Codigo_CFOP]
+colunaTitulo [CFOP]
+colunaAlinhar [center]
+style [width:1%]
+---
+colunaValor [T005_Valor_Total]
+colunaTitulo [Total]
+callback [gCorrigeNumero]
+colunaAlinhar [right]
+style [width:1%]
+---
+colunaValor [Vendedor.C007_Primeiro_Nome]
+colunaTitulo [Vendedor]
+style [width:1%; background:var(--celula-amarelo-claro);]
+---

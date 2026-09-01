@@ -1,0 +1,15 @@
+colunaValor [C007_Primeiro_Nome]
+colunaTitulo [Vendedor]
+colunaOrdem [13]
+---
+colunaValor [Retornar]
+colunaOrdem [1]
+---
+colunaValor [D024_Observacao_Financeiro]
+colunaTitulo [Observação Financeira<br/>Comercial]
+colunaOrdem [20]
+---
+colunaValor [T005_Motivo_Pedido_Liberacao]
+colunaTitulo [Motivo pedido liberação]
+colunaOrdem [21]
+---

@@ -1,0 +1,20 @@
+countLinha
+campoCancelamentoOrcamento
+T003_Id
+T003_Data_Emissao
+T003_D024_Id
+substr(D024_Nome_Empresa,1,15)
+Contato
+D018_UF
+D006_Codigo_CFOP
+T003_Valor_Total_Produtos_Sem_Desconto
+T003_Valor_Desconto
+T003_Valor_Frete
+T003_Valor_Total
+T003_Percentual_Margem
+if(T139_Id>0,'Ok','<font style="color:red">--</font>')
+IFNULL(IF(T003_Status_Retorno_Email='RETORNAR',CONCAT('<font style="color:red">',T003_Status_Retorno_Email,'</font>'),T003_Status_Retorno_Email), '<font style="color:red">--</font>')
+Pedido
+NF
+	vendedor.C007_Primeiro_Nome
+Status

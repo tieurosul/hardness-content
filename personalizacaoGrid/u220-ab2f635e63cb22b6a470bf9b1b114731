@@ -1,0 +1,6 @@
+---
+colunaValor [T005_Data_Emissao]
+colunaTitulo [Emissão]
+callback [gCorrigeData]
+colunaAlinhar [center]
+style [width:1%]

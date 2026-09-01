@@ -1,0 +1,12 @@
+colunaValor [D137_Id]
+titulo [Id]
+exibir [S]
+---
+colunaValor [D006_Id]
+titulo [D006_Id]
+exibir [S]
+---
+colunaValor [D006_Descricao]
+titulo [Descrição]
+exibir [S]
+---

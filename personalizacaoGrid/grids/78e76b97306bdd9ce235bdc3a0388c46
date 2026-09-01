@@ -1,0 +1,1 @@
+a:11:{s:4:"nome";s:10:"teste lote";s:6:"modulo";s:0:"";s:5:"opcao";s:0:"";s:6:"estilo";s:6:"normal";s:3:"md5";s:32:"1e55cb0a070681b8a4030f5f23058882";s:4:"from";s:5:"T066A";s:5:"extra";s:0:"";s:4:"grid";a:1:{i:0;a:2:{s:11:"colunaValor";s:8:"T066A_Id";s:12:"colunaTitulo";s:8:"T066A_Id";}}s:3:"sql";s:26:"SELECT T066A_Id FROM T066A";s:10:"clickhouse";b:0;s:12:"criadoViaSQL";b:1;}

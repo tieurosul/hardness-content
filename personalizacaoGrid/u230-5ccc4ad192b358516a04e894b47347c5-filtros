@@ -1,0 +1,8 @@
+colunaValor [T015_Id]
+titulo [ID]
+tipo [texto]
+---
+colunaValor [T015_Valor_Desconto]
+titulo [Desconto]
+tipo [moeda]
+---

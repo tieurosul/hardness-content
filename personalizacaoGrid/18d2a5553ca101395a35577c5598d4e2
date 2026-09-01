@@ -1,0 +1,25 @@
+colunaValor [D009_Id]
+colunaTitulo [D009_Id]
+chavePrimaria [S]
+style [width: 1%;]
+---
+colunaValor [D001_Id]
+colunaTitulo [D001_Id]
+chavePrimaria [S]
+colunaExibir []
+style [width: 1%;]
+---
+colunaValor [D049_Id]
+colunaTitulo [D049_Id]
+chavePrimaria [S]
+colunaExibir []
+style [width: 1%;]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Cod]
+style [width: 1%;]
+---
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Desc]
+style [width: 1%;]
+---

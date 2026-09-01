@@ -1,0 +1,20 @@
+countLinha
+T004_Codigo_Produto
+	T004_Flag_Comprar
+descricao
+substr(D082_Marca,1,15)
+D049_Flag_Tipo
+infoCustoVendaProduto
+T004_Quantidade
+D009_Quantidade_Estoque_Liquido
+IF((T004_Quantidade - IF(D009_Quantidade_Estoque_Liquido<0,0,D009_Quantidade_Estoque_Liquido)) <= 0, 0.00, T004_Quantidade-IF(D009_Quantidade_Estoque_Liquido<0,0,D009_Quantidade_Estoque_Liquido))
+T004_Flag_Gerar_Cotacao
+T004_Valor_Preco_Unitario
+T004_Observacao_Entrega
+T219_T218_Id
+T219_Valor_Preco_Venda
+T219_Valor_Preco_Venda_Negociado-T219_Valor_Preco_Venda
+T219_Observacao_Entrega
+T004_Observacao_Compra
+substr(C007_Primeiro_Nome,1,10)
+addColuna

@@ -1,0 +1,40 @@
+colunaValor [usuario.C007_Login]
+colunaExibir [S]
+colunaTitulo [Login]
+---
+colunaValor [usuario.C007_Ultimo_Acesso]
+colunaExibir [S]
+colunaTitulo [Ult.Acesso]
+---
+colunaValor [usuario.C007_Cargo]
+colunaExibir [S]
+colunaTitulo [C007_Cargo]
+---
+colunaValor [usuario.C007_Usuario_Ancora]
+colunaExibir [S]
+colunaTitulo [Ancora]
+---
+colunaValor [usuario.C007_Usuario_Suporte]
+colunaExibir [S]
+colunaTitulo [Suporte]
+---
+colunaValor [usuario.C007_Crc]
+colunaExibir [S]
+colunaTitulo [usuario.C007_Crc]
+---
+colunaValor [usuario.C007_Email]
+colunaExibir [S]
+colunaTitulo [C007_Email]
+---
+colunaValor [usuario.C007_Valor_Maximo_OC]
+colunaExibir [S]
+colunaTitulo [C007_Valor_Maximo_OC]
+---
+colunaValor [usuario.C007_Email_POP_Servidor]
+colunaExibir [S]
+colunaTitulo [C007_Email_POP_Servidor]
+---
+colunaValor [Usuario.C007_Email_POP_Porta]
+colunaExibir [S]
+colunaTitulo [C007_Email_POP_Porta]
+---

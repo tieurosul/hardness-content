@@ -1,0 +1,30 @@
+countLinha
+D001_Codigo_Produto
+D001_Descricao_Produto
+D005_Classificacao_Fiscal
+D049_D082_Id
+D009_Quantidade_Estoque_Real
+D009_Valor_Preco_Tabela
+D009_ICF_1
+	D049_Flag_Tipo
+D009_Valor_Custo_Unitario
+	D009_Preco_1
+	D009_Preco_2
+	D009_Preco_3
+D009_IPV_1
+D009_IPV_2
+D009_IPV_3
+D009_IPV_4
+D009_IPT_1
+D009_IPT_2
+D009_IPT_3
+D009_IPT_4
+D009_Preco_4
+D001_Peso_Unitario_Kg
+D049_Valor_Preco_KG
+D009_Valor_Custo_Tabela
+D009_Data_Ultima_Entrada
+D009_Data_Atualizacao_Custo_Fornecedor
+D001_Descricao_Ingles
+IF('A'='A',D001_Foto,'A')
+addColuna

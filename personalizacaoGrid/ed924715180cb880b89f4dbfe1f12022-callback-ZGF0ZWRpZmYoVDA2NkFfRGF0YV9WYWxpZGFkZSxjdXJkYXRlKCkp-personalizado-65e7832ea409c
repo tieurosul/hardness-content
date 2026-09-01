@@ -1,0 +1,21 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['datediff(T066A_Data_Validade,curdate())']
+    // $array['totais']['Nome_Total']
+
+    if($array['campoAtual'] > 0 && $array['todosCampos']['T066A_Data_Validade'] > '0000-00-00'){
+        if($array['campoAtual'] > 30){
+            return "<font style='background:var(--BGVerde);color:white;padding:4px 10px;border-radius: .425rem;'>" . $array['campoAtual']. "</font>";
+        } else {
+            return "<font style='background:var(--BGVermelho);color:white;padding:4px 10px;border-radius: .425rem;'>" . $array['campoAtual']. "</font>";
+        }
+    } elseif($array['todosCampos']['T066A_Data_Validade'] == '0000-00-00' || empty($array['todosCampos']['T066A_Data_Validade'])){
+        return '-';
+    } else {
+        return "<font style='background:var(--BGVermelho);color:white;padding:4px;border-radius: .425rem;'>VENCIDO</font>";
+    }
+}

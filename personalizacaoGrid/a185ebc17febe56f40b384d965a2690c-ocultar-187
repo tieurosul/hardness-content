@@ -1,0 +1,28 @@
+D049_Modelo	|	Sub-item
+T004_Codigo_Substituto	|	Cód.Cli
+T218_Id	|	Cotação
+D009_Quantidade_Estoque_Fora	|	Fora
+D009_Quantidade_OC	|	OC
+D005_Classificacao_Fiscal	|	NCM
+T004_Flag_Origem_Produto	|	Orig
+T004_Flag_Destino_Produto	|	Dest
+T004_Aliquota_ICMS	|	ICM
+T004_Percentual_Reducao_ICMS	|	% Red
+(round(T004_Valor_ST,2)/(round(T004_Valor_Total_Preco,2)+round(T004_Valor_IPI,2)))*100	|	% ST
+T004_Valor_ICMS	|	ICMS R$
+T004_Valor_ST	|	ST R$
+T004_Flag_ST	|	ST
+T004_ICMS_Inter_Estadual	|	ICMS IE
+T004_ST_ICMS_Interno	|	ICMS Int
+T004_ST_VA	|	MVA
+T004_Valor_Base_ST	|	Base ST
+T004_Valor_Base_IPI	|	Base IPI
+T004_Valor_Base_ICMS	|	Base ICM
+T004_Numero_Pedido_Compra	|	Num.OC
+T004_Item_Pedido_Compra	|	Item.OC
+T004_Percentual_Comissao	|	%Comiss
+T006_Valor_Comissao	|	Comissão
+T005_Id	|	Pedido
+NF	|	NF
+D006_Codigo_CFOP	|	CFOP
+D024_Id	|	Código

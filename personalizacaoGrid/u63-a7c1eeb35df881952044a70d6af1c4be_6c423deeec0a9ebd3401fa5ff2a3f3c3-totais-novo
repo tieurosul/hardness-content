@@ -1,0 +1,7 @@
+nome [Cdigo_Distinct]
+valor [D001_Codigo_Produto]
+titulo [Qtd Código]
+exibir [S]
+totalizador [distinct]
+callbackParameter [0]
+---

@@ -1,0 +1,9 @@
+colunaValor [T014_Quantidade]
+colunaOrdem [9]
+---
+colunaValor [T014_Valor_Custo_Unitario]
+colunaOrdem [10]
+---
+colunaValor [D001_Flag_Pre_Cadastro]
+colunaOrdem [8]
+---

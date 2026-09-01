@@ -1,0 +1,18 @@
+colunaValor [D005_D037_Id_Tributavel]
+colunaExibir [S]
+colunaTitulo [D005_D037_Id_Tributavel]
+colunaEditarTodos [S]
+---
+colunaValor [D005_D037_Id_Tributavel]
+colunaExibir [S]
+colunaTitulo [Unidade Tributável]
+callback [personalizado-620d2df50e9010]
+colunaEditar [S]
+colunaEditarTodos [S]
+colunaEditarGeraSelect [array('D037', 'D037_Id', 'D037_Unidade', "ORDER BY D037_Unidade", true)]
+callbackParameter [D037_Unidade]
+---
+colunaValor [D037_Unidade]
+colunaTitulo [Unidade]
+colunaExibir[]
+---

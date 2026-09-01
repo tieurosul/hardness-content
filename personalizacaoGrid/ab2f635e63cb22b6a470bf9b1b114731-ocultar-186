@@ -1,0 +1,2 @@
+T003_Valor_Desconto	|	R$ Descto
+if(T139_Id>0,'Ok','<font style="color:red">--</font>')	|	Mail

@@ -1,0 +1,10 @@
+D024_Nome_Fantasia	|	Nome Fantasia
+T005_Id_Pedido_Externo	|	ID Ecommerce
+IF(DiasFaltantes_T005_Prazo_Entrega = 0 AND T005_Flag_Status = 5, 'OK', DiasFaltantes_T005_Prazo_Entrega)	|	Dias faltantes
+T005_Percentual_Comissao	|	%Comissão
+T005_Valor_Total_Comissao	|	Comissão
+T005_D021_Id	|	Representante
+T005_Percentual_Comissao_Representante	|	%Comissão
+T005_Valor_Comissao_Representante	|	Comissão R$
+Externo.C007_Primeiro_Nome	|	Externo
+Supervisor	|	Supervisor

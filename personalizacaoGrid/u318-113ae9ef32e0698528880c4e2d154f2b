@@ -1,0 +1,33 @@
+colunaValor [D001_Descricao_Ingles]
+colunaOrdem [7]
+---
+colunaValor [D049_D082_Id]
+colunaOrdem [8]
+---
+colunaValor [D001_Descricao_Produto]
+colunaOrdem [5]
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaOrdem [9]
+---
+colunaValor [Pedido]
+colunaOrdem [10]
+---
+colunaValor [D001_D037_Id]
+colunaOrdem [12]
+---
+colunaValor [D001_Codigo_Produto]
+colunaOrdem [4]
+---
+colunaValor [D049A_Data_Alteracao]
+colunaOrdem [12]
+---
+colunaValor [D001A_Codigo_IMPA]
+colunaOrdem [6]
+---
+colunaValor [foto]
+colunaOrdem [3]
+---
+colunaValor [D049_Data_Cadastro]
+colunaOrdem [11]
+---

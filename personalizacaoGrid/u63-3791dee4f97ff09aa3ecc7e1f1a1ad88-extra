@@ -1,0 +1,5 @@
+left join D009 on D009_Id=T008_D009_Id
+left join D049 on D049_Id=D009_D049_Id
+left join D082 on D082_Id=D049_D082_Id
+left join D001 on D001_Id=D049_D001_Id
+left join T007 on T007_Id=T008_T007_Id

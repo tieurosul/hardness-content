@@ -1,0 +1,9 @@
+colunaValor [T084_Flag_Entrada_Saida]
+colunaExibir [S]
+colunaTitulo [T084_Flag_Entrada_Saida]
+---
+colunaValor [T084_Modelo]
+colunaTitulo [T084_Modelo]
+colunaExibir [S]
+colunaOrdem [1]
+---

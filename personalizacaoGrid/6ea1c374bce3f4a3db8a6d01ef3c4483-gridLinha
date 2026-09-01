@@ -1,0 +1,11 @@
+<?php
+namespace hardness;
+
+function gridLinha($array) {
+    if ($array['todosCampos']['D001_Flag_Pre_Cadastro']=='S' or $array['todosCampos']['T004_Valor_Preco_Unitario']<=0 or $array['todosCampos']['Pedido']<=0) {
+        return 'linhaVermelho';
+    }
+    if($array['todosCampos']['T006_T005_Id']>0){
+        return 'linhaCinza';
+    }
+}

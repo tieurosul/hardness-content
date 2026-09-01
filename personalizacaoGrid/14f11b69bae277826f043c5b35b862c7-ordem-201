@@ -1,0 +1,28 @@
+T013_Id
+T013_Flag_Estoque_Finalizado
+T013_Numero_Controle
+T013_Numero_Nota_Fiscal
+group_concat(distinct substr(Comprador.C007_Primeiro_Nome,1,10))
+T013_Data_Emissao
+T013_Data_Entrada
+T013_Data_Entrada_Estoque
+T013_Data_Financeiro
+D024_Id
+D024_Nome_Empresa
+D018_UF
+Tipo_Documento
+group_concat(distinct D006_Codigo_CFOP separator ',')
+T013_Valor_Total_Produtos
+	T013_Valor_Total_ICMS
+	T013_Valor_Total_IPI
+T013_Valor_ICMS_Substituicao
+	T013_Valor_Frete
+	T013_Valor_Total
+	DANFE
+Almoxarifado
+Cancelar
+XML
+T013_Chave_Acesso_Nfe
+T013_Numero_Protocolo_Nfe
+T013_Retorno_Nfe
+Comprador.C007_Primeiro_Nome

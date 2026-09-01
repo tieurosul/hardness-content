@@ -1,0 +1,4 @@
+colunaValor [substr(D024_Nome_Empresa,1,15)]
+titulo [Cliente]
+exibir [S]
+---

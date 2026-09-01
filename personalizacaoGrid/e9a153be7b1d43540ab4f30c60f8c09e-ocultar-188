@@ -1,0 +1,25 @@
+T005_Ordem_Compra	|	OC.  Cli
+(T005_Valor_Desconto/T005_Valor_Total_Produtos_Sem_Desconto)*100	|	% Descto
+T005_Percentual_Margem	|	Margem
+T005_IPV	|	IPV
+UFClienteEntrega.D018_UF	|	UF Entrega
+T178_Data	|	Coleta
+UFFaturamento.D018_UF	|	UF Faturamento
+T005_Flag_Alcada	|	Alcada
+T005_Observacao_Comercial	|	Observação
+Supervisor	|	Supervisor
+externo.C007_Primeiro_Nome	|	Externo
+T005_Valor_Comissao_Representante	|	Comissão R$
+T005_Percentual_Comissao_Representante	|	%Comissão
+T005_Percentual_Comissao	|	%Comissão
+T005_Valor_Total_Comissao	|	Comissão
+T005_Percentual_Comissao_Manual	|	%Manual
+T005_D021_Id	|	Representante
+liberouOrcamento.C007_Primeiro_Nome	|	Analista comercial orçamento
+vendedor.C007_Primeiro_Nome	|	Vendedor
+liberou.C007_Primeiro_Nome	|	Analista comercial pedido
+Liberou.C007_Primeiro_Nome	|	Analista comercial pedido
+LiberouOrcamento.C007_Primeiro_Nome	|	Analista comercial orçamento
+(SELECT IF(T178_Data="0000-00-00","",T178_Data) FROM T178 WHERE T178_T005_Id=T005_Id AND T178_Descricao="Coletado" ORDER BY T178_Id DESC LIMIT 1)	|	Coleta
+Externo.C007_Primeiro_Nome	|	Externo
+maiorPrevisao	|	Maior Previsão

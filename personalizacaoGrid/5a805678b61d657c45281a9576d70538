@@ -1,0 +1,9 @@
+colunaValor [T075_Id]
+colunaTitulo [Id]
+colunaExibir [S]
+colunaAlinhar[center]
+---
+colunaValor [T075_Ordem_Compra]
+colunaTitulo [Purchase Order]
+style [width:1%]
+---

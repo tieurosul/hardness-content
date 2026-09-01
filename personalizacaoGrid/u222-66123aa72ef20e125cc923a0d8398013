@@ -1,0 +1,7 @@
+colunaValor [D001_Descricao_Ingles]
+colunaTitulo [Descrição Inglês]
+colunaOrdem [4]
+---
+colunaValor [substr(D082_Marca,1,12)]
+colunaOrdem [16]
+---

@@ -1,0 +1,47 @@
+countLinha
+T005_Data_Emissao
+T003_Id
+T005_Id
+NF
+vendedor.C007_Primeiro_Nome
+D024_Id
+	T006_Descricao_Produto
+	T006_Quantidade
+	Pedido
+	faltaEstoque
+	T006_Valor_Preco_Sem_Desconto_Unitario
+	T006_Valor_Custo_Unitario
+D024_Nome_Empresa
+D018_UF
+T005_Nome_Status
+T006_Codigo_Produto
+	T006_Item_Pedido_Compra
+	T006_Valor_Total_Preco
+T006_Valor_Preco_Original
+	T006_Numero_Pedido_Compra
+T006_Observacao
+T006_Observacao_Compra
+D006_Codigo_CFOP
+D005_Classificacao_Fiscal
+T006_Flag_Origem_Produto
+T006_Flag_Destino_Produto
+T006_Aliquota_IPI
+T006_Aliquota_ICMS
+T006_Percentual_Reducao_ICMS
+T006_Aliquota_ICMS_ST
+T006_Valor_ICMS
+T006_Valor_IPI
+T006_Valor_ICMS_Substituicao_Retencao
+T006_Flag_ST
+T006_ICMS_Inter_Estadual
+T006_ST_ICMS_Interno
+T006_ST_VA
+T006_Valor_Base_ICMS_Substituicao
+T006_Valor_Base_IPI
+T006_Valor_Base_ICMS
+T006_Percentual_Comissao
+T006_Valor_Comissao
+D004_Local
+T006_Quantidade_Separacao
+T218_Id
+addColuna

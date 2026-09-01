@@ -1,0 +1,15 @@
+impressaoEtiqueta
+D001_Codigo_Produto
+D001_Codigo_Barras
+D001_Flag_Ativo
+D001_Flag_Pre_Cadastro
+D049_Flag_Curva_ABC
+D001_Descricao_Produto
+D049_D082_Id
+	D001_D037_Id
+	D009_Quantidade_Estoque
+	D009_Quantidade_Estoque_Liquido
+D001_D005_Id
+D009_IPV_1
+D009_C007_Id_Comprador
+	D049_Origem_Mercadoria

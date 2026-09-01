@@ -1,0 +1,41 @@
+T006_Codigo_Substituto	|	Cód.Cli
+D009_Quantidade_Estoque_Similar	|	Similar
+D009_Quantidade_Estoque_Fora	|	Fora
+T006_Percentual_Reducao_ICMS	|	% Red
+T006_Valor_Base_IRPJ	|	Base IRPJ
+T006_Valor_Base_COFINS	|	Base COFINS
+T006_Valor_IPI	|	IPI R$
+T006_Valor_Comissao	|	Comissão
+T006_Percentual_Comissao	|	%Comiss
+T006_Valor_Base_CSLL	|	Base CSLL
+T006_Valor_Base_PIS	|	Base PIS
+T006_Valor_Base_IPI	|	Base IPI
+T006_ST_VA	|	MVA
+T006_ST_ICMS_Interno	|	ICMS Int
+T006_Percentual_Reducao_ICMS_ST	|	%Red
+T006_Valor_ICMS_Substituicao_Retencao	|	ST R$
+T006_Flag_ST	|	ST
+T006_Valor_IRPJ	|	IRPJ R$
+T006_Valor_CSLL	|	CSLL R$
+T006_ICMS_Inter_Estadual	|	ICMS IE
+T006_Aliquota_PIS	|	PIS
+T006_Valor_ICMS	|	ICMS R$
+T006_Valor_COFINS	|	COFINS R$
+T006_Aliquota_CSLL	|	CSLL
+T006_Aliquota_COFINS	|	COFINS
+T006_Aliquota_IRPJ	|	IRPJ
+D049_Modelo	|	Sub-item
+T006_Quantidade_Separacao	|	Separado
+D004_Local	|	Locação
+SUBSTRING(D082_Marca,1,15)	|	Marca
+Pedido	|	Estoque
+T006_Observacao	|	Observação
+T006_Flag_Origem_Produto	|	Orig
+T006_Aliquota_ICMS	|	ICM
+T006_Flag_Destino_Produto	|	Dest
+T006_Observacao_Entrega	|	Entg.dias
+T006_Valor_Total_Frete	|	Frete R$
+((T006_Valor_ICMS_Substituicao_Retencao/T006_Quantidade)/T006_Valor_Preco_Unitario)*100	|	% ST
+T006_Valor_PIS	|	PIS R$
+T006_Preco_Pauta_ST	|	Pauta
+T218_Id	|	Cotação

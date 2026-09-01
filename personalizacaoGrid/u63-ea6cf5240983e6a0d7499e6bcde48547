@@ -1,0 +1,46 @@
+colunaValor [N001_Id]
+colunaTitulo [N001_Id]
+chavePrimaria [S]
+---
+colunaValor [C004_Nome_Abreviado]
+colunaTitulo [Empresa]
+---
+colunaValor [C007_Primeiro_Nome]
+colunaTitulo [Usuário]
+---
+colunaValor [N001_C029]
+colunaTitulo [N001_C029]
+---
+colunaValor [N001_C031]
+colunaTitulo [N001_C031]
+---
+colunaValor [N001_Flag_Alcada]
+colunaTitulo [N001_Flag_Alcada]
+---
+colunaValor [N001_Nome_Notificacao]
+colunaTitulo [N001_Nome_Notificacao]
+---
+colunaValor [N001_Id_Mensagem]
+colunaTitulo [N001_Id_Mensagem]
+---
+colunaValor [N001_Id_Mensagem_Md5]
+colunaTitulo [N001_Id_Mensagem_Md5]
+---
+colunaValor [N001_Mensagem]
+colunaTitulo [N001_Mensagem]
+---
+colunaValor [N001_C004_Nome_Abreviado]
+colunaTitulo [N001_C004_Nome_Abreviado]
+---
+colunaValor [N001_Funcao_JS]
+colunaTitulo [N001_Funcao_JS]
+---
+colunaValor [N001_Flag_Excluido]
+colunaTitulo [N001_Flag_Excluido]
+---
+colunaValor [N001_Uniqid_Mensagem]
+colunaTitulo [N001_Uniqid_Mensagem]
+---
+colunaValor [N001_Hora_Data_Update]
+colunaTitulo [N001_Hora_Data_Update]
+---

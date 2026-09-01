@@ -1,0 +1,86 @@
+a:2:{i:0;a:14:{s:2:"id";s:13:"686d2bc3377e7";s:6:"titulo";s:15:"Insere Correios";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:1:"1";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:2692:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+
+    // Felipe Kadanos - 03/02/2026
+    global $g;
+
+    $sql = "SELECT
+                T005_C004_Id,
+                T005_D024_Id,
+                T005_D022_Id,
+                T005_D148_Id_Entrega,
+                T005_D036_Id,
+                D036_Flag_Correios,
+                T005_Valor_Total_Produtos,
+                T007_Id
+            FROM T005
+                LEFT JOIN T007 ON T007_T005_Id = T005_Id
+                LEFT JOIN D036 ON D036_Id = T005_D036_Id
+            WHERE
+                T005_Id = '{$array['todosCampos']['T005_Id']}'";
+
+    $ped = mysql_fetch_array(mysql_query($sql));
+
+    if ($ped['T005_D022_Id'] != 1885) {
+        return array('code' => false, 'data' => 'Transportadora do pedido não é Correios!');
+    }
+
+    if ($ped['D036_Flag_Correios'] != 'S') {
+        return array('code' => false, 'data' => 'Tipo do transporte no pedido não esta configurada para Correios!');
+    }
+
+    if ($ped['D036_Id'] != 4) { // 4 = Id do tipo de transporte dos Correios
+        return array('code' => false, 'data' => 'Tipo do transporte no pedido não esta configurada para Correios!');
+    }
+
+    $valorDeclarado = 'N';
+    if($ped['T005_Valor_Total_Produtos']>=str_replace(",", ".", $g['C031']['ValorDeclaradoCorreios'])){
+        $valorDeclarado = 'S';
+    }
+
+    mysql_query("START TRANSACTION");
+    mysql_query("insert into T268 
+                    (T268_C004_Id,
+                    T268_T007_Id,
+                    T268_D024_Id,
+                    T268_D148_Id,
+                    T268_D036_Id,
+                    T268_Servico_Adicional_VD,
+                    T268_Valor_Declarado) 
+                values (
+                    '{$ped['T005_C004_Id']}',
+                    '{$ped['T007_Id']}',
+                    '{$ped['T005_D024_Id']}',
+                    '{$ped['T005_D148_Id_Entrega']}',
+                    '{$ped['T005_D036_Id']}',
+                    '{$valorDeclarado}',
+                    '{$ped['T005_Valor_Total_Produtos']}')");
+
+    if ($erro = mysql_error()) {
+        mysql_query("ROLLBACK");
+        return array('code' => false, 'data' => $erro);
+    }
+
+    mysql_query("COMMIT");
+    return array('code' => true, 'data' => 'Registro inserido com sucesso!');
+    // return array('code' => (!empty(mysql_error())) ? false : true, 'data' => (!empty(mysql_error())) ? mysql_error() : 'Registro inserido com sucesso!');
+}";s:14:"exibirCallback";s:132:"<?php
+namespace hardness;
+
+function callback($array) {
+    // retornar true ou false
+    // $array['{parametro}']
+    return true;
+}";}i:1;a:14:{s:2:"id";s:19:"ven002IncluirPedido";s:6:"titulo";s:7:"Incluir";s:4:"tipo";s:6:"janela";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:9:"[910,575]";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:0;s:4:"lote";s:0:"";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:9:"janelaUrl";s:47:"/ven/ven002/content/ven002contentIncluirPedido/";s:14:"exibirCallback";s:174:"<?php
+namespace hardness;
+
+function callback($array) {
+    global $g;
+    return ($g["C031"]["usarBotaoIncluirPedido"] == "S" || $g['usuarioAtual'] == '63') ? true : false;
+}";}}

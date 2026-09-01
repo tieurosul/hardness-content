@@ -1,0 +1,20 @@
+colunaValor [excluir]
+colunaTipo [livre]
+colunaTitulo []
+callback [gExcluirLinha]
+callbackParameter [array('P003_Id')]
+colunaOrdem [1]
+---
+colunaValor [P003_Novo_Campo]
+colunaExibir [S]
+colunaTitulo [Tipo Falha]
+---
+colunaValor [P003_Id]
+colunaTitulo [ID]
+colunaAlinhar [center]
+---
+colunaValor [P003_P004_Id]
+colunaExibir [S]
+colunaTitulo [Setor]
+----
+

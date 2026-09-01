@@ -1,0 +1,17 @@
+campoCancelamentoOrcamento
+T003_Data_Emissao
+	T003_Id
+	Pedido
+T003_D024_Id
+substr(D024_Nome_Empresa,1,15)
+D018_UF
+D006_Codigo_CFOP
+T003_Valor_Total_Produtos_Sem_Desconto
+T003_Valor_Total
+	T003_IPV
+	Status
+T003_Percentual_Margem
+	NF
+	Contato
+vendedor.C007_Primeiro_Nome
+T003_Flag_Alcada

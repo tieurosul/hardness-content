@@ -1,0 +1,14 @@
+tab [geral]
+field [T019_D024_Id]
+name [T019_D024_Id]
+label [Empresa]
+type [pesquisa]
+pesquisa [array (
+  'D024',
+  'D024_Id',
+  'D024_Nome_Empresa,D020_Nome_Cidade,D018_UF,D024_Cpf,D024_Cnpj,D024_DDD_Telefone_1,D024_Telefone_1,D024_Nome_Fantasia,D024_Id',
+  'left join D020 on D020_Id=D024_D020_Id left join D018 on D018_Id=D024_D018_Id WHERE D024_Flag_Ativo="S" order by D024_Nome_Empresa',
+  '%1 - %9 - (%4%5) -  [%2/%3]',
+)]
+length [80, 30]
+---

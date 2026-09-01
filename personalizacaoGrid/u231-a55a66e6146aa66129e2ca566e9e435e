@@ -1,0 +1,25 @@
+colunaValor [D009_Quantidade_OC]
+colunaTitulo [Qte.OC]
+colunaOrdem [8]
+---
+colunaValor [D009_Quantidade_Estoque_Fora]
+colunaTitulo [Estq.Fora]
+colunaOrdem [12]
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaTitulo [Estq.Físico]
+colunaOrdem [10]
+---
+colunaValor [D037_Unidade]
+colunaTitulo [Unidade]
+colunaOrdem [13]
+---
+colunaValor [Pedido]
+colunaOrdem [11]
+---
+colunaValor [D001_Codigo_Produto]
+colunaOrdem [5]
+---
+colunaValor [D049_Modelo]
+colunaOrdem [7]
+---

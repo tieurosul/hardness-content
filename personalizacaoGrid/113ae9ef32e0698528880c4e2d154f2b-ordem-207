@@ -1,0 +1,25 @@
+countLinha
+Etiqueta
+foto
+D001_Codigo_Produto
+ifnull(D069_D070_Id,"_")
+D001_Descricao_Produto
+	D009_Quantidade_Estoque
+	Pedido
+	D001_D037_Id
+D002_Descricao_Produto
+	D001_Observacao_Compra
+D049_D082_Id
+D001_D005_Id
+D009_Quantidade_OC
+D009_Data_Ultima_Entrada
+D009_Data_Ultima_Venda
+D049_Flag_Tipo
+D009_C007_Id_Comprador
+D001_D060_Id
+D001_D003_Id
+D049_D024_Id
+D001_Flag_Tipo_Item
+D009_Quantidade_Compra_Emergencia
+D001A_Codigo_IMPA
+addColuna

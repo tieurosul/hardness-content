@@ -1,0 +1,36 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['Teste_Status_Entrega']
+    // $array['totais']['Nome_Total']
+
+    $sql = "SELECT
+                T007_Data_Entrega,
+                T005A_Data_Agendamento,
+                T007A_Data_Prazo_Transporte,
+                CASE
+                    WHEN (IF(T005A_Data_Agendamento = '0000-00-00' OR T005A_Data_Agendamento = '' OR T005A_Data_Agendamento IS NULL, T007A_Data_Prazo_Transporte,T005A_Data_Agendamento) = '0000-00-00')
+                        OR (T007_Data_Entrega = '0000-00-00')
+                        OR (IF(T005A_Data_Agendamento = '0000-00-00' OR T005A_Data_Agendamento = '' OR T005A_Data_Agendamento IS NULL, T007A_Data_Prazo_Transporte,T005A_Data_Agendamento) IS NULL)
+                        OR (T007_Data_Entrega IS NULL)
+                    THEN '-'
+                    WHEN T007_Data_Entrega <= IF(T005A_Data_Agendamento = '0000-00-00' OR T005A_Data_Agendamento = '' OR T005A_Data_Agendamento IS NULL, T007A_Data_Prazo_Transporte,T005A_Data_Agendamento) THEN 'DENTRO DO PRAZO'
+                    ELSE 'FORA DO PRAZO'
+                END AS Status_Prazo
+            FROM T007
+                LEFT JOIN T007A ON T007A_T007_Id=T007_Id
+                LEFT JOIN T005  ON T005_Id =T007_T005_Id
+                LEFT JOIN T005A ON T005_Id=T005A_T005_Id
+            WHERE T007_Id = '{$array['todosCampos']['T007_Id']}'";
+    $sql = mysql_query($sql);
+    $sql = mysql_fetch_array($sql);
+
+    if ($sql['Status_Prazo'] == 'FORA DO PRAZO') {
+        return "<span style='color: red;'>FORA DO PRAZO</span>";
+    } else {
+        return $sql['Status_Prazo'];
+    }
+}

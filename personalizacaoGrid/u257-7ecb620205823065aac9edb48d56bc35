@@ -1,0 +1,31 @@
+colunaValor [Etiqueta]
+colunaOrdem [4]
+---
+colunaValor [D022_Nome_Empresa]
+colunaTitulo [Transportadora]
+colunaOrdem [15]
+---
+colunaValor [T007_Numero_Nota_Fiscal]
+colunaTitulo [NF]
+colunaOrdem [10]
+---
+colunaValor [D024_Nome_Empresa]
+colunaTitulo [Cliente]
+colunaOrdem [14]
+---
+colunaValor [retornarPedidoViaCupom]
+colunaTitulo [CF]
+colunaOrdem [16]
+---
+colunaValor [campoOpcoesAguardandoEntrega2]
+colunaTitulo [Pedido]
+colunaOrdem [9]
+---
+colunaValor [imprimirMinutaDeDespacho]
+colunaTitulo [Minuta]
+colunaOrdem [19]
+---
+colunaValor [T005_Estoque_BOX]
+colunaTitulo [Box]
+colunaOrdem [16]
+---

@@ -1,0 +1,12 @@
+<?php
+/**
+ * Código executado para preencher a opção "select" de campos "type [select]" 
+ * Variáveis:
+ *      $array['campoAtual'], $array['todosCampos'], $g, $array['{parametro}']
+ */
+//return gGeraSelect($tabela, $campoId, $campoTxt, $sqlExtra, [$first], [$default], [$formato]);
+//return array(array('title' => 'Título', 'value' => 'valor'), ...);
+
+return array(array('title' => '...', 'value' => ''),
+             array('title' => 'SIM', 'value' => 'S'),
+             array('title' => 'NÃO', 'value' => 'N'));

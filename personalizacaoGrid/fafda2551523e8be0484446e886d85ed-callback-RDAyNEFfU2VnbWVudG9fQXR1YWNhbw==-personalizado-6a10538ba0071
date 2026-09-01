@@ -1,0 +1,23 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['D024A_Segmento_Atuacao']
+    // $array['totais']['Nome_Total']
+
+    $seg = [
+        '1'  => "Offshore & O&G",
+        '2'  => "Apoio Portuário",
+        '3'  => "Navegação Comercial",
+        '4'  => "Navegação Interior",
+        '5'  => "Construção & Retrofit",
+        '6'  => "Industrial & Energia",
+        '7'  => "Manutenção & Serviço Técnico",
+        '8'  => "Abastecimento Portuário",
+        '9'  => "Náutica & Recreio",
+        '10' => "Fornecedor",
+    ];
+    return $seg[$array['campoAtual']] ?? "...";
+}

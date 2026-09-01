@@ -1,0 +1,84 @@
+a:5:{s:4:"nome";s:17:"contatos clientes";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"7fa43f2f14f5cce8c133e649ae6831bc";s:6:"codigo";s:3821:"<?php                                                                                    
+  // $g, $array['{parametro}'], executarCodigo(id, vars[])                                                                                                                                                                                    
+  //                                                                                                                                                                                                                                            // Executado via: /api/rel/get/AppApi?API_AUTH=...&codigoApp=<hash>                                                                                                                                                                         
+  // Retorna contatos D013 (com dados da empresa D024) como JSON.                                                                                                                                                                             
+
+  $resposta = array('code' => true, 'data' => array());
+
+  // filtros opcionais via querystring (ignorados se ausentes)
+  $filtroTermo = array();
+
+  if (!empty($_GET['D013_Id'])) {
+      $filtroTermo[] = "D013_Id = '" . mysql_real_escape_string($_GET['D013_Id']) . "'";
+  }
+  if (!empty($_GET['D024_Id'])) {
+      $filtroTermo[] = "D013_D024_Id = '" . mysql_real_escape_string($_GET['D024_Id']) . "'";
+  }
+  if (!empty($_GET['D013_Codigo_Contato'])) {
+      $filtroTermo[] = "D013_Codigo_Contato = '" . mysql_real_escape_string($_GET['D013_Codigo_Contato']) . "'";
+  }
+  if (!empty($_GET['D013_Cpf'])) {
+      $filtroTermo[] = "D013_Cpf = '" . mysql_real_escape_string($_GET['D013_Cpf']) . "'";
+  }
+  if (!empty($_GET['D013_Cnpj'])) {
+      $filtroTermo[] = "D013_Cnpj = '" . mysql_real_escape_string($_GET['D013_Cnpj']) . "'";
+  }
+  if (!empty($_GET['APENAS_ATIVOS']) && $_GET['APENAS_ATIVOS'] == '1') {
+      $filtroTermo[] = "D013_Flag_Ativo = 'S'";
+  }
+
+  $where = '';
+  if (count($filtroTermo) > 0) {
+      $where = ' WHERE ' . implode(' AND ', $filtroTermo);
+  }
+
+  $sql = "
+      SELECT
+          D013_Id,
+          D013_D024_Id,
+          D013_Codigo_Contato,
+          D013_Cpf,
+          D013_Nome_Contato,
+          D013_Funcao,
+          D013_Endereco,
+          D013_E_Mail,
+          D013_Codigo_Empresa,
+          D013_Cnpj,
+          D013_Flag_Ativo,
+
+          D024_Id,
+          D024_Nome_Empresa
+      FROM D013
+      LEFT JOIN D024 ON D024_Id = D013_D024_Id
+      {$where}
+      ORDER BY D013_Nome_Contato
+  ";
+
+  $result = mysql_query($sql);
+
+  if ($result === false) {
+      $resposta['code']  = false;
+      $resposta['error'] = 'Erro na consulta: ' . mysql_error();
+      return json_encode($resposta, JSON_UNESCAPED_UNICODE);
+  }
+
+  while ($row = mysql_fetch_assoc($result)) {
+      $resposta['data'][] = array(
+          'D013_Id'             => (int)    $row['D013_Id'],
+          'D013_D024_Id'        => (int)    $row['D013_D024_Id'],
+          'D013_Codigo_Contato' => (string) $row['D013_Codigo_Contato'],
+          'D013_Cpf'            => (string) $row['D013_Cpf'],
+          'D013_Nome_Contato'   => (string) $row['D013_Nome_Contato'],
+          'D013_Funcao'         => (string) $row['D013_Funcao'],
+          'D013_Endereco'       => (string) $row['D013_Endereco'],
+          'D013_E_Mail'         => (string) $row['D013_E_Mail'],
+          'D013_Codigo_Empresa' => (string) $row['D013_Codigo_Empresa'],
+          'D013_Cnpj'           => (string) $row['D013_Cnpj'],
+          'D013_Flag_Ativo'     => (string) $row['D013_Flag_Ativo'],
+
+          'D024_Id'             => (int)    $row['D024_Id'],
+          'D024_Nome_Empresa'   => (string) $row['D024_Nome_Empresa'],
+      );
+  }
+
+  return json_encode($resposta, JSON_UNESCAPED_UNICODE);";s:3:"md5";s:32:"dcd5f981a7ee57cb2ec01c43273a6e73";}

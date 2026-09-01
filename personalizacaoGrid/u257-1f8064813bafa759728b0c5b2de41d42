@@ -1,0 +1,45 @@
+colunaValor [T007_Data_Entrega]
+colunaTitulo [Data Entrega]
+colunaOrdem [19]
+colunaMetrica [S]
+---
+colunaValor [observacoes]
+colunaOrdem [20]
+---
+colunaValor [T005_Data_Entrega]
+colunaOrdem [18]
+---
+colunaValor [D022_Nome_Empresa]
+colunaTitulo [Transportadora]
+colunaOrdem [21]
+---
+colunaValor [D024_Nome_Fantasia]
+colunaTitulo [Nome Fantasia]
+colunaOrdem [21]
+---
+colunaValor [T007_Numero_Nota_Fiscal]
+colunaTitulo [T007_Numero_Nota_Fiscal]
+colunaOrdem [14]
+colunaCorDeFundo [#beb6b6ff,#989191]
+---
+colunaValor [XML]
+colunaTitulo [XML]
+colunaOrdem [22]
+---
+colunaValor [Etiqueta]
+colunaOrdem [3]
+---
+colunaValor [T007_Data_Envio_XML]
+colunaTitulo [Mail]
+colunaOrdem [2]
+---
+colunaValor [T007_Data_Emissao]
+colunaTitulo [Emissão]
+colunaCorDeFundo []
+---
+colunaValor [D020_Nome_Cidade]
+colunaOrdem [15]
+---
+colunaValor [T007_Peso_Bruto]
+colunaOrdem [57]
+---

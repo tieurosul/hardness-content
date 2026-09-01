@@ -4,11 +4,8 @@ namespace hardness;
 /**
  * Cliente HTTP para API externa de cotação de frete (orçamento VEN001).
  *
- * Configuração via C031 (CAD058):
- * - apiFreteUrl
- * - apiFreteToken
- * - apiFreteTimeout
- * - apiFreteMapaD022 (JSON opcional)
+ * Configuração via C031 (CAD058): apiFreteUrl (endpoint único que retorna todas as opções).
+ * Autenticação (.env / token) pode ser adicionada depois.
  *
  * Ajuste montarBody() e parseOpcoes() quando o contrato da API estiver definido.
  */
@@ -23,21 +20,10 @@ class ApiFreteCliente
         global $g;
 
         $url = trim(isset($g['C031']['apiFreteUrl']) ? $g['C031']['apiFreteUrl'] : '');
-        $token = trim(isset($g['C031']['apiFreteToken']) ? $g['C031']['apiFreteToken'] : '');
-        $timeout = (int) (isset($g['C031']['apiFreteTimeout']) && $g['C031']['apiFreteTimeout'] !== ''
-            ? $g['C031']['apiFreteTimeout']
-            : 15);
-
-        if ($timeout <= 0) {
-            $timeout = 15;
-        }
+        $timeout = 15;
 
         if ($url === '') {
             return array('ok' => false, 'erro' => 'Configure apiFreteUrl em CAD058 (Configurações globais / C031).');
-        }
-
-        if ($token === '') {
-            return array('ok' => false, 'erro' => 'Configure apiFreteToken em CAD058 (Configurações globais / C031).');
         }
 
         $body = $this->montarBody($payload);
@@ -45,6 +31,11 @@ class ApiFreteCliente
         if ($jsonBody === false) {
             return array('ok' => false, 'erro' => 'Não foi possível montar o JSON da requisição de frete.');
         }
+
+        $headers = array(
+            'Content-Type: application/json',
+            'Accept: application/json',
+        );
 
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -54,11 +45,7 @@ class ApiFreteCliente
             CURLOPT_POSTFIELDS => $jsonBody,
             CURLOPT_TIMEOUT => $timeout,
             CURLOPT_CONNECTTIMEOUT => min(10, $timeout),
-            CURLOPT_HTTPHEADER => array(
-                'Content-Type: application/json',
-                'Accept: application/json',
-                'Authorization: Bearer ' . $token,
-            ),
+            CURLOPT_HTTPHEADER => $headers,
         ));
 
         $response = curl_exec($curl);

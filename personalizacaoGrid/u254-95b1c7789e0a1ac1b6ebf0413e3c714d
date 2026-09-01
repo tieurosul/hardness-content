@@ -1,0 +1,16 @@
+colunaValor [D005_Classificacao_Fiscal]
+colunaTitulo [NCM]
+colunaOrdem [15]
+---
+colunaValor [T294_Peso_Kg_Liquido_Unitario]
+colunaTitulo [Peso Kg unit]
+colunaOrdem [16]
+---
+colunaValor [D082_Marca]
+colunaTitulo [Marca]
+colunaOrdem [15]
+---
+colunaValor [T294_Peso_Kg_Liquido_Total]
+colunaTitulo [Peso Kg total]
+colunaOrdem [12]
+---

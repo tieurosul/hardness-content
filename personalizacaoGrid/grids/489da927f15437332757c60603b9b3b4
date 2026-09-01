@@ -1,0 +1,1 @@
+a:11:{s:4:"nome";s:18:"preco 3 e 4 errado";s:6:"modulo";s:0:"";s:5:"opcao";s:0:"";s:6:"estilo";s:6:"normal";s:3:"md5";s:32:"ce4758607824eef819bcc0b43b6640ab";s:4:"from";s:4:"D009";s:5:"extra";s:0:"";s:4:"grid";a:1:{i:0;a:2:{s:11:"colunaValor";s:7:"D009_Id";s:12:"colunaTitulo";s:7:"D009_Id";}}s:3:"sql";s:24:"SELECT D009_Id FROM D009";s:10:"clickhouse";b:0;s:12:"criadoViaSQL";b:1;}

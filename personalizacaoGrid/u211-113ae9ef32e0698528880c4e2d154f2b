@@ -1,0 +1,27 @@
+colunaValor [D001_Peso_Unitario_Bruto]
+colunaOrdem [16]
+---
+colunaValor [D001A_Altura]
+colunaOrdem [19]
+---
+colunaValor [D001A_Largura]
+colunaOrdem [18]
+---
+colunaValor [D001A_Comprimento]
+colunaOrdem [17]
+---
+colunaValor [D049_D082_Id]
+colunaOrdem [20]
+---
+colunaValor [D009_Quantidade_OC]
+colunaOrdem [15]
+---
+colunaValor [D009_Data_Ultima_Venda]
+colunaOrdem [21]
+---
+colunaValor [D009_Data_Ultima_Entrada]
+colunaOrdem [22]
+---
+colunaValor [D009_C007_Id_Comprador]
+colunaOrdem [23]
+---

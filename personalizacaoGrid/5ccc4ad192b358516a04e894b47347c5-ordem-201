@@ -1,0 +1,24 @@
+T015_Flag_Reparcelar
+	T015_Id
+	campoExclusao
+D024_Id
+D024_Nome_Empresa
+	T015_D073_Id
+	T015_D032_Id
+	T015_D014_Id
+T015_Numero_Duplicata
+T015_Data_Emissao
+Prazo
+T015_Data_Vencimento
+T015_Data_Pagamento
+	T015_Flag_Baixar_Lote
+T015_Valor_Duplicata
+T015_Valor_Juros
+T015_Valor_Desconto
+T015_Valor_Total
+T015_Valor_Pago
+T015_Valor_Saldo
+	T015_Codigo_Barras
+	D024_CNPJ
+D031_Portador
+T015_Observacao

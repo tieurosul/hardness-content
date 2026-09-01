@@ -1,0 +1,33 @@
+---
+colunaValor [D049_Flag_Curva_ABC_Qtd]
+titulo [Curva ABC(Q)]
+tipo [texto]
+---
+colunaValor [D001_Flag_Tipo]
+titulo [Tipo]
+exibir [S]
+---
+colunaValor [D049_D024_Id]
+titulo [Fornecedor]
+exibir [S]
+---
+colunaValor [D001A_Codigo_IMPA]
+titulo [Código IMPA]
+exibir [S]
+---
+colunaValor [D001A_Flag_Validade]
+titulo [Validade]
+exibir [S]
+---
+colunaValor [D001_Id]
+titulo [Id]
+exibir [S]
+---
+colunaValor [D001_Especificacoes]
+titulo [Especificacoes]
+exibir [S]
+---
+colunaValor [D001_Descricao_Ingles]
+titulo [Descrição Inglês]
+exibir [S]
+---

@@ -1,0 +1,9 @@
+---
+colunaValor [D001_Observacao_Compra]
+colunaTitulo [Observações Venda]
+style [font-weight:bold;white-space:normal;]
+colunaExibir [1]
+colunaEditar [1]
+colunaEditarTodos [1]
+colunaEditarNivel [2]
+---

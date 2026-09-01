@@ -1,0 +1,24 @@
+dividirOrdemCompraFornecedor
+T224_Id
+	T224_Ordem_Compra
+T224_T218_Id
+T224_Data_Emissao
+T224_D024_Id
+concat(substr(D024_Nome_Empresa,1,30),'<br><font style="font-weight:normal;font-size:10px"><i>',ifnull(T224_Observacao_Pedido_Perdido,''))
+Contato
+D018_UF
+D006_Codigo_CFOP
+T224_Valor_Total_Produtos
+T224_Valor_Total_IPI
+T224_Valor_Total_ICMS
+T224_Valor_ICMS_Substituicao_Retencao
+T224_Valor_Total
+T224_Valor_Pendente
+T224_Prazos(T224_Id)
+concat(T224_Nome_Status,'<br><font style="font-weight:normal;font-size:10px"><i>',ifnull(T224_Liberou_Alcada_Observacao_Nao_Liberado,''))
+if(T139_Id>0,'Ok','<font style="color:red">--</font>')
+group_concat(distinct T013_Id SEPARATOR '|')
+comprador.C007_Primeiro_Nome
+analista.C007_Primeiro_Nome
+T224_Liberou_Alcada_Data
+D022_Nome_Empresa

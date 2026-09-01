@@ -1,0 +1,11 @@
+colunaValor [D024_D046_Id]
+colunaTitulo [Grupo]
+colunaOrdem [10]
+---
+colunaValor [D024_C007_Vendedor_Interno]
+colunaTitulo [Vendedor]
+colunaOrdem [11]
+---
+colunaValor [D085_Data]
+colunaOrdem [21]
+---

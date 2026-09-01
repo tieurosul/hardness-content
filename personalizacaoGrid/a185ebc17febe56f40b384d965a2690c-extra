@@ -1,0 +1,23 @@
+left join T003 on T003_Id=T004_T003_Id
+left join D024 on D024_Id=T003_D024_Id
+left join D018 on D018_Id=D024_D018_Id
+left join D037 on D037_Id=T004_D037_Id
+left join D009 on D009_Id=T004_D009_Id
+left join D049 on D049_Id=D009_D049_Id
+left join D082 on D082_Id=D049_D082_Id
+left join D001 on D001_Id=D049_D001_Id
+left join D003 on D003_Id=D001_D003_Id
+left join D006 on D006_Id=T004_D006_Id
+left join D005 on D005_Id=T004_D005_Id
+LEFT JOIN T066 on T066_D009_Id=D009_Id
+LEFT JOIN D004 on D004_Id=T066_D004_Id
+LEFT JOIN T006 ON T004_Id=T006_T004_Id
+left join T005 ON T005_Id=T006_T005_Id
+left join T219 ON T219_Id=T006_T219_Id
+left join T218 ON T218_Id=T219_T218_Id
+left join T007 ON T007_T005_Id=T005_Id
+left join C007 as Vendedor on Vendedor.C007_Id=T003_C007_Id_Vendedor_Interno
+left join C007 as Supervisor on Supervisor.C007_Id=Vendedor.C007_C007_Id
+where T003_C004_Id='[[g-empresaAtual]]' 
+group by T004_Id 
+order by T003_Id desc

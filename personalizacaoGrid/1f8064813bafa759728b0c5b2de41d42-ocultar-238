@@ -1,0 +1,7 @@
+D024_Cnpj	|	CNPJ
+T007_Cliente_Endereco	|	Rua
+D024_Nome_Fantasia	|	Nome Fantasia
+T007_Cliente_Endereco_Numero	|	Número
+T007_Cliente_CEP	|	CEP
+T005_T003_Id	|	Orç
+T007_Valor_Despesas_Acessorias	|	Despesas

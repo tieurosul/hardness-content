@@ -1,0 +1,24 @@
+D049_Modelo	|	Sub-item
+T006_Quantidade_OC	|	OC
+D009_Quantidade_Estoque_Fora	|	Fora
+T006_C004_Id_Estoque	|	CD
+T006_Valor_Preco_Original	|	Tabela
+T006_Flag_Origem_Produto	|	Orig
+T006_Flag_Destino_Produto	|	Dest
+T006_Aliquota_ICMS	|	ICM
+T006_Percentual_Reducao_ICMS	|	% Red
+T006_Aliquota_ICMS_ST	|	% ST
+T006_Valor_ICMS	|	ICMS R$
+T006_Valor_ICMS_Substituicao_Retencao	|	ST R$
+T006_Flag_ST	|	ST
+T006_ICMS_Inter_Estadual	|	ICMS IE
+T006_ST_ICMS_Interno	|	ICMS Int
+T006_ST_VA	|	MVA
+T006_Valor_Base_ICMS_Substituicao	|	Base ST
+T006_Valor_Base_IPI	|	Base IPI
+T006_Numero_Pedido_Compra	|	Num.OC
+T006_Item_Pedido_Compra	|	Item.OC
+T006_Percentual_Comissao	|	%Comiss
+T006_Valor_Comissao	|	Comissão
+T006_Quantidade_Separacao	|	Separado
+T218_Id	|	Cotação

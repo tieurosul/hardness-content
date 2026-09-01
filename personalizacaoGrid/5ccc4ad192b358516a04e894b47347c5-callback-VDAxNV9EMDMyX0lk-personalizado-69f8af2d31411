@@ -1,0 +1,11 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['T015_D032_Id']
+    // $array['totais']['Nome_Total']
+
+   return $array['todosCampos']['D032_Descricao'];
+}

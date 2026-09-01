@@ -1,0 +1,26 @@
+<?php
+/**
+ * Código executado para preencher a opção "select" de campos "type [select]" 
+ * Variáveis:
+ *      $array['campoAtual'], $array['todosCampos'], $g, $array['{parametro}']
+ */
+//return gGeraSelect($tabela, $campoId, $campoTxt, $sqlExtra, [$first], [$default], [$formato]);
+//return array(array('title' => 'Título', 'value' => 'valor'), ...);
+global $g;
+
+if ($g['nivelAlcada'] <= 2) { 
+    echo <<<EOT
+        <div class="divHidden"><script type="text/javascript"> if (typeof jQuery != 'undefined') {
+            $('#{$g['divId']} #T004A_T066_Id').attr('readonly', true);
+            // $('#{$g['divId']} #T004A_T066_Id').prop('disabled', true);
+            
+            var el = $('#{$g['divId']} #T004A_T066_Id');
+            el.bind('focus', function() {
+                this.initialSelect = this.selectedIndex;
+            });
+            el.bind('change', function() {
+                this.selectedIndex = this.initialSelect;
+            });
+        } </script></div>
+EOT;
+}

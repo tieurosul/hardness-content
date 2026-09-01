@@ -1,0 +1,13 @@
+colunaValor [T003_Id]
+colunaTitulo [Orçamento]
+colunaOrdem [9]
+---
+colunaValor [T004_Valor_Preco_Original]
+colunaTitulo [$Unit]
+---
+colunaValor [T004_Valor_Total_Preco]
+colunaTitulo [Subtotal]
+---
+colunaValor [Status]
+colunaOrdem [11]
+---

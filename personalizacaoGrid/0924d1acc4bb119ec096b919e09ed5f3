@@ -1,0 +1,10 @@
+colunaValor [IF(IFNULL(T225_Observacao_Entrega,'')='', NULL, DATE_ADD(T224_Data_Emissao, INTERVAL T225_Observacao_Entrega DAY)) as dataPrevisaoEntrega]
+colunaTitulo [Previsão Entrega]
+style [background: var(--celula-amarelo-claro);white-space:nowrap;]
+---
+colunaValor [T225_Observacao_Entrega]
+colunaEditarJSCallback [colunaEditarCallbackJSReload]
+---
+colunaValor [dataPrevisaoEntrega]
+callback [personalizado-69e912336c04c]
+---

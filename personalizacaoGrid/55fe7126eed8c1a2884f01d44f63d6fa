@@ -1,0 +1,60 @@
+colunaValor [excluirLinha]
+colunaTipo [livre]
+callback [gExcluirLinha]
+callbackParameter [array('T140_Id', '[[divId]]')]
+style [width: 1%]
+---
+colunaValor [T140_Id]
+colunaTitulo [ID]
+chavePrimaria [S]
+style [font-size: 10px; width: 1%;]
+---
+colunaValor [D001_Id]
+colunaTitulo [D001_Id]
+chavePrimaria [S]
+colunaExibir []
+style [font-size: 10px; width: 1%;]
+---
+colunaValor [T140_Flag_Marcado]
+callback [gCheckbox]
+callbackParameter [array('T140_Flag_Marcado', 'N|S')]
+colunaEditarTodos [S]
+colunaEditarTipo [flag]
+colunaEditarExtra [S|N]
+colunaAlinhar [center]
+style [witdh: 1%;]
+---
+colunaValor [T140_Tipo_Documento]
+colunaTitulo [Tipo Doc.]
+colunaExibir []
+style [witdh: 1%;]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Cod]
+callback [abrirJanela]
+callbackParameter [array('Produto','/cad/cad002/content/form2/', 'D001_Id')]
+colunaAlinhar [right]
+colunaExibir []
+style [witdh: 1%;]
+---
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Descrição]
+colunaExibir []
+style [witdh: 1%;]
+---
+colunaValor [T140_Numero_Serie]
+colunaTitulo [Núm. Série]
+style [witdh: 1%;]
+---
+colunaValor [IF(T140_Link != "", T140_Link, T140_Nome_Arquivo)]
+colunaTitulo [Documento]
+style [width: 1%;]
+---
+colunaValor [T140_Data_Hora_Upload]
+colunaTitulo [Upload]
+callback [gCorrigeData]
+---
+colunaValor [C007_Primeiro_Nome]
+colunaTitulo [Usuario]
+style [width: 1%]
+---

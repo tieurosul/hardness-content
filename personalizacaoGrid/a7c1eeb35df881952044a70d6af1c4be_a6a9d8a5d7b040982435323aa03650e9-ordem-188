@@ -1,0 +1,12 @@
+D001_Codigo_Produto
+D001_Descricao_Produto
+D082_Marca
+D037_Unidade
+	retornaPrecoVenda
+	Pedido
+D005_Classificacao_Fiscal
+D009_Quantidade_OC
+D004_Local
+C007_Primeiro_Nome
+	D083_Codigo_Produto_Fornecedor
+	infoCustoVendaProduto

@@ -1,0 +1,147 @@
+colunaValor [D049A_Id]
+colunaTitulo [D049A_Id]
+chavePrimaria [1]
+colunaExibir []
+---
+colunaValor [D049_Data_Cadastro]
+colunaTitulo [Cadastro]
+callback [gCorrigeData]
+colunaOrdem [5]
+---
+colunaValor [D049A_Data_Alteracao]
+colunaTitulo [Alteração]
+callback [gCorrigeData]
+colunaOrdem [6]
+---
+colunaValor [EtiquetaLote]
+colunaTitulo [LT]
+colunaTipo [livre]
+style [width: 1%;]
+colunaOrdem [2]
+callback [personalizado-68dfe1992a774]
+---
+colunaValor [D001_D003_Id]
+colunaTitulo [Grupo]
+style [font-weight:normal]
+colunaEditar [1]
+colunaEditarTodos [1]
+colunaEditarNivel [2]
+colunaExibir [S]
+callback [campoMostraGrupo]
+---
+colunaValor [foto]
+colunaExibir [S]
+colunaTitulo [Foto]
+---
+colunaValor [D001_D060_Id]
+colunaTitulo [Setor]
+colunaEditar [1]
+colunaEditarTodos [1]
+colunaEditarNivel [2]
+colunaExibir [S]
+callback [campoMostraSetor]
+---
+colunaValor [D049_Flag_Tipo]
+colunaTitulo [Tipo]
+colunaAlinhar [center]
+colunaEditarTodos [1]
+colunaEditarOculto [1]
+colunaExibir [1]
+colunaExibir[S]
+---
+colunaValor [D009_Quantidade_Compra_Emergencia]
+colunaTitulo [Emer<br>gência]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+style [background-color: var(--celula-vermelho);]
+---
+colunaValor [D001A_Codigo_IMPA]
+colunaExibir [S]
+colunaTitulo [Código IMPA]
+colunaEditar [1]
+---
+colunaValor [D149_Id]
+chavePrimaria [1]
+---
+colunaValor [D149_Flag_Parana_Competitivo]
+colunaExibir [S]
+colunaTitulo [PR Competitivo]
+colunaEditarGeraSelect [array(array('title'=> '...', 'value' => ''),
+                              array('title'=> 'Sim', 'value' => 'S'),
+                              array('title'=> 'Não', 'value' => 'N'))]
+colunaEditarTodos [S]
+colunaEditar [S]
+colunaAlinhar [center]
+---
+colunaValor [D001A_Flag_Validade]
+colunaExibir [S]
+colunaTitulo [Validade]
+colunaEditarGeraSelect [array(array('title'=> '...', 'value' => ''),
+                              array('title'=> 'Sim', 'value' => 'S'),
+                              array('title'=> 'Não', 'value' => 'N'))]
+colunaEditarTodos [S]
+colunaEditar [S]
+---
+colunaValor [D009A_Data_Ultimo_Orcamento]
+colunaExibir [S]
+colunaTitulo [Últ.Orcamento]
+callback [gCorrigeData]
+---
+colunaValor [D001_Descricao_Ingles]
+colunaTitulo [Descrição Inglês]
+colunaEditarOculto [1]
+colunaEditarNivel [2]
+---
+colunaValor [linkImagem]
+colunaExibir [S]
+---
+colunaValor [IF(D049_Flag_Nao_Comprar = 'S','NAO','SIM') as flagNaoCompra]
+colunaTitulo [Comprar?]
+colunaExibir [S]
+colunaAlinhar [center]
+---
+colunaValor [D001_Flag_Visualizar_Site]
+colunaExibir [S]
+colunaTitulo [Item Site]
+colunaEditarGeraSelect [array(array('title'=> 'SIM', 'value' => 'S'),
+                              array('title'=> 'NÃO', 'value' => 'N'))]
+colunaEditarTodos [S]
+colunaEditar [S]
+colunaAlinhar [center]
+callback [personalizado-67bc8338d0ba6]
+---
+colunaValor [T144_Url]
+colunaExibir [S]
+colunaTitulo [LINK]
+---
+colunaValor [D001_Peso_Unitario_Kg]
+colunaTitulo [Peso Uni. Liq.]
+---
+colunaValor [D001_Peso_Unitario_Bruto]
+colunaTitulo [Peso Uni. Bruto]
+---
+colunaValor [D001A_Altura]
+colunaTitulo [Altura]
+---
+colunaValor [D001A_Largura]
+colunaTitulo [Largura]
+---
+colunaValor [D001A_Comprimento]
+colunaTitulo [Comprimento]
+---
+colunaValor [D001_D002_Id]
+colunaTitulo [Sub-Grupo]
+colunaEditar [1]
+colunaEditarTodos [1]
+colunaEditarNivel [1]
+colunaExibir [S]
+callback [campoMostraSubGrupo]
+---
+colunaValor [D001A_Observacao_Entrada]
+colunaTitulo [Obs. Entrada]
+colunaExibir [S]
+---
+colunaValor [D001A_Id]
+colunaTitulo [D001A_Id]
+chavePrimaria [1]
+---

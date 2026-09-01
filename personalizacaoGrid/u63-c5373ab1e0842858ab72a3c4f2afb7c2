@@ -1,0 +1,7 @@
+colunaValor [visualizarArquivo]
+colunaTitulo [Visualizar]
+colunaTipo [livre]
+callback [visualizarArquivo]
+callbackParameter [array(T140_Id, documentoProduto)]
+style [width: 1%;]
+---

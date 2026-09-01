@@ -1,0 +1,1 @@
+a:4:{s:70:"IF(D154_Id>0,CONCAT(D154_Descricao," - ",D014_SubConta),D014_SubConta)";s:3:"210";s:14:"T019_Referente";s:9:"231.77778";s:16:"T019_Complemento";s:3:"479";s:15:"T019_Conciliado";s:2:"16";}

@@ -1,0 +1,11 @@
+colunaValor [P005_Tipo]
+titulo [Tipo]
+tipo [select]
+select [array(
+    array('title' => '...', 'value' => ""),
+    array('title' => 'Substituto', 'value' => "1"),
+    array('title' => 'Reposição', 'value' => "2"),
+    array('title' => 'Complementar', 'value' => "3")
+)]
+exibir [S]
+--- 

@@ -1,0 +1,16 @@
+colunaValor [XML]
+colunaTitulo [XML]
+colunaOrdem [16]
+---
+colunaValor [Cancelar]
+colunaTitulo [Cancelar]
+colunaOrdem [20]
+---
+colunaValor [SUM(T007_Valor_Frete_Calculado)]
+colunaTitulo [Frete calculado]
+colunaOrdem [18]
+---
+colunaValor [T084A_Flag_Empresa_Tomadora]
+colunaTitulo [Tomadora]
+colunaOrdem [20]
+---

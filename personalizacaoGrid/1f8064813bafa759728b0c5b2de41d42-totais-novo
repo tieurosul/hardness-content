@@ -1,0 +1,6 @@
+nome [Valor_ICMS__]
+valor [T007_Valor_Total_ICMS]
+titulo [ ICMS]
+exibir [S]
+totalizador [soma]
+---

@@ -1,0 +1,14 @@
+T005_Flag_Dividido	|	Div
+T005_Data_Entrega	|	Entrega
+(T005_Valor_Desconto/T005_Valor_Total_Produtos_Sem_Desconto)*100	|	% Descto
+T005_Valor_Desconto	|	R$ Descto
+T005_Valor_Frete	|	Frete
+T005_Percentual_Estoque_Disponivel	|	Estoque
+T005_Percentual_Margem	|	Margem
+T005_IPV	|	IPV
+DividirPedidoCliente	|	
+campoCancelamento	|	
+T005_Id_Pedido_Externo	|	ID Ecommerce
+IF(DiasFaltantes_T005_Prazo_Entrega = 0 AND T005_Flag_Status = 5, 'OK', DiasFaltantes_T005_Prazo_Entrega)	|	Dias faltantes
+T005A_Percentual_Estoque_Disponivel_E_Ordem_Compra	|	Falta
+maiorPrevisao	|	Maior Previsão

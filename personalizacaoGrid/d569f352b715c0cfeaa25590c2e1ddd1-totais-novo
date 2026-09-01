@@ -1,0 +1,8 @@
+nome [Total_ME_]
+titulo [Total ME]
+tipo [sql]
+valor [T055_Valor_Total_Custo]
+exibir [S]
+totalizador [soma]
+callbackParameter [2]
+---

@@ -1,0 +1,13 @@
+D024_Id
+D024_Nome_Empresa
+D013_Nome_Contato
+	C007_Primeiro_Nome
+D013_E_Mail
+D013_Telefone_1
+D013_Telefone_2
+D013_Celular
+D013_Data_Nascimento
+D013_Tipo_Contato
+IF(D013_Flag_Ativo = 'S', 'SIM', 'NÃO')
+D020_Nome_Cidade
+D018_UF

@@ -1,0 +1,26 @@
+<?php
+namespace hardness;
+
+<?php
+$Diretorio_NFe = $g['pathDadosAntigo'] . 'nfe';
+
+// Caminho para o diretório onde estão os arquivos PDF
+$diretorio = $Diretorio_NFe. "/danfe/";
+echo "qual o diretorio ".$diretorio. "<br>";
+
+// Lista todos os arquivos PDF no diretório
+//$arquivosPDF = glob($diretorio . '/*.pdf');
+$arquivosPDF = $diretorio;
+
+// Verifica se existem arquivos PDF
+if (!empty($arquivosPDF)) {
+    $count = 0;
+    foreach ($arquivosPDF as $arquivo) {
+        $count++;
+        // Exclui cada arquivo PDF
+        //unlink($arquivo);
+        echo "Arquivo achado ($count): " . $arquivo ." <br> ";
+    }
+} else {
+    echo 'Nenhum arquivo PDF encontrado no diretório.';
+}

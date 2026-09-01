@@ -1,0 +1,80 @@
+a:5:{s:4:"nome";s:16:"consulta produto";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"aa6f3c4ec8cec85286bf5320ec93b337";s:6:"codigo";s:3656:"<?php
+global $confUsuario,$g;
+// $g, $array[var], executarCodigo(id, vars[])
+
+if ($array['T014_Id']>0) {
+	$sql = "select T014_Id from T014 where T014_Id='{$array['T014_Id']}'";
+} else {
+	$sql = base64_decode($array['sql']);
+}
+
+$produtos = mysql_query($sql);
+
+$array = array();
+
+while ($mProdutos = mysql_fetch_array($produtos)) {
+
+    $T014 = mysql_query("SELECT D001_Codigo_Barras, 
+                                D001_Descricao_Produto, 
+                                D001_Codigo_Produto,
+                                D004_Local, 
+                                D004_Descricao,
+                                T014_Quantidade, 
+                                D009_Quantidade_Estoque, 
+                                T014_T013_Id, 
+                                T014_Id,
+                                T013_Numero_Nota_Fiscal,
+                                T013_Data_Entrada,
+                                C004_Logo_Marca
+                           FROM T014
+                      LEFT JOIN D009 ON T014_D009_Id=D009_Id 
+                      LEFT JOIN D049 ON D049_Id=D009_D049_Id
+                      LEFT JOIN D001 ON D001_Id=D049_D001_Id
+                      LEFT JOIN T066 ON T066_Id=T014_T066_Id
+                      LEFT JOIN D004 ON D004_Id=T066_D004_Id
+                      LEFT JOIN T013 ON T013_Id=T014_T013_Id
+                      LEFT JOIN C004 ON C004_Id=T013_C004_Id
+                          WHERE T014_Id = '{$mProdutos['T014_Id']}'
+                            AND D009_C004_Id = '{$g['empresaAtual']}'
+                          LIMIT 1");
+					
+    $mT014 = mysql_fetch_assoc($T014);
+				
+    // achar número do item
+    $resItem = mysql_query("SELECT T014_Id 
+                              FROM T014 
+                             WHERE T014_T013_Id='{$mT014['T014_T013_Id']}' 
+                          ORDER BY T014_Id ASC");
+		
+    $count = 0;
+    $item  = 0;
+    while($rowItem = mysql_fetch_assoc($resItem)) {
+        $count++;
+        if ($mT014['T014_Id'] == $rowItem['T014_Id']) {
+            $item = $count;
+        }
+    }    
+
+    $pathinfo                    = pathinfo($g['c004']['C004_Logo_Marca']);
+    $logo                        = $g['empresaAtual'].'.'.$pathinfo['extension'];
+    $dataCompleta                = gCorrigeData($mT014['T013_Data_Entrada']);
+    $anoFormatado                = substr($dataCompleta, -2);
+    $dataEntrada                 = substr_replace($dataCompleta, $anoFormatado, 6, 4); 
+    $mT014['D001_Codigo_Barras'] = (!empty($mT014['D001_Codigo_Barras'])) ? $mT014['D001_Codigo_Barras'] : $mT014['D001_Codigo_Produto'];
+
+    $array['loop'][] = array('D001_Codigo_Barras'      => $mT014['D001_Codigo_Barras'],
+                             'D001_Descricao_Produto'  => substr($mT014['D001_Descricao_Produto'], 0, 70),
+                             'D001_Codigo_Produto'     => $mT014['D001_Codigo_Produto'],
+                             'item'                    => $item,
+                             'T014_Quantidade'         => gCorrigeNumero($mT014['T014_Quantidade']),
+                             'D009_Quantidade_Estoque' => gCorrigeNumero($mT014['D009_Quantidade_Estoque']),
+                             'D004_Local'              => $mT014['D004_Local'],
+                             'D004_Descricao'          => $mT014['D004_Descricao'],
+                             'T013_Data_Entrada'       => $dataEntrada,
+                             'T013_Numero_Nota_Fiscal' => $mT014['T013_Numero_Nota_Fiscal'],
+                             'logo'                    => "/hardness3/dados_usuarios/{$confUsuario['dbDatabase']}/imagens/logo/" . $logo,
+
+    );	
+}
+
+return $array;";s:3:"md5";s:32:"5bc690fbbaa518949810d7e118276e09";}

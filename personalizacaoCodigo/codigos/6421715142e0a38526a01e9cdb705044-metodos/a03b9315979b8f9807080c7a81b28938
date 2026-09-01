@@ -1,0 +1,79 @@
+a:5:{s:4:"nome";s:21:"consultar nota fiscal";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"6421715142e0a38526a01e9cdb705044";s:6:"codigo";s:3667:"<?php
+// $g, $array[var], executarCodigo(id, vars[])
+
+			$sqlT007 = <<<EOT
+						SELECT 
+							*, 
+							D020D.D020_Nome_Cidade as D020D_D020_Nome_Cidade, 
+							D020E.D020_Nome_Cidade as D020E_D020_Nome_Cidade, 
+							D020T.D020_Nome_Cidade as D020T_D020_Nome_Cidade,
+							D018T.D018_UF as D018T_D018_UF, 
+							D018E.D018_UF as D018E_D018_UF, 
+							D018D.D018_UF as D018D_D018_UF
+						FROM T007
+						left join D024 on D024_Id=T007_D024_Id
+						left join C004 on C004_Id=T007_C004_Id
+						left join D018 as D018E on D018E.D018_Id=C004_D018_Id
+						left join D020 as D020E on D020E.D020_Id=C004_D020_Id
+						left join D006 on D006_Id=T007_D006_Id
+						left join C007 on C007_Id=T007_C007_Id_Vendedor_Interno
+						left join D021 on D021_Id=D024_D021_Id
+						left join D022 on D022_Id=T007_D022_Id
+						left join D018 as D018T on D018T.D018_Id=D022_D018_Id
+						left join D020 as D020T on D020T.D020_Id=D022_D020_Id
+						left join T005 on T005_Id=T007_T005_Id
+						left join D036 on T005_D036_Id=D036_Id 
+						left join D148 on D148_Id=T007_D148_Id_Entrega
+						left join D018 as D018D on D018D.D018_Id=IF(D148_Id is null,D024_D018_Id,D148_D018_Id)
+						left join D020 as D020D on D020D.D020_Id=IF(D148_Id is null,D024_D020_Id,D148_D020_Id)
+						WHERE T007_Id = '{$array['T007_Id']}'
+EOT;
+			$T007 = mysql_query($sqlT007);
+			$mT007 = mysql_fetch_assoc($T007);
+
+if ($mT007['D148_Id'] > 0) {
+	$mT007['D024_Endereco']       = $mT007['D148_Rua'];
+	$mT007['D024_Numero']         = $mT007['D148_Numero'];
+	$mT007['D024_Complemento']    = $mT007['D148_Complemento'];
+	$mT007['D024_Bairro']         = $mT007['D148_Bairro'];
+	$mT007['D024_DDD_Telefone_1'] = $mT007['D148_DDD_Telefone'];
+	$mT007['D024_Telefone_1']     = $mT007['D148_Telefone'];
+	$mT007['D024_Cep']            = $mT007['D148_Cep'];
+}
+
+
+//tratamento dos campos
+//$mT007['D024_Nome_Empresa'] = substr($mT007['D024_Nome_Empresa'],0,35);
+//$endereco                   = substr($mT007['D024_Endereco'],0,30).", ". trim(substr($mT007['D024_Numero'], 0, 30));
+$mT007['D022_Nome_Empresa'] = substr($mT007['D022_Nome_Empresa'],0,30).'<br>'.substr($mT007['D022_Nome_Empresa'],30,60);
+
+$array = array();
+for ($volume = 1; $volume <= $mT007['T005_Quantidade_Volumes']; $volume++) {
+	
+	$array['loop'][] = array('NF'           => $mT007['T007_Numero_Nota_Fiscal'],
+  	                 	     'vl'           => $volume,
+					         'vls'          => $mT007['T005_Quantidade_Volumes'],
+							 'transp'       => $mT007['D022_Nome_Empresa'],
+							 'pedido'       => $mT007['T005_Id'],
+  							 'cliente'      => $mT007['D024_Nome_Empresa'],
+							 'endereco'     => $mT007['D024_Endereco'] . ', ' . $mT007['D024_Numero'],
+							 'bairro'       => $mT007['D024_Bairro'],
+							 'cidade'       => $mT007['D020D_D020_Nome_Cidade'],
+							 'uf'           => $mT007['D018D_D018_UF'],
+							 'cep'          => $mT007['D024_Cep'],
+							 'tel'          => $mT007['D024_DDD_Telefone_1'] .' '. $mT007['D024_Telefone_1'],
+							 'compl'        => $mT007['D024_Complemento'],
+							 'tipoTrans'    => $mT007['D036_Tipo_Transporte'],
+							 'empresa'      => $mT007['C004_Nome_Empresa'],
+							 'cnpj'         => $mT007['C004_Cnpj'],
+							 'ie'           => $mT007['C004_Inscricao_Estadual'],
+							 'endEmp'       => $mT007['C004_Logradouro'] . ', ' .    $mT007['C004_Numero'],
+							 'cepEmp'       => $mT007['C004_Cep'],
+							 'bairroEmp'    => $mT007['C004_Bairro'],
+							 'cidadeEmp'    => $mT007['D020E_D020_Nome_Cidade'],
+							 'ufEmp'        => $mT007['D018E_D018_UF'],
+							 'telEmp'	    => $mT007['C004_DDD_Telefone'] .' '. $mT007['C004_Telefone'],
+					    );
+}
+
+return $array;";s:3:"md5";s:32:"9aff18f392a26a18273b09a48639f278";}

@@ -1,0 +1,9 @@
+colunaValor [IF(T019_T002_Id > 0, T002_Data_Recebimento, T015_Data_Pagamento) as Data_Baixa_Registro]
+colunaTitulo [Data de Baixa]
+callback [gCorrigeData]
+----
+
+
+
+						
+			    						

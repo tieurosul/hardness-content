@@ -1,0 +1,75 @@
+colunaValor [T015_Numero_Duplicata]
+colunaOrdem [12]
+---
+colunaValor [T015_Valor_Total]
+colunaOrdem [22]
+---
+colunaValor [T015_Valor_Pago]
+colunaOrdem [16]
+---
+colunaValor [D073_Nome]
+colunaOrdem [10]
+---
+colunaValor [T015_D031_Id]
+colunaOrdem [25]
+---
+colunaValor [T015_Valor_Duplicata]
+colunaOrdem [15]
+---
+colunaValor [T015_Data_Vencimento]
+colunaOrdem [17]
+---
+colunaValor [T015_D024_Id]
+colunaOrdem [4]
+---
+colunaValor [D024_Nome_Empresa]
+colunaOrdem [7]
+---
+colunaValor [IF(D154_Id>0,CONCAT(D154_Descricao," - ",D014_SubConta),D014_SubConta)]
+colunaOrdem [9]
+---
+colunaValor [Parcelas]
+colunaOrdem [11]
+---
+colunaValor [T015_Data_Emissao]
+colunaOrdem [13]
+---
+colunaValor [Prazo]
+colunaOrdem [14]
+---
+colunaValor [Atraso]
+colunaOrdem [18]
+---
+colunaValor [T015_Data_Pagamento]
+colunaOrdem [19]
+---
+colunaValor [T015_Valor_Juros]
+colunaOrdem [20]
+---
+colunaValor [T015_Valor_Desconto]
+colunaOrdem [21]
+---
+colunaValor [T015_Valor_Saldo]
+colunaOrdem [23]
+---
+colunaValor [C004_Nome_Abreviado]
+colunaOrdem [24]
+---
+colunaValor [T015_Observacao]
+colunaOrdem [26]
+---
+colunaValor [T015_Codigo_Barras]
+colunaOrdem [27]
+---
+colunaValor [T015_Flag_Baixar_Lote]
+colunaOrdem [5]
+---
+colunaValor [T015_Flag_Reparcelar]
+colunaOrdem [6]
+---
+colunaValor [campoExclusao]
+colunaOrdem [1]
+---
+colunaValor [T015_D032_Id]
+colunaOrdem [8]
+---

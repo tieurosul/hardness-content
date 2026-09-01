@@ -1,0 +1,4 @@
+colunaValor [concat(T224_Nome_Status,'<br><font style="font-size:10px"><i>',ifnull(T224_Liberou_Alcada_Observacao_Nao_Liberado,''))]
+titulo [Status]
+exibir [S]
+---

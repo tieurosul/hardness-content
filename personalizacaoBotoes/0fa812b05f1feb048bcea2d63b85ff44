@@ -1,0 +1,15 @@
+a:1:{i:0;a:13:{s:2:"id";s:13:"6848985c51e4e";s:6:"titulo";s:14:"Ajusta valores";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:0;s:4:"lote";s:3:"100";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:594:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+    $D009_Id = $array['todosCampos']['D009_Id'];
+
+    mysql_query("UPDATE D009 SET D009_Preco_2 = D009_Preco_1,
+                                 D009_IPT_3 = 1.08,
+                                 D009_IPT_4 = 1.16
+                           WHERE D009_Id = '{$D009_Id}'");
+}";}}

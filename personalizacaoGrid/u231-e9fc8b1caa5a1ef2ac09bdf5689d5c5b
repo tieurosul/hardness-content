@@ -1,0 +1,12 @@
+colunaValor [D009_Quantidade_Compra_Emergencia]
+colunaTitulo [Emer<br>gência]
+colunaOrdem [16]
+---
+colunaValor [D049_Flag_Nao_Comprar]
+colunaTitulo [Não Comprar]
+colunaOrdem [3]
+---
+colunaValor [D009_Quantidade_Comprar]
+colunaTitulo [Qtde<br>Comprar]
+colunaOrdem [13]
+---

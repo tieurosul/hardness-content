@@ -1,0 +1,15 @@
+CampoCadastro
+D001_Codigo_Produto
+	T001_Data_Lancamento
+D001_Descricao_Produto
+	T075_Numero_DI
+	D006_Codigo_CFOP
+T001_Descricao_Operacao
+	Cliente
+	T001_Valor_Custo_Unitario
+	Medio
+	Preco
+	T001_Flag_Operacao
+	T001_Quantidade
+	T001_Quantidade_Saldo
+	D004_Local

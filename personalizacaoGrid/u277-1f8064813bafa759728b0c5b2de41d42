@@ -1,0 +1,14 @@
+colunaValor [T007_Valor_Total_Produtos]
+colunaTitulo [Produtos]
+colunaOrdem [6]
+---
+colunaValor [T007_C007_Id_Vendedor_Interno]
+colunaTitulo [Vendedor]
+colunaOrdem [8]
+---
+colunaValor [T005_Data_Entrega]
+colunaOrdem [14]
+---
+colunaValor [T007A_Valor_Total_Reforma]
+colunaOrdem [7]
+---

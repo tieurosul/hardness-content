@@ -1,0 +1,21 @@
+T005_Valor_Total_Comissao	|	Comissão
+T005_Percentual_Comissao	|	%Comissão
+T005_Percentual_Comissao_Representante	|	%Comissão
+T005_Valor_Comissao_Representante	|	Comissão R$
+externo.C007_Primeiro_Nome	|	Externo
+T005_Flag_Marcado	|	
+T005_Percentual_Comissao_Manual	|	%Manual
+UFClienteEntrega.D018_UF	|	UF Entrega
+T005_IPV	|	IPV
+T178_Data	|	Coleta
+T005_D024_Id	|	Cod.
+T005_Flag_Dividido	|	Div
+T005_Percentual_Margem	|	Margem
+liberou.C007_Primeiro_Nome	|	Analista comercial pedido
+T005_Flag_Alcada	|	Alcada
+T005_D021_Id	|	Representante
+Liberou.C007_Primeiro_Nome	|	Analista comercial pedido
+LiberouOrcamento.C007_Primeiro_Nome	|	Analista comercial orçamento
+Supervisor	|	Supervisor
+Externo.C007_Primeiro_Nome	|	Externo
+DividirPedidoCliente	|

@@ -1,0 +1,11 @@
+colunaValor [D024_Id]
+colunaTitulo [ID]
+chavePrimaria [1]
+---
+colunaValor [D024_C007_Vendedor_Interno]
+colunaTitulo [Vendedor Interno]
+colunaEditarTodos [S]
+---
+colunaValor [D024_C007_Vendedor_Externo]
+colunaTitulo [Vendedor Externo]
+---

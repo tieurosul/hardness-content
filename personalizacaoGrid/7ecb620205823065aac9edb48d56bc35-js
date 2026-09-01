@@ -1,0 +1,47 @@
+// Variáveis disponíveis:
+// [[divId]] [[divIdRoot]] [[divIdParent]]
+
+/*  Modelo: CLICK na linha do GRID
+acaoClickLinha('[[divId]]', function(data, array) {
+    // array['todosCampos'], array['divId'], array['divIdRoot'], array['divIdParent']
+    abrirJanela(data, array['divIdRoot'], array['divId'], unique(), '', 'Título janela - ID: ' + array['todosCampos']['CAMPO'], 'URL', '&acaoId=' + encodeURIComponent(array['todosCampos']['CAMPO']), [980,550]);
+});
+*/
+
+// Modelo: Remover campos editáveis
+//$('#[[divId]] .grid .campoEditavel').unbind('click').unbind('click').bind('click', function(event) { return false; });
+
+// Modelo: NÂO permitir ORDERNAÇÃO
+//$('#[[divId]] .grid th').removeAttr('onclick').css({'cursor': 'auto'});
+
+// Modelo: Remover FILTRO
+//$('#[[divId]] .gridFiltro').remove();
+
+// Modelo: Desabilitar o refresh automático deste grid
+//$('#61211ad346a8e .grid').data('lastTimeUpdate', 'never');
+
+// Modelo: Já vir selecionado o primeiro (o recurso setas para baixo e cima)
+//$('#[[divId]]').find('tr:eq(1)').addClass('linhaSelecionada');
+
+// Modelo: Alterar o campo de um formulário
+// $('#[[divIdParent]] .itemForm-CAMPO').val('');
+
+// Modelo: Fechar janela
+// fecharJanela('[[divId]]');
+
+function etiquetaDespacho(T007_Id) {
+    $.ajax({
+        url: '/sistema/personalizacaoLowCode/grid_func-ajax/telaGerarPdf/',
+        type: 'GET',
+        dataType: 'jsonp',
+        data: {
+            'ajax': 'true',
+            'acaoId': '7c26aa4c8fb14f00fbf2ebb77d6c8aaa',
+            'link': '/sistema/personalizacao/tela/7c26aa4c8fb14f00fbf2ebb77d6c8aaa/?ajax=true&T007_Id=' + T007_Id,
+        },
+        success: function(resposta) {
+            $('#[[divId]]').hideLoading();
+            window.open(resposta.data, '_blank');
+        }
+    });
+}

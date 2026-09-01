@@ -1,0 +1,16 @@
+colunaValor [D004_Local]
+titulo [Locação]
+tipo [texto]
+---
+colunaValor [D049_Flag_Curva_ABC_Qtd]
+titulo [Curva ABC(Q)]
+tipo [texto]
+---
+colunaValor [D003_Id,D003_Nome_Linha]
+titulo [Grupo]
+tipo [texto]
+---
+colunaValor [D009_Data_Ultima_Venda]
+titulo [Ult.Venda]
+tipo [data]
+---

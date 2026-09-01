@@ -1,0 +1,91 @@
+a:5:{s:4:"nome";s:19:"rma  2.0 cabeçalho";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"7fa43f2f14f5cce8c133e649ae6831bc";s:6:"codigo";s:4536:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+namespace hardness;
+
+$colunas = <<<EOT
+    SELECT RMA001_Data_Abertura AS 'Data_Abertura',
+        D022_Id AS 'id_transportadora',
+        RMA001_T182_Id AS 'ID_RMA',
+        T007_Numero_Nota_Fiscal AS 'Nota_Fiscal',
+        RMA001_T007_Id AS 'Id_Nota_Fiscal',
+        if(RMA001_Data_Conclusao != '0000-00-00', '0',(DATEDIFF(CURRENT_TIMESTAMP(), RMA001_Data_Previsao_Retorno))) AS 'Dia_Retorno',
+        if(RMA001_Data_Conclusao != '0000-00-00', DATEDIFF(RMA001_Data_Conclusao, RMA001_Data_Abertura),(DATEDIFF(CURRENT_TIMESTAMP(), RMA001_Data_Abertura))) AS 'Dia_Abertura',
+        T005_Id AS 'Pedido',
+        C004_Nome_Empresa AS 'Empresa',
+        C007criador.C007_Login AS 'Usuario',
+        C007responsavel.C007_Login AS 'responsavel',
+        D162_Status AS 'Status',
+        D024_Id AS 'Codigo_Cliente',
+        D024_Nome_Empresa AS 'Cliente',
+        D018_Uf AS 'UF',
+        ((SELECT GROUP_CONCAT(DISTINCT D164_Tipo, "") FROM RMA002 LEFT JOIN D164 ON D164_Id = RMA002_D164_Id WHERE RMA002_RMA001_Id = RMA001_Id)) AS 'Tipo',
+        ((SELECT GROUP_CONCAT(DISTINCT D197_Motivo, "") FROM RMA002 LEFT JOIN D197 ON D197_Id = RMA002_D197_Id WHERE RMA002_RMA001_Id = RMA001_Id)) AS 'Motivo',
+        RMA001_Data_Previsao_Retorno AS 'Data_Prevista_de_Retorno',
+        RMA001_Data_Previsao_Fechamento AS 'Data_Previsao_Fechamento',
+        RMA001_Data_Conclusao_Cliente AS 'Data_Conclusao_Cliente',
+        RMA001_Data_Conclusao AS 'Data_Conclusao',
+        RMA001_Observacao AS 'Observacao',
+        RMA001_Acao AS 'Acao',
+        T007_Data_Emissao AS 'Emissao_Nota',
+        T005_Data_Emissao AS 'Emissao_Pedido',
+        T005_Ordem_Compra AS 'OC_Cliente',
+        D199_Descricao AS 'Origem_Atendimento',
+        T005_Canal_Vendas_Ecommerce AS 'Canal_Vendas_Ecommerce',
+        D022_Nome_Empresa AS 'Transportadora_Venda',
+        IF(RMA001_Flag_Cancelado = 'N', (SELECT SUM(RMA003_Valor) FROM RMA003 WHERE RMA003_RMA001_Id = RMA001_Id), 0) AS 'Total_Custo',
+        IF(RMA001_Flag_Cancelado = 'N', (SELECT SUM(RMA003_Valor) FROM RMA003 WHERE RMA003_RMA001_Id = RMA001_Id AND RMA003_Flag_Reversao = 'S'), 0) AS 'Total_custo_revertido',
+        RMA001_Data_Previsao_Reenvio AS 'Data_Previsao_Reenvio',
+        RMA001_NF_Remessa_Cliente AS 'NF_Remessa_Cliente',
+        RMA001_NF_Remessa_Fornecedor AS 'NF_Remessa_Fornecedor',
+        RMA001_NF_Retorno_Cliente AS 'NF_Retorno_Cliente',
+        RMA001_NF_Retorno_Fornecedor AS 'NF_Retorno_Fornecedor',
+        RMA001_Hora_Abertura AS 'Hora_Abertura',
+        RMA001_Hora_Conclusao_Cliente AS 'Hora_Conclusao_Cliente',
+        RMA001_Hora_Conclusao AS 'Hora_Conclusao',
+        D013_Nome_Contato AS 'Contato',
+        format(SUM(RMA002_Quantidade*IF(RMA001_Tipo_Documento = "T007", T008_Valor_Preco_Sem_Desconto_Unitario, T006_Valor_Preco_Unitario)),2,"pt_BR") AS 'Preco_total'
+EOT;
+
+$from = 'RMA001';
+
+if (isset($_GET['DATAINICIAL'])) {
+    $dataInicio = $_GET['DATAINICIAL'];
+} else {
+    $dataInicio = date('Y-m-01');
+}
+
+$dataFinal = isset($_GET['DATAFINAL']) ? $_GET['DATAFINAL'] : date('Y-m-d');
+$where = "RMA001_Data_Abertura >= '$dataInicio' AND RMA001_Data_Conclusao <= '$dataFinal' AND RMA001_Flag_Cancelado = 'N' GROUP BY RMA001_Id";
+
+$extra = <<<EOT
+    LEFT JOIN C004 ON C004_Id = RMA001_C004_Id
+    LEFT JOIN C007 C007criador ON C007criador.C007_Id = RMA001_C007_Id
+    LEFT JOIN C007 C007responsavel ON C007responsavel.C007_Id = RMA001_Responsavel_C007_Id
+    LEFT JOIN D013 ON D013_Id = RMA001_D013_Id
+    LEFT JOIN D024 ON D024_Id = RMA001_D024_Id
+    LEFT JOIN D018 ON D018_Id = D024_D018_Id
+    LEFT JOIN D162 ON D162_Id = RMA001_D162_Id
+    LEFT JOIN D199 ON D199_Id = RMA001_D199_Id
+    LEFT JOIN T005 ON T005_Id = RMA001_T005_Id
+    LEFT JOIN T007 ON T007_Id = RMA001_T007_Id
+    LEFT JOIN D022 ON D022_Id = IF(RMA001_Tipo_Documento = 'T005', T005_D022_Id, T007_D022_Id)
+    LEFT JOIN RMA002 ON RMA002_RMA001_Id = RMA001_Id
+    LEFT JOIN D164 ON D164_Id=RMA002_D164_Id
+    LEFT JOIN D197 ON D197_Id=RMA002_D197_Id
+    LEFT JOIN T006 ON T006_Id = IF(RMA001_Tipo_Documento = 'T005', RMA002_Id_Produto, 0)
+    LEFT JOIN T008 ON T008_Id = IF(RMA001_Tipo_Documento = 'T007', RMA002_Id_Produto, 0)
+EOT;
+
+$query = $colunas . ' FROM ' . $from . ' ' . $extra . ' WHERE ' . $where;
+
+$resultado = mysql_query($query);
+if($erro = mysql_error()){log("Erro no SQL: $erro");}
+$linhas = array();
+
+while ($linha = mysql_fetch_assoc($resultado)) {
+    $linhas[] = $linha;
+}
+  
+$json = json_encode($linhas);
+return $json;";s:3:"md5";s:32:"479c7df19e563d73d7543063a9d7fa04";}

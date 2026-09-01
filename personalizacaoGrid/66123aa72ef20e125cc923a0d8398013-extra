@@ -1,0 +1,4 @@
+-- JOIN
+LEFT JOIN D024 AS fornecedorD049 ON fornecedorD049.D024_Id=D049_D024_Id
+-- WHERE
+WHERE D049_Flag_Nao_Comprar = 'N'

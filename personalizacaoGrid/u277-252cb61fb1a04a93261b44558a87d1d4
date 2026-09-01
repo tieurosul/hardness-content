@@ -1,0 +1,12 @@
+colunaValor [T008_Valor_Total_Preco_Sem_Desconto]
+colunaOrdem [7]
+---
+colunaValor [CONCAT(EstHist.D004_Local, ' - ', LocacaoHist.T066_Id)]
+colunaOrdem [14]
+---
+colunaValor [Vendedor.C007_Primeiro_Nome]
+colunaOrdem [8]
+---
+colunaValor [D082_Marca]
+colunaOrdem [10]
+---

@@ -1,0 +1,28 @@
+D004_Local	|	Locação
+T006_Valor_Comissao	|	Comissão
+T006_Percentual_Comissao	|	%Comiss
+T006_Valor_Base_CSLL	|	Base CSLL
+T006_Valor_Base_IRPJ	|	Base IRPJ
+T006_Valor_Base_COFINS	|	Base COFINS
+T006_Valor_Base_PIS	|	Base PIS
+T006_Item	|	It
+T006_Valor_Base_ICMS	|	Base ICM
+T006_Valor_Base_IPI	|	Base IPI
+T006_Valor_Base_ICMS_Substituicao	|	Base ST
+T218_Id	|	Cotação
+T006_Item_Pedido_Compra	|	Item.OC
+T006_Numero_Pedido_Compra	|	Num.OC
+T006_ST_VA	|	MVA
+T006_Percentual_Reducao_ICMS_ST	|	%Red
+T006_ST_ICMS_Interno	|	ICMS Int
+T006_ICMS_Inter_Estadual	|	ICMS IE
+T006_Flag_ST	|	ST
+T006_Valor_CSLL	|	CSLL R$
+T006_Valor_IRPJ	|	IRPJ R$
+T006_Valor_COFINS	|	COFINS R$
+T006_Valor_PIS	|	PIS R$
+T006_Valor_ICMS_Substituicao_Retencao	|	ST R$
+excluirLinha	|	
+T006_Percentual_Partilha_ICMS_Destino	|	Difal Dest
+T006_Percentual_Partilha_ICMS_Origem	|	Difal Orig
+T006_Valor_Partilha_ICMS_Destino	|	Difal Dest R$

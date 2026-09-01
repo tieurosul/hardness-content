@@ -1,0 +1,21 @@
+countLinha
+excluirLinha
+T295_Id
+	T295_Nome_Status
+T295_Data_Emissao
+T295_Data_Previsao
+T295_Ordem_Compra
+T295_D024_Id
+Fornecedor
+D030_Nome_Pais
+T295_Flag_Transporte_DI
+Produtos_Real
+T296_Valor_Total_Preco_Nota_Fiscal
+T296_Valor_Total_Custo_Final
+freteTotal
+pesoTotal
+C007_Primeiro_Nome
+T295_Condicao_Mercadoria
+T295_Enquadramento_Material_Usado
+T295_Operacao_Enquadramento_Material_Usado
+addColuna

@@ -1,0 +1,37 @@
+a:5:{s:4:"nome";s:27:"faturar pedidos com estoque";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"4a50a28806731878416673cbe8854b29";s:6:"codigo";s:1282:"<?php
+// $g, $array[var], executarCodigo(id, vars[])
+global $g;
+
+$T005 = mysql_query("select T005_Id,
+                            C007_Id, 
+                            C007_Flag_Vendedor,
+                            T005_C004_Id
+                       from T005
+                  left join C007 on C007_Id=T005_C007_Id_Vendedor_Interno
+                      where T005_Id='{$array['todosCampos']['T005_Id']}'");
+$mT005 = mysql_fetch_assoc($T005);
+
+$g['usuarioAtual'] = $mT005['C007_Id'];
+$g['empresaAtual'] = $mT005['T005_C004_Id'];
+
+require_once('bibliotecas/classes/INDEX.php');
+$INDEX = new INDEX();
+
+$INDEX->carragaVARSGlobal();
+
+if($g['C031']['faturaPedidoAutomaticoComEstoque'] == 'N'){
+    return "Processo não habilitado";
+}
+
+require_once('bibliotecas/classes/VEN002.php');
+$VEN002 = new VEN002();
+
+$retorno = $VEN002->faturarPedidosSelecionadosPedido($mT005);
+
+if ($retorno === true) {
+    mysql_query("insert into T178(T178_T005_Id,T178_C007_Id,T178_Data,T178_Descricao,T178_Observacao) VALUES ('{$array['todosCampos']['T005_Id']}',{$g['usuarioAtual']},CURRENT_TIMESTAMP(),'Pedido faturado automaticamente','')");
+} else {
+    return "Erro ao faturar pedido {$array['todosCampos']['T005_Id']}: ".$retorno;
+}
+
+return "Processado pedido {$array['todosCampos']['T005_Id']}";";s:3:"md5";s:32:"20dc4c446d0616461b51b9c245f88fd4";}

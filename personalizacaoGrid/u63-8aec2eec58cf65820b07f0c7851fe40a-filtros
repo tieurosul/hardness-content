@@ -1,0 +1,12 @@
+colunaValor [D009_Id]
+titulo [D009_Id]
+exibir [S]
+---
+colunaValor [D001_Codigo_Produto]
+titulo [D001_Codigo_Produto]
+exibir [S]
+---
+colunaValor [D009A_Data_Ultimo_Orcamento]
+titulo [D009A_Data_Ultimo_Orcamento]
+exibir [S]
+---

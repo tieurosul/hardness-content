@@ -1,0 +1,13 @@
+a:1:{i:0;a:11:{s:2:"id";s:13:"62a1eaf71a72e";s:6:"titulo";s:16:"atualiza estoque";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:0;s:4:"lote";s:1:"1";s:7:"urlForm";s:0:"";s:8:"callback";s:347:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+
+    $D009_Id = $array['todosCampos']['D009_Id'];
+    require_once('bibliotecas/classes/CAD002.php');
+    $CAD002 = new CAD002();
+    $CAD002->D001_reprocessa_historico(0,$D009_Id,1);
+}";}}

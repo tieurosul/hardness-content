@@ -1,0 +1,60 @@
+colunaValor [Status2]
+colunaOrdem [20]
+---
+colunaValor [NF]
+colunaOrdem [21]
+---
+colunaValor [T005_Prazos(T005_Id)]
+colunaTitulo [Prazo]
+colunaOrdem [29]
+---
+colunaValor [maiorPrevisao]
+colunaTitulo [Maior Previsão]
+colunaOrdem [27]
+---
+colunaValor [T005_Id_Pedido_Externo]
+colunaTitulo [ID Ecommerce]
+colunaOrdem [27]
+---
+colunaValor [(T005_Valor_Desconto/T005_Valor_Total_Produtos_Sem_Desconto)*100]
+colunaTitulo [% Descto]
+colunaOrdem [24]
+---
+colunaValor [Vendedor.C007_Primeiro_Nome]
+colunaTitulo [Vendedor]
+colunaOrdem [19]
+---
+colunaValor [IF(DiasFaltantes_T005_Prazo_Entrega = 0 AND T005_Flag_Status = 5, 'OK', DiasFaltantes_T005_Prazo_Entrega)]
+colunaTitulo [Dias faltantes]
+colunaOrdem [29]
+---
+colunaValor [T005_Valor_Desconto]
+colunaTitulo [R$ Descto]
+colunaOrdem [24]
+---
+colunaValor [DividirPedidoCliente]
+colunaOrdem [3]
+---
+colunaValor [campoCancelamento]
+colunaOrdem [2]
+---
+colunaValor [T005A_Percentual_Estoque_Disponivel_E_Ordem_Compra]
+colunaTitulo [Falta]
+colunaOrdem [25]
+---
+colunaValor [T005A_Percentual_Ordem_Compra]
+colunaTitulo [OC]
+colunaOrdem [24]
+---
+colunaValor [T005_Valor_Total_Comissao]
+colunaTitulo [Comissão]
+colunaOrdem [28]
+---
+colunaValor [T005_D021_Id]
+colunaTitulo [Representante]
+colunaOrdem [24]
+---
+colunaValor [T005_Percentual_Comissao]
+colunaTitulo [%Comissão]
+colunaOrdem [23]
+---

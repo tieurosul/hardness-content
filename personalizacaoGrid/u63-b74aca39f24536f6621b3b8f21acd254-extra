@@ -1,0 +1,15 @@
+LEFT JOIN T289 as nfRecebida ON nfRecebida.T289_T014_Id=T001_T014_Id
+LEFT JOIN T289A ON T289A_T008_Id=T001_T008_Id
+LEFT JOIN T289 as nfEmitida ON T289A_T289_Id=nfEmitida.T289_Id
+LEFT JOIN T290 ON T290_T008_Id=T001_T008_Id
+LEFT JOIN T008 as itemNfEntrada ON itemNfEntrada.T008_Id=T289A_T008_Id
+LEFT JOIN T007 as cabecalhoNfEntrada ON cabecalhoNfEntrada.T007_Id=itemNfEntrada.T008_T007_Id
+LEFT JOIN T008 as itemNfVenda ON itemNfVenda.T008_Id=T290_T008_Id
+LEFT JOIN T007 as cabecalhoNfVenda ON cabecalhoNfVenda.T007_Id=itemNfVenda.T008_T007_Id
+LEFT JOIN T014 ON T014_Id=nfRecebida.T289_T014_Id
+LEFT JOIN T013 ON T013_Id=T014_T013_Id
+LEFT JOIN D024 ON IF(T013_D024_Id > 0, D024_Id = T013_D024_Id , IF(cabecalhoNfVenda.T007_D024_Id > 0, D024_Id = cabecalhoNfVenda.T007_D024_Id, D024_Id = cabecalhoNfEntrada.T007_D024_Id))
+LEFT JOIN T290A ON T290_Id = T290A_T290_Id
+WHERE T001_D009_Id='[[r_acaoId]]'
+AND (T290_Id > 0 OR nfRecebida.T289_Id > 0 OR nfEmitida.T289_Id > 0) 
+ORDER BY IF(nfRecebida.T289_Id IS NULL AND nfEmitida.T289_Id IS NULL, T290_T289_Id ,IF(nfRecebida.T289_Id > 0, nfRecebida.T289_Id, nfEmitida.T289_Id)) DESC, T001_Flag_Operacao DESC, T001_Id DESC

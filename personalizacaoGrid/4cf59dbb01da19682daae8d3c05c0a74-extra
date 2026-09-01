@@ -1,0 +1,7 @@
+LEFT JOIN D006 on D006_Id=T007_D006_Id
+LEFT JOIN D024 on D024_Id=T007_D024_Id
+WHERE T007_Data_Emissao >= DATE_SUB(CURRENT_DATE(), INTERVAL 12 MONTH) 
+AND T007_Flag_Cancelada != 'S'
+AND D006_Flag_Venda_Compra_Outros = 'V'                        
+GROUP BY T007_D024_Id
+ORDER BY SUM(T007_Valor_Total_Produtos) DESC

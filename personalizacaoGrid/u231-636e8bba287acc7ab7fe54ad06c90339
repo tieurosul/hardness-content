@@ -1,0 +1,15 @@
+colunaValor [T006_Quantidade]
+colunaTitulo [Qtde]
+colunaOrdem [13]
+---
+colunaValor [T006_Codigo_Produto]
+colunaOrdem [10]
+colunaTitulo [Código]
+---
+colunaValor [T006_Quantidade_OC]
+colunaTitulo [OC]
+colunaOrdem [16]
+---
+colunaValor [Pedido]
+colunaOrdem [12]
+---

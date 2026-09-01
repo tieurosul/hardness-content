@@ -1,0 +1,18 @@
+colunaValor [(SELECT GROUP_CONCAT(DISTINCT(C008_Tipo)) as Tipo
+                                                  FROM T008 
+                                                  LEFT JOIN D009 ON D009_Id=T008_D009_Id 
+                                                  LEFT JOIN D049 ON D049_Id=D009_D049_Id 
+                                                  LEFT JOIN D001 ON D001_Id=D049_D001_Id 
+                                                  LEFT JOIN C008 ON C008_Id=D001_C008_Id 
+                                                  WHERE T008_T007_Id=T007_Id) as Tipos]
+colunaExibir [S]
+colunaTitulo [Tipos]
+---
+colunaValor [vendedor.C007_Primeiro_Nome]
+colunaExibir [S]
+colunaTitulo [Vendedor]
+---
+colunaValor [T007_C007_Id_Vendedor_Interno]
+colunaExibir [S]
+colunaTitulo [Vendedor]
+---

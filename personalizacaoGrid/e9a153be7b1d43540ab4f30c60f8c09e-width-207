@@ -1,0 +1,1 @@
+a:7:{s:7:"Status2";s:3:"111";s:27:"vendedor.C007_Primeiro_Nome";s:2:"76";s:20:"T005_Prazos(T005_Id)";s:2:"58";s:18:"D024_Nome_Fantasia";s:3:"243";s:17:"campoCancelamento";s:2:"16";s:22:"T005_Id_Pedido_Externo";s:4:"10.2";s:105:"IF(DiasFaltantes_T005_Prazo_Entrega = 0 AND T005_Flag_Status = 5, 'OK', DiasFaltantes_T005_Prazo_Entrega)";s:4:"11.2";}

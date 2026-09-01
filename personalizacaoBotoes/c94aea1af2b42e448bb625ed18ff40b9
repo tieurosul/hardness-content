@@ -1,0 +1,44 @@
+a:1:{i:0;a:13:{s:2:"id";s:13:"688b94ccd9f26";s:6:"titulo";s:16:"Atualiza Cliente";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:2:"10";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:1782:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+    if (!empty($array['todosCampos']['D024_CNPJ'])){
+        $CNPJ = trim(preg_replace('/[^0-9]/', '', $array['todosCampos']['D024_CNPJ']));
+        // $url = "https://publica.cnpj.ws/cnpj/".$CNPJ;
+        $url = "https://brasilapi.com.br/api/cnpj/v1/".$CNPJ;
+
+        log('CNPJ '.$CNPJ);
+
+        $curl = curl_init($url); 
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true); // Retorna a resposta como string
+        $response = curl_exec($curl);
+        $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        curl_close($curl);
+        
+        if (!($httpCode == 200 && $response !== false)) {
+            log('http '.$httpCode);
+            log('Retorno '.json_encode($response));
+        }
+
+        $dados = json_decode($response, true);
+        $situacao = $dados['descricao_situacao_cadastral'];
+        log('Situação: '.$situacao);
+
+        mysql_query("SET AUTOCOMMIT=0");
+        mysql_query("START TRANSACTION");
+        if ($situacao == 'ATIVA') {
+            $updt = "UPDATE D024 SET D024_Flag_ativo = 'S' WHERE D024_Id = '{$array['todosCampos']['D024_Id']}'";
+            mysql_query($updt);
+            if (mysql_error()) {
+                mysql_query("ROLLBACK");
+                return array('code' => false, 'data' => 'Erro ao atualizar o status do cliente: ' . mysql_error());
+            }
+            mysql_query("COMMIT");
+            return array('code' => true, 'data' => 'Atualizado o status do cliente!');
+        }
+    }
+}";}}

@@ -1,0 +1,8 @@
+tab [item]
+field [T008_Valor_Custo_Unitario]
+name [T008_Valor_Custo_Unitario]
+label [Custo Unitário]
+type [moeda]
+length [20, 15]
+readonly [S]
+---

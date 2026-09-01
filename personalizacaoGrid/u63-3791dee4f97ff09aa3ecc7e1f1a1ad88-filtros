@@ -1,0 +1,41 @@
+colunaValor [T007_Data_Emissao]
+titulo [T007_Data_Emissao]
+exibir [S]
+tipo [data]
+---
+colunaValor [T008_Id]
+titulo [T008_Id]
+exibir [S]
+---
+colunaValor [T008_Valor_Custo_Unitario]
+titulo [T008_Valor_Custo_Unitario]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D009_Valor_Custo_Unitario]
+titulo [D009_Valor_Custo_Unitario]
+exibir [S]
+tipo [numero]
+---
+colunaValor [T008_Codigo_Produto]
+titulo [Cód. NF]
+exibir [S]
+---
+colunaValor [T007_Numero_Nota_Fiscal]
+titulo [NF]
+exibir [S]
+---
+colunaValor [T008_Valor_Preco_Original]
+titulo [T008_Valor_Preco_Original]
+exibir [S]
+tipo [numero]
+---
+colunaValor [datediff(T007_Data_Emissao[[virgula]]D009_Data_Ultima_Entrada)]
+titulo [datediff]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D049_Flag_Tipo]
+titulo [D049_Flag_Tipo]
+exibir [S]
+---

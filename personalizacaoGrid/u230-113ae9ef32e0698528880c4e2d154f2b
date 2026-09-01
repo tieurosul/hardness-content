@@ -1,0 +1,7 @@
+colunaValor [D001_D005_Id]
+colunaTitulo [NCM]
+colunaEditarOculto [1]
+colunaEditarTodos [1]
+callback [campoMostraValor]
+colunaEditarNivel [1]
+---

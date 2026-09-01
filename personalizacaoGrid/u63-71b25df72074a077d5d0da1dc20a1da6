@@ -1,0 +1,8 @@
+colunaValor [D006_Situacao_Tributaria_PIS]
+colunaExibir [S]
+colunaTitulo [D006_Situacao_Tributaria_PIS]
+---
+colunaValor [D006_Situacao_Tributaria_COFINS]
+colunaExibir [S]
+colunaTitulo [D006_Situacao_Tributaria_COFINS]
+---

@@ -1,0 +1,35 @@
+colunaValor [LinkProduto]
+colunaTitulo [Link]
+colunaOrdem [25]
+---
+colunaValor [T004_Quantidade]
+colunaTitulo [Qtde]
+colunaOrdem [9]
+---
+colunaValor [T004_Valor_Preco_Unitario]
+colunaTitulo [Preço]
+colunaOrdem [10]
+---
+colunaValor [T004_Percentual_Desconto]
+colunaTitulo [% Desc]
+colunaOrdem [11]
+---
+colunaValor [SUBSTRING(D082_Marca,1,15)]
+colunaTitulo [Marca]
+colunaOrdem [8]
+---
+colunaValor [T004_Valor_Total_Preco]
+colunaTitulo [Total]
+colunaOrdem [12]
+---
+colunaValor [T004_Observacao]
+colunaTitulo [Observação]
+colunaOrdem [7]
+---
+colunaValor [T004_Descricao_Produto]
+colunaTitulo [Produto]
+colunaCongelar [S]
+---
+colunaValor [Pedido]
+colunaOrdem [14]
+---

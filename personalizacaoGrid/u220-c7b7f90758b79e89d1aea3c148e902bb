@@ -1,0 +1,9 @@
+colunaValor [T005_Id]
+callback [abrirJanela]
+callbackParameter [array('Pedido', '/ven/ven002/content/ven002content02/', 'T005_Id', '1000,615', false, false, '&tabela=T005')]
+---
+colunaValor [T005_Observacao_1]
+colunaTitulo [Observação]
+style [color:red;max-width:200px;white-space:normal;]
+colunaEditar[1]
+---

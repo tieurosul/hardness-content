@@ -1,0 +1,33 @@
+CampoCadastro
+T001_Data_Lancamento
+Cliente
+T001_Descricao_Operacao
+	T001_Quantidade
+T001_Valor_Custo_Unitario
+Medio
+Preco
+T001_Flag_Operacao
+T001_Quantidade_Saldo
+T001_Flag_MMF
+T001_Flag_Atualiza_Custo
+D004_Local
+T001_Quantidado_Saldo_Locacao
+	D006_Codigo_CFOP
+T001_Aliquota_ICMS
+T001_Aliquota_IPI
+T001_Percentual_ST
+T001_Aliquota_PIS
+T001_Aliquota_COFINS
+T001_Percentual_Frete
+T001_Percentual_Custo_Financeiro
+T001_Valor_ICMS
+T001_Valor_IPI
+T001_Valor_ST
+T001_Valor_PIS
+T001_Valor_COFINS
+T001_Valor_Frete
+T001_Valor_Custo_Financeiro
+T001_Quantidade_Saldo_Mes_Anterior
+T001_Valor_Custo_Mes_Anterior
+T001_Valor_Custo_Medio_Mes_Anterior
+T075_Numero_DI

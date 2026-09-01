@@ -1,0 +1,18 @@
+nome [Produtos_R_]
+valor [Produtos_Real]
+titulo [Produtos R$]
+exibir [S]
+totalizador [soma]
+---
+nome [Valor_NFe_R_]
+valor [T055_Valor_Total_Preco_Nota_Fiscal]
+titulo [Valor NFe R$]
+exibir [S]
+totalizador [soma]
+---
+nome [SISCOMEX_R_]
+valor [T055_Valor_Total_Despesas_Aduaneira]
+titulo [ SISCOMEX R$]
+exibir [S]
+totalizador [soma]
+---

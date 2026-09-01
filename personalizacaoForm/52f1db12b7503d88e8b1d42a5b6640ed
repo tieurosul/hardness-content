@@ -1,0 +1,35 @@
+tab[geral]
+field[P005_Id]
+name[P005_Id]
+type[hidden]
+label[Id]
+---
+tab[geral]
+field[P005_D001_Id]
+name[P005_D001_Id]
+type[pesquisa]
+label[Item principal]
+pesquisa [array('D001','D001_Id','D001_Codigo_Produto, D001_Descricao_Produto', "")]
+disabled [S]
+---
+tab[geral]
+field[P005_D001_Id_Complemento]
+name[P005_D001_Id_Complemento]
+type[pesquisa]
+label[Item Complemento]
+pesquisa[array('D001', 'D001_Id', 'D001_Codigo_Produto, D001_Descricao_Produto', '', '')]
+---
+tab[geral]
+field[P005_Tipo]
+name[P005_Tipo]
+type[select]
+label[Tipo]
+select [ 
+    array(
+        array('title' => '...', 'value'=>''),
+		array('title' => 'Substituto', 'value'=>'1'),
+		array('title' => 'Reposição', 'value' =>'2'),
+        array('title' => 'Complementar', 'value' =>'3')
+		)
+]
+---

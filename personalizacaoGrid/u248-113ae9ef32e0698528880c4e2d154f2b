@@ -1,0 +1,19 @@
+colunaValor [D049_D082_Id]
+colunaTitulo [Marca]
+colunaOrdem [12]
+---
+colunaValor [D049_Origem_Mercadoria]
+colunaTitulo [Origem]
+colunaOrdem [10]
+---
+colunaValor [D001_D005_Id]
+colunaTitulo [NCM]
+colunaOrdem [11]
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaTitulo [Físico]
+colunaOrdem [13]
+---
+colunaValor [Pedido]
+colunaOrdem [14]
+---

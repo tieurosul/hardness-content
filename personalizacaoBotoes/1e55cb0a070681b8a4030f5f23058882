@@ -1,0 +1,30 @@
+a:1:{i:0;a:13:{s:2:"id";s:13:"68f22e5c60047";s:6:"titulo";s:18:"ajusta numero lote";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:0;s:4:"lote";s:1:"1";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:1218:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+
+    //$lote = $array['todosCampos']['T066A_Numero_Lote'] . rand(1000, 9999);
+
+    //mysqli_query("UPDATE T066A SET T066A_Numero_Lote = '{$lote}' WHERE T066A_Id = '{$array['todosCampos']['T066A_Id']}'");
+
+
+    $T001 = mysql_query("SELECT T066A_Id, T066_Id, T001A_Id, T001_Id , T001A_Numero_Lote, T066A_Numero_Lote
+        FROM T001A
+        LEFT JOIN T001 ON T001_Id = T001A_T001_Id
+        LEFT JOIN T066 ON T066_Id = T001_T066_Id
+        LEFT JOIN T066A ON T066_Id = T066A_T066_Id
+        WHERE T001_T066_Id = '{$array['todosCampos']['T066_Id']}'
+        AND T001A_Numero_Lote != ''  ");
+
+        while($mT001 = mysql_fetch_array($T001)){
+          //mysqli_query("UPDATE T001A SET T001A_Numero_Lote = '{$mT001['T066A_Numero_Lote']}' WHERE T001A_Id = '{$mT001['T001A_Id']}'");
+          
+        }
+        log("T001_Ids : ".$T001_Ids);
+        return array('code' => true, 'data' => $T001_Ids);
+
+}";}}

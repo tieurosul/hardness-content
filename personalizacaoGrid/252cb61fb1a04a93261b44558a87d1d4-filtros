@@ -1,0 +1,40 @@
+colunaValor [D022_Nome_Empresa]
+titulo [Transportadora]
+tipo [texto]
+---
+colunaValor [D149_Flag_Parana_Competitivo]
+titulo [Parana Competivivo]
+tipo [select]
+select [array(
+		array('title' => 'Todos', 'value' => ''),
+		array('title' => 'SIM', 'value' => 'S'),
+		array('title' => 'NÃO', 'value' => 'N'),
+	)]
+exibir [S]
+---
+colunaValor [T008_Flag_Destino_Produto]
+titulo [Destino]
+tipo [numero]
+---
+colunaValor [T008_Flag_Situacao_Tributaria]
+titulo [Origem]
+---
+colunaValor [T008_Valor_ICMS_Substituicao_Retencao]
+titulo [ST R$]
+exibir [S]
+tipo [numero]
+---
+colunaValor [T007_Flag_Entrada_Saida]
+titulo [Entrada ou Saida?]
+tipo [select]
+select [array(
+		array('title' => 'Todos', 'value' => ''),
+		array('title' => 'ENTRADA', 'value' => 'E'),
+		array('title' => 'SAÍDA', 'value' => 'S'),
+	)]
+exibir [S]
+---
+colunaValor [UsuarioGerouNF.C007_Nome]
+titulo [Gerou NF]
+exibir [S]
+---

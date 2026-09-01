@@ -1,0 +1,77 @@
+colunaValor [T055_Id]
+chavePrimaria [S]
+colunaExibir [S]
+---
+colunaValor [T055A_Id]
+chavePrimaria [S]
+colunaExibir []
+---
+colunaValor [T007_Id]
+chavePrimaria [S]
+colunaExibir []
+---
+colunaValor [T055_D009_Id]
+chavePrimaria [S]
+colunaExibir []
+---
+colunaValor [T055_T075_Id]
+colunaExibir []
+---
+colunaValor [T055_Codigo_Produto]
+colunaTitulo [Código] 
+colunaAlinhar [center]
+style [width:1%;]
+---
+colunaValor [T055_Descricao_Produto]
+colunaTitulo [Descrição] 
+style [width:1%;]
+---
+colunaValor [T055_Quantidade]
+colunaTitulo [Quantidade] 
+colunaAlinhar [right]
+colunaCasasDecimais [2]
+style [width:1%;]
+---
+colunaValor [T055_T066_Id]
+colunaTitulo [Locação] 
+callback [T055_T066_Id_Local]
+style [width:1%;]
+---
+colunaValor [D004_Local]
+colunaTitulo [D004_Local] 
+colunaExibir []
+---
+colunaValor [T055A_Data_Validade]
+colunaTitulo [Validade] 
+colunaExibir [S]
+callback [gCorrigeData]
+colunaEditar [S]
+colunaEditarJSCallback [colunaEditarCallbackJS_T055A_Data_Validade]
+style [width:1%;]
+---
+colunaValor [T055_Flag_Produto_Divergencia]
+colunaTitulo [Divergência] 
+colunaExibir [S]
+colunaAlinhar [center]
+style [width:1%;]
+callback [personalizado-62953a1d08a0a]
+---
+colunaValor [T055A_Observacao_Divergencia]
+colunaTitulo [Observação Divergência] 
+colunaExibir [S]
+colunaAlinhar [left]
+colunaEditar [S]
+---
+colunaValor [T296_Id]
+colunaTitulo [T296_Id] 
+colunaExibir []
+---
+colunaValor [T066A_Data_Validade]
+colunaTitulo [T066A_Data_Validade] 
+colunaExibir []
+---
+colunaValor [T066_Quantidade_Estoque]
+colunaTitulo [T066_Quantidade_Estoque] 
+colunaExibir []
+---
+

@@ -1,0 +1,25 @@
+colunaValor [Vendedor.C007_Primeiro_Nome]
+colunaTitulo [Vendedor]
+colunaOrdem [9]
+---
+colunaValor [T005_Valor_Total]
+colunaTitulo [Valor Total]
+colunaOrdem [8]
+---
+colunaValor [NF]
+colunaOrdem [6]
+---
+colunaValor [D024_Nome_Fantasia]
+colunaTitulo [Nome Fantasia]
+colunaOrdem [24]
+---
+colunaValor [Status2]
+colunaOrdem [10]
+---
+colunaValor [substr(D024_Nome_Empresa,1,15)]
+colunaTitulo [Cliente]
+colunaOrdem [5]
+---
+colunaValor [T005_Data_Emissao]
+colunaOrdem [1]
+---

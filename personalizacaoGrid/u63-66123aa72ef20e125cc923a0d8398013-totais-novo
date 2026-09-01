@@ -1,0 +1,12 @@
+nome [Sugesto_]
+valor [D009_Quantidade_Comprar_Calculada]
+titulo [Sugestão]
+exibir [S]
+totalizador [soma]
+---
+nome [Emerbrgncia_]
+valor [D009_Quantidade_Compra_Emergencia]
+titulo [ Emergência]
+exibir [S]
+totalizador [soma]
+---

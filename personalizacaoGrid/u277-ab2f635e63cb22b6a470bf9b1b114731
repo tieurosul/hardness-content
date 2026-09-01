@@ -1,0 +1,27 @@
+colunaValor [Vendedor.C007_Primeiro_Nome]
+colunaTitulo [Vendedor]
+colunaOrdem [9]
+---
+colunaValor [Contato]
+colunaOrdem [19]
+---
+colunaValor [T003_Valor_Total]
+colunaTitulo [Valor Total]
+colunaOrdem [11]
+---
+colunaValor [T003_Valor_Total_Produtos_Sem_Desconto]
+colunaTitulo [Tabela]
+colunaOrdem [10]
+---
+colunaValor [NF]
+colunaOrdem [5]
+---
+colunaValor [Pedido]
+colunaOrdem [4]
+---
+colunaValor [T003_Data_Emissao]
+colunaOrdem [3]
+---
+colunaValor [Status]
+colunaOrdem [16]
+---

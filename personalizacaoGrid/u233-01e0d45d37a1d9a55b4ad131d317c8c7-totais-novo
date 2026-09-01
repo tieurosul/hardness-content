@@ -1,0 +1,6 @@
+nome [CFOP_Max]
+valor [D006_Codigo_CFOP]
+titulo [Maior CFOP]
+exibir [S]
+totalizador [max]
+---

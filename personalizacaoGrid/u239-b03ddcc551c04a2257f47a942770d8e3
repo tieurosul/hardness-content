@@ -1,0 +1,19 @@
+colunaValor [outrosPedidos]
+colunaTitulo [Outros<br />Pedidos]
+colunaOrdem [19]
+---
+colunaValor [Vencer]
+colunaTitulo [Valor<br />a Vencer]
+colunaOrdem [19]
+---
+colunaValor [saldoLimite]
+colunaTitulo [Valor<br />Saldo Limite]
+colunaOrdem [19]
+---
+colunaValor [Limite]
+colunaOrdem [18]
+---
+colunaValor [Vencido]
+colunaTitulo [Valor<br />Vencido]
+colunaOrdem [17]
+---

@@ -1,0 +1,22 @@
+colunaValor [D004_Local]
+colunaOrdem [8]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Código]
+colunaOrdem [3]
+---
+colunaValor [D049_Modelo]
+colunaTitulo [Sub-item]
+colunaOrdem [6]
+---
+colunaValor [D001_Codigo_Barras]
+colunaTitulo [EAN]
+colunaOrdem [19]
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaTitulo [Estq.Físico]
+colunaOrdem [7]
+---
+colunaValor [Pedido]
+colunaOrdem [9]
+---

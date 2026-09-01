@@ -1,0 +1,25 @@
+countLinha
+impressaoEtiqueta
+D009_Flag_Imprimir_Etiqueta
+D001_Codigo_Produto
+D001_Descricao_Produto
+D082_Marca
+D037_Unidade
+D009_Quantidade_Estoque
+Pedido
+percentualEstoqueLiquido
+D009_Quantidade_Estoque_Loja
+D009_Quantidade_OC
+D009_Quantidade_Estoque_Fora
+D001_Peso_Unitario_Kg
+D001_Peso_Unitario_Bruto
+D004_Local
+	D049_Modelo
+	percentualEstoqueFisico
+	D001_Codigo_Barras
+D009_Data_Reprocessa_Historico
+D049_Data_Validade
+D049_Data_Fabricacao
+D049_Flag_Curva_ABC_Qtd
+D001_D003_Id
+addColuna

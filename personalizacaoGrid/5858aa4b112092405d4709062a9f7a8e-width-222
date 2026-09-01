@@ -1,0 +1,1 @@
+a:5:{s:100:"concat(T155_Nome_Arquivo,if(ifnull(T155_T168_Id,0)>0,concat(" (Despesa - id:",T155_T168_Id,")"),""))";s:3:"322";s:14:"T155_Descricao";s:3:"223";s:7:"T155_Id";s:2:"66";s:21:"T155_Data_Hora_UpLoad";s:3:"193";s:18:"C007_Primeiro_Nome";s:3:"214";}

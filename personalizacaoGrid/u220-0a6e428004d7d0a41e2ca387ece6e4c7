@@ -1,0 +1,17 @@
+---
+colunaValor [D049_Flag_Tipo]
+colunaTitulo [Tipo]
+colunaAlinhar [center]
+colunaEditarTodos [1]
+colunaEditarOculto [1]
+colunaExibir [1]
+colunaExibir[S]
+---
+colunaValor [D009_Preco_4]
+colunaTitulo [Preço 4]
+colunaOrdem [13]
+---
+colunaValor [D009A_Preco_5]
+colunaTitulo [Preço 5]
+colunaOrdem [14]
+---

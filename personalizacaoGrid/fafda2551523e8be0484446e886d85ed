@@ -1,0 +1,96 @@
+colunaValor [D024A_Id]
+colunaTitulo [D024A_Id]
+chavePrimaria [1]
+---
+colunaValor [D024_Flag_Ativo]
+colunaTitulo [Cliente Ativo/Inativo]
+colunaEditarTodos [S]
+colunaExibir [S]
+---
+colunaValor [D024_Valor_Limite]
+colunaTitulo [Valor Limite]
+colunaAlinhar [right]
+colunaCasasDecimais [2]
+colunaEditar [1]
+colunaEditarTodos [1]
+colunaEditarNivel [2]
+style [font-weight:bold; width: 1%;]
+colunaEditarTipo [moeda]
+---
+colunaValor [D024_E_Mail]
+colunaExibir [S]
+colunaTitulo [Email]
+---
+colunaValor [D024_Flag_Lista_Preco]
+colunaExibir [S]
+---
+colunaValor [D024_Dias_Envio_Email_Orc_Apos_Emissao]
+colunaTitulo [Dias email orc. apos emissão]
+colunaExibir [S]
+colunaEditarTodos [1]
+---
+colunaValor [D024_Dias_Envio_Email_Orc_Antes_Vencer]
+colunaTitulo [Dias email orc. antes vencer]
+colunaExibir [S]
+colunaEditarTodos [1]
+---
+colunaValor [D085_Mensagem]
+colunaExibir [S]
+colunaTitulo [Última Ação]
+---
+colunaValor [D085_Data]
+colunaExibir [S]
+colunaTitulo [Último Contato]
+---
+colunaValor [D024_D022_Id]
+callback [personalizado-6517027588c92]
+---
+colunaValor [D024_D022_Id]
+colunaTitulo [Transpotadora]
+colunaEditar [1]
+colunaEditarTodos [1]
+style [width:1%]
+colunaEditarGeraSelect[Array('D022','D022_Id','D022_Nome_Empresa')]
+---
+colunaValor [D022_Nome_Empresa]
+colunaExibir []
+colunaTitulo [D022_Nome_Empresa]
+---
+colunaValor [D024_Flag_Liberado]
+colunaExibir [S]
+colunaTitulo [Crédito Liberado]
+colunaEditarTodos [S]
+---
+colunaValor [Alterado.C007_Primeiro_Nome]
+colunaExibir [S]
+colunaTitulo [Usuário última ação]
+---
+colunaValor [D024_Flag_Cliente]
+colunaTitulo [Cliente]
+colunaEditarTodos [S]
+colunaExibir [S]
+colunaEditarNivel [2]
+---
+colunaValor [D024_Flag_Fornecedor]
+colunaTitulo [Fornecedor]
+colunaEditarTodos [S]
+colunaExibir [S]
+colunaEditarNivel [2]
+---
+colunaValor [D024_CNPJ_Matriz]
+colunaTitulo [CNPJ Matriz]
+colunaEditar [S]
+colunaEditarNivel [2]
+colunaEditarCallback [personalizado-68a8a26632313]
+---
+colunaValor [D024_D046_Id]
+colunaTitulo [Grupo]
+colunaEditar [S]
+colunaEditarTodos [S]
+colunaEditarNivel [2]
+---
+colunaValor [D024A_Segmento_Atuacao]
+colunaTitulo [Segmento Atuação]
+callback [personalizado-6a10538ba0071]
+colunaAlinhar [center]
+---

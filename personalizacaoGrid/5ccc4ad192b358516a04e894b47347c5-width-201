@@ -1,0 +1,1 @@
+a:6:{s:9:"D073_Nome";s:3:"154";s:14:"D032_Descricao";s:3:"149";s:70:"IF(D154_Id>0,CONCAT(D154_Descricao," - ",D014_SubConta),D014_SubConta)";s:3:"249";s:17:"D024_Nome_Empresa";s:3:"256";s:12:"T015_D032_Id";s:3:"164";s:21:"T015_Numero_Duplicata";s:3:"114";}

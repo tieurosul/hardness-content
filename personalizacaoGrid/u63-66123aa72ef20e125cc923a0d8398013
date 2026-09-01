@@ -1,0 +1,15 @@
+colunaValor [D009_Id]
+colunaExibir [S]
+colunaTitulo [D009_Id]
+---
+colunaValor [D009A_Id]
+colunaExibir [S]
+colunaTitulo [D009A_Id]
+chavePrimaria [S]
+---
+colunaValor [D009A_Flag_Atualizar_Estoque]
+colunaExibir [S]
+colunaTitulo [D009A_Flag_Atualizar_Estoque]
+colunaEditar [S]
+colunaEditarTodos [S]
+---

@@ -1,0 +1,11 @@
+<?php
+namespace hardness;
+
+function gridLinha($array) {
+    // $array['todosCampos']['CAMPO']
+    // return 'linhaCinza';
+    // return 'background-color: green; color: white;';
+    if ($array['todosCampos']['T066A_Flag_Ativo'] == 'N') {
+        return 'linhaVermelho';
+    }
+}

@@ -1,0 +1,12 @@
+nome [Base_ICM_]
+valor [T008_Valor_Base_ICMS]
+titulo [Base ICM]
+exibir [S]
+totalizador [soma]
+---
+nome [ICMS_Base_Diferimento_]
+valor [T008_Valor_Base_ICMS_Impresso]
+titulo [ ICMS Base Diferimento]
+exibir [S]
+totalizador [soma]
+---

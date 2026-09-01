@@ -1,0 +1,45 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['T008_Situacao_Tributaria_PIS']
+    // $array['totais']['Nome_Total']
+    switch ($array['todosCampos']['T008_Situacao_Tributaria_PIS']) {
+        case '01': return '01 - Operação Tributável com Alíquota Básica';
+        case '02': return '02 - Operação Tributável com Alíquota Diferenciada';
+        case '03': return '03 - Operação Tributável com Alíquota por Unidade de Medida de Produto';
+        case '04': return '04 - Operação Tributável Monofásica - Revenda a Alíquota Zero';
+        case '05': return '05 - Operação Tributável por Substituição Tributária';
+        case '06': return '06 - Operação Tributável a Alíquota Zero';
+        case '07': return '07 - Operação Isenta da Contribuição';
+        case '08': return '08 - Operação sem Incidência da Contribuição';
+        case '09': return '09 - Operação com Suspensão da Contribuição';
+        case '49': return '49 - Outras Operações de Saída';
+        case '50': return '50 - Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Tributada no Mercado Interno';
+        case '51': return '51 - Operação com Direito a Crédito – Vinculada Exclusivamente a Receita Não Tributada no Mercado Interno';
+        case '52': return '52 - Operação com Direito a Crédito - Vinculada Exclusivamente a Receita de Exportação';
+        case '53': return '53 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno';
+        case '54': return '54 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas no Mercado Interno e de Exportação';
+        case '55': return '55 - Operação com Direito a Crédito - Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação';
+        case '56': return '56 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno, e de Exportação';
+        case '60': return '60 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Tributada no Mercado Interno';
+        case '61': return '61 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Não-Tributada no Mercado Interno';
+        case '62': return '62 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita de Exportação';
+        case '63': return '63 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno';
+        case '64': return '64 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas no Mercado Interno e de Exportação';
+        case '65': return '65 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação';
+        case '66': return '66 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno, e de Exportação';
+        case '67': return '67 - Crédito Presumido - Outras Operações';
+        case '70': return '70 - Operação de Aquisição sem Direito a Crédito';
+        case '71': return '71 - Operação de Aquisição com Isenção';
+        case '72': return '72 - Operação de Aquisição com Suspensão';
+        case '73': return '73 - Operação de Aquisição a Alíquota Zero';
+        case '74': return '74 - Operação de Aquisição sem Incidência da Contribuição';
+        case '75': return '75 - Operação de Aquisição por Substituição Tributária';
+        case '98': return '98 - Outras Operações de Entrada';
+        case '99': return '99 - Outras Operações';
+        default: return 'Valor não encontrado';
+    }
+}

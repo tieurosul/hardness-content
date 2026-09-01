@@ -1,0 +1,6 @@
+tab [geral]
+field [D149_Flag_Parana_Competitivo]
+name [D149_Flag_Parana_Competitivo]
+label [Paraná Competitivo]
+type [select]
+---

@@ -1,0 +1,7 @@
+nome [Pedido_Count]
+valor [campoOpcoesAguardandoEntrega2]
+titulo [Registros]
+exibir [S]
+totalizador [count]
+callbackParameter [0]
+---

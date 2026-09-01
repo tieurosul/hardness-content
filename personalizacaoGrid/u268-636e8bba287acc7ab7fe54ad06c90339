@@ -1,0 +1,9 @@
+colunaValor [Pedido]
+colunaOrdem [15]
+---
+colunaValor [T006_Quantidade_OC]
+colunaOrdem [14]
+---
+colunaValor [T006_Quantidade]
+colunaOrdem [13]
+---

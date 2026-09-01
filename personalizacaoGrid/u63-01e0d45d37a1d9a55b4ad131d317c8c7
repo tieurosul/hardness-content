@@ -1,0 +1,54 @@
+colunaValor [D001_Codigo_Barras]
+colunaTitulo [Cod. Barras]
+colunaOrdem [5]
+---
+colunaValor [T006_T075_Id]
+colunaTitulo [Estoque]
+callback [montaGridEstoque]
+colunaExibir [S]
+colunaOrdem [14]
+---
+colunaValor [D009_Id]
+colunaExibir [S]
+colunaTitulo [D009]
+---
+colunaValor [D004_Local]
+colunaTitulo [Locação]
+colunaOrdem [14]
+---
+colunaValor [T006_Quantidade]
+colunaTitulo [Qtde]
+colunaOrdem [11]
+---
+colunaValor [Pedido]
+colunaOrdem [13]
+---
+colunaValor [D049_Flag_Tipo]
+colunaTitulo [TP]
+colunaOrdem [16]
+---
+colunaValor [SUBSTRING(D082_Marca,1,15)]
+colunaTitulo [Marca]
+colunaOrdem [7]
+---
+colunaValor [T006_Valor_Custo_Unitario]
+colunaTitulo [Custo]
+colunaOrdem [10]
+---
+colunaValor [T006_Codigo_Substituto]
+colunaTitulo [Cód.Cli]
+colunaOrdem [6]
+---
+colunaValor [T006_Valor_Preco_Sem_Desconto_Unitario]
+colunaOrdem [24]
+---
+colunaValor [T006_ICMS_Inter_Estadual]
+colunaOrdem [58]
+---
+colunaValor [T006_T066_Id]
+colunaExibir [S]
+colunaTitulo [T006_T066_Id]
+---
+colunaValor [locacao]
+colunaOrdem [12]
+---

@@ -1,0 +1,6 @@
+tab [geral]
+field [P002_Tipo_Orcamento]
+name [P002_Tipo_Orcamento]
+label [Tipo Orç]
+type [text]
+---

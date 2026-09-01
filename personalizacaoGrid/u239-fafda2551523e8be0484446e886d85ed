@@ -1,0 +1,16 @@
+colunaValor [D024_D022_Id]
+colunaOrdem [26]
+---
+colunaValor [D024_D046_Id]
+colunaTitulo [Grupo]
+colunaOrdem [12]
+---
+colunaValor [D024A_Id]
+colunaTitulo [D024A_Id]
+chavePrimaria [1]
+---
+colunaValor [D024A_Segmento_Atuacao]
+colunaTitulo [D024A_Segmento_Atuacao]
+colunaEditarTodos [S]
+colunaOrdem [9]
+---

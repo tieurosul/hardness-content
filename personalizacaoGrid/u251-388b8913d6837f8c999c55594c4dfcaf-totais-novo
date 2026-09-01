@@ -1,0 +1,8 @@
+nome [Count]
+titulo [Registros]
+tipo [sql]
+valor []
+exibir [S]
+totalizador [count]
+callbackParameter [0]
+---

@@ -1,0 +1,20 @@
+colunaValor [T224_Ordem_Compra]
+colunaTitulo [Ref. Interna]
+colunaAlinhar [center]
+style [width:1%]
+colunaExibir [S]
+colunaEditarOculto[S]
+colunaEditarTodos[S]
+---
+colunaValor [campoCancelamento]
+colunaTipo [livre]
+callback [campoCancelamento]
+style [width:1%;]
+colunaExibirNivel [4]
+---
+colunaValor [campoCancelamento]
+colunaTipo [livre]
+callback [campoCancelamento]
+style [width:1%;]
+colunaExibirNivel [3]
+---

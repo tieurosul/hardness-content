@@ -1,0 +1,10 @@
+colunaValor [T296_Valor_Custo_Unitario_ME_Origem]
+colunaExibir [S]
+---
+colunaValor [T296_Valor_Custo_Total_ME_Origem]
+colunaExibir [S]
+---
+colunaValor [D009A_Quantidade_Meses_Estoque]
+colunaTitulo [MMF]
+colunaExibir [S]
+---

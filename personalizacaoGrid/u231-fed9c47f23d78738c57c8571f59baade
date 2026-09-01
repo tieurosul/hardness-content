@@ -1,0 +1,11 @@
+colunaValor [T014_Quantidade]
+colunaTitulo [Quantidade]
+colunaOrdem [20]
+---
+colunaValor [T014_Codigo_Produto]
+colunaTitulo [Cód Forn]
+colunaOrdem [12]
+---
+colunaValor [D001A_Observacao_Entrada]
+colunaOrdem [11]
+---

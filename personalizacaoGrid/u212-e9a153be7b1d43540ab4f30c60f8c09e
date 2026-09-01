@@ -1,0 +1,8 @@
+colunaValor [T005_Percentual_Estoque_Disponivel]
+colunaTitulo [Estoque]
+colunaOrdem [21]
+---
+colunaValor [T005_Valor_Frete]
+colunaTitulo [Frete]
+colunaOrdem [22]
+---

@@ -1,0 +1,8 @@
+colunaValor [D009_Quantidade_Estoque_Real]
+titulo [Estoque]
+exibir [S]
+---
+colunaValor [D009_IPT_3]
+titulo [IPT 3]
+exibir [S]
+---

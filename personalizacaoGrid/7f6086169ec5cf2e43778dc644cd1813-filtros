@@ -1,0 +1,12 @@
+colunaValor [D001_Codigo_Produto]
+titulo [Cod]
+tipo [texto]
+---
+colunaValor [D001_Descricao_Produto]
+titulo [Desc]
+tipo [texto]
+---
+colunaValor [D009_Id]
+titulo [D009_Id]
+tipo [numero]
+---

@@ -1,0 +1,15 @@
+colunaValor [T225_Valor_Preco_Unitario]
+colunaOrdem [18]
+---
+colunaValor [T225_Quantidade]
+colunaOrdem [16]
+---
+colunaValor [infoCustoVendaProduto]
+colunaOrdem [20]
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaOrdem [19]
+---
+colunaValor [sum(T014_Quantidade)*count(distinct T014_Id)/count(*)]
+colunaOrdem [24]
+---

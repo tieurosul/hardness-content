@@ -1,0 +1,16 @@
+---
+colunaValor [D024_D021_Id]
+colunaTitulo [Representante]
+colunaEditar [1]
+colunaEditarTodos [1]
+callback [mostrarRepresentante]
+style [width:1%]
+---
+colunaValor [D085_Data]
+colunaExibir [S]
+colunaTitulo [Data]
+---
+colunaValor [D085_Data]
+colunaExibir [S]
+colunaTitulo [Último Contato]
+---

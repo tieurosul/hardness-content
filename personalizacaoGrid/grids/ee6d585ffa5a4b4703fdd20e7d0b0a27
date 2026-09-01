@@ -1,0 +1,2 @@
+a:11:{s:4:"nome";s:19:"nota fiscal produto";s:6:"modulo";s:0:"";s:5:"opcao";s:0:"";s:6:"estilo";s:6:"normal";s:3:"md5";s:32:"1b311b591d7c2f5dd8753b18edc4bc12";s:4:"from";s:4:"T008";s:5:"extra";s:0:"";s:4:"grid";a:1:{i:0;a:2:{s:11:"colunaValor";s:7:"T008_Id";s:12:"colunaTitulo";s:7:"T008_Id";}}s:3:"sql";s:24:"SELECT T008_Id
+FROM T008";s:10:"clickhouse";b:0;s:12:"criadoViaSQL";b:1;}

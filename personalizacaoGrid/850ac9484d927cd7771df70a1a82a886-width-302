@@ -1,0 +1,1 @@
+a:8:{s:14:"T019_Referente";s:3:"417";s:17:"D024_Nome_Empresa";s:3:"297";s:16:"T019_Complemento";s:3:"393";s:21:"T019_Valor_Lancamento";s:3:"100";s:70:"IF(D154_Id>0,CONCAT(D154_Descricao," - ",D014_SubConta),D014_SubConta)";s:3:"213";s:15:"T019_Observacao";s:3:"170";s:10:"T019_Saldo";s:2:"99";s:15:"T019_Conciliado";s:2:"16";}

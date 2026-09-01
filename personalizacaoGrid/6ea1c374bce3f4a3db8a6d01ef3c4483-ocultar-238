@@ -1,0 +1,23 @@
+D009_Quantidade_Estoque_Similar	|	Similar
+D009_Quantidade_Estoque_Fora	|	Fora
+D049_Flag_Tipo	|	TP
+T004_Valor_Preco_Tabela	|	Forn
+T004_Observacao_Entrega	|	Entg.dias
+T004_Flag_Origem_Produto	|	Orig
+T004_Flag_Destino_Produto	|	Dest
+T004_Percentual_Reducao_ICMS	|	%Red
+T004_Aliquota_PIS	|	%PIS
+T004_Aliquota_COFINS	|	%COFINS
+T004_Aliquota_IRPJ	|	%IRPJ
+T004_Aliquota_CSLL	|	%CSLL
+T004_Valor_PIS	|	PIS R$
+T004_Valor_COFINS	|	COFINS R$
+T004_Valor_IRPJ	|	IRPJ R$
+T004_Valor_CSLL	|	CSLL R$
+T004_Percentual_Reducao_ICMS_ST	|	%Red Base
+T004_Valor_Base_IPI	|	Base IPI
+T004_Valor_Base_PIS	|	Base PIS
+T004_Valor_Base_COFINS	|	Base COFINS
+T004_Valor_Base_IRPJ	|	Base IRPJ
+T004_Valor_Base_ST	|	Base ST
+D049_Modelo	|	Sub-item

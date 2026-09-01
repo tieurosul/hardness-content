@@ -1,0 +1,11 @@
+colunaValor [T005A_Data_Hora_Etapa_Expedicao]
+colunaTitulo [Etapa Expedição]
+colunaExibir [S]
+callback [gCorrigeData]
+colunaOrdem [8]
+---
+colunaValor [T005_Flag_Status]
+colunaExibir [S]
+colunaTitulo [T005_Flag_Status]
+colunaEditarTodos [S]
+---

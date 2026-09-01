@@ -1,0 +1,10 @@
+left join D024 on D024_Id=T019_D024_Id                                                                                                                                                                                                      
+  left join D027 on D027_Id=T019_D027_Id
+  left join D031 on D031_Id=T019_D031_Id
+  left join D014 on D014_Id=T019_D014_Id
+  LEFT JOIN D154 ON D154_Id=D014_D154_Id
+  left join T216 on T216_T019_Id=T019_Id
+  LEFT JOIN T002 ON T002_Id=T019_T002_Id
+  LEFT JOIN T015 ON T015_Id=T019_T015_Id
+  where (T019_D007_Id='[[r_D007_Id]]')
+  ORDER BY T019_Data_Lancamento DESC, T019_Id DESC

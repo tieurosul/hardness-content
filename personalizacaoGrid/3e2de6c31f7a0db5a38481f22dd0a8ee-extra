@@ -1,0 +1,17 @@
+left join D024 on D024_Id=T005_D024_Id
+left join D020 on D020_Id=D024_D020_Id
+left join D018 on D018_Id=D024_D018_Id
+left join D021 on D021_Id=T005_D021_Id
+left join D022 on D022_Id=T005_D022_Id
+left join D006 on D006_Id=T005_D006_Id
+left join C007 as Vendedor on Vendedor.C007_Id=T005_C007_Id_Vendedor_Interno
+left join C004 on C004_Id=T005_C004_Id
+left join D036 on T005_D036_Id=D036_Id 
+left join T007 on T007_T005_Id=T005_Id and T007_Flag_Cancelada!='S'
+left join C007 as Liberou on Liberou.C007_Id=T005_Liberacao_Credito_Id
+left join C007 as Separou on Separou.C007_Id=T005_Usuario_Pecas
+left join T005A on T005_Id=T005A_T005_Id
+where (T005_C004_Id='[[g-empresaAtual]]'
+and T005_Flag_Status='1')
+group by T005_Id 
+order by T005_Id

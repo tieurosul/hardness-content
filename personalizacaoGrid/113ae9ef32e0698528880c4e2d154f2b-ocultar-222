@@ -1,0 +1,6 @@
+D001_Codigo_Barras	|	EAN
+D009_Quantidade_Estoque_Loja	|	Loja
+D009_Quantidade_Estoque_Fora	|	Fora
+ifnull(D069_D070_Id,"_")	|	Tab
+D049_Flag_Curva_ABC_Qtd	|	ABC(Q)
+D049_Flag_Curva_ABC	|	ABC(V)

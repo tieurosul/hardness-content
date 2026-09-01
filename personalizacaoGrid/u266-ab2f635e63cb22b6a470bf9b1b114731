@@ -1,0 +1,11 @@
+colunaValor [Contato]
+colunaOrdem [7]
+---
+colunaValor [(T003_Valor_Desconto/T003_Valor_Total_Produtos_Sem_Desconto)*100]
+colunaTitulo [% Descto]
+colunaOrdem [11]
+---
+colunaValor [T003_Valor_Pendente]
+colunaTitulo [Val. Pend.]
+colunaOrdem [14]
+---

@@ -1,0 +1,17 @@
+excluirLinha
+	T007_Numero_Nota_Fiscal
+	T007_Data_Emissao
+T075_Data_Emissao_DI
+T075_Numero_DI
+T075_Ordem_Compra
+	Fornecedor
+T075_D024_Id
+Produtos_Real
+T055_Valor_Total_Preco_Nota_Fiscal
+T055_Valor_Total_Custo_Final
+C007_Primeiro_Nome
+	T075_Data_Licenca_Importacao
+	T075_Data_Estoque
+	T075_Data_Embarque
+	T075_Data_Previsao
+	checklist

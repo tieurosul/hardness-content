@@ -1,0 +1,12 @@
+nome [Valor_Media]
+valor [T084_Valor_Conhecimento]
+titulo [Média Valor]
+exibir [S]
+totalizador [media]
+---
+nome [Valor_Total]
+valor [T084_Valor_Conhecimento]
+titulo [Valor]
+exibir [S]
+totalizador [soma]
+---

@@ -1,0 +1,30 @@
+countLinha
+Etiqueta
+D001_Id
+foto
+D001_Codigo_Produto
+D001_Codigo_Barras
+D001_Flag_Ativo
+D049_Flag_Curva_ABC
+D049_Flag_Curva_ABC_Qtd
+ifnull(D069_D070_Id,"_")
+D001_Descricao_Produto
+	D001_Especificacoes
+	D049_Flag_Tipo
+	Pedido
+	D009_Quantidade_OC
+	D009_Data_Ultima_Venda
+	D009_Quantidade_Estoque
+	D001_Descricao_Ingles
+	D001A_Codigo_IMPA
+	D049_D024_Id
+	D001_D003_Id
+D002_Descricao_Produto
+D049_D082_Id
+	D009_Quantidade_Compra_Emergencia
+D001_D005_Id
+D001_D037_Id
+D009_Data_Ultima_Entrada
+D001_D060_Id
+D001_Flag_Tipo_Item
+addColuna

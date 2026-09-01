@@ -1,0 +1,14 @@
+colunaValor [T066A_Numero_Lote]
+colunaTitulo [Lote]
+colunaOrdem [3]
+---
+colunaValor [D004_Local]
+colunaTitulo [Locação]
+colunaOrdem [12]
+---
+colunaValor [EtiquetaLote]
+colunaTipo [livre]
+style [width:1%;]
+colunaOrdem [2]
+callback [personalizado-68dfcc73478f7]
+---

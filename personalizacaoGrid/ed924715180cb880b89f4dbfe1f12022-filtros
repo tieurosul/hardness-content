@@ -1,0 +1,27 @@
+colunaValor [D001_Codigo_Produto]
+titulo [Código]
+exibir [S]
+---
+colunaValor [D001_Descricao_Produto]
+titulo [Código]
+exibir [S]
+---
+colunaValor [D004_Local]
+titulo [Locação]
+exibir [S]
+---
+colunaValor [T066A_Data_Validade]
+titulo [Data Validade]
+exibir [S]
+tipo [data]
+---
+colunaValor [T066_Quantidade_Estoque]
+titulo [Estoque]
+exibir [S]
+tipo [numero]
+---
+colunaValor [T066_Quantidade_Estoque_Liquido]
+titulo [Estoque Líquido]
+exibir [S]
+tipo [numero]
+---

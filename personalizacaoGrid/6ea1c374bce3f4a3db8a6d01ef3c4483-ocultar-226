@@ -1,0 +1,13 @@
+T004_Valor_ICMS_Credito	|	Valor ICM Créd
+T004_Aliquota_ICMS_Credito	|	%ICM Créd
+D004_Local	|	Locação
+T006_T005_Id	|	Ped
+T004_Preco_Pauta_ST	|	Pauta
+T004_ST_VA	|	MVA
+T004_Valor_Partilha_ICMS_Destino	|	Difal Dest R$
+T004_Valor_CSLL	|	CSLL R$
+T004_Valor_Base_CSLL	|	Base CSLL
+T004_Percentual_Partilha_ICMS_Origem 	|	%Difal Orig
+T004_Percentual_Partilha_ICMS_Destino 	|	%Difal Dest
+T004_Percentual_Reducao_ICMS_ST	|	%Red Base
+excluirCheckbox	|

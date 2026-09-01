@@ -1,0 +1,12 @@
+url [/srm/srm001/content/srm001ContentComprasEstoqueModelos/]
+titulo [Compras Estoque]
+---
+url [/est/est009/grid/est009GridCotacaoEmergencia/]
+titulo [Cotação Emergência]
+---
+url [/srm/srm001/content/srm001ContentComprasEmergencia/]
+titulo [Compras Emergência]
+---
+url [/est/est009/grid/est009GridMontagensEmergencia/]
+titulo [Montagens Emergência]
+---

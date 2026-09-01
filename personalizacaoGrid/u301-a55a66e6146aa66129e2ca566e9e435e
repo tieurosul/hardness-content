@@ -1,0 +1,27 @@
+colunaValor [D004_Local]
+colunaOrdem [7]
+---
+colunaValor [Pedido]
+colunaOrdem [9]
+---
+colunaValor [D009_Flag_Imprimir_Etiqueta]
+colunaOrdem [22]
+---
+colunaValor [D049_Modelo]
+colunaOrdem [18]
+---
+colunaValor [D001_Codigo_Barras]
+colunaOrdem [10]
+---
+colunaValor [D009_Quantidade_OC]
+colunaOrdem [13]
+---
+colunaValor [D049_Data_Fabricacao]
+colunaOrdem [14]
+---
+colunaValor [D049_Data_Validade]
+colunaOrdem [15]
+---
+colunaValor [D049_Flag_Curva_ABC_Qtd]
+colunaOrdem [16]
+---

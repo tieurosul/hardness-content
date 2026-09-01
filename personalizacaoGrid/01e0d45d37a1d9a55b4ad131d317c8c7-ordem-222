@@ -1,0 +1,28 @@
+countLinha
+excluirLinha
+	T006_Item
+	D005_Classificacao_Fiscal
+	T006_Codigo_Produto
+	D037_Unidade
+	T006_Descricao_Produto
+	T006_Quantidade
+	T006_Valor_Custo_Unitario
+	T006_Valor_Preco_Sem_Desconto_Unitario
+	T006_Valor_Total_Preco
+	D006_Codigo_CFOP
+	T006_Aliquota_IPI
+T006_Quantidade_OC
+T006_Quantidade_OP
+T006_Valor_Preco_Original
+T006_Percentual_Desconto
+T006_Percentual_Partilha_ICMS_Destino
+T006_Percentual_Partilha_ICMS_Origem
+T006_Valor_Partilha_ICMS_Destino
+T006_Valor_Partilha_ICMS_Origem
+T006_Valor_Base_ICMS_Substituicao
+T006_Valor_Base_ICMS
+T006_Numero_Pedido_Compra
+T006_Item_Pedido_Compra
+T006_Aliquota_ICMS_Credito
+T006_Valor_ICMS_Credito
+addColuna

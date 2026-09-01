@@ -1,0 +1,27 @@
+colunaValor [T003_Valor_Pendente]
+colunaOrdem [13]
+---
+colunaValor [T003_Valor_Total]
+colunaOrdem [8]
+---
+colunaValor [T003_D024_Id]
+colunaOrdem [3]
+---
+colunaValor [substr(D024_Nome_Empresa,1,15)]
+colunaOrdem [4]
+---
+colunaValor [Contato]
+colunaOrdem [6]
+---
+colunaValor [UFCliente.D018_UF]
+colunaOrdem [5]
+---
+colunaValor [T003_Id]
+colunaOrdem [2]
+---
+colunaValor [Vendedor.C007_Primeiro_Nome]
+colunaOrdem [9]
+---
+colunaValor [D006_Codigo_CFOP]
+colunaOrdem [15]
+---

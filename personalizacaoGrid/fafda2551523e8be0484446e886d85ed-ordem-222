@@ -1,0 +1,27 @@
+excluirLinha
+D024_Id
+D024_Flag_Curva_ABC_Qtd
+D024_Flag_Ativo
+D024_Nome_Empresa
+	D018_UF
+	D024_D021_Id
+	D024_Percentual_Comissao
+	D024_Valor_Limite
+	D024_C007_Vendedor_Externo
+	D024_D046_Id
+	D024_C007_Vendedor_Interno
+	D024_CNPJ
+	D024_Flag_Curva_ABC
+	D024_Flag_Classe
+	D024_Flag_Contribuinte
+	D024_Codigo_Regime_Tributario
+D024_CNPJ_Matriz
+D024_CPF
+D024_Endereco
+	D024_Nome_Fantasia
+D024_Numero
+D024_Bairro
+D020_Nome_Cidade
+D024_Dia_Visita
+D024_Data_Cadastro
+Supervisor

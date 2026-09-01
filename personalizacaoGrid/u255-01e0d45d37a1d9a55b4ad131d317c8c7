@@ -1,0 +1,8 @@
+colunaValor [T006_Numero_Pedido_Compra]
+colunaTitulo [Num.OC]
+colunaOrdem [6]
+---
+colunaValor [T006_Item_Pedido_Compra]
+colunaTitulo [Item.OC]
+colunaOrdem [5]
+---

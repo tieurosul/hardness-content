@@ -1,0 +1,1 @@
+IF(D013_Flag_Ativo = 'S', 'SIM', 'NÃO')	|	Ativo

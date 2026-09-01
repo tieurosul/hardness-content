@@ -1,0 +1,6 @@
+colunaValor [(T006_Valor_Total_Preco_Sem_Desconto) + (T006_Valor_IPI) + (T006_Valor_ICMS_Substituicao_Retencao)]
+colunaOrdem [21]
+---
+colunaValor [T006_Observacao_Entrega]
+colunaOrdem [20]
+---

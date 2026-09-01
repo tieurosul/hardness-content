@@ -1,0 +1,121 @@
+a:5:{s:4:"nome";s:20:"incluir itens pedido";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"9d68cfe02895528f42940c7de6f6da70";s:6:"codigo";s:5487:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+log("entrou incluir itens do pedido");
+    global $g;
+    $T005_Id = $array['T005_Id'];
+    
+    if (empty($T005_Id)) {
+        return 'Não encontrado o Id do pedido (T005_ID)';
+    }
+
+    $T005 = mysql_query("SELECT T005_Flag_Destino_Produto,
+                                T005_Observacao_1
+                           FROM T005
+                          WHERE T005_Id = '{$T005_Id}'");
+
+    $mT005 = mysql_fetch_array($T005);
+    
+    require_once("bibliotecas/classes/CAD002.php");
+    $CAD002 = new CAD002();
+
+    require_once("bibliotecas/classes/VEN002.php");
+    $VEN002 = new VEN002();
+
+    mysql_query("START TRANSACTION");
+
+    $T006 = mysql_query("SELECT T206_Id, 
+                                T206_D009_Id,
+                                T206_T066_Id,
+                                D001_Codigo_Produto, 
+                                D001_Descricao_Produto, 
+                                D082_Marca, 
+                                D009_Quantidade_OE(T206_D009_Id, T206_Id, 0, T206_D169_Id) as saldo,
+                                D001_D037_Id,
+                                D001_D005_Id
+                           FROM T206 
+                      LEFT JOIN T006 ON T206_Id=T006_T206_Id 
+                      LEFT JOIN T005 ON T005_Id=T006_T005_Id 
+                      LEFT JOIN D169 ON D169_Id=T206_D169_Id 
+                      LEFT JOIN D009 ON D009_Id=T206_D009_Id 
+                      LEFT JOIN D049 ON D049_Id=D009_D049_Id 
+                      LEFT JOIN D082 ON D082_Id=D049_D082_Id 
+                      LEFT JOIN D001 ON D049_D001_Id=D001_Id 
+                          WHERE T206_Flag_Marcado='S'
+                       GROUP BY T206_Id");
+
+    while($mT006 = mysql_fetch_array($T006)){
+        
+        $sql  = "INSERT INTO T006 (T006_T005_Id,
+                                   T006_T206_Id,
+                                   T006_D009_Id, 
+                                   T006_D005_Id,
+                                   T006_T066_Id,
+                                   T006_Codigo_Produto, 
+                                   T006_Marca,
+                                   T006_Descricao_Produto, 
+                                   T006_Quantidade, 
+                                   T006_Valor_Preco_Sem_Desconto_Unitario, 
+                                   T006_Valor_Preco_Original,
+                                   T006_Valor_Preco_Original_Bruto,
+                                   T006_Valor_Preco_Bruto,
+                                   T006_D037_Id,
+                                   T006_Flag_Destino_Produto
+                           )VALUES('{$T005_Id}',
+                                   '{$mT006['T206_Id']}',
+                                   '{$mT006['T206_D009_Id']}',
+                                   '{$mT006['D001_D005_Id']}',
+                                   '{$mT006['T206_T066_Id']}',
+                                   '{$mT006['D001_Codigo_Produto']}',
+                                   '{$mT006['D082_Marca']}',
+                                   '{$mT006['D001_Descricao_Produto']}',
+                                   '{$mT006['saldo']}',
+                                   '0.01',
+                                   '0.01',
+                                   '0.01',
+                                   '0.01',
+                                   '{$mT006['D001_D037_Id']}',
+                                   '{$mT005['T005_Flag_Destino_Produto']}')";
+                                   
+        log($sql);
+        $ret  = mysql_query($sql, false);
+        $erro = mysql_error();
+        if (!empty($erro)) {
+            mysql_query("ROLLBACK");
+            return 'Erro: ' . $erro;
+        }
+        
+        mysqli_query("UPDATE T206 SET T206_Flag_Marcado = 'N' WHERE T206_Id = '{$mT006['T206_Id']}'");
+        log("UPDATE T206 SET T206_Flag_Marcado = 'N' WHERE T206_Id = '{$mT006['T206_Id']}'");
+        $D009Ids[] = $mT006['T206_D009_Id'];
+    }  
+
+    $observacao = "REQUISIÇÃO INTERNA DE PRODUTOS <br>" . $mT005['T005_Observacao_1'];
+
+    mysqli_query("UPDATE T005 SET T005_Observacao_1 = '{$observacao}',
+                                  T005_Flag_Status  = 1,
+                                  T005_Nome_Status  = T005_Status_Pedido (T005_Flag_Status, 1)
+                            WHERE T005_Id = '{$T005_Id}'");
+    log("UPDATE T005 SET T005_Observacao_1 = '{$observacao}',
+                                  T005_Flag_Status  = 1,
+                                  T005_Nome_Status  = T005_Status_Pedido (T005_Flag_Status, 1)
+                            WHERE T005_Id = '{$T005_Id}'");
+
+    $VEN002->ven002atualizarCFOP($T005_Id);
+    foreach(array_unique($D009Ids) as $D009_Id){
+        log("Rodou reprocessa D009_Id: {$D009_Id}");
+        $CAD002->D001_reprocessa_historico(false, $D009_Id, 30, true);
+    }
+
+    // VERIFICANDO SE GEROU CORRETAMENTE O T005 e T006
+    $T005_T006  = mysql_query("SELECT T005_Id,T006_Id from T005 LEFT JOIN T006 ON T006_T005_Id=T005_Id WHERE T005_Id='{$T005_Id}'");
+    $mT005_T006 = mysql_fetch_array($T005_T006);
+    
+    if($mT005_T006['T005_Id'] <=0 OR $mT005_T006['T006_Id'] <=0 ){
+        mysql_query("ROLLBACK");
+        log("deu erro");
+        log("Houve um problema na gravação dos dados. Por favor, refaça a operação");
+        return "Houve um problema na gravação dos dados. Por favor, refaça a operação";
+    }
+
+    mysql_query("COMMIT");
+    return true;";s:3:"md5";s:32:"515d9393bb4f1563caa72885d82a0053";}

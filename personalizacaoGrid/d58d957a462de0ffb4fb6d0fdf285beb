@@ -1,0 +1,11 @@
+colunaValor [D024_CNPJ]
+colunaTitulo [CNPJ]
+---
+colunaValor [D001_D003_Id]
+colunaTitulo [id_Grupo]
+colunaExibir []
+---
+colunaValor [D003_Nome_Linha]
+colunaTitulo [Grupo]
+colunaExibir [S]
+---

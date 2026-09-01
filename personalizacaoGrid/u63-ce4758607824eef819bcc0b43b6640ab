@@ -1,0 +1,34 @@
+colunaValor [D009_Id]
+colunaExibir []
+---
+colunaValor [D009_C004_Id]
+colunaTitulo [C004]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Código]
+---
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Descrição]
+style [color: gray;]
+---
+colunaValor [D009_Preco_1]
+colunaTitulo [Preco 1]
+---
+colunaValor [D009_IPT_3]
+colunaTitulo [IPT 3]
+---
+colunaValor [D009_Preco_3]
+colunaTitulo [Preco 3]
+---
+colunaValor [D009_IPT_4]
+colunaTitulo [IPT 4]
+---
+colunaValor [D009_Preco_4]
+colunaTitulo [Preco 4]
+---
+colunaValor [ROUND((D009_Preco_1*D009_IPT_3),10)]
+colunaTitulo [-- PRECO 3 CERTO --]
+---
+colunaValor [ROUND((D009_Preco_1*D009_IPT_4),10)]
+colunaTitulo [-- PRECO 4 CERTO --]
+---

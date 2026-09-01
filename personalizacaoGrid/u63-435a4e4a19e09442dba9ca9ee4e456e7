@@ -1,0 +1,20 @@
+colunaValor [D006_Observacao]
+colunaExibir [S]
+colunaTitulo [D006_Observacao]
+---
+colunaValor [D006_Observacao_Produto]
+colunaExibir [S]
+colunaTitulo [D006_Observacao_Produto]
+---
+colunaValor [D006_Aliquota_PIS]
+colunaExibir [S]
+colunaTitulo [D006_Aliquota_PIS]
+---
+colunaValor [D006_Aliquota_COFINS]
+colunaExibir [S]
+colunaTitulo [D006_Aliquota_COFINS]
+---
+colunaValor [D006_Flag_Unidade_Tributavel]
+colunaExibir [S]
+colunaTitulo [D006_Flag_Unidade_Tributavel]
+---

@@ -1,0 +1,14 @@
+T004_Observacao	|	Observação
+T004_Observacao_Entrega	|	Entg.dias
+T004_Codigo_Substituto	|	Cód.Cli
+D009_Quantidade_OC	|	OC
+T004_Item_Pedido_Compra	|	Item.OC
+T004_Valor_CSLL	|	CSLL R$
+D049_Flag_Tipo	|	TP
+T004_Item	|	It
+T006_T005_Id	|	Ped
+D004_Local	|	Locação
+T004_Valor_Base_CSLL	|	Base CSLL
+T004_Numero_Pedido_Compra	|	Num.OC
+T004_Valor_Base_IRPJ	|	Base IRPJ
+D009_Quantidade_Estoque_Similar	|	Similar

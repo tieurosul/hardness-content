@@ -1,0 +1,5 @@
+colunaValor [D013A_Data_Ultima_Alteracao]
+colunaExibir [S]
+colunaTitulo [Ult. Alteração]
+callback [gCorrigeData]
+---

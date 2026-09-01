@@ -1,0 +1,27 @@
+colunaValor [T075_Numero_DI]
+colunaTitulo [Número DI]
+style [font-weight:bold;width:1%]
+---
+colunaValor [T001_Valor_Custo_Mes_Anterior]
+colunaCasasDecimais [6]
+---
+colunaValor [T001_Valor_Custo_Medio_Mes_Anterior]
+colunaCasasDecimais [6]
+---
+colunaValor [T001_T008_Id]
+colunaTitulo [T001_T008_Id]
+colunaExibir [S]
+---
+colunaValor [T001_T014_Id]
+colunaTitulo [T001_T014_Id]
+colunaExibir [S]
+---
+colunaValor [T001A_Numero_Lote]
+colunaTitulo [Lote]
+colunaExibir [S]
+style [background:#E0EEEE;font-weight:normal]
+colunaOrdem [16]
+---
+colunaValor [D046_Nome]
+colunaTitulo [Canal Primario]
+---

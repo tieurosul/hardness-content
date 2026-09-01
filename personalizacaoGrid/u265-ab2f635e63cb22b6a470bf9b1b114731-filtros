@@ -1,0 +1,8 @@
+colunaValor [substr(D024_Nome_Empresa,1,15)]
+titulo [Cliente]
+exibir [S]
+---
+colunaValor [T003_Data_Emissao]
+titulo [Emissão]
+exibir [S]
+---

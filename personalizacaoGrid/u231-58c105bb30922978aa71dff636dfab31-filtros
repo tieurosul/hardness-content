@@ -1,0 +1,8 @@
+colunaValor [T075_Valor_PIS]
+titulo [Valor PIS]
+exibir [S]
+---
+colunaValor [Fornecedor]
+titulo [Fornecedor]
+exibir [S]
+---

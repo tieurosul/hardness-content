@@ -1,0 +1,7 @@
+Left join D024 on D024_Id=D013_D024_Id
+left join D018 on D018_Id=D024_D018_Id
+left join D020 on D020_Id=D024_D020_Id 
+left join D085 on D085_Id=D024_D085_Id
+left join D046 on D046_Id=D024_D046_Id
+left join C007 on C007_Id=D024_C007_Vendedor_Interno
+left join D013A on D013_Id=D013A_D013_Id

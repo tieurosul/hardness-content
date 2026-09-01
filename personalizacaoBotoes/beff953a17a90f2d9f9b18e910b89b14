@@ -1,0 +1,12 @@
+a:1:{i:0;a:13:{s:2:"id";s:13:"68b5b5684d350";s:6:"titulo";s:17:"Atualizar Estoque";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:0;s:4:"lote";s:2:"20";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:355:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['Nome_Total']
+    
+    require_once('bibliotecas/classes/CAD002.php');
+    $CAD002 = new CAD002();        
+    $CAD002->D001_reprocessa_historico(false, $array['todosCampos']['D009_Id'],50);
+
+    return array('code' => true, 'data' => 'Estoque atualizado com sucesso!');
+}";}}

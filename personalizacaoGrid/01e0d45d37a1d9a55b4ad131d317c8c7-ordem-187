@@ -1,0 +1,24 @@
+excluirLinha
+T006_Item
+	D006_Codigo_CFOP
+	D005_Classificacao_Fiscal
+T006_Codigo_Produto
+T006_Descricao_Produto
+	Pedido
+	T006_Quantidade
+	T006_Valor_Preco_Sem_Desconto_Unitario
+	T006_Valor_Custo_Unitario
+	T006_Percentual_Desconto
+	T006_Aliquota_IPI
+SUBSTRING(D082_Marca,1,15)
+D037_Unidade
+T006_Quantidade_OC
+D009_Quantidade_Estoque_Similar
+T006_Valor_Total_Preco
+T006_Observacao
+T006_Valor_Total_Frete
+T006_Flag_ST
+T006_ICMS_Inter_Estadual
+T006_Percentual_Reducao_ICMS_ST
+	T006_Quantidade_Separacao
+D004_Local

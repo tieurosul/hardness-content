@@ -1,0 +1,77 @@
+// Variáveis disponíveis:
+// [[divId]] [[divIdRoot]] [[divIdParent]]
+
+// Click na linha do grid
+/*
+acaoClickLinha('[[divId]]', function(data, array) {
+    // campos disponíveis no array: todosCampos, divId, divIdRoot, divIdParent, parametros
+    abrirJanela(data, array['divIdRoot'], array['divId'], unique(), '', 'Título janela - ID: ' + array['todosCampos']['CAMPO'], 'URL', '&acaoId=' + encodeURIComponent(array['todosCampos']['CAMPO']), [980,550]);
+});
+*/
+
+// Remover campos editáveis
+//$('#[[divId]] .grid .campoEditavel').unbind('click').unbind('click').bind('click', function(event) { return false; });
+
+// Não permitir ordenação
+//$('#[[divId]] .grid th').removeAttr('onclick').css({'cursor': 'auto'});
+
+// Remover filtro
+//$('#[[divId]] .gridFiltro').remove();
+
+// Desabilitar o refresh automático deste grid
+//$('#[[divId]] .grid').data('lastTimeUpdate', 'never');
+
+// Já vir selecionado a primeira linha (o recurso setas para baixo e cima)
+//$('#[[divId]]').find('tr:eq(1)').addClass('linhaSelecionada');
+
+// Alterar o campo de um formulário
+// $('#[[divIdParent]] .itemForm-CAMPO').val('');
+
+// Fechar a janela atual
+// fecharJanela('[[divId]]');
+
+// Remover as opções (menu) do grid
+//$('#[[divId]] .gridOptTop').remove();
+
+// Remover os totais do grid
+//$('#[[divId]] .gridTotais').remove();
+
+// Remover o botão de maximizar do grid
+//$('#[[divId]]').addClass('removerGridTheadMaximizar');
+
+// Ação ao fechar a janela
+/*
+acaoFecharJanela('[[divId]]', function(data, ui) {
+    atualizarLinhaGrid('[[divIdParent]]');
+});
+*/
+function opcaoEtiquetaLote(D009_Id, T066_Id){
+    var $buttons = {
+        "Lote 100x40": function() {
+            imprimirEtiquetaLote('f351afb5493fc6f950d0afab54408e98', D009_Id, T066_Id);
+            $(this).dialog("destroy").remove(); 
+        },
+        "Cancelar": function() { 
+            $(this).dialog("destroy").remove(); 
+        }
+    };
+    dialogConfirm('Etiqueta', 'Escolha o tamanho da etiqueta', $buttons);
+}
+
+function imprimirEtiquetaLote(modelo, D009_Id, T066_Id) {
+    $('#[[divId]]').showLoading();
+    $.ajax({
+        url: '/sistema/personalizacaoLowCode/grid_func-ajax/telaGerarPdf/',
+        type: 'GET',
+        dataType: 'jsonp',
+        data: {
+            'ajax': 'true',
+            'acaoId': modelo,
+            'link': '/sistema/personalizacao/tela/'+ modelo +'/?ajax=true&D009_Id=' + D009_Id + '&T066_Id=' + T066_Id,
+        },
+        success: function(resposta) {
+            $('#[[divId]]').hideLoading();
+            window.open(resposta.data, '_blank');
+        }
+    });
+}

@@ -1,0 +1,20 @@
+colunaValor [D001_Codigo_Produto]
+titulo [Cod]
+exibir [S]
+---
+colunaValor [D001_Descricao_Produto]
+titulo [Descrição]
+exibir [S]
+---
+colunaValor [T140_Numero_Serie]
+titulo [Núm. Série]
+exibir [S]
+---
+colunaValor [T140_Data_Hora_Upload]
+titulo [Upload]
+exibir [S]
+---
+colunaValor [C007_Primeiro_Nome]
+titulo [Usuario]
+exibir [S]
+---

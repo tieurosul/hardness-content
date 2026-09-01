@@ -1,0 +1,20 @@
+left join D024 as Forn on Forn.D024_Id=T001_D024_Id
+left join D024 as Cli on Cli.D024_Id=T001_D024_Id_Cliente
+left join D046 on D046_Id = Cli.D024_D046_Id
+left join D006 on D006_Id=T001_D006_Id
+left join D009 on D009_Id=T001_D009_Id
+left join C004 on C004_Id=D009_C004_Id
+left join T066 on T066_Id=T001_T066_Id
+left join D004 on D004_Id=T001_D004_Id
+left join T066A on T066A_T066_Id = T066_Id
+left join T014 on T014_Id=T001_T014_Id
+left join T013 on T013_Id=T014_T013_Id
+left join T008 on T008_Id=T001_T008_Id
+left join T007 on T007_Id=T008_T007_Id
+left join T030 on T030_Id=T001_T030_Id
+left join T029 on T030_T029_Id=T029_Id
+left join T075 ON T075_Id=T007_T075_Id
+left join C007 as Vendedor on Vendedor.C007_Id=T007_C007_Id_Vendedor_Interno
+left join T001A on T001_Id = T001A_T001_Id
+where D009_Id='[[r_acaoId]]'
+order by T001_Data_Lancamento desc,T001_Id desc

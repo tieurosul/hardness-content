@@ -1,0 +1,22 @@
+LEFT JOIN D014 ON T013_D014_Id = D014_Id
+LEFT JOIN D154 ON D154_Id=D014_D154_Id 
+LEFT JOIN D032 ON D032_Id = D014_D032_Id
+left join T014 on T014_T013_Id=T013_Id
+left join T008 on T008_Id=T014_T008_Id
+left join T007 on T007_Id=T008_T007_Id
+left join C007 as VendedorSaida on VendedorSaida.C007_Id=T007_C007_Id_Vendedor_Interno
+left join T012 on T012_Id=T014_T012_Id
+left join T225 on T225_Id=T014_T225_Id
+left join T224 on T224_Id=T225_T224_Id
+left join D009 on D009_Id=T014_D009_Id
+left join D049 on D049_Id=D009_D049_Id
+left join D001 on D001_Id=D049_D001_Id
+left join D024 on D024_Id=T013_D024_Id
+left join D018 on D018_Id=D024_D018_Id
+left join D006 on D006_Id=T014_D006_Id
+left join C007 as Comprador on Comprador.C007_Id=T224_C007_Id_Vendedor_Interno
+left join C007 as Supervisor on Supervisor.C007_Id=Comprador.C007_C007_Id
+left join C007 as Vendedor on Vendedor.C007_Id=D024_C007_Vendedor_Interno
+left join T013A on T013_Id = T013A_T013_Id
+where T013_C004_Id='[[g-empresaAtual]]'
+GROUP BY T013_Id

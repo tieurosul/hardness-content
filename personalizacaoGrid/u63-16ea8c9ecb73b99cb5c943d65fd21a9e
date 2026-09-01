@@ -1,0 +1,12 @@
+colunaValor [T055_Id]
+colunaTitulo [T055_Id]
+colunaExibir []
+---
+colunaValor [((((T055_Valor_Custo_Unitario * T055_Quantidade) * T075_Cotacao_ME) + T055_Valor_Imposto_Importacao + T055_Valor_PIS + T055_Valor_COFINS) / T055_Quantidade)]
+colunaTitulo [NFe Unitario]
+callback [gCorrigeNumero]
+---
+colunaValor [(((T055_Valor_Custo_Unitario * T055_Quantidade) * T075_Cotacao_ME) + T055_Valor_Imposto_Importacao + T055_Valor_PIS + T055_Valor_COFINS)]
+colunaTitulo [NFe Total Parcial]
+callback [gCorrigeNumero]
+---

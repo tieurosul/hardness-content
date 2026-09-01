@@ -1,0 +1,64 @@
+countLinha
+excluirLinha
+horizontal
+T219_Item
+T219_Codigo_Produto
+D049_Modelo
+T219_Codigo_Substituto
+T219_Descricao_Produto
+SUBSTRING(D082_Marca,1,15)
+D049_Flag_Tipo
+D005_Classificacao_Fiscal
+D037_Unidade
+D009_Quantidade_Estoque
+infoCustoVendaProduto
+	D006_Codigo_CFOP
+	T219_Flag_Origem_Produto
+	T219_Flag_Destino_Produto
+T219_Quantidade
+T219_Valor_Preco_Unitario
+	T219_Observacao_Entrega
+	T219_Observacao
+T219_Valor_Total_Preco
+T225_T224_Id
+	T219_IPV
+	T219_Valor_Preco_Venda
+T219_Aliquota_IPI
+T219_Aliquota_ICMS
+T219_Aliquota_ICMS_Diferenca_Aliquotas
+T219_Percentual_Reducao_ICMS
+(round(T219_Valor_ST,2)/(round(T219_Valor_Total_Preco,2)+round(T219_Valor_IPI,2)))*100
+T219_Aliquota_PIS
+T219_Aliquota_COFINS
+T219_Valor_ICMS
+T219_Valor_ICMS_Diferenca_Aliquotas
+T219_Valor_IPI
+T219_Valor_ST
+T219_Valor_PIS
+T219_Valor_COFINS
+(T219_Valor_Frete+T219_Valor_Frete_Total)
+	T219_Valor_Custo_Unitario
+T219_Valor_Financeiro
+if(T003_Flag_Perdido='S','<font style="color:red">Cancelado</font>',T219_Valor_Preco_Venda_Negociado)
+if(T003_Flag_Perdido='S',0,T219_Valor_Preco_Venda_Negociado-(T219_Valor_Preco_Venda*0.96))
+D009_Valor_Custo_Medio_Unitario
+T219_Percentual_Frete
+T219_Percentual_Financeiro
+T219_Flag_ST
+T219_Percentual_ST
+T219_ICMS_Inter_Estadual
+T219_ST_ICMS_Interno
+T219_ST_VA
+T219_ST_VA_Ajustada
+T219_Percentual_Reducao_ICMS_ST
+T219_Valor_Base_ST
+T219_Valor_Base_IPI
+T219_Valor_Base_ICMS
+T219_Valor_Base_PIS
+T219_Valor_Base_COFINS
+T003_Id
+T006_T005_Id
+substr(D024_Nome_Empresa,1,20)
+C007_Primeiro_Nome
+D009_C004_Id
+addColuna

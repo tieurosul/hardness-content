@@ -1,0 +1,53 @@
+a:1:{i:0;a:13:{s:2:"id";s:13:"66eac997777cb";s:6:"titulo";s:14:"Verifica Custo";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:1:"1";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:2951:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+
+    require_once('bibliotecas/classes/CAD002.php');
+    $CAD002 = new CAD002();
+    require_once('bibliotecas/classes/VEN001.php');
+    $VEN001 = new VEN001();
+
+    $T008_Id = $array['todosCampos']['T008_Id'];
+
+    $T008 = mysql_query("SELECT *
+                        FROM T008
+                    LEFT JOIN T007 ON T007_Id = T008_T007_Id
+                        WHERE T008_Id = '{$T008_Id}' ");
+
+    $mT008 = mysql_fetch_array($T008);
+
+
+    $Aliquotas                 = $VEN001->retornaAliquotas($mT008['T008_D009_Id'],false,false, $mT008['T007_Id'], false, false, false, $mT008['T008_D006_Id'], false);
+
+    $dadosPrecoVenda           = $CAD002->retornaPrecoVenda($mT008['T008_D009_Id'], 1, $mT008['T007_D024_Id'], false, $mT008['T008_D006_Id'], $Aliquotas['Aliquota_ICMS'], false, false, $mT008['T007_Casas_Decimais_Preco'], $Aliquotas['Aliquota_PIS'], $Aliquotas['Aliquota_COFINS'], $Aliquotas['Aliquota_IPI'], $Aliquotas['ST_VA'], $Aliquotas['Percentual_Reducao_ICMS_ST'], $Aliquotas['ST_ICMS_Interno'], $Aliquotas['Percentual_Reducao_ICMS'], $Aliquotas['ICMS_Inter_Estadual'], $Aliquotas['Aliquota_IRPJ'], $Aliquotas['Aliquota_CSLL']);
+    $T008_Valor_Custo_Unitario = $dadosPrecoVenda[4];
+
+    log("Valor do T008_Valor_Custo_Unitario : ".$T008_Valor_Custo_Unitario);
+    log("Valor do T008_Id : ".$T008_Id);
+    log("Valor do T007 : ".$mT008['T008_T007_Id']);
+    
+    /*mysqli_query("UPDATE T008 SET T008_Valor_Custo_Unitario = '{$T008_Valor_Custo_Unitario}',
+                                  T008_Valor_Total_Custo=T008_Valor_Custo_Unitario*T008_Quantidade,
+                                  T008_Percentual_Margem=VEN_Calculo_Margem(0, 0, 0, 0, 0, {$T008_Id}, 'N', 'N', 'N', 'N', 'N', T008_Valor_Preco_Unitario, T008_Valor_Custo_Unitario, T008_Quantidade, T008_Valor_ICMS, T008_Valor_PIS, T008_Valor_COFINS, T008_Valor_IRPJ, T008_Valor_CSLL)
+                            WHERE T008_Id = '{$T008_Id}'"); 
+
+
+    $T007 = mysql_query("SELECT SUM(T008_Valor_Total_Custo) as totalCusto
+                           FROM T008
+                          WHERE T008_T007_Id = '{$mT008['T008_T007_Id']}' ");
+                        
+    $mT007 = mysql_fetch_array($T007);
+
+
+    mysqli_query("UPDATE T007 SET T007_Valor_Total_Custo = '{$mT007['totalCusto']}',
+                                  T007_Percentual_Margem=VEN_Calculo_Margem(0, 0, 0, 0, {$mT008['T008_T007_Id']}, 0, 'N', 'N', 'N', 'N', 'N', T007_Valor_Total_Produtos, T007_Valor_Total_Custo, 1, 0, 0, 0, 0, 0)
+                            WHERE T007_Id = '{$mT008['T008_T007_Id']}'");  
+ */
+
+    return array('code' => true, 'data' => 'totalCusto: '.$mT007['totalCusto']);
+}";}}

@@ -1,0 +1,10 @@
+colunaValor [D149_Flag_Parana_Competitivo]
+titulo [Parana Competivivo]
+tipo [select]
+select [array(
+		array('title' => 'Todos', 'value' => ''),
+		array('title' => 'SIM', 'value' => 'S'),
+		array('title' => 'NÃO', 'value' => 'N'),
+	)]
+exibir [S]
+---

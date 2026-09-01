@@ -1,0 +1,20 @@
+colunaValor [D001_Id]
+colunaExibir [S]
+colunaTitulo [Id]
+---
+colunaValor [ifnull(D069_D070_Id,"_")]
+colunaTitulo [Tab]
+colunaOrdem [19]
+---
+colunaValor [D049_Flag_Tipo]
+colunaOrdem [21]
+---
+colunaValor [D009_Quantidade_Compra_Emergencia]
+colunaOrdem [15]
+---
+colunaValor [D009_Quantidade_OC]
+colunaOrdem [16]
+---
+colunaValor [Pedido]
+colunaOrdem [18]
+---

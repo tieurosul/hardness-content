@@ -1,0 +1,11 @@
+colunaValor [Nome_Separou]
+colunaOrdem [8]
+---
+colunaValor [T005_Observacao_1]
+colunaTitulo [Observação]
+colunaOrdem [7]
+---
+colunaValor [D022_Nome_Empresa]
+colunaTitulo [Transportadora]
+colunaOrdem [9]
+---

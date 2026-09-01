@@ -1,0 +1,8 @@
+colunaValor [T003_Valor_Total]
+titulo [Valor Total]
+exibir [S]
+---
+colunaValor [T003_D024_Id]
+titulo [Cod.]
+exibir [S]
+---

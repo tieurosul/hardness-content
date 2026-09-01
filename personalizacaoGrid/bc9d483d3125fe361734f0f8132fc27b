@@ -1,0 +1,31 @@
+colunaValor [EtiquetaLote]
+colunaTipo [livre]
+style [width:1%;]
+colunaOrdem [1]
+callback [personalizado-68dfde82f3366]
+---
+colunaValor [T066_Id]
+colunaTitulo [ID]
+chavePrimaria [S]
+style [width:1%;]
+---
+colunaValor [T066A_Id]
+colunaTitulo [T066A_Id]
+colunaExibir []
+chavePrimaria [S]
+style [width:1%;]
+---
+colunaValor [D009_Id]
+colunaTitulo [D009_Id]
+colunaExibir []
+---
+colunaValor [T066A_Numero_Lote]
+colunaTitulo [Lote]
+style [width:1%;]
+---
+colunaValor [D004_Local]
+colunaTitulo [Locação]
+---
+colunaValor [D146_Descricao]
+colunaTitulo [Armazém]
+---

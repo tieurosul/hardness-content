@@ -1,0 +1,72 @@
+<?php
+/**
+ * Código executado para preencher o valor (value) do campo 
+ * Variáveis:
+ *      $g, $array['todosCampos'], $array['{parametro}']
+ */
+// Exemplo
+//return "Valor do campo";
+
+$prazoEntrega     = '';
+$enderecoPadrao   = 'N';
+$D148_Id = (empty($array['D148_Id'])) ? 0 : $array['D148_Id'];
+$D024_Id = (empty($array['D024_Id'])) ? 0 : $array['D024_Id'];
+
+log("ID: ".$D024_Id);
+
+if(!empty($array['enderecoPadrao'])){
+    // Essa informação vem quando carrega o campo de entrega
+    // Se usar o padrão, busca o prazo do D024
+    $enderecoPadrao = $array['enderecoPadrao'];
+}
+
+if($D148_Id > 0){
+    // Se for recarregado o campo de entrega
+    // Busca pelo o ID da tabela D148
+    $D148 = mysql_query("SELECT D018_Prazo_entrega, 
+                                D020_Prazo_Entrega
+                           FROM D148
+                      LEFT JOIN D018 ON D018_Id = D148_D018_Id
+                      LEFT JOIN D020 ON D020_Id = D148_D020_Id
+                          WHERE D148_Id = '{$D148_Id}'
+                            AND D148_Flag_Tipo = 'E'");
+    $mD148 = mysql_fetch_array($D148);
+    $prazoEntrega = ($mD148['D020_Prazo_Entrega'] != '') ? $mD148['D020_Prazo_Entrega'] : $mD148['D018_Prazo_entrega'];
+    
+} elseif($D024_Id > 0){
+    // Se for recarregado o cliente
+    // Vai buscar se existe enderço de entrega, caso não pega o endereço do cadastro
+    $D018 = mysql_query("SELECT D018_Prazo_entrega, 
+                                D020_Prazo_Entrega
+                           FROM D148
+                      LEFT JOIN D024 ON D024_Id = D148_D024_Id
+                      LEFT JOIN D018 ON D018_Id = D148_D018_Id
+                      LEFT JOIN D020 ON D020_Id = D148_D020_Id
+                          WHERE D024_Id = '{$D024_Id}'
+                            AND D148_Flag_Tipo = 'E'");
+
+    if(mysql_num_rows($D018) > 0 && $enderecoPadrao == 'N'){
+        $mD018 = mysql_fetch_array($D018);
+        $prazoEntrega = ($mD018['D020_Prazo_Entrega'] != '') ? $mD018['D020_Prazo_Entrega'] : $mD018['D018_Prazo_entrega'];
+    } else {
+
+        $D018 = mysql_query("SELECT D018_Prazo_entrega,
+                                    D020_Prazo_Entrega 
+                               FROM D024
+                          LEFT JOIN D018 ON D018_Id = D024_D018_Id
+                          LEFT JOIN D020 ON D020_Id = D024_D020_Id
+                              WHERE D024_Id = '{$D024_Id}'");
+        $mD018 = mysql_fetch_array($D018);
+        $prazoEntrega = ($mD018['D020_Prazo_Entrega'] != '') ? $mD018['D020_Prazo_Entrega'] : $mD018['D018_Prazo_entrega'];
+    }
+} 
+
+if($prazoEntrega == '' && $D148_Id <= 0 && $D024_Id <=0){
+    return $array['todosCampos']['T005_Prazo_Entrega'];
+} else {
+    if($array['acaoId'] > 0){
+        mysqli_query("UPDATE T005 SET T005_Prazo_Entrega = '{$prazoEntrega}' WHERE T005_Id = '{$array['acaoId']}' ");
+    } else {
+        return $prazoEntrega;
+    }
+}

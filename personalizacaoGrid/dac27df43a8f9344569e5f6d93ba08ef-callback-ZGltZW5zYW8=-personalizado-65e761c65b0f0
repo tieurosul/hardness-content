@@ -1,0 +1,15 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['dimensao']
+    // $array['totais']['Nome_Total']
+
+    $dimensao = 'A:'.gCorrigeNumero($array['todosCampos']['T055A_Altura'],2) .
+                '<br>L:'. gCorrigeNumero($array['todosCampos']['T055A_Largura'],2) .
+                '<br>C:'.gCorrigeNumero($array['todosCampos']['T055A_Comprimento'],2);
+
+    return $dimensao;
+}

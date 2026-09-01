@@ -1,0 +1,7 @@
+tab [geral]
+field [T005_Flag_ACP]
+name [T005_Flag_ACP]
+label [Tipo Documento]
+type [select]
+disabled [S]
+---

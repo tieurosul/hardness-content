@@ -1,0 +1,18 @@
+	group_concat(distinct T004_T003_Id)
+campoCancelamento
+T218_Grupo
+T218_Id
+T218_Data_Emissao
+T218_D024_Id
+substr(D024_Nome_Empresa,1,28)
+D018_UF
+D006_Codigo_CFOP
+count(distinct T219_Id)
+T218_Valor_Total_Produtos
+T218_Valor_Total_IPI
+T218_Valor_Total_ICMS
+T218_Valor_ST
+T218_Valor_Total
+if(T139_Id>0,'Ok','<font style="color:red">--</font>')
+Pedido
+NF

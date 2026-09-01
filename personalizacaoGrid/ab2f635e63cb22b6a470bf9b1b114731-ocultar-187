@@ -1,0 +1,10 @@
+liberou.C007_Primeiro_Nome	|	Analista comercial
+T003_Valor_Frete	|	Frete
+T003_Valor_Pendente	|	Val. Pend.
+T003_Prazos(T003_Id)	|	Prazo
+if(T139_Id>0,'Ok','<font style="color:red">--</font>')	|	Mail
+IFNULL(IF(T003_Status_Retorno_Email='RETORNAR',CONCAT('<font style="color:red">',T003_Status_Retorno_Email,'</font>'),T003_Status_Retorno_Email), '<font style="color:red">--</font>')	|	Agenda
+externo.C007_Primeiro_Nome	|	Externo
+T219_T218_Id	|	Cotação
+T003_Valor_Desconto	|	R$ Descto
+(T003_Valor_Desconto/T003_Valor_Total_Produtos_Sem_Desconto)*100	|	% Descto

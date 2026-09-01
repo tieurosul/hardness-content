@@ -1,0 +1,14 @@
+colunaValor [Etiqueta]
+colunaOrdem [3]
+---
+colunaValor [T007_C007_Id_Vendedor_Interno]
+colunaTitulo [Vendedor]
+colunaOrdem [13]
+---
+colunaValor [UFCliente.D018_UF]
+colunaOrdem [14]
+---
+colunaValor [Danfe]
+colunaTitulo [Danfe]
+colunaOrdem [16]
+---

@@ -1,0 +1,7 @@
+D032_Descricao
+D014_SubConta
+(SELECT SUM(T019_Valor_Lancamento) FROM T019 WHERE T019_D014_Id=D014_Id AND T019_Data_Lancamento >= '2018-01-01' AND T019_Data_Lancamento <= '2019-04-30' AND T019_Valor_Lancamento > 0 AND (T019_C004_Id = '1')) Recebido
+(SELECT SUM(T019_Valor_Lancamento*-1) FROM T019 WHERE T019_D014_Id=D014_Id AND T019_Data_Lancamento >= '2018-01-01' AND T019_Data_Lancamento <= '2019-04-30' AND T019_Valor_Lancamento < 0 AND (T019_C004_Id = '1')) Pago
+Total
+Percentual
+	grupoTipo

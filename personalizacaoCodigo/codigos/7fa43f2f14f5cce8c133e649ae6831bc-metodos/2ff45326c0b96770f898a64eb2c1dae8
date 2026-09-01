@@ -1,0 +1,67 @@
+a:5:{s:4:"nome";s:29:"tempo processo ate gerar nota";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"7fa43f2f14f5cce8c133e649ae6831bc";s:6:"codigo";s:1965:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+namespace hardness;
+header('Content-Type: application/json; charset=utf-8');
+
+$dataInicio = isset($_GET['DATAINICIAL']) ? $_GET['DATAINICIAL'] : date('Y-m-01');
+$dataFinal = isset($_GET['DATAFINAL']) ? $_GET['DATAFINAL'] : date('Y-m-d');
+
+$sql = 
+    "SELECT
+        T005_Id AS num_pedido,
+        D024_Nome_Empresa AS nome_cliente,
+        
+        UserGerouPD.C007_Primeiro_Nome AS usuario_faturou,
+        PD.T178_Data AS data_faturamento,
+        NF.T178_Data AS data_gerou_nf,
+        UserGerouNF.C007_Primeiro_Nome AS usuario_gerou_nf,
+        
+        SEC_TO_TIME(TIMESTAMPDIFF(SECOND, PD.T178_Data, NF.T178_Data)) AS tempo_total
+    FROM T005
+        LEFT JOIN D024 ON D024_Id = T005_D024_Id
+        
+        LEFT JOIN T178 NF ON NF.T178_Id = (
+            SELECT T178_Id
+            FROM T178
+            WHERE T178_T005_Id = T005_Id
+                AND T178_Descricao LIKE 'Gerou nota fiscal%'
+            ORDER BY T178_Id DESC LIMIT 1
+        )
+        LEFT JOIN C007 UserGerouNF ON UserGerouNF.C007_Id = NF.T178_C007_Id
+
+        LEFT JOIN T178 PD ON PD.T178_Id = (
+            SELECT T178_Id
+            FROM T178
+            WHERE T178_T005_Id = T005_Id
+                AND T178_Descricao LIKE 'Faturou Pedido%'
+            ORDER BY T178_Id DESC LIMIT 1
+        )
+        LEFT JOIN C007 UserGerouPD ON UserGerouPD.C007_Id = PD.T178_C007_Id
+    WHERE 
+        (T005_Data_Emissao >= '{$dataInicio}' AND T005_Data_Emissao <= '{$dataFinal}')";
+
+$resultado = mysql_query($sql);
+if($erro = mysql_error()){
+    return $erro.'
+
+SQL: 
+    '.$sql;
+}
+
+$linhas = array();
+
+while ($linha = mysql_fetch_assoc($resultado)) {
+    $linhas[] = $linha;
+}
+
+$json = json_encode($linhas, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+
+// desfaz o hex de tags caso alguma camada tenha forçado isso
+$json = str_replace(
+    ['\u003C', '\u003E', '\u0026'],
+    ['<', '>', '&'],
+    $json
+);
+
+echo $json;
+exit;";s:3:"md5";s:32:"f57f6537f41419d48bd3b6664a270411";}

@@ -1,0 +1,12 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['EtiquetaLote']
+    // $array['totais']['Nome_Total']
+    global $g;
+    $abrirJanela = "abrirJanela(true, '{$g['divIdRoot']}', '{$g['divId']}', unique(), '', 'Lotes', '/sistema/personalizacao/grid/fc5622070001a1e50dc2efa42cfffb6b/', '&acaoId={$array['todosCampos']['D009_Id']}', [500,300]);";
+    return "<a href=\"#\" onclick=\"{$abrirJanela}\"><span class='ui-icon ui-icon-tag'></span></a>";
+}

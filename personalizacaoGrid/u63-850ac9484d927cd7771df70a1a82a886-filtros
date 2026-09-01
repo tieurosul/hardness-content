@@ -1,0 +1,12 @@
+colunaValor [T019_Id]
+titulo [ID]
+exibir [S]
+---
+colunaValor [T019_T002_Id]
+titulo [T019_T002_Id]
+exibir [S]
+---
+colunaValor [D024_Nome_Empresa]
+titulo [Cliente]
+tipo [texto]
+---

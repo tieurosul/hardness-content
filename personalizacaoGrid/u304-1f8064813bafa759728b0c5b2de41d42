@@ -1,0 +1,24 @@
+colunaValor [T007_Data_Entrega]
+colunaOrdem [13]
+---
+colunaValor [T005A_Data_Agendamento]
+colunaOrdem [14]
+---
+colunaValor [T007A_Data_Prazo_Transporte]
+colunaOrdem [15]
+---
+colunaValor [observacoes]
+colunaOrdem [21]
+---
+colunaValor [T007_D021_Id]
+colunaOrdem [36]
+---
+colunaValor [(CASE WHEN (IF(T005A_Data_Agendamento = '0000-00-00' OR T005A_Data_Agendamento = '' OR T005A_Data_Agendamento IS NULL, T007A_Data_Prazo_Transporte,T005A_Data_Agendamento) = '0000-00-00') OR (T007_Data_Entrega = '0000-00-00') OR (IF(T005A_Data_Agendamento = '0000-00-00' OR T005A_Data_Agendamento = '' OR T005A_Data_Agendamento IS NULL, T007A_Data_Prazo_Transporte,T005A_Data_Agendamento) IS NULL) OR (T007_Data_Entrega IS NULL) THEN '-' WHEN T007_Data_Entrega <= IF(T005A_Data_Agendamento = '0000-00-00' OR T005A_Data_Agendamento = '' OR T005A_Data_Agendamento IS NULL, T007A_Data_Prazo_Transporte,T005A_Data_Agendamento) THEN 'DENTRO DO PRAZO' ELSE 'FORA DO PRAZO' END) AS Status_Prazo]
+colunaOrdem [16]
+---
+colunaValor [D022_Nome_Empresa]
+colunaOrdem [17]
+---
+colunaValor [T007_Cliente_Endereco_Numero]
+colunaOrdem [19]
+---

@@ -1,0 +1,14 @@
+left join T005 on T005_Id=T007_T005_Id
+left join T007A on T007_Id=T007A_T007_Id 
+left join D013 as Pedido on Pedido.D013_Id=T005_D013_Id
+    left join D024 on D024_Id=T007_D024_Id
+    left join D018 on D018_Id=D024_D018_Id
+    left join D006 on D006_Id=T007_D006_Id
+left join C007 as vendedor on vendedor.C007_Id=T007_C007_Id_Vendedor_Interno
+left join C007 as supervisor on supervisor.C007_Id=vendedor.C007_C007_Id
+left join C007 as supervisor2 on supervisor2.C007_Id=vendedor.C007_C007_Id_2
+left join C007 as Externo on Externo.C007_Id=T005_C007_Id_Vendedor_Externo
+left join C007 as Substituto on Substituto.C007_Id=Vendedor.C007_Id_Vendedor_Substituto
+    left join D021 on D021_Id=D024_D021_Id
+    where (T007_C004_Id='[[g-empresaAtual]]'
+    and T007_Flag_Emitida_Recebida!='R')

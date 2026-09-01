@@ -1,0 +1,31 @@
+left join D024 on D024_Id=T005_D024_Id
+left join C007 as Liberou_Credito on Liberou_Credito.C007_Id=T005_Liberacao_Credito_Id
+left join D018 as UFCliente on UFCliente.D018_Id=D024_D018_Id
+left join D020 on D020_Id=D024_D020_Id
+left join D013 on D013_Id=T005_D013_Id
+left join T003 on T003_Id=T005_T003_Id
+left join C007 as Vendedor on Vendedor.C007_Id=T005_C007_Id_Vendedor_Interno
+left join C007 as Externo on Externo.C007_Id=T005_C007_Id_Vendedor_Externo
+left join C007 as Liberou on Liberou.C007_Id=T005_Liberou_Alcada_C007_Id
+left join C007 as LiberouOrcamento on LiberouOrcamento.C007_Id=T003_Liberou_Alcada_C007_Id
+left join C007 as Supervisor on Supervisor.C007_Id=Vendedor.C007_C007_Id
+left join C007 as Substituto on Substituto.C007_Id=Vendedor.C007_Id_Vendedor_Substituto
+left join T007 on T007_T005_Id=T005_Id
+left join D006 on D006_Id=T005_D006_Id
+left join T006 on T006_T005_Id=T005_Id
+left join D021 on D021_Id=T005_D021_Id
+left join D022 on D022_Id=T005_D022_Id 
+left join D018 as UFFaturamento on UFFaturamento.D018_Id=D022_D018_Id
+left join T178 on T178_T005_Id=T005_Id and T178_Descricao = 'Coletado'
+left join D148 on D148_Id=T005_D148_Id_Entrega
+left join D018 as UFClienteEntrega on UFClienteEntrega.D018_Id=D148_D018_Id
+left join T005A on T005_Id = T005A_T005_Id
+left join (SELECT 
+           T005_Id AS 'temp_t005_id', 
+           IF(T005_Flag_Status = 5, 0, (-DATEDIFF(CURRENT_TIMESTAMP(), DATE_FORMAT(STR_TO_DATE(T005_Prazo_Entrega, '%d/%m/%Y'), '%Y-%m-%d')))) AS 'DiasFaltantes_T005_Prazo_Entrega',
+           IF(T005_Flag_Status = 5, 0, (-DATEDIFF(CURRENT_TIMESTAMP(), T005_Data_Entrega))) AS 'DiasFaltantes_T005_Data_Entrega'
+           FROM T005) tabela_dias_faltantes ON temp_t005_id = T005_Id
+LEFT JOIN D036 ON D036_Id=T005_D036_Id
+where (T005_C004_Id='[[g-empresaAtual]]' 
+and (T005_T005_Id_Agrupado<=0 or T005_T005_Id_Agrupado is null))
+group by T005_Id

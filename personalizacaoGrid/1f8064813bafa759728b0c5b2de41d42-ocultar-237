@@ -1,0 +1,15 @@
+T007_Valor_Despesas_Acessorias	|	Despesas
+T007_Numero_Protocolo_Cancelamento_Nfe	|	Prot. Cancel
+D024_Nome_Fantasia	|	Nome Fantasia
+Contato	|	Contato
+D022_Nome_Empresa	|	Transportadora
+T007_Numero_Protocolo_Nfe	|	Protocolo NFe
+UFFaturamento.D018_UF	|	UF Faturamento
+Retorno Sefaz	|	Retorno SEFAZ
+T005_T003_Id	|	Orç
+T007_Valor_Total_COFINS	|	COFINS
+T007_Valor_Frete	|	Frete
+T007_D021_Id	|	Representante
+T007_Percentual_Comissao	|	%Comissão
+T007_Valor_Total_Comissao	|	Comissão
+UFClienteEntrega.D018_UF	|	UF Entrega

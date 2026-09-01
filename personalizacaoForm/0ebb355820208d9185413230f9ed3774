@@ -1,0 +1,8 @@
+tab [Cabeçalho]
+field [RMA001_Data_Previsao_Retorno]
+name [RMA001_Data_Previsao_Retorno]
+label [Data de Recebimento]
+type [data]
+value []
+length [10, 10]
+---

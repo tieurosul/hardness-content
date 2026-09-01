@@ -1,0 +1,4 @@
+-- JOIN
+left join D022 on D022_Id=D024_D022_Id
+left join C007 as Alterado on Alterado.C007_Id=D085_C007_Id
+left join D024A on D024A_D024_Id = D024_Id

@@ -1,0 +1,31 @@
+colunaValor [D049_Modelo]
+colunaExibir []
+---
+colunaValor [T048_T066_Id]
+colunaTitulo [Lote]
+callback [T048_T066_Id_Local]
+colunaAlinhar [center]
+---
+colunaValor [D009_Id]
+colunaTitulo [D009_Id]
+colunaExibir []
+---
+colunaValor [subItem]
+colunaTitulo [Sub-item]
+colunaExibir [S]
+colunaTipo [livre]
+colunaOrdem [5]
+callback [personalizado-67a2170d71e5a]
+---
+colunaValor [T066A_Numero_Lote]
+colunaExibir []
+---
+colunaValor [T066A_Data_Validade]
+colunaExibir []
+---
+colunaValor [locacoes]
+colunaTitulo [Local]
+colunaTipo [livre]
+colunaOrdem [7]
+callback [personalizado-67a6410517cf4]
+---

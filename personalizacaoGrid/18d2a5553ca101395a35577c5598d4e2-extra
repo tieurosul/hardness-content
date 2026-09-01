@@ -1,0 +1,7 @@
+-- JOIN
+LEFT JOIN D049 ON D049_Id = D009_D049_Id
+LEFT JOIN D001 ON D001_Id = D049_D001_Id
+-- WHERE
+WHERE D009_C004_Id = '[[g-empresaAtual]]'
+AND D009_Quantidade_Estoque != D009_Quantidade_Estoque_Liquido 
+AND (D009_Quantidade_Pedido(D009_Id, 1)) <= 0

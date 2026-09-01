@@ -1,0 +1,13 @@
+D009_Quantidade_Estoque_Loja	|	Loja
+ifnull(D069_D070_Id,"_")	|	Tab
+D009_Data_Ultima_Venda	|	Ult.Saída
+D009_C007_Id_Comprador	|	Comprador
+D009_Data_Ultima_Entrada	|	Ult.Entrada
+D049_Flag_Curva_ABC	|	ABC
+D009_Quantidade_Estoque_Fora	|	Fora
+D009_Quantidade_Estoque_Similar	|	Similar
+D001_Flag_Pre_Cadastro	|	Pré
+D001_Id	|	Id
+D001_Codigo_Barras	|	EAN
+D049_Origem_Mercadoria	|	Origem
+D009_Quantidade_OC	|	OC

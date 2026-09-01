@@ -1,0 +1,21 @@
+colunaValor [D046_Nome]
+colunaTitulo [Grupo]
+colunaExibir [s]
+colunaOrdem [3]
+---
+colunaValor [D024_Flag_Lista_Preco]
+colunaTitulo [Lista Preço]
+callback [mostrarListaPreco]
+colunaEditar [1]
+colunaExibir [S]
+colunaEditarTodos [1]
+---
+colunaValor [D024_Id]
+titulo [Cod Cliente]
+tipo [numero]
+---
+colunaValor [IF(TRIM(IFNULL(D024_Cnpj_Matriz[[virgula]]'')) = ''[[virgula]] 'N'[[virgula]] 'S')]
+titulo [CNPJ Matriz]
+tipo [select]
+select [array(array('title' => 'Todos', 'value' => ''), array('title' => 'Sim', 'value' => 'S'), array('title' => 'Não', 'value' => 'N'))]
+---

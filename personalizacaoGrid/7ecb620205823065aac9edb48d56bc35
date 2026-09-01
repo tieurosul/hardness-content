@@ -1,0 +1,8 @@
+colunaValor [impressaoEtiqueta]
+colunaExibir []
+---
+colunaValor [T005_Data_Entrega]
+colunaTitulo [Prazo entrega]
+colunaExibir [S]
+callback [gCorrigeData]
+---

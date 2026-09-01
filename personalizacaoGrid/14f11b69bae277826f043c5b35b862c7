@@ -1,0 +1,18 @@
+colunaValor [CONCAT(IFNULL(D014_SubConta, ''),IFNULL(D032_Descricao, ''),IFNULL(D154_Descricao, ''))]
+colunaExibir [S]
+colunaTitulo [Conta]
+---
+colunaValor [group_concat(distinct substr(IFNULL(VendedorSaida.C007_Primeiro_Nome, Vendedor.C007_Primeiro_Nome),1,10))]
+colunaTitulo [Vendedor]
+colunaAlinhar [center]
+---
+colunaValor [D024_Cnpj]
+colunaTitulo [CNPJ]
+colunaExibir [S]
+---
+colunaValor [D024_Cnpj_Matriz]
+colunaTitulo [CNPJ Matriz]
+---
+colunaValor [T013_Peso_Bruto]
+colunaTitulo [Peso bruto]
+---

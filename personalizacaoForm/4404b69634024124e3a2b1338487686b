@@ -1,0 +1,7 @@
+tab [produto]
+field [T004A_T066_Id]
+name [T004A_T066_Id]
+label [Lote]
+type [select]
+align [left]
+---

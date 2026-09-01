@@ -1,0 +1,10 @@
+T006_Codigo_Produto
+	T006_Descricao_Produto
+	T006_Quantidade_Estoque
+D037_Unidade
+T006_Quantidade
+	T006_Valor_Preco_Sem_Desconto_Unitario
+	T005_Id
+	T005_T003_Id
+	D024_Nome_Empresa
+	D082_Marca

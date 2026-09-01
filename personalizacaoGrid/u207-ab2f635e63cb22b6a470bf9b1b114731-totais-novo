@@ -1,0 +1,8 @@
+nome [Percentual_Desconto]
+titulo [% Desconto]
+tipo [totais]
+valor [({Valor_Desconto} / {Valor_Tabela}) * 100]
+exibir [S]
+totalizador [soma]
+callbackParameter [2]
+---

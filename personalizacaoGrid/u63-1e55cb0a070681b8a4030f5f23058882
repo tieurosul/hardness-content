@@ -1,0 +1,19 @@
+colunaValor [T066A_Id]
+colunaTitulo [T066A_Id]
+chavePrimaria [S]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [D001_Codigo_Produto]
+---
+colunaValor [T066A_Numero_Lote]
+colunaTitulo [T066A_Numero_Lote]
+colunaEditar [S]
+---
+colunaValor [T066A_T066_Id]
+colunaExibir [S]
+colunaTitulo [T066A_T066_Id]
+---
+colunaValor [T066_Id]
+colunaExibir [S]
+colunaTitulo [T066_Id]
+---

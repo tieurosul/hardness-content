@@ -1,0 +1,12 @@
+Ordem
+D001_Codigo_Produto
+D001_Descricao_Produto
+                IFNULL((SELECT SUM(T008_Valor_Total_Preco) FROM T007 LEFT JOIN T008 on T008_T007_Id=T007_Id LEFT JOIN C004 on C004_Id=T007_C004_Id LEFT JOIN D006 on D006_Id=T007_D006_Id WHERE T008_D009_Id=D009_Id AND T007_Data_Emissao >= '2019-01-01 00:00:00' AND T007_Data_Emissao <= '2019-01-31 23:59:59' AND T007_Flag_Cancelada!='S' AND D006_Flag_Entrada_Saida='S' AND D006_Flag_Gera_Contas='R' AND D006_Flag_Devolucao<>'S' AND D006_Flag_Venda_Compra_Outros = 'V'),0)
+                IFNULL((SELECT SUM(T008_Valor_Total_Preco) FROM T007 LEFT JOIN T008 on T008_T007_Id=T007_Id LEFT JOIN C004 on C004_Id=T007_C004_Id LEFT JOIN D006 on D006_Id=T007_D006_Id WHERE T008_D009_Id=D009_Id AND T007_Data_Emissao >= '2019-02-01 00:00:00' AND T007_Data_Emissao <= '2019-02-28 23:59:59' AND T007_Flag_Cancelada!='S' AND D006_Flag_Entrada_Saida='S' AND D006_Flag_Gera_Contas='R' AND D006_Flag_Devolucao<>'S' AND D006_Flag_Venda_Compra_Outros = 'V'),0)
+                IFNULL((SELECT SUM(T008_Valor_Total_Preco) FROM T007 LEFT JOIN T008 on T008_T007_Id=T007_Id LEFT JOIN C004 on C004_Id=T007_C004_Id LEFT JOIN D006 on D006_Id=T007_D006_Id WHERE T008_D009_Id=D009_Id AND T007_Data_Emissao >= '2019-03-01 00:00:00' AND T007_Data_Emissao <= '2019-03-31 23:59:59' AND T007_Flag_Cancelada!='S' AND D006_Flag_Entrada_Saida='S' AND D006_Flag_Gera_Contas='R' AND D006_Flag_Devolucao<>'S' AND D006_Flag_Venda_Compra_Outros = 'V'),0)
+                IFNULL((SELECT SUM(T008_Valor_Total_Preco) FROM T007 LEFT JOIN T008 on T008_T007_Id=T007_Id LEFT JOIN C004 on C004_Id=T007_C004_Id LEFT JOIN D006 on D006_Id=T007_D006_Id WHERE T008_D009_Id=D009_Id AND T007_Data_Emissao >= '2019-04-01 00:00:00' AND T007_Data_Emissao <= '2019-04-27 23:59:59' AND T007_Flag_Cancelada!='S' AND D006_Flag_Entrada_Saida='S' AND D006_Flag_Gera_Contas='R' AND D006_Flag_Devolucao<>'S' AND D006_Flag_Venda_Compra_Outros = 'V'),0)
+Total
+Total
+Total
+Mix
+	D003_Nome_Linha

@@ -1,0 +1,7 @@
+---
+colunaValor [D009_Quantidade_Estoque_Liquido]
+colunaTitulo [Estoq]
+callback [qtePedidos]
+colunaAlinhar [right]
+style [width:1%]
+---

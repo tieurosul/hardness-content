@@ -1,0 +1,24 @@
+<?php
+/**
+ * Código executado ao alterar o valor de um campo
+ * Variáveis:
+ *      $array['campoAtual'], $array['todosCampos'], $g, $array['{parametro}'], $array['acaoId']
+ * Funções:
+ *      jsRecarregarCampo('campo', array('var' => 'valor'))
+ *      jsAlterarCampoValor($campo, $valor)
+ *      jsExecutarCodigo($codigo)
+ *      jsAbrirJanela($url, $titulo, $parametros, $tamanho = '[900,600]')
+ */
+
+
+$valorD197 = 0;
+
+if (isset($array['todosCampos']['RMA002_P004_Id'])) {
+    $valorD197 = intval($array['todosCampos']['RMA002_P004_Id']);
+}
+
+jsAlterarCampoValor('RMA002_P003_Id', '');
+
+jsRecarregarCampo('RMA002_P003_Id', array(
+    'RMA002_P004_Id' => $valorD197
+));

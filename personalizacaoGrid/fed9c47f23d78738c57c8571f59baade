@@ -1,0 +1,60 @@
+colunaValor [T014_Flag_Situacao_Tributaria]
+colunaExibir [S]
+colunaTitulo [CST ICMS]
+colunaOrdem [59]
+---
+colunaValor [T014_Situacao_Tributaria_IPI]
+colunaExibir [S]
+colunaTitulo [CST IPI]
+colunaOrdem [58]
+---
+colunaValor [D001A_Altura]
+colunaTitulo [Altura]
+colunaEditar [S]
+colunaOrdem [15]
+callback [personalizado-69c199e1273f9]
+---
+colunaValor [D001A_Largura]
+colunaTitulo [Largura]
+colunaEditar [S]
+colunaOrdem [16]
+callback [personalizado-69c19a040a04a]
+---
+colunaValor [D001A_Comprimento]
+colunaTitulo [Comprimento]
+colunaEditar [S]
+colunaOrdem [17]
+callback [personalizado-69c19a1a43f4d]
+---
+colunaValor [D001_Peso_Unitario_Kg]
+colunaTitulo [Peso Unitario Kg]
+colunaOrdem [18]
+colunaEditar [S]
+callback [personalizado-69c19a34cd244]
+---
+colunaValor [T066A_Numero_Lote]
+colunaExibir []
+---
+colunaValor [T066A_Data_Validade]
+colunaExibir []
+---
+colunaValor [D001A_Observacao_Entrada]
+colunaExibir [S]
+colunaTitulo [Observacao Entrada]
+---
+colunaValor [D001A_FLAG_Inspecao_Amostragem]
+colunaExibir [S]
+colunaTitulo [Inspecao Amostragem]
+---
+colunaValor [D001A_Flag_Validade]
+colunaExibir [S]
+colunaTitulo [Validade?]
+---
+colunaValor [D001A_Flag_Doc_Num_Serie]
+colunaExibir [S]
+colunaTitulo [Certificado num serie?]
+---
+colunaValor [D001A_Flag_Produto_Emite_Certificado]
+colunaExibir [S]
+colunaTitulo [Documentos?]
+---

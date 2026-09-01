@@ -1,0 +1,10 @@
+colunaValor [T284_Cidade_Descarregamento_Codigo_IBGE]
+colunaExibir [S]
+colunaTitulo [T284_Cidade_Descarregamento_Codigo_IBGE]
+colunaEditarTodos [S]
+---
+colunaValor [T284_Chave_De_Acesso_NFe]
+colunaExibir [S]
+colunaTitulo [284_Chave_De_Acesso_NFe]
+colunaEditarTodos [S]
+---

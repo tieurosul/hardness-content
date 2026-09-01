@@ -1,0 +1,112 @@
+colunaValor [excluirLinha]
+colunaTipo [livre]
+callback [gExcluirLinha]
+---
+colunaValor [T075_Data_Emissao_DI]
+colunaTitulo [Data DI]
+callback [gCorrigeData]
+colunaAlinhar [center]
+style [width:1%]
+---
+colunaValor [T075_Numero_DI]
+colunaTitulo [Número DI]
+style [width:1%,]
+---
+colunaValor [T007_Numero_Nota_Fiscal]
+colunaTitulo [NF-e]
+colunaAlinhar [center]
+style [width:1%]
+---
+colunaValor [T075_D024_Id]
+colunaTitulo [Código]
+style [width:1%]
+---
+colunaValor [FORNECEDOR.D024_Nome_Empresa]
+colunaTitulo [Exportador]
+style [width:1%]
+colunaDimensao [S]
+---
+colunaValor [T055_Id]
+colunaTitulo [Id]
+chavePrimaria [1]
+colunaExibir []
+---
+colunaValor [T055_D009_Id]
+colunaTitulo [Produto]
+colunaExibir []
+---
+colunaValor [foto]
+colunaTitulo [Foto]
+colunaTipo [livre]
+callback [mostrarImagemProdutoPequena]
+colunaExibir []
+style [width:0px]
+---
+colunaValor [T055_Codigo_Produto]
+colunaTitulo [Código]
+---
+colunaValor [T055_Descricao_Produto]
+colunaTitulo [Produto]
+colunaDimensao [S]
+---
+colunaValor [D005_Classificacao_Fiscal]
+colunaTitulo [NCM]
+colunaAlinhar [center]
+colunaDimensao [S]
+---
+colunaValor [T055_Peso_Kg_Liquido_Unitario]
+colunaTitulo [Peso Kg unit]
+colunaEditar []
+colunaCasasDecimais [6]
+colunaAlinhar [right]
+---
+colunaValor [T055_Quantidade]
+colunaTitulo [Quantidade]
+colunaCasasDecimais [3]
+colunaEditar []
+---
+colunaValor [T055_Valor_Custo_Unitario]
+colunaTitulo [Unitário ME]
+colunaCasasDecimais [7]
+colunaAlinhar [right]
+colunaEditar []
+---
+colunaValor [T055_Valor_Total_Custo]
+colunaTitulo [Total ME]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+colunaMetrica [S]
+---
+colunaValor [T055_Valor_Preco_Unitario_Nota_Fiscal]
+colunaTitulo [NFe unit R$]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---
+colunaValor [T055_Valor_Custo_Final_Unitario]
+colunaTitulo [Custo unit R$]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+style [font-weight:bold;color:red;]
+---
+colunaValor [T055_Peso_Kg_Liquido_Total]
+colunaTitulo [Peso Kg total]
+colunaCasasDecimais [6]
+colunaAlinhar [right]
+colunaMetrica [S]
+---
+colunaValor [D001_Id]
+colunaTitulo [D001_Id]
+colunaExibir []
+---
+colunaValor [T075_Data_Previsao]
+colunaExibir [S]
+colunaTitulo [Previsão chegada]
+callback [gCorrigeData]
+colunaAlinhar [center]
+---
+colunaValor [T075_Data_Previsao]
+titulo [Previsão chegada]
+exibir [S]
+tipo [data]
+---
+

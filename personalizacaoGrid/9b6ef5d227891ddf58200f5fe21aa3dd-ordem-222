@@ -1,0 +1,13 @@
+excluirLinha
+T007_Numero_Nota_Fiscal
+T055_Codigo_Produto
+T055_Descricao_Produto
+	T055_Quantidade
+	T055_Valor_Custo_Final_Unitario
+	T055_Valor_Preco_Unitario_Nota_Fiscal
+	T055_Valor_Custo_Unitario
+	T075_Data_Emissao_DI
+	FORNECEDOR.D024_Nome_Empresa
+	T055_Valor_Total_Custo
+	T075_Numero_DI
+T055_Peso_Kg_Liquido_Unitario

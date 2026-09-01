@@ -1,0 +1,9 @@
+colunaValor [D001A_Motivo_Inativado]
+colunaTitulo [Motivo Inativado]
+style [
+    width: 10%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+]
+---

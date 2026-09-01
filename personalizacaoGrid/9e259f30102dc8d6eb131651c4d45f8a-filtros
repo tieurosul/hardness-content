@@ -1,0 +1,8 @@
+colunaValor [RMA001_Id]
+titulo [ID]
+exibir [S]
+---
+colunaValor [T182_Id]
+titulo [ID T182]
+exibir [S]
+---

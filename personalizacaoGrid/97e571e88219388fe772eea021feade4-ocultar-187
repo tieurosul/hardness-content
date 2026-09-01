@@ -1,0 +1,6 @@
+T003_D024_Id	|	Cod.
+T003_Id	|	Orc
+substr(vendedor.C007_Primeiro_Nome,1,12)	|	Vendedor
+Contato	|	Contato
+T003_Flag_Alcada	|	Alcada
+T003_IPV	|	IPV

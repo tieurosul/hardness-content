@@ -1,0 +1,214 @@
+<?php
+namespace hardness;
+
+function normalizaPdfPara14($arquivoOriginal) {
+    $arquivoSaida = preg_replace('/\.pdf$/i', '', $arquivoOriginal) . '_v14.pdf';
+
+    $cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dBATCH " .
+           "-sOutputFile=" . escapeshellarg($arquivoSaida) . " " . escapeshellarg($arquivoOriginal) . " 2>&1";
+
+    shell_exec($cmd);
+
+    // Se quiser, você pode testar se o arquivo foi mesmo criado
+    if (file_exists($arquivoSaida) && filesize($arquivoSaida) > 0) {
+        return $arquivoSaida;
+    }
+
+    // Se der erro, volta o original (ou trate como quiser)
+    return $arquivoOriginal;
+}
+
+$resposta = array('code' => true, 'data' => array());
+
+    global $g;
+
+    $T006_Id = base64_decode($r_T006_Id);
+    $D001_Id = base64_decode($r_D001_Id);
+
+    // Monta caminho diretorio
+    //$dir = "/www/hardness3/".$g['pathDados']."certificados/impressao/"; 
+    $diretorio = getcwd().'/'.$g['pathDados'].'/';
+
+    
+    // Limpa a pasta com o ultimo PDF compilado impresso
+    $dir = $diretorio."certificados/impressao/"; 
+    if (is_dir($dir)){
+        $files = glob($dir . '*'); // Obtém uma lista de arquivos na pasta
+        foreach ($files as $file) {
+            if (is_file($file)) {
+                 @unlink($file);
+            }
+        }
+    }
+    // FIM
+    require_once("bibliotecas/PDFMerger/PDFMerger.php");
+    $pdfMerger  = new \PDFMerger;
+    //require_once('/www/hardness3/hardness/fpdf/fpdf.php');
+    //$fpdf = new \FPDI;
+    $fpdf = new \FPDF('P', 'mm', 'A4');
+    $fpdi = new \FPDI;
+
+    // $sql = "SELECT T140_Id FROM T140 WHERE T140_D001_Id = '{$D001_Id}' AND T140_Flag_Marcado = 'S' GROUP BY T140_Id";
+    // log($sql);
+    // $res = mysql_query($sql);
+    // $where = (mysql_num_rows($res) > 0) ? "AND T140_Flag_Marcado = 'S' " : "";
+
+    $T140 = mysql_query("SELECT T140_Id,
+                                T140_Link 
+                           FROM T140
+                          WHERE T140_Flag_Marcado = 'S'
+                       GROUP BY T140_Id");
+
+    while ($mT140 = mysql_fetch_array($T140)){
+
+        if (!is_dir($diretorio . "certificados/impressao/")){
+            mkdir($diretorio . "certificados/impressao/", 0777, true);
+        } 
+        
+        // Verifica se há um link para baixar o arquivo
+       if (!empty($mT140['T140_Link'])) {
+            // Define o nome do arquivo temporário
+            $extensaoArquivo = pathinfo(parse_url($mT140['T140_Link'], PHP_URL_PATH), PATHINFO_EXTENSION);
+            $extensaoArquivo = strtolower($extensaoArquivo);
+
+            $arquivoDestino = $diretorio . "certificados/impressao/".$mT140['T140_Id'].".".$extensaoArquivo;
+
+            // Baixa o arquivo do link
+            $conteudoArquivo = file_get_contents($mT140['T140_Link']);
+            if ($conteudoArquivo) {
+                file_put_contents($arquivoDestino, $conteudoArquivo);
+                chmod($arquivoDestino, 0777);
+
+                if ($extensaoArquivo == 'pdf') {
+                    // Se for PDF, adiciona diretamente ao compilado
+
+                    $arquivoPdfNormalizado = normalizaPdfPara14($arquivoDestino);
+                    
+                    $pdfMerger->addPDF($arquivoPdfNormalizado, 'all');
+                } elseif (in_array($extensaoArquivo, ['jpg', 'jpeg'])) {
+                    // Se for uma imagem, converte para PDF
+                    $fpdf->SetMargins(10, 10, 10);
+                    $fpdf->AddPage();
+                    $fpdf->Image($arquivoDestino, 10, 10);
+                    
+                    $arquivoPDF = $diretorio . "certificados/impressao/".$mT140['T140_Id'].".pdf";
+                    $fpdf->Output($arquivoPDF, 'F');
+                    chmod($arquivoPDF, 0777);
+
+                    // Adiciona o PDF gerado ao compilado
+                    $pdfMerger->addPDF($arquivoPDF, 'all');
+
+                    // Remove a imagem original após a conversão
+                    @unlink($arquivoDestino);
+                }
+            }
+        }
+
+        $arquivoExtensao = $diretorio . "certificados/".$mT140['T140_Id'].".*";
+        $arquivos = glob($arquivoExtensao);
+
+        foreach ($arquivos as $arquivo) {
+ 
+            $extensaoArquivo = pathinfo($arquivo, PATHINFO_EXTENSION);
+            $extensaoArquivo = strtolower($extensaoArquivo);
+
+            if($extensaoArquivo == 'pdf'){
+                $arquivoPDF     = $diretorio ."certificados/".$mT140['T140_Id'].".pdf";
+
+                // Verifica a versão do PDF
+                // Precisa ter instalado no servidor o pacote ghostscrtip: Comando apt install ghostscript
+                $pdfVersion = shell_exec("gs -q -dNODISPLAY -c \"($arquivoPDF) (r) file runpdfbegin pdfversion == quit\"");
+                $pdfVersion = trim($pdfVersion);
+
+                if ($pdfVersion > "1.4") {
+                    // Se for maior que 1.4 ajusta para não ter problema na hora de fazer merge de todos os PDFs
+                    // Caso de algum erro que não consiga converter, da par usar este site e converter para o 1.4 e importar o PDF novamente no sistema : https://docupub.com/pdfconvert/
+                    $arquivoPDFConvertido = $diretorio . "certificados/".$mT140['T140_Id']."_temp.pdf";
+                    shell_exec("gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -o \"$arquivoPDFConvertido\" \"$arquivoPDF\"");
+                    $arquivoPDF = $arquivoPDFConvertido;
+                }
+
+                $caminhoDestino = $diretorio . 'certificados/impressao/'.$mT140['T140_Id'].'.pdf';
+                // Copia o arquivo para a pasta da empressao
+                copy($arquivoPDF, $caminhoDestino);
+                chmod($caminhoDestino, 0777);
+
+                $numeroPaginas = $fpdi->setSourceFile($arquivoPDF);
+                if ($numeroPaginas % 2 != 0) {
+
+                    // Criar uma página em branco apenas se necessário
+                    $pdfEmBranco = $diretorio . 'certificados/impressao/pagina_branco.pdf';
+                    if (!file_exists($pdfEmBranco)) {
+                        $fpdf->AddPage();
+                        $fpdf->Output($pdfEmBranco, 'F');
+                    }
+
+                    // Adiciona a página em branco ao PDFMerger
+                    $pdfMerger->addPDF($pdfEmBranco, 'all');
+                }
+
+                $pdfMerger->addPDF($diretorio . 'certificados/impressao/'.$mT140['T140_Id'].'.pdf','all');
+                @unlink($arquivoPDFConvertido);
+
+            } else {
+
+                $extensoesPermitidas = array('jpg', 'jpeg'); 
+                if (!in_array(strtolower($extensaoArquivo), $extensoesPermitidas)) {
+                    // Se não tiver a extensao permitida, finaliza
+                    continue;
+                }
+                // Converter imagens de outras extensões em PDFs 
+                $fpdf->SetMargins(10, 10, 10); // Defina as margens superiores, esquerdas e inferiores para 10mm
+                $fpdf->AddPage();
+                
+                $imagePath = $diretorio . "certificados/".$mT140['T140_Id'].".".$extensaoArquivo;
+                // A imagem começa a partir da borda esquerda e superiror
+                $bordaEsquerda = 10; 
+                $bordaSuperior = 10;
+
+                $fpdf->Image($imagePath, $bordaEsquerda, $bordaSuperior);
+                $fpdf->Output($diretorio . "certificados/".$mT140['T140_Id'].".pdf", 'F');
+
+                $arquivoPDFConvertido = $diretorio . "certificados/".$mT140['T140_Id'].".pdf";
+                $caminhoDestino       = $diretorio . 'certificados/impressao/'.$mT140['T140_Id'].'.pdf';
+                // Copia o arquivo para a pasta da empressao
+                copy($arquivoPDFConvertido, $caminhoDestino);
+                chmod($caminhoDestino, 0777);
+                $pdfMerger->addPDF($diretorio . 'certificados/impressao/'.$mT140['T140_Id'].'.pdf','all');
+                // Apaga o arquivo que foi gerado PDF
+                @unlink($arquivoPDFConvertido);
+            }
+        }
+       mysqli_query("UPDATE T140 SET T140_Flag_Marcado = 'N' WHERE T140_Id = '{$mT140['T140_Id']}'");
+    }
+
+    // Obtém o número total de páginas no PDF gerado
+    $mergedPdfContent = $pdfMerger->merge('string', 'documentos.pdf');
+    $totalPaginas = substr_count($mergedPdfContent, '/Type /Page');
+    
+    //error_log("qual o totalPaginas ".$totalPaginas);
+    // Se o número de páginas for ímpar, adicione uma página em branco diretamente no PDF
+     if ($totalPaginas % 2 != 0) {
+            // Criar uma página em branco apenas se necessário
+            $pdfEmBranco = $diretorio . 'certificados/impressao/pagina_branco.pdf';
+            if (!file_exists($pdfEmBranco)) {
+                $fpdf->AddPage();
+                $fpdf->Output($pdfEmBranco, 'F');
+            }
+
+            // Adiciona a página em branco ao PDFMerger
+            $pdfMerger->addPDF($pdfEmBranco, 'all');
+
+    } 
+ 
+    $pdfMerger->merge($diretorio . 'certificados/impressao/', 'documentos.pdf');
+    
+    if($T006_Id > 0){
+        mysqli_query("UPDATE T006A SET T006A_C007_Id_Impressao_Certificado = '{$g[usuarioAtual]}',
+                                       T006A_Data_Impressao_Certificado    = NOW() 
+                                 WHERE T006A_T006_Id = '{$T006_Id}'");
+    }
+
+    die();
+
+echo $_REQUEST['callback'] . "(" . json_encode($resposta) . ");";

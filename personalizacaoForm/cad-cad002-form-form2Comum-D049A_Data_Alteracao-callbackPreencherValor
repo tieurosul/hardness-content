@@ -1,0 +1,15 @@
+<?php
+/**
+ * Código executado para preencher o valor (value) do campo 
+ * Variáveis:
+ *      $g, $array['todosCampos'], $array['{parametro}']
+ */
+// Exemplo
+//return "Valor do campo";
+
+if (!empty($array['D001_Id'])) {
+    $D049 = "SELECT D049A_Data_Alteracao FROM D049 LEFT JOIN D049A ON D049A_D049_Id=D049_Id WHERE D049_D001_Id = '{$array['D001_Id']}'";
+    $mD049 = mysql_fetch_assoc(mysql_query($D049));
+    return gCorrigeData($mD049['D049A_Data_Alteracao']);
+}
+return '';

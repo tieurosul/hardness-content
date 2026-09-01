@@ -1,0 +1,11 @@
+<?php
+// $g, $array[var], executarCodigo(id, vars[])
+
+$g['empresaAtual'] = 1;
+$array['todosCampos']['D009_Id'] = 75125;
+
+require_once('bibliotecas/classes/CAD002.php');
+$CAD002 = new CAD002();
+error_log("vai comecar a atualizar estatistica");
+$CAD002->atualizarEstatisticasCompra($array['todosCampos']['D009_Id']);
+error_log("finalizou estatistica");

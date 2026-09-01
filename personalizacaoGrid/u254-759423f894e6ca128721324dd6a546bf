@@ -1,0 +1,20 @@
+colunaValor [D005_Classificacao_Fiscal]
+colunaTitulo [NCM]
+colunaOrdem [12]
+---
+colunaValor [T296_Peso_Kg_Liquido_Unitario]
+colunaTitulo [Peso Kg unit]
+colunaOrdem [13]
+---
+colunaValor [T296_Peso_Kg_Liquido_Total]
+colunaTitulo [Peso Kg total]
+colunaOrdem [13]
+---
+colunaValor [T296_Valor_Custo_Unitario]
+colunaTitulo [Unitário ME]
+colunaOrdem [8]
+---
+colunaValor [T296_Quantidade_Saldo]
+colunaTitulo [Saldo]
+colunaOrdem [10]
+---

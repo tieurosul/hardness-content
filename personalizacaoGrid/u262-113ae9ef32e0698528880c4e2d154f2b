@@ -1,0 +1,22 @@
+colunaValor [D001A_Codigo_IMPA]
+colunaOrdem [8]
+---
+colunaValor [D049_D082_Id]
+colunaTitulo [Marca]
+colunaOrdem [7]
+---
+colunaValor [D001_Flag_Visualizar_Site]
+colunaOrdem [4]
+---
+colunaValor [foto]
+colunaOrdem [3]
+---
+colunaValor [D001_Codigo_Produto]
+colunaOrdem [5]
+---
+colunaValor [T144_Url]
+colunaOrdem [11]
+---
+colunaValor [D001_Descricao_Produto]
+colunaOrdem [12]
+---

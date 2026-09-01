@@ -1,0 +1,8 @@
+nome [registros]
+titulo [registros]
+tipo [sql]
+valor [T003_Id]
+exibir [S]
+totalizador [distinct]
+callbackParameter [0]
+---

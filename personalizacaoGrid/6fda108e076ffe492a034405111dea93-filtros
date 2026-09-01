@@ -1,0 +1,29 @@
+colunaValor [D001_Descricao_Produto,D001_Descricao_Ingles]
+titulo [Produto]
+tipo [texto]
+---
+colunaValor [D001_Codigo_Produto]
+titulo [Código Prod.]
+tipo [texto]
+---
+colunaValor [D082_Marca]
+titulo [Marca]
+tipo [texto]
+---
+colunaValor [(T006_Quantidade_Estoque-T006_Quantidade)]
+titulo [Estoque]
+tipo [Numero]
+exibir []
+---
+colunaValor [D024_Nome_Empresa]
+titulo [Cliente]
+tipo[texto]
+---
+colunaValor [D001_Foto]
+titulo [IMPA/FANN]
+tipo [numero]
+---
+colunaValor [T005_Id]
+titulo [Pedido]
+tipo [texto]
+---

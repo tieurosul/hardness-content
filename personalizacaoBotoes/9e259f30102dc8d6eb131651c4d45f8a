@@ -1,0 +1,69 @@
+a:1:{i:0;a:14:{s:2:"id";s:13:"69f23872cf5a9";s:6:"titulo";s:18:"Ajustar RMA (ROOT)";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:1:"1";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:2422:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+    
+    /* Este botão foi criado para corrigir o problema com as triggers php que
+    podem acontecer ao Criar RMA. Este codigo executa exatamente o codigo da
+    trigger do RMA001, por isso não o execute se ouver a ligação RMA_T182_Id
+    estiver preechida */
+
+    global $g;
+
+    // Pega ligações entre RMA e T182
+    $RMA001 = mysql_query("SELECT RMA001_T182_Id FROM RMA001 WHERE RMA001_Id='{$array['todosCampos']['RMA001_Id']}'");
+    $mRMA001 = mysql_fetch_array($RMA001);
+    
+    // Verifica se o RMA já tem ligação com a T182
+    if($mRMA001['RMA001_T182_Id'] > 0){
+        return array('code' => false, 'data' => 'Este RMA já tem ligação com a T182, não é possivel realizar processo da Trigger RMA001');
+    }
+    
+    // Pega dados do RMA
+    $RMA001 = mysql_query("SELECT RMA001_D024_Id, RMA001_C007_Id, RMA001_D013_Id, RMA001_T007_Id FROM RMA001 WHERE RMA001_Id='{$array['todosCampos']['RMA001_Id']}'");
+    $mRMA001 = mysql_fetch_array($RMA001);  
+
+    // Insere ligação entre RMA e T182
+    $T182 = "INSERT INTO T182 (
+                T182_D024_Id_Cliente,
+                T182_C007_Id,
+                T182_D013_Id_Cliente,
+                T182_T007_Id
+            ) VALUES (
+                '{$mRMA001['RMA001_D024_Id']}',
+                '{$mRMA001['RMA001_C007_Id']}',
+                '{$mRMA001['RMA001_D013_Id']}',
+                '{$mRMA001['RMA001_T007_Id']}'
+            )";	  
+    mysql_query($T182);
+
+    // Pega o ID para fazer ligação com o RMA
+    $T182_Id = $g['mysqlLastId'];
+
+    // Se não conseguiu pegar o ID, tenta pegar o ID pelo SELECT
+    if ($T182_Id <= 0) {
+        $T182 = mysql_query("SELECT T182_Id FROM T182 WHERE T182_T007_Id = '{$mRMA001['RMA001_T007_Id']}'");
+        $T182_Id = mysql_fetch_array($T182);
+    }
+
+    // Se não conseguiu pegar o ID, retorna erro
+    if ($T182_Id <= 0) {
+        return array('code' => false, 'data' => 'Erro ao ligar com a T182');
+    }
+
+    // Faz a ligação entre RMA e T182
+    mysql_query("UPDATE RMA001 SET RMA001_T182_Id = '{$T182_Id}' WHERE RMA001_Id = '{$array['todosCampos']['RMA001_Id']}'");
+}";s:14:"exibirCallback";s:189:"<?php
+namespace hardness;
+
+function callback($array) {
+    // retornar true ou false
+    // $array['{parametro}']
+    global $g;
+    
+    return ($g['usuarioAtual'] == 63) ? true : false;
+}";}}

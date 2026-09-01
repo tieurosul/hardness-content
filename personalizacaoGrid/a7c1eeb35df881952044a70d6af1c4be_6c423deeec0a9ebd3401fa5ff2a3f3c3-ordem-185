@@ -1,0 +1,18 @@
+	D001_Codigo_Produto
+D049_Modelo
+D083_Codigo_Produto_Fornecedor
+D001_Descricao_Produto
+D001_Aplicacao
+D082_Marca
+D037_Unidade
+D049_Flag_Tipo
+D005_Classificacao_Fiscal
+Pedido
+Estoque
+D009_Quantidade_Estoque_Fora
+D009_Quantidade_Estoque_Similar
+retornaPrecoVenda
+infoCustoVendaProduto
+D009_Quantidade_OC
+D004_Local
+C007_Primeiro_Nome

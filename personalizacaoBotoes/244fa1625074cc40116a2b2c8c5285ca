@@ -1,0 +1,34 @@
+a:1:{i:0;a:13:{s:2:"id";s:13:"69727e000b905";s:6:"titulo";s:14:"Gerar Romaneio";s:4:"tipo";s:8:"codigojs";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:14:"&sql=[[extra]]";s:10:"recarregar";b:0;s:4:"lote";s:0:"";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:1784:"<?php
+namespace hardness;
+
+function callback($array){
+    // Retornar código JS que será executado ao clicar no botão
+    global $g;
+    $extra = $array['sql'];
+    return <<<JS
+        // Exemplo: abrirJanela
+        // abrirJanela(data, '{$g['divIdRoot']}', '{$g['divId']}', unique(), '', 'Título janela', 'URL', '&teste=1', [980,550]);
+        var \$buttons = {
+            "Sim": function() {
+                $('#{$g['divId']}').showLoading();
+                $.getJSON('/est/est002/grid_func-ajax/gerarNumeroRomaneio/?ajax=true&extra=' + encodeURIComponent('{$extra}') + '&callback=?', function(request) {
+                    if (request.code) {
+                        var \$buttons = { "Fechar": function() { 
+                            $(this).dialog("destroy").remove(); 
+                            nova_janela('/est/est002/outro/est002ImprimirRomaneioDeColeta/?ajax=true&T275_Id=' + encodeURIComponent(request.data) + '&extra=' + encodeURIComponent('{$extra}') ,0,0,850,700,'yes','no','no','no','yes','no','Impressao_Romaneio');
+                        } }
+                        dialogConfirm('Ok', 'Número de romaneio gerado com sucesso!', \$buttons);
+                    } else {
+                        var \$buttons = { "Fechar": function() { $(this).dialog("destroy").remove(); } }
+                        dialogConfirm('Erro', request.data, \$buttons);
+                    }
+                    $('#{$g['divId']}').hideLoading();
+                    divRefresh('{$g['divId']}');
+                });
+                    $(this).dialog("destroy").remove();
+                },
+                "Não": function() { $(this).dialog("destroy").remove(); }
+        };
+        dialogConfirm('Gerar romaneio', 'Gerar número de romaneio de coleta?  ', \$buttons);
+JS;
+}";}}

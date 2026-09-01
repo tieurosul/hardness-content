@@ -1,0 +1,29 @@
+a:5:{s:4:"nome";s:20:"atualiza preco 3 e 4";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"bcbb978185214783c6f74db0e8d757a2";s:6:"codigo";s:1190:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+$g['empresaAtual'] = $array['todosCampos']['D009_C004_Id'];
+
+require_once('bibliotecas/classes/INDEX.php');
+$INDEX = new INDEX();
+
+$INDEX->carragaVARSGlobal();
+//echo "\n\n Vai atualizar o preco Eurosul";
+/* require_once('bibliotecas/classes/CAD002.php');
+$CAD002 = new CAD002();
+$retorno = $CAD002->D001_reprocessa_historico(0, $array['todosCampos']['D009_Id'], 50);
+//$CAD002->atualizarEstatisticasCompra($array['todosCampos']['D009_Id']);
+
+$log = "Processando {$array['todosCampos']['D009_Id']}: " . var_export($retorno, true);    
+return $log; */
+
+$D009_Id    = $array['todosCampos']['D009_Id'];
+$D009_IPT_3 = $array['todosCampos']['D009_IPT_3'];
+$D009_IPT_4 = $array['todosCampos']['D009_IPT_4'];
+
+mysqli_query("update D009
+                 set D009_Preco_3            =if({$D009_IPT_3} > 0, D009_Preco_1*{$D009_IPT_3},D009_Preco_3),
+                     D009_Preco_4            =if({$D009_IPT_4} > 0, D009_Preco_1*{$D009_IPT_4},D009_Preco_4)
+                where D009_Id='{$D009_Id}'");
+
+mysqli_query("UPDATE D009A SET D009A_Flag_Atualizar_Estoque = 'S'
+                            WHERE D009A_D009_Id = '{$D009_Id}'");";s:3:"md5";s:32:"2b2fcc434758c553e72915e6c840438f";}

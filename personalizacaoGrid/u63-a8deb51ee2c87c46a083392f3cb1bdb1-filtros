@@ -1,0 +1,12 @@
+colunaValor [D022_Taxa_Frete]
+titulo [Taxa Frete]
+exibir [S]
+---
+colunaValor [D022_Id]
+titulo [Código]
+exibir [S]
+---
+colunaValor [D022A_Flag_Ativo]
+titulo [Ativo]
+exibir [S]
+---

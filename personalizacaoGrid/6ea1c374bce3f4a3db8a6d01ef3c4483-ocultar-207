@@ -1,0 +1,35 @@
+D049_Flag_Tipo	|	TP
+D009_Quantidade_OC	|	OC
+T004_Valor_Preco_Tabela	|	Forn
+infoCustoVendaProduto	|	
+T004_Observacao_Entrega	|	Entg.dias
+T004_Observacao	|	Observação
+T004_Percentual_Reducao_ICMS	|	%Red
+D009_Quantidade_Estoque_Fora	|	Fora
+D009_Quantidade_Estoque_Similar	|	Similar
+(round(T004_Valor_ST,2)/(round(T004_Valor_Total_Preco,2)+round(T004_Valor_IPI,2)))*100	|	%ST
+T004_Valor_ST	|	ST R$
+D049_Modelo	|	Sub-item
+T004_ST_VA	|	MVA
+T004_Percentual_Reducao_ICMS_ST	|	%Red Base
+T004_Preco_Pauta_ST	|	Pauta
+T004_Valor_Base_ST	|	Base ST
+T004_Aliquota_PIS	|	%PIS
+T004_Aliquota_COFINS	|	%COFINS
+T004_Aliquota_IRPJ	|	%IRPJ
+T004_Aliquota_CSLL	|	%CSLL
+T004_Flag_Destino_Produto	|	Dest
+T004_Valor_Frete_Total	|	Frete R$
+T004_Valor_ICMS	|	ICMS R$
+T004_Valor_IPI	|	IPI R$
+T004_Valor_PIS	|	PIS R$
+T004_Valor_COFINS	|	COFINS R$
+T004_Valor_IRPJ	|	IRPJ R$
+T004_ICMS_Inter_Estadual	|	ICMS IE
+T004_ST_ICMS_Interno	|	ICMS Int
+T004_Valor_Base_IPI	|	Base IPI
+T004_Valor_Base_COFINS	|	Base COFINS
+T004_Valor_Base_PIS	|	Base PIS
+T004_Valor_Base_IRPJ	|	Base IRPJ
+T004_Valor_Base_CSLL	|	Base CSLL
+D004_Local	|	Locação

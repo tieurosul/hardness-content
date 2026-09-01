@@ -1,0 +1,7 @@
+T005_Ordem_Compra	|	OC.  Cli
+T005_Prazos(T005_Id)	|	Prazo
+T178_Data	|	Coletado
+DividirPedidoCliente	|	
+campoCancelamento	|	
+T005_Data_Entrega	|	Entrega
+IF(DiasFaltantes_T005_Prazo_Entrega = 0 AND T005_Flag_Status = 5, 'OK', DiasFaltantes_T005_Prazo_Entrega)	|	Dias faltantes

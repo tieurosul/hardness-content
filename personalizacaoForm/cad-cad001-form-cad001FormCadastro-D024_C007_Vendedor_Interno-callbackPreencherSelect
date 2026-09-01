@@ -1,0 +1,9 @@
+<?php
+/**
+ * Código executado para preencher a opção "select" de campos "type [select]" 
+ * Variáveis:
+ *      $array['campoAtual'], $array['todosCampos'], $g, $array['{parametro}']
+ */
+//return gGeraSelect($tabela, $campoId, $campoTxt, $sqlExtra, [$first], [$default], [$formato]);
+//return array(array('title' => 'Título', 'value' => 'valor'), ...);
+return gGeraSelect("C007", "C007_Id", "C007_Primeiro_Nome", "where (C007_Flag_Vendedor='V' or C007_Flag_Vendedor='S' or C007_Flag_Vendedor='D' or C007_Flag_Vendedor='C') and C007_Ativo='S' order by C007_Primeiro_Nome", true);

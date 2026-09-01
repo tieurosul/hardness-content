@@ -1,0 +1,57 @@
+colunaValor [T007_D024_Id]
+colunaTitulo [Cod]
+colunaAlinhar [center]
+---
+colunaValor [T005_T003_Id]
+colunaTitulo [Orç]
+colunaAlinhar [center]
+style [width:1%]
+---
+colunaValor [T007_Valor_Total+T007_Valor_Total_IPI]
+colunaTitulo [Total+IPI]
+colunaAlinhar [right]
+colunaCasasDecimais [2]
+colunaMetrica [S]
+---
+colunaValor [T007_Valor_Total_PIS]
+colunaTitulo [PIS]
+colunaAlinhar [right]
+colunaCasasDecimais [2]
+colunaMetrica [S]
+colunaExibirNivel [1]
+---
+colunaValor [T007_Valor_Total_COFINS]
+colunaTitulo [COFINS]
+colunaAlinhar [right]
+colunaCasasDecimais [2]
+colunaMetrica [S]
+colunaExibirNivel [1]
+---
+colunaValor [T007_Valor_Frete]
+colunaTitulo [Frete]
+colunaAlinhar [right]
+colunaCasasDecimais [2]
+style [width:1%]
+---
+colunaValor [T007_Valor_Total_ICMS]
+colunaTitulo [ICM]
+colunaAlinhar [right]
+colunaCasasDecimais [2]
+colunaMetrica [S]
+colunaExibirNivel [1]
+---
+colunaValor [T007_Valor_Despesas_Acessorias]
+colunaTitulo [Despesas]
+colunaAlinhar [right]
+colunaCasasDecimais [2]
+style [width:1%]
+---
+colunaValor [ACP]
+colunaTitulo [ACP]
+colunaTipo [livre]
+callback [validaCampoACP]
+colunaExibir [1]
+---
+colunaValor [T007_Flag_Impresso]
+colunaExibir [S]
+---

@@ -1,0 +1,11 @@
+D070_Id
+substr(D024_Nome_Empresa,1,15)
+	Marca
+D069_Codigo_Produto
+preCadastro
+D069_Descricao_Produto
+Unidade
+IF(D005_Classificacao_Fiscal != '',concat(D005_Classificacao_Fiscal,'-',D005_Flag_Aplicacao),CONCAT('<font color="red">',D069_NCM,'</font>'))
+D069_Valor_Preco_Original
+	D069_Valor_Custo_Unitario
+	retornaPrecoVendaTabelaFornecedor

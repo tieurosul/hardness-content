@@ -1,0 +1,20 @@
+colunaValor [D001A_Observacao_Entrada]
+colunaExibir [S]
+colunaTitulo [Obs. Entrega]
+---
+colunaValor [D001A_FLAG_Inspecao_Amostragem]
+colunaExibir [S]
+colunaTitulo [Inspecao Amostragem]
+---
+colunaValor [D001A_Flag_Validade]
+colunaExibir [S]
+colunaTitulo [Validade?]
+---
+colunaValor [D001A_Flag_Doc_Num_Serie]
+colunaExibir [S]
+colunaTitulo [Certificado num serie?]
+---
+colunaValor [D001A_Flag_Produto_Emite_Certificado]
+colunaExibir [S]
+colunaTitulo [Documentos?]
+---

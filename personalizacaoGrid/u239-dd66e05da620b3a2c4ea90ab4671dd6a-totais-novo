@@ -1,0 +1,14 @@
+nome [TDId_Distinct]
+valor [T140_D001_Id]
+titulo [Qtd T140_D001_Id]
+exibir [S]
+totalizador [distinct]
+callbackParameter [0]
+---
+nome [TId_Distinct]
+valor [T140_Id]
+titulo [Qtd T140_Id]
+exibir [S]
+totalizador [distinct]
+callbackParameter [0]
+---

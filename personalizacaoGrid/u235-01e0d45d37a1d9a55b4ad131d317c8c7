@@ -1,0 +1,23 @@
+colunaValor [T006_Numero_Pedido_Compra]
+colunaTitulo [Num.OC]
+colunaOrdem [7]
+---
+colunaValor [T006_Item_Pedido_Compra]
+colunaTitulo [Item.OC]
+colunaOrdem [5]
+---
+colunaValor [D049_Modelo]
+colunaTitulo [Sub-item]
+colunaOrdem [4]
+---
+colunaValor [D004_Local]
+colunaTitulo [Locação]
+colunaOrdem [9]
+---
+colunaValor [Pedido]
+colunaOrdem [11]
+---
+colunaValor [T006_Quantidade]
+colunaTitulo [Qtde]
+colunaOrdem [12]
+---

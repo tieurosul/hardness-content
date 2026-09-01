@@ -1,0 +1,4 @@
+colunaValor [D009A_Pedido_Minimo]
+colunaTitulo [Ped Minimo / MOQ]
+callback [gCorrigeNumero]
+---

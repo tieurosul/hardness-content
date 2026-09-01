@@ -1,0 +1,27 @@
+T005_Data_Emissao
+T005_Id
+	NF
+	D006_Codigo_CFOP
+D024_Id
+	T006_Codigo_Produto
+	T006_Codigo_Substituto
+D024_Nome_Empresa
+D018_UF
+	T006_Descricao_Produto
+	D037_Unidade
+	T006_Quantidade
+	Pedido
+	T006_Percentual_Desconto
+	T006_Valor_Custo_Unitario
+	T006_Valor_Preco_Sem_Desconto_Unitario
+	T006_Valor_Total_Preco
+Status2
+T006_Observacao_Entrega
+T006_Observacao
+D005_Classificacao_Fiscal
+T006_Aliquota_IPI
+T006_Valor_IPI
+T006_Valor_Base_ICMS
+D004_Local
+	T006_Quantidade_Separacao
+T218_Id

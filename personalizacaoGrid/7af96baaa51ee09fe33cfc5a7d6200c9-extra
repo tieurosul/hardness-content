@@ -1,0 +1,10 @@
+left join T048 on T048_Id=T071_T048_Id
+left join T047 on T047_Id=T048_T047_Id
+left join D009 on D009_Id=T071_D009_Id
+left join D049 on D049_Id=D009_D049_Id
+left join D001 on D001_Id=D049_D001_Id
+left join D082 on D082_Id=D049_D082_Id
+left join T066 on T066_Id=T071_T066_Id
+left join T066A on T066_Id=T066A_T066_Id
+left join D004 on D004_Id=T066_D004_Id
+where T071_T048_Id='[[r_acaoId]]'

@@ -1,0 +1,15 @@
+colunaValor [observacoes]
+colunaTitulo [Observações]
+colunaTipo [livre]
+callback [exibirObservacoesCelula]
+colunaExibir [S]
+---
+colunaValor [T013_Flag_Calcular]
+colunaExibir [S]
+colunaTitulo [T013_Flag_Calcular]
+---
+colunaValor [T013_Tipo]
+colunaExibir [S]
+colunaTitulo [T013_Tipo]
+colunaEditarTodos [S]
+---

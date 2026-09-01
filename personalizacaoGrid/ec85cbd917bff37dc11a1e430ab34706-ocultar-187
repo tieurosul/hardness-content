@@ -1,0 +1,4 @@
+SUBSTR(D001_Descricao_Produto,1,50)	|	Descrição português
+D001_Flag_Pre_Cadastro	|	Pré
+D001_Descricao_Ingles	|	Descrição Inglês
+IF('A'='A',D001_Foto,'A')	|	IMPA/FANN

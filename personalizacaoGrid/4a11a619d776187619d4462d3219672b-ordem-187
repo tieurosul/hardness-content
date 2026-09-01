@@ -1,0 +1,20 @@
+T055_Valor_Adicao
+D005_Classificacao_Fiscal
+itens
+	T055_Aliquota_COFINS
+T055_Valor_Total_Custo
+T055_Valor_Total_Frete
+T055_Valor_Total_Aduaneira
+T055_Valor_Seguro
+Subtotal
+T055_Aliquota_Imposto_Importacao
+T055_Valor_Imposto_Importacao
+T055_Aliquota_IPI
+T055_Valor_IPI
+T055_Aliquota_PIS
+T055_Valor_PIS
+T055_Valor_COFINS
+T055_Valor_ICMS
+T055_Valor_ICMS_Presumido
+T055_Valor_ICMS_Pagar
+T055_Peso_Kg_Liquido_Unitario

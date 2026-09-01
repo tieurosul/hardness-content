@@ -1,0 +1,20 @@
+left join T013 on T013_Id=T014_T013_Id
+            left join D024 on D024_Id=T013_D024_Id
+left join T012 on T012_Id=T014_T012_Id
+left join D009 on D009_Id=T014_D009_Id
+left join D049 on D049_Id=D009_D049_Id
+left join D001 on D001_Id=D049_D001_Id
+left join D037 on D037_Id=D001_D037_Id
+left join D082 on D082_Id=D049_D082_Id
+left join T001 on T001_T014_Id=T014_Id
+left join D006 on D006_Id=T014_D006_Id
+left join T225 on T225_Id=T014_T225_Id
+left join D003 on D003_Id=D001_D003_Id
+left join T224 on T224_Id=T225_T224_Id
+lefT join T008 on T008_Id=T014_T008_Id
+lefT join T007 on T007_Id=T008_T007_Id
+left join C007 as Comprador on Comprador.C007_Id=T224_C007_Id_Vendedor_Interno
+left join C007 as Supervisor on Supervisor.C007_Id=Comprador.C007_C007_Id
+and IF('D' = 'V', Comprador.C007_Id='63',IF('D' = 'S', (Supervisor.C007_Id='63' or Comprador.C007_Id='63') ,'1=1'))
+WHERE T013_C004_Id='[[g-empresaAtual]]'
+order by T014_Id

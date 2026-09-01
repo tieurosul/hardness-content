@@ -1,0 +1,16 @@
+colunaValor [D004_Indicador_Propriedade]
+colunaExibir [S]
+colunaTitulo [Indicador_Propriedade]
+---
+colunaValor [T066_Id]
+colunaTitulo [T066_Id]
+chavePrimaria [1]
+colunaExibir []
+style [width: 1%]
+---
+colunaValor [T066A_Id]
+colunaTitulo [T066A_Id]
+chavePrimaria [1]
+colunaExibir []
+style [width: 1%]
+---

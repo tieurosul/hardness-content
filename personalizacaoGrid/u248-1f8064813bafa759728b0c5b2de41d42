@@ -1,0 +1,17 @@
+colunaValor [T007_Data_Envio_XML]
+colunaTitulo [Mail]
+colunaOrdem [16]
+---
+colunaValor [T005_Data_Entrega]
+colunaOrdem [17]
+---
+colunaValor [observacoes]
+colunaOrdem [19]
+---
+colunaValor [T007_Data_Entrega]
+colunaOrdem [18]
+---
+colunaValor [T007_C007_Id_Vendedor_Interno]
+colunaOrdem [15]
+colunaTitulo [Vendedor]
+---

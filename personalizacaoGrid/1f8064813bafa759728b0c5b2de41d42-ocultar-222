@@ -1,0 +1,30 @@
+T007_Flag_Impresso	|	
+T007_D024_Id	|	Cod
+T007_Flag_ACP	|	Tipo
+D024_Nome_Fantasia	|	Nome Fantasia
+T007_Valor_Comissao_Representante	|	Comissão R$
+T007_Percentual_Comissao_Representante	|	%Comissão
+T007_Valor_Total_Comissao	|	Comissão
+T007_Percentual_Comissao	|	%Comissão
+T007_Valor_Total_IPI	|	IPI
+T007_Valor_Total_COFINS	|	COFINS
+T007_Valor_Total_PIS	|	PIS
+T007_Valor_Total_ICMS	|	ICMS
+UFClienteEntrega.D018_UF	|	UF Entrega
+T007_Flag_Marcado	|	MDF-e
+T007_Cliente_Endereco	|	Rua
+T007_D021_Id	|	Representante
+Retorno Sefaz	|	Retorno SEFAZ
+T007_Chave_Acesso_Nfe	|	Chave Acesso
+T007_Numero_Protocolo_Nfe	|	Protocolo NFe
+T007_Data_Envio_XML	|	Mail
+T007_Prazos(T007_Id)	|	Prazo
+T007_Valor_Frete	|	Frete
+D024_Cpf	|	CPF
+UFFaturamento.D018_UF	|	UF Faturamento
+T007_Cliente_Endereco_Numero	|	Número
+T007_Cliente_CEP	|	CEP
+T007_Numero_Protocolo_Cancelamento_Nfe	|	Prot. Cancel
+T007_Valor_Despesas_Acessorias	|	Despesas
+T007_Serie	|	Série
+T007_Id	|	Id

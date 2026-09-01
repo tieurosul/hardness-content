@@ -1,0 +1,32 @@
+D049_Modelo	|	Sub-item
+T006_Percentual_Comissao	|	%Comiss
+T006_Valor_Base_PIS	|	Base PIS
+D004_Local	|	Locação
+T006_Quantidade_Separacao	|	Separado
+T218_Id	|	Cotação
+T006_Valor_Comissao	|	Comissão
+T006_Valor_Base_CSLL	|	Base CSLL
+T006_Valor_Base_IRPJ	|	Base IRPJ
+T006_Valor_Base_COFINS	|	Base COFINS
+T006_Valor_Base_ICMS	|	Base ICM
+T006_Valor_Base_IPI	|	Base IPI
+T006_Percentual_Reducao_ICMS_ST	|	%Red
+D009_Quantidade_Estoque_Fora	|	Fora
+D009_Quantidade_Estoque_Similar	|	Similar
+T006_Observacao_Entrega	|	Entg.dias
+T006_Flag_Origem_Produto	|	Orig
+T006_Flag_Destino_Produto	|	Dest
+T006_Percentual_Reducao_ICMS	|	% Red
+T006_Valor_ICMS_Substituicao_Retencao	|	ST R$
+T006_Valor_ICMS	|	ICMS R$
+T006_Preco_Pauta_ST	|	Pauta
+T006_ST_ICMS_Interno	|	ICMS Int
+T006_ICMS_Inter_Estadual	|	ICMS IE
+T006_Valor_CSLL	|	CSLL R$
+T006_Valor_IRPJ	|	IRPJ R$
+T006_Valor_COFINS	|	COFINS R$
+T006_Valor_PIS	|	PIS R$
+T006_Valor_IPI	|	IPI R$
+T006_Quantidade_OP	|	OP
+T006_Valor_Preco_Original	|	Tabela
+D049_Flag_Tipo	|	TP

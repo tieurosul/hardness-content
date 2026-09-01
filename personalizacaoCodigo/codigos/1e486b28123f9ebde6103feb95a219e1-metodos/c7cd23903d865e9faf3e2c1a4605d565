@@ -1,0 +1,50 @@
+a:5:{s:4:"nome";s:27:"inativar item prÉ cadastro";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"1e486b28123f9ebde6103feb95a219e1";s:6:"codigo";s:2470:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+$g['empresaAtual'] = $array['todosCampos']['C004_Id'];
+
+require_once('bibliotecas/classes/INDEX.php');
+$INDEX = new INDEX();
+
+$INDEX->carragaVARSGlobal();
+
+if($g['C031']['diasMaxProdutoPreCadastro'] <= 0 || $g['C031']['diasMaxProdutoPreCadastro'] == ''){
+    return "Não ativado para inativar produto EM PRÉ-CADASTRO na configuração da empresa {$g['empresaAtual']}";
+}
+
+// Busca produtos em pré-cadastro, ativos, sem estoque e acima do prazo máximo configurado.
+$D001 = mysql_query("SELECT D001_Id,
+                            D009_Id
+                       FROM D001 
+                  LEFT JOIN D049 ON D001_Id = D049_D001_Id
+                  LEFT JOIN D009 ON D049_Id = D009_D049_Id AND D009_C004_Id = '1'
+                      WHERE D001_Flag_Pre_Cadastro = 'S' 
+                        AND D001_Flag_Ativo != 'N'
+                        AND D009_Quantidade_Estoque <= 0
+                        AND DATEDIFF(CURDATE(), D049_Data_Cadastro) > {$g['C031']['diasMaxProdutoPreCadastro']}");
+$count = 0;                      
+while($mD001 = mysql_fetch_array($D001)){
+    // Felipe Kadanos - 25/09/2025
+    // Personalizado a pedido do Miguel e Lucas, para não inativar produtos que tiveram orçamento a menos de 6 meses
+    // Verifica se houve orçamento para o produto nos últimos 6 meses.
+    $sql = mysql_query("SELECT T004_Id FROM T004
+                            LEFT JOIN T003 ON T003_Id = T004_T003_Id
+                        WHERE T004_D009_Id = '{$mD001['D009_Id']}'
+                            AND T003_Data_Emissao > DATE_SUB(CURDATE(), INTERVAL 6 MONTH) 
+                        ORDER BY T003_Data_Emissao, T003_Id DESC LIMIT 1");
+
+    // Se houve orçamento recente, não inativa.
+    if (mysql_num_rows($sql)>0) {
+        continue;
+    }
+
+    $count++;
+    // Inativa o produto por permanecer em pré-cadastro além do prazo configurado, sem estoque.
+    mysqli_query("UPDATE D001 SET D001_Flag_Ativo = 'N' WHERE D001_Id = '{$mD001['D001_Id']}'");
+
+    // Registra o motivo da inativação na tabela complementar D001A.
+    mysqli_query("UPDATE D001A SET D001A_Motivo_Inativado = 'Inativado pelo crontab(7): produto em pré-cadastro, acima do prazo configurado e com estoque físico zerado'
+                   WHERE D001A_D001_Id = '{$mD001['D001_Id']}'");
+}
+
+return "Inativado {$count} produtos por estarem a mais de {$g['C031']['diasMaxProdutoPreCadastro']} dias em PRÉ-CADASTRO";";s:3:"md5";s:32:"1bb3a468684c247983d4b9d14c0a351c";}

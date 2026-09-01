@@ -1,0 +1,20 @@
+colunaValor [D006_Codigo_CFOP]
+colunaTitulo [CFOP]
+colunaOrdem [18]
+---
+colunaValor [UFCliente.D018_UF]
+colunaOrdem [17]
+---
+colunaValor [Danfe]
+colunaTitulo [Danfe]
+colunaOrdem [6]
+---
+colunaValor [T007_Id]
+colunaExibir [S]
+colunaTitulo [Id]
+colunaOrdem [3]
+---
+colunaValor [T007_Data_Entrega]
+colunaTitulo [Data Entrega]
+colunaOrdem [52]
+---

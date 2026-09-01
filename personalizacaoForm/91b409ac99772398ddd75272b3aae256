@@ -1,0 +1,6 @@
+tab [geral]
+field [D001A_Observacao_Entrada]
+name [D001A_Observacao_Entrada]
+label [Obs. Entrega]
+type [textarea]
+---

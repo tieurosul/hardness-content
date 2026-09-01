@@ -1,0 +1,57 @@
+colunaValor [T055_T066_Id]
+colunaTitulo [Lote]
+callback [T055_T066_Id_Local]
+colunaAlinhar [left]
+---
+colunaValor [T055_Descricao_Produto_Ingles]
+colunaExibir [S]
+---
+colunaValor [T055_Cotacao_CC]
+colunaTitulo [Cotação CC]
+colunaExibir [S]
+colunaEditarOculto [1]
+style [background:#A1FCA9;font-weight:normal]
+---
+colunaValor [D009_Valor_Custo_Ultima_Compra]
+colunaExibir [S]
+colunaTitulo [Custo Ult.Compra]
+colunaCasasDecimais [4]
+colunaAlinhar [right]
+---
+colunaValor [D009_Preco_1]
+colunaExibir [S]
+colunaTitulo [Preço 1]
+colunaCasasDecimais [4]
+colunaAlinhar [right]
+---
+colunaValor [T296_Valor_Custo_Final_Unitario]
+colunaExibir [S]
+---
+colunaValor [((T055_Valor_Custo_Final_Unitario - T296_Valor_Custo_Final_Unitario)/T055_Valor_Custo_Final_Unitario)*100]
+colunaExibir [S]
+---
+colunaValor [foto]
+colunaExibir [S]
+colunaTitulo [Foto]
+---
+colunaValor [T055A_Altura]
+colunaTitulo [Altura]
+colunaCasasDecimais [6]
+colunaAlinhar [right]
+---
+colunaValor [T055A_Largura]
+colunaTitulo [Largura]
+colunaCasasDecimais [6]
+colunaAlinhar [right]
+---
+colunaValor [T055A_Comprimento]
+colunaTitulo [Comprimento]
+colunaCasasDecimais [6]
+colunaAlinhar [right]
+---
+colunaValor [T066A_Numero_Lote]
+colunaExibir []
+---
+colunaValor [T066A_Data_Validade]
+colunaExibir []
+---

@@ -1,0 +1,7 @@
+excluirLinha
+impressaoEtiqueta
+D004_Id
+D004_Local
+D004_Descricao
+group_concat(concat(D001_Codigo_Produto,' - ',D001_Descricao_Produto,' - Qte: ',T066.T066_Quantidade_Estoque) SEPARATOR '<br>')
+	D146_Descricao

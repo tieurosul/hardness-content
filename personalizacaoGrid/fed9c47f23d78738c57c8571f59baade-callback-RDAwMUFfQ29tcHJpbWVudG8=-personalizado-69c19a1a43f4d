@@ -1,0 +1,17 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['D001A_Comprimento']
+    // $array['totais']['Nome_Total']
+    if (!empty($array['campoAtual'])) {
+        echo <<<EOT
+        	<div class="divHidden"><script type="text/javascript"> if (typeof jQuery != 'undefined') {
+                $("td[onclick*='D001A_Comprimento']").removeAttr("onclick");
+	    } </script></div>
+EOT;
+    }
+    return $array['campoAtual'];
+}

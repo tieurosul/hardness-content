@@ -1,0 +1,19 @@
+<?php
+/**
+ * Código executado ao enviar um formulário (inserir/alterar)
+ * Variáveis:
+ *      $array['campoAtual'], $array['todosCampos'], $array['acaoId'], $g, $array['{parametro}']
+ * Funções:
+ *      jsRecarregarCampo('campo', array('var' => 'valor'))
+ *      jsAlterarCampoValor($campo, $valor)
+ *      jsExecutarCodigo($codigo)
+ *      jsAbrirJanela($url, $titulo, $parametros, $tamanho = '[900,600]')
+ */
+// Retornar true ou mensagem de erro 
+// Exemplo campo obrigatório
+//return empty($array['campoAtual']) ? 'Campo é obrigatório' : true;
+
+// Personalizado a pedido do Miguel
+if (mb_strlen($array['campoAtual']) > 400) {
+    return "Não pode passar de 400 caracteres!";
+}

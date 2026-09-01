@@ -1,0 +1,54 @@
+tab [fiscal]
+field [D024_Flag_ICMS_Substituicao_Tributaria_Substituto]
+name [D024_Flag_ICMS_Substituicao_Tributaria_Substituto]
+label [Isento ICMS S.T.]
+type [select]
+---
+tab [cadastro]
+field [D024_Cnpj_Matriz]
+name [D024_Cnpj_Matriz]
+label [CNPJ Matriz]
+type [pesquisa]
+pesquisa [array (
+    'D024',
+    'D024_Cnpj',
+    'D024_Nome_Fantasia,D024_Cnpj,D024_Cpf,D020_Nome_Cidade,D018_UF',
+    'left join D020 on D020_Id=D024_D020_Id left join D018 on D018_Id=D024_D018_Id WHERE D024_Flag_Ativo="S" ORDER BY D024_Nome_Fantasia'
+)]
+length [80, 30]
+---
+tab [cadastro]
+field [D024_Flag_Pre_Cadastro]
+name [D024_Flag_Pre_Cadastro]
+label [Pré-Cadastrado]
+type [select]
+select [array(
+    array('title' => '...', 'value' => 'S','selected' => true),
+    array('title' => 'Sim', 'value' => 'S'), 
+    array('title' => 'Não', 'value' => 'N') 
+)]
+---
+tab [cadastro]
+field [D024_D046_Id]
+name [D024_D046_Id]
+label [Canal Primario]
+---
+tab [cadastro]
+field [D024A_Segmento_Atuacao]
+name [D024A_Segmento_Atuacao]
+label [Segmento Atuação]
+type [select]
+select [array(
+    array('title' => '...', 'value' => ''),
+    array('title' => 'Offshore & O&G', 'value' => '1'),
+    array('title' => 'Apoio Portuário', 'value' => '2'),
+    array('title' => 'Navegação Comercial', 'value' => '3'),
+    array('title' => 'Navegação Interior', 'value' => '4'),
+    array('title' => 'Construção & Retrofit', 'value' => '5'),
+    array('title' => 'Industrial & Energia', 'value' => '6'),
+    array('title' => 'Manutenção & Serviço Técnico', 'value' => '7'),
+    array('title' => 'Abastecimento Portuário', 'value' => '8'),
+    array('title' => 'Náutica & Recreio', 'value' => '9'),
+    array('title' => 'Fornecedor', 'value' => '10')
+)]
+---

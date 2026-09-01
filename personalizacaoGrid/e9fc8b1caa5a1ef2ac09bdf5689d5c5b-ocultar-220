@@ -1,0 +1,10 @@
+D049_Quantidade_Embalagem_Compra	|	Embalagem
+D001_Especificacoes	|	Especificações
+D049_Modelo	|	Sub-Item
+D009_Quantidade_Estoque_Fora	|	EstqFora
+D009_Quantidade_Estoque_Similar	|	EstqSimilar
+D009_Quantidade_Estoque_Tabela	|	EstqTabela
+D009_Quantidade_Estoque_Loja	|	EstqLoja
+colunaFornecedores	|	Fornecedores
+D009_Flag_Cotar	|
+D009_Id	|	ID

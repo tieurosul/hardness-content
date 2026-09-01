@@ -1,0 +1,35 @@
+<?php
+/**
+ * Código executado para preencher a opção "select" de campos "type [select]" 
+ * Variáveis:
+ *      $array['campoAtual'], $array['todosCampos'], $g, $array['{parametro}']
+ */
+//return gGeraSelect($tabela, $campoId, $campoTxt, $sqlExtra, [$first], [$default], [$formato]);
+//return array(array('title' => 'Título', 'value' => 'valor'), ...);
+
+/**
+ * Código executado para preencher a opção "select" de campos "type [select]" 
+ * Variáveis:
+ *      $array['campoAtual'], $array['todosCampos'], $g, $array['{parametro}']
+ */
+$d197Id = 0;
+
+if (isset($array['RMA002_P004_Id'])) {
+    $d197Id = intval($array['RMA002_P004_Id']);
+}
+
+if ($d197Id <= 0) {
+    return array();
+}
+
+$sqlExtra = " WHERE P003_P004_Id = " . $d197Id;
+
+return gGeraSelect(
+    'P003',
+    'P003_Id',
+    'P003_Id, P003_Novo_Campo',
+    $sqlExtra,
+    true,
+    '',
+    ''
+);

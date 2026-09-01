@@ -1,0 +1,43 @@
+countLinha
+excluirLinha
+imprimirMinutaDeDespacho
+T007_Id
+Etiqueta
+T007_Numero_Nota_Fiscal
+T007_Serie
+T007_Data_Emissao
+D024_Nome_Empresa
+	T007_Valor_Total
+	T007_Valor_Total_Produtos
+	T005_Id
+	T005_T003_Id
+	Danfe
+	T007_Data_Entrega
+	T007_C007_Id_Vendedor_Interno
+	T007_Valor_ICMS_Substituicao_Retencao
+	UFCliente.D018_UF
+	D006_Codigo_CFOP
+	D022_Nome_Empresa
+	Contato
+	Damdfe
+	T007_Valor_Frete
+	T007_D021_Id
+	XML
+D024_Cpf
+T007_Prazos(T007_Id)
+T007_Data_Envio_XML
+ACP
+CCe
+T007_Flag_Cancelada
+	Retorno Sefaz
+	T007_Chave_Acesso_Nfe
+	T007_Valor_Despesas_Acessorias
+	T007_Numero_Protocolo_Nfe
+	D024_Cnpj
+	UFFaturamento.D018_UF
+	T007_Numero_Protocolo_Cancelamento_Nfe
+T007_Cliente_Endereco
+T007_Cliente_Endereco_Numero
+T007_Cliente_Bairro
+T007_Cliente_CEP
+addColuna

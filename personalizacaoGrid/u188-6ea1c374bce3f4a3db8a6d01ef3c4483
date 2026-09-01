@@ -1,0 +1,7 @@
+colunaValor [D009_Quantidade_OC]
+colunaTitulo [OC]
+colunaAlinhar [center]
+callback [abrirJanela]
+style [width:1%]
+colunaExibir [S]
+---

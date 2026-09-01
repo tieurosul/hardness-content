@@ -1,0 +1,12 @@
+colunaValor [T018_Valor_Recebido]
+colunaTitulo [Recebido]
+callback [gCorrigeNumero]
+colunaAlinhar [right]
+colunaTotal [S]
+---
+colunaValor [T018_Valor_Pago]
+colunaTitulo [Pago]
+callback [gCorrigeNumero]
+colunaAlinhar [right]
+colunaTotal [S]
+---

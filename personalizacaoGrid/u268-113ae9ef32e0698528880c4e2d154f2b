@@ -1,0 +1,11 @@
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Descrição]
+colunaOrdem [9]
+---
+colunaValor [D049_Flag_Curva_ABC_Qtd]
+colunaTitulo [ABC(Q)]
+colunaOrdem [8]
+---
+colunaValor [flagNaoCompra]
+colunaOrdem [10]
+---

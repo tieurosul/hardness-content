@@ -1,0 +1,16 @@
+tab [geral]
+field [T015_Numero_Documento]
+name [T015_Numero_Documento]
+label [Nº Documento]
+type [text]
+length [30, 30]
+---
+tab [geral]
+field [T015_Numero_Duplicata]
+name [T015_Numero_Duplicata]
+label [Nº Duplicata ]
+align [right]
+style [float:right]
+type [text]
+length [30, 30]
+---

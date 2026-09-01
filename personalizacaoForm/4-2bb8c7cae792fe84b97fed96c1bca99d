@@ -1,0 +1,7 @@
+tab [orcamentos]
+field [T003_Flag_Acp]
+name [T003_Flag_Acp]
+label [Tipo Documento]
+type [select]
+disabled [S]
+---

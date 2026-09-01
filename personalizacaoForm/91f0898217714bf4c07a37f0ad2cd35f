@@ -1,0 +1,19 @@
+tab[geral]
+field[P003_Id]
+name[P003_Id]
+type[hidden]
+label[Id]
+---
+tab[geral]
+field[P003_P004_Id]
+name[P003_P004_Id]
+type[pesquisa]
+label[Motivo]
+pesquisa[array('P004', 'P004_Id', 'P004_Id, P004_Setor', '', '')]
+---
+tab[geral]
+field[P003_Novo_Campo]
+name[P003_Novo_Campo]
+type[text]
+label[Tipo Da Falha]
+---

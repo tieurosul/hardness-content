@@ -1,0 +1,19 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['docs']
+    // $array['totais']['Nome_Total']
+
+    global $g;
+
+    $img = "<span onclick=\"abrirJanela(true, '{$g['divIdRoot']}', '{$g['divId']}', unique(), '', 'Doc NF - ID: {$array['todosCampos']['T007_Id']}', '/sistema/personalizacao/content/99127608ef5dab1afa625b00a733489a/', '&T007_Id=' + encodeURIComponent({$array['todosCampos']['T007_Id']}), [900,500]);\">
+                <div class='icone ui-state-default ui-corner-all'>
+                    <span class='ui-icon ui-icon-print' title='Documentos Nota Fiscal'></span>
+                </div>
+            </span>";
+
+    return $img;
+}

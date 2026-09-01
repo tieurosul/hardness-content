@@ -1,0 +1,37 @@
+countLinha
+excluirLinha
+T294_Valor_Adicao
+T294_Adicao_Item
+T294_Codigo_Produto
+D001_Descricao_Produto
+T294_Descricao_Produto
+	T294_Quantidade
+D082_Marca
+T294_Peso_Kg_Liquido_Unitario
+	T294_Peso_Kg_Liquido_Total
+T294_Valor_Custo_Unitario
+T294_Valor_Total_Custo
+T294_Valor_Custo_Final_Unitario
+T294_Valor_Total_Despesas
+	D005_Classificacao_Fiscal
+T294_Valor_Imposto_Importacao
+T294_Valor_IPI
+T294_Valor_PIS
+T294_Valor_COFINS
+T294_Valor_ICMS
+T294_Valor_ICMS_Presumido
+T294_Valor_ICMS_Pagar
+T294_Aliquota_Imposto_Importacao
+T294_Aliquota_IPI
+T294_Aliquota_PIS
+T294_Aliquota_COFINS
+T294_Aliquota_ICMS
+T294_Aliquota_ICMS_Presumido
+T294_Valor_Base_Imposto_Importacao
+T294_Valor_Base_IPI
+T294_Valor_Base_PIS
+T294_Valor_Base_COFINS
+T294_Valor_Base_ICMS_Sem_Reducao
+T294_Valor_Base_ICMS_Normal
+T294_Flag_Finalizar_Compra
+addColuna

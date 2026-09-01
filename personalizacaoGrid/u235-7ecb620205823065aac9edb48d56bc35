@@ -1,0 +1,10 @@
+colunaValor [etiquetaDespacho]
+colunaTitulo [Despacho]
+colunaTipo [livre]
+colunaAlinhar [center]
+callback [personalizado-619661455fd4a]
+---
+colunaValor [T005_Data_Entrega]
+colunaTitulo [Prazo entrega]
+colunaOrdem [11]
+---

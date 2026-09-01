@@ -1,0 +1,20 @@
+<?php
+/**
+ * Código executado para preencher o valor (value) do campo 
+ * Variáveis:
+ *      $g, $array['todosCampos'], $array['{parametro}']
+ */
+// Exemplo
+//return "Valor do campo";
+global $g;
+
+if (empty($array['acaoId']) || $array['acaoId'] <= 0) {
+    echo <<<EOT
+        <div class="divHidden"><script type="text/javascript"> if (typeof jQuery != 'undefined') {
+            /*  $(document).ready(function () {
+                $('[formeditorid="T003A_Referencia_Orcamento"]').hide();
+            }); */
+            $("#{$g['divId']} #T003A_Referencia_Orcamento").closest('.formEditor').hide();
+        } </script></div>
+EOT;
+}

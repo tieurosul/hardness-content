@@ -1,0 +1,10 @@
+colunaValor [T008_Valor_Base_ICMS]
+colunaOrdem [14]
+---
+colunaValor [T008_Valor_Base_ICMS_Impresso]
+colunaExibir [S]
+colunaTitulo [ICMS Base Diferimento]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+colunaOrdem [45]
+---

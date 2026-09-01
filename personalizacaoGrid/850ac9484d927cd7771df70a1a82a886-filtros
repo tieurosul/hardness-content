@@ -1,0 +1,11 @@
+colunaValor [D024_Nome_Empresa]
+titulo [Cliente]
+tipo [texto]
+---
+colunaValor [IF(T019_T002_Id > 0 [[VIRGULA]] T002_Data_Recebimento [[VIRGULA]] T015_Data_Pagamento)]
+titulo [Data de Baixa]
+exibir [S]
+tipo [data]
+---
+
+

@@ -1,0 +1,18 @@
+countLinha
+	D001_Flag_Ativo
+	D001_Codigo_Produto
+D001_Descricao_Produto
+	D001_D037_Id
+	D009_Quantidade_Estoque
+	Custo
+	D009_Preco_1
+	D149_Aliquota_IPI
+	D009_Valor_Custo_Ultima_Compra
+	CustoME
+	D049_D082_Id
+	D001_D005_Id
+	D001_Flag_Pre_Cadastro
+	T144_Url
+	D001_Descricao_Ingles
+D049_Flag_Curva_ABC
+addColuna

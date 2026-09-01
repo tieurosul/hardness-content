@@ -1,0 +1,21 @@
+campoExclusao
+D024_Id
+	T002_Numero_Documento
+T002_Numero_Duplicata
+Parcelas
+T002_Data_Emissao
+Prazo
+T002_Data_Vencimento
+Atraso
+T002_Valor_Duplicata
+T002_Valor_Juros
+T002_Valor_Desconto
+T002_Valor_Recebido
+T002_Valor_Total
+T002_Valor_Saldo
+D027_Portador
+T117_Nosso_Numero
+T002_Observacao
+C007_Nome
+D046_Nome
+T002_T045_Id

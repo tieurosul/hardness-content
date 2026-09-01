@@ -1,0 +1,9 @@
+colunaValor [D001_Codigo_Produto]
+colunaOrdem [5]
+---
+colunaValor [subItem]
+colunaOrdem [4]
+---
+colunaValor [T048_Flag_Tipo_Montagem]
+colunaOrdem [2]
+---

@@ -1,0 +1,43 @@
+excluirLinha
+T006_Item
+T006_Codigo_Produto
+T006_Descricao_Produto
+SUBSTRING(D082_Marca,1,15)
+D037_Unidade
+Pedido
+T006_Quantidade
+	T006_Valor_Preco_Sem_Desconto_Unitario
+	T006_Valor_Total_Preco
+	T006_Percentual_Desconto
+D006_Codigo_CFOP
+	T006_Aliquota_IPI
+	D004_Local
+T006_Flag_Origem_Produto
+	T006_Valor_Preco_Original
+T006_Aliquota_ICMS
+	D005_Classificacao_Fiscal
+	T006_Flag_Destino_Produto
+T006_Percentual_Reducao_ICMS
+((T006_Valor_ICMS_Substituicao_Retencao/T006_Quantidade)/T006_Valor_Preco_Unitario)*100
+T006_Aliquota_PIS
+T006_Aliquota_CSLL
+T006_Valor_ICMS
+T006_Valor_IPI
+T006_Valor_ICMS_Substituicao_Retencao
+T006_Valor_PIS
+T006_Valor_COFINS
+T006_Valor_CSLL
+T006_Flag_ST
+T006_ICMS_Inter_Estadual
+T006_ST_ICMS_Interno
+T006_ST_VA
+T006_Valor_Base_ICMS_Substituicao
+T006_Valor_Base_IPI
+T006_Valor_Base_ICMS
+T006_Valor_Base_PIS
+T006_Valor_Base_COFINS
+T006_Valor_Base_IRPJ
+T006_Valor_Base_CSLL
+T006_Numero_Pedido_Compra
+T006_Percentual_Comissao
+T006_Quantidade_Separacao

@@ -1,0 +1,12 @@
+nome [Total_ME_]
+valor [T294_Valor_Total_Custo]
+titulo [Total ME]
+exibir [S]
+totalizador [soma]
+---
+nome [Peso_Kg_total_]
+valor [T294_Peso_Kg_Liquido_Total]
+titulo [ Peso Kg total]
+exibir [S]
+totalizador [soma]
+---

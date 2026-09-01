@@ -1,0 +1,8 @@
+colunaValor [SUM(T007_Valor_Total)]
+titulo [Total c/ IPI]
+exibir [S]
+---
+colunaValor [SUM(T007_Valor_ICMS_Substituicao_Retencao)]
+titulo [ST]
+exibir [S]
+---

@@ -1,0 +1,10 @@
+<?php
+namespace hardness;
+global $g;
+$logFile = $g['pathDados'] . 'logs/log_script_atualizacao_preco.log';
+$erro = "Erro ao atualizar o o item  {$mTeste['T004_Codigo_Produto']} - precoVendaProduto : {$precoVendaProduto}" . PHP_EOL;
+
+// Grava no log
+if (!file_put_contents($logFile, "[" . date("Y-m-d H:i:s") . "] Mensagem de log testessssssss" . PHP_EOL, FILE_APPEND)) {
+    die("Erro ao salvar o arquivo de log em: $logFile");
+}

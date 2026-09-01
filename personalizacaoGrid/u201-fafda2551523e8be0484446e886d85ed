@@ -1,0 +1,12 @@
+colunaValor [D046_Nome]
+colunaExibir [S]
+colunaTitulo [Grupo]
+---
+colunaValor [D024_D046_Id]
+colunaTitulo [Grupo]
+colunaOrdem [10]
+colunaCongelar []
+---
+colunaValor [Alterado.C007_Primeiro_Nome]
+colunaOrdem [28]
+---

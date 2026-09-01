@@ -1,0 +1,48 @@
+a:1:{i:0;a:13:{s:2:"id";s:13:"685ecaae7cb9c";s:6:"titulo";s:14:"Corrige Margem";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:2:"10";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:2545:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+
+    $C031 = mysql_query("SELECT
+                            MAX(CASE WHEN C031_Campo = 'somarICMSPrecoVenda' THEN C031_Valor END) AS xC031_Somar_ICMS_Preco_Venda,
+                            MAX(CASE WHEN C031_Campo = 'somarPISPrecoVenda' THEN C031_Valor END) AS xC031_Somar_PIS_Preco_Venda,
+                            MAX(CASE WHEN C031_Campo = 'somarCOFINSPrecoVenda' THEN C031_Valor END) AS xC031_Somar_COFINS_Preco_Venda,
+                            MAX(CASE WHEN C031_Campo = 'somarIRPJPrecoVenda' THEN C031_Valor END) AS xC031_Somar_IRPJ_Preco_Venda,
+                            MAX(CASE WHEN C031_Campo = 'somarCSLLPrecoVenda' THEN C031_Valor END) AS xC031_Somar_CSLL_Preco_Venda
+                        FROM C031
+                        WHERE C031_C004_Id = '{$g['empresaAtual']}'
+                        AND C031_Campo IN ('somarICMSPrecoVenda', 'somarPISPrecoVenda', 'somarCOFINSPrecoVenda', 'somarIRPJPrecoVenda', 'somarCSLLPrecoVenda')");
+
+    $C031 = mysql_fetch_assoc($C031);
+
+    mysql_query("UPDATE T008 SET
+                    T008_Percentual_Margem = VEN_Calculo_Margem(
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        '{$array['todosCampos']['T008_Id']}',
+                        '{$C031['xC031_Somar_ICMS_Preco_Venda']}',
+                        '{$C031['xC031_Somar_PIS_Preco_Venda']}',
+                        '{$C031['xC031_Somar_COFINS_Preco_Venda']}',
+                        '{$C031['xC031_Somar_IRPJ_Preco_Venda']}',
+                        '{$C031['xC031_Somar_CSLL_Preco_Venda']}',
+                        T008_Valor_Preco_Unitario,
+                        T008_Valor_Custo_Unitario,
+                        T008_Quantidade,
+                        T008_Valor_ICMS,
+                        T008_Valor_PIS,
+                        T008_Valor_COFINS,
+                        T008_Valor_IRPJ,
+                        T008_Valor_CSLL
+                    )
+                WHERE 
+                    T008_Id = '{$array['todosCampos']['T008_Id']}'");
+
+    return array('code' => (mysql_error()) ? false : true, 'data' => (mysql_error())? mysql_error() : 'Margem atualizada com sucesso!');
+}";}}

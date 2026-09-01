@@ -1,0 +1,17 @@
+UFClienteEntrega.D018_UF	|	UF Entrega
+T005_Data_Entrega	|	Entrega
+substr(D024_Nome_Empresa,1,15)	|	Cliente
+T005_D024_Id	|	Cod.
+Contato	|	Contato
+liberou.C007_Primeiro_Nome	|	Analista comercial pedido
+DividirPedidoCliente	|	
+T005_Flag_Alcada	|	Alcada
+T005_Flag_Dividido	|	Div
+T005_Valor_Comissao_Representante	|	Comissão R$
+Supervisor	|	Supervisor
+Externo.C007_Primeiro_Nome	|	Externo
+T005_Percentual_Comissao	|	%Comissão
+T005_Valor_Total_Comissao	|	Comissão
+T005_Percentual_Comissao_Manual	|	%Manual
+T005_Percentual_Comissao_Representante	|	%Comissão
+T005_Id_Pedido_Externo	|	ID Ecommerce

@@ -1,0 +1,26 @@
+countLinha
+campoOpcoesAguardandoEntrega1
+T007_Flag_Imprimir_Romaneio
+	T007_Flag_Marcado
+coletaEtiquetaCorreio
+	Etiqueta
+	T007_Flag_Impresso
+T005_T275_Id
+T007_Quantidade_Volumes
+UFCliente.D018_UF
+	T007_Numero_Nota_Fiscal
+D024_Nome_Empresa
+T005_Data_Emissao
+T005_Data_Saida
+Tipo_Documento
+	UFClienteEntrega.D018_UF
+T005_Observacao_1
+D006_Codigo_CFOP
+	D022_Nome_Empresa
+T005_Data_Hora_Almoxarifado
+Nome_Liberou
+Nome_Vendedor
+	campoOpcoesAguardandoEntrega2
+Nome_Conferiu
+etiquetaDespacho
+addColuna

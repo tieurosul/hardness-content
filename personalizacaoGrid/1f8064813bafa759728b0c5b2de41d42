@@ -1,0 +1,71 @@
+colunaValor [T005A_Id]
+colunaExibir []
+chavePrimaria [S]
+---
+colunaValor [T005A_Data_Agendamento]
+colunaTitulo [Agend. Entrega]
+callback [gCorrigeData]
+colunaEditar [S]
+---
+colunaValor [(CASE WHEN (IF(T005A_Data_Agendamento = '0000-00-00' OR T005A_Data_Agendamento = '' OR T005A_Data_Agendamento IS NULL, T007A_Data_Prazo_Transporte,T005A_Data_Agendamento) = '0000-00-00') OR (T007_Data_Entrega = '0000-00-00') OR (IF(T005A_Data_Agendamento = '0000-00-00' OR T005A_Data_Agendamento = '' OR T005A_Data_Agendamento IS NULL, T007A_Data_Prazo_Transporte,T005A_Data_Agendamento) IS NULL) OR (T007_Data_Entrega IS NULL) THEN '-' WHEN T007_Data_Entrega <= IF(T005A_Data_Agendamento = '0000-00-00' OR T005A_Data_Agendamento = '' OR T005A_Data_Agendamento IS NULL, T007A_Data_Prazo_Transporte,T005A_Data_Agendamento) THEN 'DENTRO DO PRAZO' ELSE 'FORA DO PRAZO' END) AS Status_Prazo]
+colunaTitulo [Status Entrega]
+---
+colunaValor [Teste_Status_Entrega]
+colunaTitulo [Status2 Entrega]
+colunaTipo [livre]
+callback [personalizado-687647b1dc321]
+colunaExibir []
+---
+colunaValor [Status_Entrega]
+colunaExibir []
+---
+colunaValor [T007_Empresa_Usuaria_Nome]
+colunaTitulo [Remetente]
+---
+colunaValor [T007_Tipo_Transporte]
+colunaTitulo [Transporte]
+---
+colunaValor [T007_Cliente_Razao]
+colunaTitulo [Destinatario]
+---
+colunaValor [T007_Flag_Frete]
+colunaTitulo [Frete]
+callback [personalizado-6877f2008973c]
+---
+colunaValor [T005_Data_Entrega]
+colunaTitulo [Data Entrega]
+callback [gCorrigeData]
+---
+colunaValor [T007_Quantidade_Volumes]
+colunaTitulo [Volumes]
+---
+colunaValor [D020_Nome_Cidade]
+colunaTitulo [Cidade]
+---
+colunaValor [T007_Peso_Bruto]
+colunaTitulo [Peso Bruto]
+---
+colunaValor [D024_CNPJ_Matriz]
+colunaTitulo [CNPJ Matriz]
+---
+colunaValor [docs]
+colunaTitulo [Docs]
+colunaTipo [livre]
+callback [personalizado-68b20eeb5acc1]
+---
+colunaValor [T007_Valor_Total_Partilha_ICMS_Destino]
+colunaExibir [S]
+colunaTitulo [Valor Total Partilha ICMS Destino]
+---
+colunaValor [T007_Valor_Total_FCP]
+colunaExibir [S]
+colunaTitulo [Valor Total FCP]
+---
+colunaValor [SEC_TO_TIME(T005A_Tempo_Seg_Expedicao)]
+colunaTitulo [Tempo Ate Gerar NF]
+---
+colunaValor [UsuarioGerouNF.C007_Nome]
+colunaTitulo [Gerou NF]
+colunaExibir [S]
+callback [personalizado-69a5bf2729e5c]
+---

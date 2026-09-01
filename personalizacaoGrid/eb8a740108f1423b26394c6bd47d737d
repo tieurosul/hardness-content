@@ -1,0 +1,23 @@
+colunaValor [(SELECT CONCAT(D001_Codigo_Produto, ' - ', D001_Descricao_Produto) FROM D001 WHERE D001_Id = P005_D001_Id) AS ItemPrincipal]
+colunaTitulo [Item Principal]
+colunaExibir [S]
+---
+colunaValor [CASE P005_Tipo WHEN 1 THEN 'Substituto' WHEN 2 THEN 'Reposição' WHEN 3 THEN 'Complementar' ELSE '' END AS Tipo]
+colunaExibir [S]
+colunaTitulo [Tipo]
+---
+colunaValor [(SELECT CONCAT(D001_Codigo_Produto, ' - ', D001_Descricao_Produto) FROM D001 WHERE D001_Id = P005_D001_Id_Complemento) AS ProdutoComplemento]
+colunaExibir [S]
+colunaTitulo [Produto Complemento]
+---
+colunaValor [excluir]
+colunaTipo [livre]
+colunaTitulo []
+callback [gExcluirLinha]
+callbackParameter [array('P005_Id')]
+colunaOrdem [1]
+---
+colunaValor [P005_Id]
+colunaTitulo [P005_Id]
+colunaExibir []
+---

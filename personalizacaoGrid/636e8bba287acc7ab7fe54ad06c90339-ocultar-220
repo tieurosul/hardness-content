@@ -1,0 +1,8 @@
+(T224_Data_Emissao + INTERVAL T225_Observacao_Entrega DAY)	|	Prev. entrega
+T225_Observacao	|	Obs.compra
+D009_Quantidade_Estoque_Fora	|	Fora
+D037_Unidade	|	Un
+T006_Quantidade_OC	|	OC
+T006_Percentual_Desconto	|	Desc %
+Date_add(T005_Data_Emissao, interval T006_Observacao_Entrega day)	|	Prev.Entrega
+T006_Observacao_Entrega	|	Entg.dias

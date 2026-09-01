@@ -1,0 +1,70 @@
+colunaValor [T066_Id]
+colunaTitulo [ID]
+chavePrimaria [1]
+---
+colunaValor [D004_Id]
+colunaTitulo [D004_Id]
+colunaExibir []
+---
+colunaValor [D004_Local]
+colunaTitulo [Locação]
+---
+colunaValor [D004_Flag_Somar_Estoque_Fisico]
+colunaTitulo [Somar Estoque]
+style [width:1px]
+colunaAlinhar [center]
+---
+colunaValor [T066_Locacao]
+colunaTitulo [Locação]
+colunaExibir []
+---
+colunaValor [D146_Descricao]
+colunaTitulo [Armazém]
+---
+colunaValor [D048_Estoque]
+colunaTitulo []
+colunaExibir []
+colunaAlinhar [right]
+---
+colunaValor [D009_Id]
+colunaTitulo []
+colunaExibir []
+---
+colunaValor [T066_Quantidade_Estoque]
+colunaTitulo [Estoque]
+colunaAlinhar [right]
+callback [gCorrigeNumero]
+style [width:1px]
+---
+colunaValor [T066_Quantidade_Estoque_Liquido]
+colunaTitulo [Estoque Líquido]
+colunaAlinhar [right]
+callback [gCorrigeNumero]
+style [width:1px]
+---
+colunaValor [T066_Minimo]
+colunaTitulo [Estoque mínimo]
+colunaAlinhar [right]
+style [width:1px]
+callback [gCorrigeNumero]
+---
+colunaValor [T066_Maximo]
+colunaTitulo [Estoque máximo]
+colunaAlinhar [right]
+style [width:1px]
+callback [gCorrigeNumero]
+---
+colunaValor [T066A_Data_Validade]
+colunaTitulo [Validade]
+callback [gCorrigeData]
+---
+colunaValor [T066_Agrupamento]
+colunaTitulo [Agrupamento]
+colunaAlinhar [right]
+style [width:1px]
+callback [gCorrigeNumero]
+colunaExibir []
+---
+colunaValor [T066A_Numero_Lote]
+colunaTitulo [Lote]
+---

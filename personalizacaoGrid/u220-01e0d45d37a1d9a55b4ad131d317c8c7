@@ -1,0 +1,33 @@
+colunaValor [T006_Valor_Preco_Bruto]
+colunaExibir [n]
+colunaTitulo [PreÃ§o]
+---
+colunaValor [T006_Valor_Total_Preco]
+colunaTitulo [Total]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+colunaExibir [s]
+---
+colunaValor [T006_Valor_Total_Agregados]
+colunaTitulo [Agregados]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+colunaExibir [s]
+---
+colunaValor [(T006_Valor_Preco_Bruto*T006_Quantidade) as T006_Valor_Total_Bruto]
+colunaExibir [S]
+colunaTitulo [Total]
+---
+colunaValor [(T006_Valor_Total_Preco_Sem_Desconto) + (T006_Valor_IPI) + (T006_Valor_ICMS_Substituicao_Retencao)]
+colunaExibir [S]
+colunaTitulo [Valor_Total_Desconto]
+---
+colunaValor [(T006_Valor_Total_Preco_Sem_Desconto) + (T006_Valor_IPI) + (T006_Valor_ICMS_Substituicao_Retencao)]
+colunaExibir [S]
+colunaTitulo [Valor Total com ST + IPI]
+---
+colunaValor [(T006_Valor_Total_Preco) + (T006_Valor_IPI) + (T006_Valor_ICMS_Substituicao_Retencao)]
+colunaExibir [S]
+colunaTitulo [Valor Total com ST + IPI]
+colunaOrdem [21]
+---

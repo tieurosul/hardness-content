@@ -1,0 +1,52 @@
+// Variáveis disponíveis:
+// [[divId]] [[divIdRoot]] [[divIdParent]]
+
+// Click na linha do grid
+/*
+acaoClickLinha('[[divId]]', function(data, array) {
+    // campos disponíveis no array: todosCampos, divId, divIdRoot, divIdParent, parametros
+    abrirJanela(data, array['divIdRoot'], array['divId'], unique(), '', 'Título janela - ID: ' + array['todosCampos']['CAMPO'], 'URL', '&acaoId=' + encodeURIComponent(array['todosCampos']['CAMPO']), [980,550]);
+});
+*/
+
+// Remover campos editáveis
+//$('#[[divId]] .grid .campoEditavel').unbind('click').unbind('click').bind('click', function(event) { return false; });
+
+// Não permitir ordenação
+//$('#[[divId]] .grid th').removeAttr('onclick').css({'cursor': 'auto'});
+
+// Remover filtro
+//$('#[[divId]] .gridFiltro').remove();
+
+// Desabilitar o refresh automático deste grid
+//$('#[[divId]] .grid').data('lastTimeUpdate', 'never');
+
+// Já vir selecionado a primeira linha (o recurso setas para baixo e cima)
+//$('#[[divId]]').find('tr:eq(1)').addClass('linhaSelecionada');
+
+// Alterar o campo de um formulário
+// $('#[[divIdParent]] .itemForm-CAMPO').val('');
+
+// Fechar a janela atual
+// fecharJanela('[[divId]]');
+
+// Remover as opções (menu) do grid
+//$('#[[divId]] .gridOptTop').remove();
+
+// Remover os totais do grid
+//$('#[[divId]] .gridTotais').remove();
+
+// Remover o botão de maximizar do grid
+//$('#[[divId]]').addClass('removerGridTheadMaximizar');
+
+// Ação ao fechar a janela
+/*
+acaoFecharJanela('[[divId]]', function(data, ui) {
+    atualizarLinhaGrid('[[divIdParent]]');
+});
+*/
+
+acaoClickLinha('[[divId]]', function(data, array) {
+    // campos disponíveis no array: todosCampos, divId, divIdRoot, divIdParent, parametros
+    abrirJanela(data, array['divIdRoot'], array['divId'], unique(), '', 'Alterar Tipo Falha: ' + array['todosCampos']['P003_Id'], '/sistema/personalizacao/form/6e65ee69a9ad48f66fc6fa1d643296d0/', '&acaoId=' + encodeURIComponent(array['todosCampos']['P003_Id']), [600,350]);
+});

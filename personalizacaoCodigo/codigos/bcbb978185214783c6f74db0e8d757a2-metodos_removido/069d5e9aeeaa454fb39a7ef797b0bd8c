@@ -1,0 +1,20 @@
+a:5:{s:4:"nome";s:16:"atualiza estoque";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"bcbb978185214783c6f74db0e8d757a2";s:6:"codigo";s:717:"<?php
+// $g, $array[var], executarCodigo(id, vars[])
+
+$g['empresaAtual'] = $array['todosCampos']['D009_C004_Id'];
+
+require_once('bibliotecas/classes/INDEX.php');
+$INDEX = new INDEX();
+
+$INDEX->carragaVARSGlobal();
+
+require_once('bibliotecas/classes/CAD002.php');
+$CAD002 = new CAD002();
+
+$retorno = $CAD002->D001_reprocessa_historico(0, $array['todosCampos']['D009_Id'], 50);
+echo "atualizou estoque agora {$array['todosCampos']['D009_Id']}\n\n"; 
+$CAD002->atualizarEstatisticasCompra($array['todosCampos']['D009_Id']);
+echo "atualizou atualizarEstatisticasCompra agora {$array['todosCampos']['D009_Id']}\n\n"; 
+
+$log = "Processando {$array['todosCampos']['D009_Id']}: " . var_export($retorno, true);    
+return $log;";s:3:"md5";s:32:"f6c1f7e033d04a3a2822b44d75cad73d";}

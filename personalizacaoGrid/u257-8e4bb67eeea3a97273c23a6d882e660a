@@ -1,0 +1,4 @@
+colunaValor [group_concat(ifnull(T007_Numero_Nota_Fiscal,""),ifnull(T013_Numero_Nota_Fiscal,""))]
+colunaTitulo [Notas]
+colunaOrdem [10]
+---

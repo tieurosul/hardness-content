@@ -1,0 +1,23 @@
+colunaValor [T007_Id]
+colunaTitulo [T007_Id]
+colunaExibir []
+---
+colunaValor [D024_Flag_Curva_ABC]
+colunaTitulo [ABC(V)]
+colunaAlinhar [center]
+callback [colunaCurvaABC]
+---
+colunaValor [T007_D024_Id]
+colunaTitulo [Código]
+colunaExibir [S]
+---
+colunaValor [D024_Nome_Fantasia]
+colunaTitulo [Cliente]
+colunaExibir [S]
+---
+colunaValor [SUM(T007_Valor_Total_Produtos)]
+colunaTitulo [Valor Total Compras<br>Últ. 12 meses]
+colunaExibir [S]
+callback [gCorrigeNumero]
+colunaAlinhar [right]
+---

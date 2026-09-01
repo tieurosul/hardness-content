@@ -1,0 +1,12 @@
+colunaValor [T055A_Comprimento]
+colunaOrdem [8]
+---
+colunaValor [T055A_Largura]
+colunaOrdem [9]
+---
+colunaValor [D001_Peso_Unitario_Kg]
+colunaOrdem [6]
+---
+colunaValor [T055A_Data_Validade]
+colunaOrdem [5]
+---

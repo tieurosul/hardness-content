@@ -1,0 +1,30 @@
+countLinha
+
+substr(vendedor.C007_Primeiro_Nome,1,10)
+T006_Codigo_Produto
+D049_Modelo
+D001_Descricao_Produto
+substr(D082_Marca,1,12)
+infoCustoVendaProduto
+T006_Quantidade
+Falta
+T006_Flag_Gerar_Cotacao
+D049_Quantidade_Embalagem_Compra
+D049_Quantidade_Minima_Compra
+T006_Quantidade_Estoque
+D009_Quantidade_Estoque
+Pedido
+D009_Quantidade_Estoque_Loja
+T006_Quantidade_OC
+D009_Quantidade_Estoque_Fora
+D009_Quantidade_Estoque_Tabela(D009_Id)
+	substr(Cliente.D024_Nome_Empresa,1,25)
+	T003_Id
+T006_Observacao_Compra
+ColunaFornecedor
+substr(comprador.C007_Primeiro_Nome,1,10)
+D037_Unidade
+T006_Valor_Preco_Unitario
+T005_Id
+T005_Data_Emissao
+addColuna

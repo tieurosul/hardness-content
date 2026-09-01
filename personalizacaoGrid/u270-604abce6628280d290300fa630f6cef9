@@ -1,0 +1,14 @@
+colunaValor [Nome_Vendedor]
+colunaOrdem [9]
+---
+colunaValor [T005_Data_Saida]
+colunaTitulo [Saída]
+colunaOrdem [13]
+---
+colunaValor [D022_Nome_Empresa]
+colunaTitulo [Transportadora]
+colunaOrdem [12]
+---
+colunaValor [Tipo_Documento]
+colunaOrdem [11]
+---

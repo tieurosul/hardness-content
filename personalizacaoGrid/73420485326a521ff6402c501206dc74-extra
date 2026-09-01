@@ -1,0 +1,8 @@
+left join D009 on T066_D009_Id=D009_Id
+left join D048 on D048_Id=T066_D048_Id
+left join D004 on D004_Id=T066_D004_Id
+left join D146 on D146_Id=D004_D146_Id
+left join T066A ON T066_Id=T066A_T066_Id
+WHERE ((1=1)) AND D009_Id='[[r_acaoId]]'
+and D009_C004_Id='[[g-usuarioAtual]]'
+AND T066A_Flag_Ativo = 'N'

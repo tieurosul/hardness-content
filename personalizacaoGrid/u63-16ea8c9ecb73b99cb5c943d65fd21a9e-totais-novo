@@ -1,0 +1,8 @@
+nome [NFe_Total_Parcial_]
+valor [(((T055_Valor_Custo_Unitario * T055_Quantidade) * T075_Cotacao_ME) + T055_Valor_Imposto_Importacao + T055_Valor_PIS + T055_Valor_COFINS)]
+titulo [NFe Total]
+exibir [S]
+totalizador [soma]
+tipo [sql]
+callbackParameter [2]
+---

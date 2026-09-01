@@ -1,0 +1,1 @@
+a:4:{s:14:"T019_Referente";s:3:"226";s:70:"IF(D154_Id>0,CONCAT(D154_Descricao," - ",D014_SubConta),D014_SubConta)";s:3:"177";s:16:"T019_Complemento";s:3:"442";s:18:"D024_Nome_Fantasia";s:3:"120";}

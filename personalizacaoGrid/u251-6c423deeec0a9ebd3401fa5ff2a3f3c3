@@ -1,0 +1,18 @@
+colunaValor [retornaPrecoVenda]
+colunaOrdem [10]
+---
+colunaValor [Pedido]
+colunaOrdem [9]
+---
+colunaValor [Estoque]
+colunaOrdem [20]
+---
+colunaValor [D001A_Apelido_Produto]
+colunaOrdem [8]
+---
+colunaValor [D049_Modelo]
+colunaOrdem [17]
+---
+colunaValor [D083_Codigo_Produto_Fornecedor]
+colunaOrdem [17]
+---

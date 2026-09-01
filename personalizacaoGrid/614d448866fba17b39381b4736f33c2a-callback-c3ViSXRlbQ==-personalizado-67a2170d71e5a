@@ -1,0 +1,44 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['D049_Modelo']
+    // $array['totais']['Nome_Total']
+
+    $T048_Id = $array['todosCampos']['T048_Id'];
+
+    $T071 = mysql_query("SELECT D001_Codigo_Produto,
+                                D001_Descricao_Produto,
+                                T071_Quantidade,
+                                D009_Id
+                           FROM T071
+                      LEFT JOIN D009 ON D009_Id = T071_D009_Id
+                      LEFT JOIN D049 ON D049_Id = D009_D049_Id
+                      LEFT JOIN D001 ON D001_Id = D049_D001_Id
+                          WHERE T071_T048_Id = '{$T048_Id}'");
+     
+    $html = "<table style='border:0px;width:100%;'>";                     
+
+    while($mT071 = mysql_fetch_array($T071)){
+
+        $D004 = mysql_query("SELECT GROUP_CONCAT(DISTINCT D004_Local SEPARATOR '; ') as locacoes
+                               FROM T066
+                          LEFT JOIN D004 ON D004_Id = T066_D004_Id
+                              WHERE T066_D009_Id = '{$mT071['D009_Id']}'");
+        
+        $mD004 = mysql_fetch_array($D004);
+
+        $mT071['T071_Quantidade'] = gCorrigeNumero($mT071['T071_Quantidade']);
+        $html .= "<tr>
+                    <td style='padding:0px;text-align:left;width:20%'>{$mT071['D001_Codigo_Produto']} - {$mT071['D001_Descricao_Produto']} | Qtd: {$mT071['T071_Quantidade']} | Loc: {$mD004['locacoes']}</td>
+                  </tr>";
+    }
+
+    $html .= "</table>";
+
+    return $html;
+
+
+}

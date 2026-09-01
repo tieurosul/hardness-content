@@ -1,0 +1,122 @@
+colunaValor [T055_Id]
+chavePrimaria [S]
+colunaExibir []
+---
+colunaValor [T055A_Id]
+chavePrimaria [S]
+colunaExibir []
+---
+colunaValor [T007_Id]
+chavePrimaria [S]
+colunaExibir []
+---
+colunaValor [T055_D009_Id]
+chavePrimaria [S]
+colunaExibir []
+---
+colunaValor [T055_T075_Id]
+colunaExibir []
+---
+colunaValor [T055_Codigo_Produto]
+colunaTitulo [Código] 
+colunaAlinhar [center]
+style [width:1%;]
+---
+colunaValor [T055_Descricao_Produto]
+colunaTitulo [Descrição] 
+style [width:1%; font-size:10px;]
+callback [personalizado-65e7632cba4d3]
+---
+colunaValor [T055_Quantidade]
+colunaTitulo [Qtd] 
+colunaAlinhar [right]
+colunaCasasDecimais [2]
+style [width:1%; font-size:10px;]
+---
+colunaValor [locacaoValidade]
+colunaTitulo [Locacao] 
+colunaTipo [livre]
+colunaExibir [S]
+style [width:1%; font-size:10px;]
+callback [personalizado-65e7645a0373f]
+---
+colunaValor [D004_Local]
+colunaTitulo [D004_Local] 
+colunaExibir []
+---
+colunaValor [T055A_Data_Validade]
+colunaTitulo [Validade] 
+colunaExibir []
+callback [gCorrigeData]
+style [background: var(--celula-amarelo);width:1%; font-size:10px;]
+colunaAlinhar [rigth]
+---
+colunaValor [dimensao]
+colunaTitulo [Dimensao] 
+colunaTipo [livre]
+colunaExibir [S]
+style [background: var(--celula-azul);width:1%; font-size:10px;]
+colunaAlinhar [center]
+callback [personalizado-65e761c65b0f0]
+---
+colunaValor [T055A_Altura]
+colunaTitulo [Dimensao] 
+colunaExibir []
+colunaCasasDecimais [3]
+style [background: var(--celula-azul);width:1%; font-size:10px;]
+colunaAlinhar [right]
+---
+colunaValor [T055A_Largura]
+colunaTitulo [Largura] 
+colunaExibir []
+colunaCasasDecimais [3]
+style [background: var(--celula-azul);width:1%; font-size:10px;]
+colunaAlinhar [right]
+---
+colunaValor [T055A_Comprimento]
+colunaTitulo [Comprimento] 
+colunaExibir []
+colunaCasasDecimais [3]
+style [background: var(--celula-azul);width:1%;font-size:10px;]
+colunaAlinhar [right]
+---
+colunaValor [T055_Flag_Produto_Divergencia]
+colunaTitulo [Divergência] 
+colunaExibir [S]
+colunaAlinhar [center]
+style [background: var(--celula-vermelho);width:1%;font-size:10px;]
+---
+colunaValor [T055A_Observacao_Divergencia]
+colunaTitulo [Obs Divergência] 
+colunaExibir [S]
+colunaAlinhar [left]
+style [background: var(--celula-vermelho);font-size:10px;]
+callback [personalizado-65e762f544bff]
+---
+colunaValor [T055A_Resolucao_Divergencia]
+colunaTitulo [Res. Divergência] 
+colunaExibir [S]
+colunaAlinhar [left]
+style [background: var(--celula-vermelho);font-size:10px;]
+callback [personalizado-65e762a837e8c]
+---
+colunaValor [T296_Id]
+colunaTitulo [T296_Id] 
+colunaExibir []
+---
+colunaValor [T066A_Data_Validade]
+colunaTitulo [T066A_Data_Validade] 
+colunaExibir []
+---
+colunaValor [T066_Quantidade_Estoque]
+colunaTitulo [T066_Quantidade_Estoque] 
+colunaExibir []
+---
+colunaValor [D001A_Observacao_Entrada]
+colunaTitulo [Obs. Entrega]
+style [width:1%;]
+---
+colunaValor [D001A_Observacao_Entrada]
+colunaTitulo [Obs. Entrega]
+style [width:1%;]
+---

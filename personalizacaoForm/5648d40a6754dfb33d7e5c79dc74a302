@@ -1,0 +1,6 @@
+tab [geral]
+field [T075_Observacao_NF]
+name [T075_Observacao_NF ]
+label [Obs Nota Fiscal]
+type [textarea]
+---

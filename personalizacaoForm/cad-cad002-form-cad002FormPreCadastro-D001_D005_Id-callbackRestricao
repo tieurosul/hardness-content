@@ -1,0 +1,11 @@
+<?php
+/**
+ * Código executado ao enviar um formulário (inserir/alterar)
+ * Variáveis:
+ *      $array['campoAtual'], $array['todosCampos'], $array['acaoId'], $g, $array[var]
+ * Funções:
+ *      recarregarCampo('campo', array('var' => 'valor'))
+ */
+// Retornar true ou mensagem de erro 
+// Exemplo campo obrigatório
+return empty($array['campoAtual']) ? 'Campo é obrigatório' : true;

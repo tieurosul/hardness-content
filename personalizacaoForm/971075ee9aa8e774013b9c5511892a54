@@ -1,0 +1,12 @@
+tab [icms]
+field [T013A_Percentual_Aproveitamento_ICMS]
+name [T013A_Percentual_Aproveitamento_ICMS]
+label [Aproveitamento ICMS %]
+type [moeda]
+---
+tab [icms]
+field [T013A_Valor_Aproveitamento_ICMS]
+name [T013A_Valor_Aproveitamento_ICMS]
+label [Aproveitamento ICMS R$]
+type [moeda]
+---

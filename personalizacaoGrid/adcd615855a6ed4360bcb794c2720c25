@@ -1,0 +1,11 @@
+---
+colunaValor [Documentos]
+colunaExibir [S]
+colunaTitulo [Documento]
+colunaTipo [livre]
+callback [imprimeCertificadoCompiladoProdutos]
+style [width:1%; padding: 2px 1px 3px 28px;]
+---
+colunaValor [Documentos]
+colunaOrdem [4]
+---

@@ -1,0 +1,38 @@
+colunaValor [D001_Peso_Unitario_Kg]
+colunaExibir [S]
+colunaTitulo [Peso Unitario Kg]
+colunaCasasDecimais [3]
+colunaAlinhar [right]
+style [width:1%;]
+colunaEditar [S]
+---
+colunaValor [D001_Id]
+colunaTitulo [D001_Id]
+chavePrimaria [S]
+colunaExibir []
+---
+colunaValor [D001A_Observacao_Entrada]
+colunaTitulo [Obs. Entrega]
+style [width:1%;]
+---
+colunaValor [D001A_Id]
+colunaTitulo [D001A_Id]
+chavePrimaria [S]
+colunaExibir []
+---
+colunaValor [D001A_FLAG_Inspecao_Amostragem]
+colunaExibir [S]
+colunaTitulo [Inspecao Amostragem]
+---
+colunaValor [D001A_Flag_Validade]
+colunaExibir [S]
+colunaTitulo [Validade?]
+---
+colunaValor [D001A_Flag_Doc_Num_Serie]
+colunaExibir [S]
+colunaTitulo [Certificado num serie?]
+---
+colunaValor [D001A_Flag_Produto_Emite_Certificado]
+colunaExibir [S]
+colunaTitulo [Documentos?]
+---

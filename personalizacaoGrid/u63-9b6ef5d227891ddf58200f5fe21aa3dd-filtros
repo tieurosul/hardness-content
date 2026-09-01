@@ -1,0 +1,9 @@
+colunaValor [T055_Percentual_Acrescimo_Impostos]
+titulo [T055_Percentual_Acrescimo_Impostos]
+exibir [S]
+tipo [numero]
+---
+colunaValor [T007_Numero_Nota_Fiscal]
+titulo [NF-e]
+exibir [S]
+---

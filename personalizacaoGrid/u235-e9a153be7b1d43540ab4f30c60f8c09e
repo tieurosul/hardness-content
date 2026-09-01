@@ -1,0 +1,14 @@
+colunaValor [Vendedor.C007_Primeiro_Nome]
+colunaTitulo [Vendedor]
+colunaOrdem [6]
+---
+colunaValor [Status2]
+colunaOrdem [5]
+---
+colunaValor [D024_Nome_Fantasia]
+colunaTitulo [Nome Fantasia]
+colunaOrdem [7]
+---
+colunaValor [NF]
+colunaOrdem [4]
+---

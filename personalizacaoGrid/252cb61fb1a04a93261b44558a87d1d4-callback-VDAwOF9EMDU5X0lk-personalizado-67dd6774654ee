@@ -1,0 +1,12 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['T008_D059_Id']
+    // $array['totais']['Nome_Total']
+    $sql = mysql_query("select D059_Codigo_ST, D059_Descricao_Origem FROM D059 WHERE D059_Id='{$array['todosCampos']['T008_D059_Id']}'");
+    $mSQL=mysql_fetch_array($sql);
+    return $mSQL['D059_Codigo_ST']." - ".$mSQL['D059_Descricao_Origem'];
+}

@@ -1,0 +1,24 @@
+colunaValor [T005_Id]
+titulo [Número Pedido]
+tipo [numero]
+---
+colunaValor [D024_Nome_Empresa]
+titulo [Nome Fantasia]
+tipo [texto]
+---
+colunaValor [T005_Data_Emissao]
+titulo [Emissão]
+tipo [data]
+---
+colunaValor [T005A_Data_Hora_Analise_Credito]
+titulo [Analise]
+tipo [data]
+---
+colunaValor [T005A_Data_Hora_Aprovacao_Credito]
+titulo [Aprovação]
+tipo [data]
+---
+colunaValor [C007_Primeiro_Nome]
+titulo [Vendedor]
+tipo [texto]
+---

@@ -1,0 +1,22 @@
+colunaValor [D006_Flag_Deduz_ICMS_Base_PIS]
+colunaTitulo [Deduz ICMS Base PIS]
+colunaEditarTodos [S]
+---
+colunaValor [D006_Flag_Deduz_ICMS_Base_COFINS]
+colunaTitulo [Deduz ICMS Base COFINS]
+colunaEditarTodos [S]
+---
+colunaValor [observacoesCOMPRAS]
+colunaTitulo [Obs Alterações Fiscais]
+colunaTipo [livre]
+callback [exibirObservacoesCelula]
+callbackParameter [array(
+    'tabela_referencia' => 'D006',
+    'setor_referencia' => 'FISCAL',
+    'exib_obs_na_celula' => 3,
+    'dstq_obs_na_celula' => 'S',
+    'dstq_obs_na_celula' => 'S',
+)]
+colunaOrdem [19]
+---
+

@@ -1,0 +1,10 @@
+colunaValor [NF]
+colunaOrdem [6]
+---
+colunaValor [Status2]
+colunaOrdem [4]
+---
+colunaValor [T005_Id_Pedido_Externo]
+colunaTitulo [ID Ecommerce]
+colunaOrdem [40]
+---

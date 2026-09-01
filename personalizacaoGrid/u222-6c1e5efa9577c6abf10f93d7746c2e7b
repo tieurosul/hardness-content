@@ -1,0 +1,10 @@
+colunaValor [T006_Valor_Total_Preco]
+colunaTitulo [Subtotal]
+---
+colunaValor [D037_Unidade]
+colunaTitulo [UN]
+colunaOrdem [5]
+---
+colunaValor [D024_Nome_Empresa]
+colunaOrdem [9]
+---

@@ -1,0 +1,20 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['T007_Flag_Frete']
+    // $array['totais']['Nome_Total']
+
+    $frete = [
+        0 => '0 - Contratação por conta do Remetente',
+        1 => '1 - Contratação por conta do Destinatário',
+        2 => '2 - Contratação por conta de Terceiros',
+        3 => '3 - Próprio por conta do Remetente',
+        4 => '4 - Próprio por conta do Destinatário',
+        9 => '9 - Sem frete'
+    ];
+
+    return $frete[$array['todosCampos']['T007_Flag_Frete']];
+}

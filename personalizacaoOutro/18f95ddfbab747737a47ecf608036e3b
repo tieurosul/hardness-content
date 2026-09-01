@@ -1,0 +1,14 @@
+<?php
+namespace hardness;
+
+// $acaoId = $array['todosCampos']['T140_Id'];
+$acaoId = 5675;
+$result = mysql_query("SELECT T140_Nome_Arquivo,T140_Link FROM T140 WHERE T140_Id = '{$acaoId}'");
+$row = mysql_fetch_assoc($result);
+$pathinfo = pathinfo($row['T140_Nome_Arquivo']);
+if(!empty($row['T140_Link'])){
+    $urlLink = $row['T140_Link'];
+} else {
+    $urlArquivo = "{$confUsuario['urlRaiz']}/hardness3/{$g['pathDados']}certificados/{$acaoId}.{$pathinfo['extension']}";
+}
+echo $urlArquivo;

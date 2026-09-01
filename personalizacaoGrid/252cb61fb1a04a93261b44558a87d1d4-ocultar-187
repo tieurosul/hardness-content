@@ -1,0 +1,14 @@
+D021_Nome_Empresa	|	Representante
+T008_Codigo_Produto	|	Cod
+(T008_Valor_Total_Custo*T008_Quantidade) + T008_Valor_IPI	|	Custo + IPI
+D082_Marca	|	Marca
+T008_Valor_ICMS	|	ICMS R$
+T008_Valor_PIS	|	PIS R$
+T008_Aliquota_COFINS	|	% COFINS
+T008_Aliquota_PIS	|	% PIS
+T008_Classificacao_Fiscal	|	NCM
+T008_Flag_Situacao_Tributaria	|	ST
+T008_Aliquota_ICMS	|	% ICMS
+T075_Numero_DI	|	Número DI
+T008_Valor_IPI	|	IPI R$
+T008_Aliquota_IPI	|	% IPI

@@ -1,0 +1,12 @@
+colunaValor [produto]
+titulo [Produtos]
+exibir [S]
+---
+colunaValor [D024_Nome_Fantasia]
+titulo [Fornecedor]
+exibir []
+---
+colunaValor [T140_Id]
+titulo [Id]
+exibir [S]
+---

@@ -1,0 +1,33 @@
+colunaValor [D024_Inscricao_Estadual]
+titulo [I.E.]
+tipo [texto]
+---
+colunaValor [D024_Endereco]
+titulo [Endereço]
+exibir [S]
+---
+colunaValor [D085_Mensagem]
+titulo [Última Ação]
+exibir [S]
+---
+colunaValor [Alterado.C007_Primeiro_Nome]
+titulo [Usuário última ação]
+exibir [S]
+---
+colunaValor [D024A_Segmento_Atuacao]
+titulo [Segmento Atuação]
+tipo [select]
+select [array(
+    array('title' => '...', 'value' => ''),
+    array('title' => 'Offshore & O&G', 'value' => '1'),
+    array('title' => 'Apoio Portuário', 'value' => '2'),
+    array('title' => 'Navegação Comercial', 'value' => '3'),
+    array('title' => 'Navegação Interior', 'value' => '4'),
+    array('title' => 'Construção & Retrofit', 'value' => '5'),
+    array('title' => 'Industrial & Energia', 'value' => '6'),
+    array('title' => 'Manutenção & Serviço Técnico', 'value' => '7'),
+    array('title' => 'Abastecimento Portuário', 'value' => '8'),
+    array('title' => 'Náutica & Recreio', 'value' => '9'),
+    array('title' => 'Fornecedor', 'value' => '10')
+)]
+---

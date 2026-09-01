@@ -1,0 +1,15 @@
+colunaValor [D009_Preco_1]
+colunaTitulo [Preço 1]
+colunaOrdem [4]
+---
+colunaValor [D009_Preco_3]
+colunaTitulo [Preço 3]
+colunaOrdem [6]
+---
+colunaValor [D009_Preco_2]
+colunaTitulo [Preço 2]
+colunaOrdem [5]
+---
+colunaValor [IF('A'='A',D001_Foto,'A')]
+colunaOrdem [12]
+---

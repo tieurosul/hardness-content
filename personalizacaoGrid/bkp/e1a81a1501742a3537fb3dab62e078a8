@@ -1,0 +1,13 @@
+colunaValor [Marca]
+colunaTitulo [Marca]
+colunaExibir []
+---
+
+colunaValor [D069_Valor_Preco_Original]
+colunaTitulo [Pre√ßo FOB]
+colunaExibir []
+---
+colunaValor [IF(D005_Classificacao_Fiscal != '',concat(D005_Classificacao_Fiscal,'-',D005_Flag_Aplicacao),CONCAT('<font color="red">',D069_NCM,'</font	 J]
+colunaTitulo [NCM]
+colunaExibir []
+---

@@ -1,0 +1,8 @@
+colunaValor [D009_Quantidade_Consumo]
+titulo [Vendido]
+exibir [S]
+---
+colunaValor [D049_Flag_Tipo]
+titulo [TP]
+exibir [S]
+---

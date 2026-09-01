@@ -1,0 +1,10 @@
+colunaValor [T268_Id]
+colunaTitulo [T268_Id]
+colunaExibir [S]
+chavePrimaria [S]
+---
+colunaValor [T005_Id]
+colunaTitulo [T005_Id]
+chavePrimaria [1]
+colunaExibir [s]
+---

@@ -1,0 +1,27 @@
+excluirLinha
+T268_Id
+T268_Flag_Postagem
+D022_Nome_Empresa
+T007_Numero_Nota_Fiscal
+T268_D024_Id
+D024_Nome_Empresa
+T268_Recebedor
+D024_Endereco
+D024_Numero
+	T268_Detalhes_Postagem
+D024_Complemento
+D024_Bairro
+D024_Cep
+D018_UF
+D020_Nome_Cidade
+CONCAT(REPLACE(REPLACE(REPLACE(FORMAT(T268_Comprimento,2), ',', ':'), '.', ','), ':', '.'), ' x ',
+            							   REPLACE(REPLACE(REPLACE(FORMAT(T268_Largura,2), ',', ':'), '.', ','), ':', '.'), ' x ',
+            							   REPLACE(REPLACE(REPLACE(FORMAT(T268_Altura,2), ',', ':'), '.', ','), ':', '.'))
+T268_Peso
+T268_Valor_Declarado
+T268_Centro_Custo
+D036_Tipo_Transporte
+T268_Codigo_Rastreio
+T268_Data_Hora_Postagem
+vendedor.C007_Primeiro_Nome
+rowData

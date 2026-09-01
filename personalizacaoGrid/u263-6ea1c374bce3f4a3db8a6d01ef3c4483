@@ -1,0 +1,16 @@
+colunaValor [LinkProduto]
+colunaTitulo [Link]
+colunaOrdem [25]
+---
+colunaValor [T004_Valor_Frete_Total]
+colunaExibir [S]
+colunaTitulo [Frete R$75]
+---
+colunaValor [SUBSTRING(D082_Marca,1,15)]
+colunaTitulo [Marca]
+colunaOrdem [6]
+---
+colunaValor [T004_Codigo_Substituto]
+colunaTitulo [Cód.Cli]
+colunaOrdem [5]
+---

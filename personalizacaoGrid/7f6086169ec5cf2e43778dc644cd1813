@@ -1,0 +1,55 @@
+colunaValor [D009_Id]
+colunaTitulo [D009_Id]
+chavePrimaria [S]
+style [width: 1%;]
+---
+colunaValor [D001_Id]
+colunaTitulo [D001_Id]
+chavePrimaria [S]
+colunaExibir []
+style [width: 1%;]
+---
+colunaValor [D049_Id]
+colunaTitulo [D049_Id]
+chavePrimaria [S]
+colunaExibir []
+style [width: 1%;]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Cod]
+style [width: 1%;]
+---
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Desc]
+style [width: 1%;]
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaTitulo [Est<br>Fisico]
+style [width: 1%;]
+---
+colunaValor [D009_Quantidade_Estoque_Liquido as Pedido]
+colunaTitulo [Est<br>Liquido]
+callback [qtePedidos]
+callbackParameter [array('abrirLocacao' => false, 'valorMenor' => 0)]
+style [width: 1%;]
+---
+colunaValor [(D009_Quantidade_Estoque_Real - D009_Quantidade_Pedido(D009_Id,1) - D009_Saldo_OE(D009_Id,0) - D009_Quantidade_Estoque_Loja) AS liquido]
+colunaTitulo [Est Liquido<br>Calculado]
+style [width: 1%;]
+---
+colunaValor [D009_Quantidade_Estoque_Real]
+colunaTitulo [Est<br>Real]
+style [width: 1%;]
+---
+colunaValor [D009_Quantidade_Pedido(D009_Id,1)]
+colunaTitulo [Qtd<br>Ped]
+style [width: 1%;]
+---
+colunaValor [D009_Saldo_OE(D009_Id,0)]
+colunaTitulo [Saldo OE]
+style [width: 1%;]
+---
+colunaValor [D009_Quantidade_Estoque_Loja]
+colunaTitulo [Est<br>Loja]
+style [width: 1%;]
+---

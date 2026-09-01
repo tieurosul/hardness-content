@@ -1,0 +1,54 @@
+colunaValor [D001_Codigo_Produto]
+colunaOrdem [6]
+---
+colunaValor [T005_Id]
+colunaOrdem [3]
+---
+colunaValor [Danfe]
+colunaOrdem [2]
+---
+colunaValor [T007_Data_Emissao]
+colunaOrdem [4]
+---
+colunaValor [T008_Descricao_Produto]
+colunaOrdem [7]
+---
+colunaValor [T008_Valor_Preco_Sem_Desconto_Unitario]
+colunaOrdem [9]
+---
+colunaValor [T008_Quantidade]
+colunaOrdem [8]
+---
+colunaValor [T008_Valor_Total_Preco_Sem_Desconto]
+colunaOrdem [10]
+---
+colunaValor [D082_Marca]
+colunaOrdem [12]
+---
+colunaValor [CONCAT(EstHist.D004_Local, ' - ', LocacaoHist.T066_Id)]
+colunaOrdem [8]
+---
+colunaValor [D024_Nome_Fantasia]
+colunaOrdem [13]
+---
+colunaValor [D037_Unidade]
+colunaOrdem [14]
+---
+colunaValor [Vendedor.C007_Primeiro_Nome]
+colunaOrdem [18]
+---
+colunaValor [D021_Nome_Empresa]
+colunaOrdem [16]
+---
+colunaValor [T008_Classificacao_Fiscal]
+colunaOrdem [16]
+---
+colunaValor [T008_Flag_Situacao_Tributaria]
+colunaOrdem [16]
+---
+colunaValor [T008_Aliquota_ICMS]
+colunaOrdem [19]
+---
+colunaValor [T008_Aliquota_IPI]
+colunaOrdem [21]
+---

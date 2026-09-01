@@ -1,0 +1,11 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['D001A_Flag_Validade']
+    // $array['totais']['Nome_Total']
+
+    return ($array['campoAtual'] == 'S') ? 'SIM' : ($array['campoAtual'] == 'N') ? 'NÃO' : '...';
+}

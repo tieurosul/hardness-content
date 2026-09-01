@@ -1,0 +1,9 @@
+<?php
+/**
+* camposLabelForm
+* 
+* Modifica o 'label' do formulário de um campo.
+*/
+
+// Mudar o texto:
+$conf['camposLabelForm']['T003_Prazo_Entrega'] = 'Prazo de entrega';

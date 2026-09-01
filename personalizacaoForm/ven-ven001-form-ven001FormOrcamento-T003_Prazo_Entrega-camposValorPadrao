@@ -1,0 +1,12 @@
+<?php
+/**
+* camposValorPadrao
+* 
+* Defina valores padrão para campos no formulário de inclusão.
+*/
+
+// Criar/modificar valor padrão: 
+$conf['camposValorPadrao']['T003_Prazo_Entrega'] = '2/7 DIAS ÚTEIS/ESTIMADO';
+
+// Remover valor padrão:
+//unset($conf['camposValorPadrao']['T003_Prazo_Entrega']);

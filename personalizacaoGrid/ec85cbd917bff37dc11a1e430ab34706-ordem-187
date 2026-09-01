@@ -1,0 +1,12 @@
+D001_Flag_Ativo
+	D001_Codigo_Produto
+D001_Descricao_Produto
+	D001_D037_Id
+	D009_Quantidade_Estoque
+	Custo
+	D009_Preco_1
+	D005_Aliquota_IPI
+	CustoME
+	D049_D082_Id
+	D001_D005_Id
+	T144_Url

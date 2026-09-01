@@ -1,0 +1,27 @@
+D049_Modelo	|	Sub-item
+T004_Codigo_Substituto	|	Cód.Cli
+SUBSTRING(D082_Marca,1,15)	|	Marca
+T004_Valor_Comissao	|	Comissão
+T004_Percentual_Comissao	|	%Comiss
+T004_Valor_Preco_Original	|	Tabela
+T004_Valor_Preco_Tabela	|	Forn
+T004_Aliquota_ICMS	|	%ICM
+D009_Quantidade_Estoque_Fora	|	Fora
+T004_Valor_IPI	|	IPI R$
+T004_Valor_ICMS	|	ICMS R$
+T004_Valor_COFINS	|	COFINS R$
+T004_Valor_Base_ICMS	|	Base ICM
+T004_Valor_Base_COFINS	|	Base COFINS
+T004_Valor_Base_CSLL	|	Base CSLL
+T004_Valor_Base_IRPJ	|	Base IRPJ
+T004_Valor_Base_PIS	|	Base PIS
+T004_ST_VA	|	MVA
+T004_Valor_IRPJ	|	IRPJ R$
+T004_Percentual_Reducao_ICMS_ST	|	%Red Base
+T004_Valor_PIS	|	PIS R$
+Pedido	|	Estque
+T004_Valor_Custo_Unitario	|	Custo
+T004_Valor_Base_IPI	|	Base IPI
+T004_Flag_Origem_Produto	|	Orig
+T004_Valor_ST	|	ST R$
+T004_Valor_Base_ST	|	Base ST

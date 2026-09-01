@@ -1,0 +1,12 @@
+countLinha
+campoExclusao
+T140_Id
+	
+T140_Data_Emissao
+T140_Data_Validade
+	T140_Tipo_Certificado
+	T140_Certificadora
+produto
+	T140_Nome_Arquivo
+D024_Nome_Fantasia
+addColuna

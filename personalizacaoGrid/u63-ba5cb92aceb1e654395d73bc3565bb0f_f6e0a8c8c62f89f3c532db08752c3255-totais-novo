@@ -1,0 +1,48 @@
+nome [Produtos_]
+valor [SUM(T007_Valor_Total_Produtos)]
+titulo [Produtos]
+exibir [S]
+totalizador [soma]
+---
+nome [Total_c_IPI_]
+valor [SUM(T007_Valor_Total)]
+titulo [Total c/ IPI]
+exibir [S]
+totalizador [soma]
+---
+nome [ICMS_]
+valor [SUM(T007_Valor_Total_ICMS)]
+titulo [ICMS]
+exibir [S]
+totalizador [soma]
+---
+nome [ST_]
+valor [SUM(T007_Valor_ICMS_Substituicao_Retencao)]
+titulo [ST]
+exibir [S]
+totalizador [soma]
+---
+nome [IPI_]
+valor [SUM(T007_Valor_Total_IPI)]
+titulo [IPI]
+exibir [S]
+totalizador [soma]
+---
+nome [PIS_]
+valor [SUM(T007_Valor_Total_PIS)]
+titulo [PIS]
+exibir [S]
+totalizador [soma]
+---
+nome [COFINS_]
+valor [SUM(T007_Valor_Total_COFINS)]
+titulo [COFINS]
+exibir [S]
+totalizador [soma]
+---
+nome [Total_IPI_]
+valor [SUM(T007_Valor_Total_Produtos+T007_Valor_Total_IPI)]
+titulo [ Total IPI]
+exibir [S]
+totalizador [soma]
+---

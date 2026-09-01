@@ -1,0 +1,30 @@
+countLinha
+	D001_Flag_Pre_Cadastro
+	D009_Quantidade_OC
+	D049_Flag_Curva_ABC
+	D049_Flag_Curva_ABC_Qtd
+	D001_Flag_Ativo
+	impressaoEtiqueta
+	infoCustoVendaProduto
+	D009_Data_Ultima_Entrada
+	D001_Codigo_Produto
+foto
+Etiqueta
+D001_Descricao_Produto
+	D009_Quantidade_Estoque
+	D001A_Codigo_IMPA
+	D049_D024_Id
+	D009_Data_Ultima_Venda
+D002_Descricao_Produto
+D049_D082_Id
+D049_Origem_Mercadoria
+D001_D005_Id
+D001_D037_Id
+	Pedido
+	D009_C007_Id_Comprador
+D049_Flag_Tipo
+D001_D060_Id
+D001_D003_Id
+D001_Flag_Tipo_Item
+D009_Quantidade_Compra_Emergencia
+addColuna

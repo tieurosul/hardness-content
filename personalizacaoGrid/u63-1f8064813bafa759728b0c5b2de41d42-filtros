@@ -1,0 +1,50 @@
+colunaValor [T007_Id]
+titulo [Id]
+exibir [S]
+tipo [numero]
+---
+colunaValor [T007_D022_Id]
+titulo [Cod Transp]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D006_Flag_Venda_Compra_Outros]
+titulo [Tipo CFOP]
+exibir [S]
+tipo [text]
+---
+colunaValor [T007_Valor_ICMS_Substituicao_Retencao]
+titulo [ST]
+exibir [S]
+tipo [numero]
+---
+colunaValor [T007_Data_Entrega]
+titulo [T007_Data_Entrega]
+exibir [S]
+tipo [texto]
+---
+colunaValor [T005A_Data_Agendamento]
+titulo [Agend. Entrega]
+exibir [S]
+---
+colunaValor [T007_Numero_Protocolo_Nfe]
+titulo [Protocolo NFe]
+exibir [S]
+---
+colunaValor [T007_D024_Id]
+titulo [Código]
+exibir [S]
+---
+colunaValor [T007_Flag_Finalidade_NFe]
+titulo [T007_Flag_Finalidade_NFe]
+exibir [S]
+---
+colunaValor [T007_Flag_ACP]
+titulo [Tipo]
+exibir [S]
+---
+colunaValor [(SELECT COUNT(*) FROM T008 WHERE T008_T007_Id = T007_Id)]
+titulo [Itens]
+exibir [S]
+tipo [numero]
+---

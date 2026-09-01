@@ -1,0 +1,3 @@
+colunaValor [IF(D013_Flag_Ativo = 'S', 'SIM', 'NÃO')]
+colunaOrdem [4]
+---

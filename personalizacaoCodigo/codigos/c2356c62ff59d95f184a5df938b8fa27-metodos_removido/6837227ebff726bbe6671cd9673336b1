@@ -1,0 +1,25 @@
+a:5:{s:4:"nome";s:30:"atualizar carteira de clientes";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"c2356c62ff59d95f184a5df938b8fa27";s:6:"codigo";s:1004:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+$g['empresaAtual'] = $array['todosCampos']['C004_Id'];
+
+require_once('bibliotecas/classes/INDEX.php');
+$INDEX = new INDEX();
+
+$INDEX->carragaVARSGlobal();
+
+if($g['C031']['carteiraClienteDiasMaxContato'] <= '0' && $g['C031']['carteiraClienteDiasMaxOrcamento'] <= '0' && $g['C031']['carteiraClienteDiasMaxPedido'] <= '0' && $g['C031']['carteiraClienteDiasMaxNotaFiscal'] <= '0'){
+    return "Não ativado para processar carteira cliente na empresa {$g['empresaAtual']}";
+} 
+
+require_once("bibliotecas/classes/CAD001.php");
+$CAD001 = new CAD001();
+$D024 = mysql_query("SELECT D024_Id 
+                       FROM D024 
+                      WHERE D024_Flag_Ativo = 'S'");
+                      
+$count = 0;
+while($mD024 = mysql_fetch_array($D024)){
+    $processarCarteiraCliente = $CAD001->processarCarteiraCliente($mD024['D024_Id']);
+    $count++;
+}
+return "Atualizado {$count} clientes com as configurações da empresa {$g['empresaAtual']}";";s:3:"md5";s:32:"62f8a67eb0f59077ed95325cd4632810";}

@@ -1,0 +1,18 @@
+colunaValor [T066_Quantidade_Estoque]
+colunaOrdem [10]
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaOrdem [11]
+---
+colunaValor [Pedido]
+colunaOrdem [12]
+---
+colunaValor [D009_Quantidade_Estoque_Fora]
+colunaOrdem [13]
+---
+colunaValor [substr(D082_Marca,1,15)]
+colunaOrdem [14]
+---
+colunaValor [D049_D024_Id]
+colunaOrdem [15]
+---

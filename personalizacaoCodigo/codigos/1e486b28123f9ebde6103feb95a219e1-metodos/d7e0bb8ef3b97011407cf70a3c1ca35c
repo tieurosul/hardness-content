@@ -1,0 +1,30 @@
+a:5:{s:4:"nome";s:31:"inativar item class. desmontado";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"1e486b28123f9ebde6103feb95a219e1";s:6:"codigo";s:1377:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+$g['empresaAtual'] = $array['todosCampos']['C004_Id'];
+require_once('bibliotecas/classes/INDEX.php');
+$INDEX = new INDEX();
+$INDEX->carragaVARSGlobal();
+
+// Busca produtos da classificação 21 (DESMONTADO) que estão ativos e com estoque <= 0.
+$D001 = mysql_query("SELECT D001_Id,
+                            D009_Id
+                       FROM D001 
+                  LEFT JOIN D049 ON D001_Id = D049_D001_Id
+                  LEFT JOIN D009 ON D049_Id = D009_D049_Id AND D009_C004_Id = '1' 
+                      WHERE D001_D002_Id = 21
+                        AND D001_Flag_Ativo = 'S'
+                        AND D009_Quantidade_Estoque <= 0");
+$count = 0;                      
+while($mD001 = mysql_fetch_array($D001)){
+    $count++;
+
+    // Inativa o produto na D001 por nao ter estoque e nao ter entrada no ultimo ano.
+    mysqli_query("UPDATE D001 SET D001_Flag_Ativo = 'N' WHERE D001_Id = '{$mD001['D001_Id']}'");
+    
+    // Registra o motivo da inativacao na tabela complementar D001A.
+    mysqli_query("UPDATE D001A SET D001A_Motivo_Inativado = 'Inativado pelo crontab(9): classifição Desmontado (21) e estoque fisico zerado'
+                   WHERE D001A_D001_Id = '{$mD001['D001_Id']}'");
+}
+
+return "Inativado {$count} produtos por com estoque fisico zerado e com classificação de DESMONTADO";";s:3:"md5";s:32:"d26c32012a0b5292d1392bd8f52ebb11";}

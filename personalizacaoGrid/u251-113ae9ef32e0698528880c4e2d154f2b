@@ -1,0 +1,35 @@
+colunaValor [D009_Quantidade_OC]
+colunaTitulo [OC]
+colunaOrdem [14]
+---
+colunaValor [D009_Quantidade_Estoque_Similar]
+colunaTitulo [Similar]
+colunaOrdem [8]
+---
+colunaValor [Pedido]
+colunaOrdem [9]
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaTitulo [Físico]
+colunaOrdem [10]
+---
+colunaValor [D049_Flag_Curva_ABC]
+colunaTitulo [ABC(V)]
+colunaOrdem [16]
+---
+colunaValor [D001_Flag_Pre_Cadastro]
+colunaTitulo [Pré]
+colunaOrdem [17]
+---
+colunaValor [D049_Flag_Curva_ABC_Qtd]
+colunaTitulo [ABC(Q)]
+colunaOrdem [16]
+---
+colunaValor [D001_Flag_Ativo]
+colunaTitulo [Ativo]
+colunaOrdem [15]
+---
+colunaValor [ifnull(D069_D070_Id,"_")]
+colunaTitulo [Tab]
+colunaOrdem [16]
+---

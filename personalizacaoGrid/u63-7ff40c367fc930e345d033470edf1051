@@ -1,0 +1,13 @@
+colunaValor [C007_Id]
+colunaTitulo [C007_Id]
+chavePrimaria [S]
+---
+colunaValor [excluirUsuário]
+colunaTipo [livre]
+callback [gExcluirLinha]
+callbackParameter' => array(C007_Id, [['divId']])
+---
+colunaValor [C007_Primeiro_Nome]
+colunaExibir [S]
+colunaTitulo [C007_Primeiro_Nome]
+---

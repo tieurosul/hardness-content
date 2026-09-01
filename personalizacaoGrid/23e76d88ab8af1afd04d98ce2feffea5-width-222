@@ -1,0 +1,1 @@
+a:1:{s:71:"CONCAT(substr(D024_Nome_Empresa,1,20),' (',COUNT(DISTINCT D085_Id),')')";s:3:"430";}

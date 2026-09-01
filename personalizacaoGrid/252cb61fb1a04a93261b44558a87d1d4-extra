@@ -1,0 +1,29 @@
+left join D009 on D009_Id=T008_D009_Id
+left join D049 on D049_Id=D009_D049_Id
+left join D082 on D082_Id=D049_D082_Id
+left join D001 on D001_Id=D049_D001_Id
+left join D006 on D006_Id=T008_D006_Id
+left join D037 on D037_Id=T008_D037_Id
+left join T007 on T007_Id=T008_T007_Id
+left join T005 on T005_Id=T007_T005_Id
+left join D024 on D024_Id=T007_D024_Id
+left join C008 on C008_Id=D001_C008_Id
+left join D021 on D021_Id=T007_D021_Id
+left join D018 on D018_Id=D024_D018_Id
+LEFT JOIN D001A ON D001A_D001_Id = D001_Id
+left join C007 as Vendedor on Vendedor.C007_Id=T007_C007_Id_Vendedor_Interno
+left join T066 as LocacaoNF on LocacaoNF.T066_Id=T008_T066_Id
+left join D004 as EstNF on EstNF.D004_Id=T066_D004_Id
+left join D003 on D003_Id=D001_D003_Id
+left join T055 on T055_Id=T008_T055_Id
+left join T075 on T075_Id=T055_T075_Id
+LEFT JOIN D022 ON D022_Id=T007_D022_Id
+left join D005 on D005_Id = T008_D005_Id
+left join D149 on D005_Id = D149_D005_Id AND D149_C004_Id = '[[g-empresaAtual]]'
+left join T001 on T008_Id=T001_T008_Id
+left join D004 as EstHist on EstHist.D004_Id=T001_D004_Id
+left join T066 as LocacaoHist on LocacaoHist.T066_Id=T001_T066_Id
+LEFT JOIN T178 ON T178_T005_Id = T005_Id AND T178_Descricao LIKE 'Gerou nota fiscal%'
+LEFT JOIN C007 AS UsuarioGerouNF ON UsuarioGerouNF.C007_Id = T178_C007_Id
+WHERE T007_C004_Id='[[g-empresaAtual]]'  
+GROUP BY T008_Id

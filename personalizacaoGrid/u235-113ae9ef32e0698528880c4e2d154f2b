@@ -1,0 +1,82 @@
+colunaValor [D001_Peso_Unitario_Bruto]
+colunaOrdem [10]
+---
+colunaValor [D001A_Altura]
+colunaOrdem [12]
+---
+colunaValor [D001A_Largura]
+colunaOrdem [13]
+---
+colunaValor [D001A_Comprimento]
+colunaOrdem [13]
+---
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Descrição]
+colunaOrdem [6]
+---
+colunaValor [D001_Codigo_Produto]
+colunaOrdem [5]
+---
+colunaValor [foto]
+colunaTitulo [Foto]
+colunaOrdem [2]
+---
+colunaValor [D001_Flag_Ativo]
+colunaTitulo [Ativo]
+colunaOrdem [22]
+---
+colunaValor [D001_Codigo_Barras]
+colunaTitulo [EAN]
+colunaOrdem [4]
+---
+colunaValor [D001_Flag_Pre_Cadastro]
+colunaTitulo [Pré]
+colunaOrdem [22]
+---
+colunaValor [D049_Flag_Curva_ABC]
+colunaTitulo [ABC(V)]
+colunaOrdem [18]
+---
+colunaValor [D049_Flag_Curva_ABC_Qtd]
+colunaTitulo [ABC(Q)]
+colunaOrdem [18]
+---
+colunaValor [C008_Tipo]
+colunaTitulo [Depto]
+colunaOrdem [17]
+---
+colunaValor [D002_Descricao_Produto]
+colunaTitulo [Sub-Grupo]
+colunaOrdem [17]
+---
+colunaValor [D049_D082_Id]
+colunaTitulo [Marca]
+colunaOrdem [16]
+---
+colunaValor [D001_D005_Id]
+colunaTitulo [NCM]
+colunaOrdem [17]
+---
+colunaValor [D049_Origem_Mercadoria]
+colunaTitulo [Origem]
+colunaOrdem [17]
+---
+colunaValor [D001_D037_Id]
+colunaTitulo [Un]
+colunaOrdem [9]
+---
+colunaValor [D009_Quantidade_Estoque_Loja]
+colunaTitulo [Loja]
+colunaOrdem [19]
+---
+colunaValor [D001_Peso_Unitario_Kg]
+colunaOrdem [45]
+---
+colunaValor [D009_Quantidade_Estoque_Fora]
+colunaTitulo [Fora]
+colunaOrdem [21]
+---
+colunaValor [D009_Quantidade_Estoque_Similar]
+colunaTitulo [Similar]
+colunaOrdem [14]
+---

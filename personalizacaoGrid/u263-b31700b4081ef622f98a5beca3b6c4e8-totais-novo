@@ -1,0 +1,8 @@
+nome [Valor_]
+titulo [Valor Total Custos]
+tipo [sql]
+valor [RMA003_50]
+exibir [S]
+totalizador [soma]
+callbackParameter [2]
+---

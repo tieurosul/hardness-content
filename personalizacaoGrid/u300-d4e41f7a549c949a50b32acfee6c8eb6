@@ -1,0 +1,15 @@
+colunaValor [T030_Quantidade]
+colunaOrdem [5]
+---
+colunaValor [T066_Quantidade_Estoque]
+colunaOrdem [6]
+---
+colunaValor [T066_Quantidade_Estoque_Liquido]
+colunaOrdem [5]
+---
+colunaValor [T030_Flag_Entrada_Saida]
+colunaOrdem [7]
+---
+colunaValor [D004_Local]
+colunaOrdem [8]
+---

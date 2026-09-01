@@ -1,0 +1,24 @@
+colunaValor [D082_Marca]
+colunaTitulo [Marca]
+colunaOrdem [13]
+---
+colunaValor [D049_Data_Validade]
+colunaOrdem [11]
+---
+colunaValor [D049_Data_Fabricacao]
+colunaOrdem [12]
+---
+colunaValor [Pedido]
+colunaOrdem [8]
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaTitulo [Estq.Físico]
+colunaOrdem [9]
+---
+colunaValor [D004_Local]
+colunaOrdem [10]
+---
+colunaValor [D037_Unidade]
+colunaTitulo [Unidade]
+colunaOrdem [7]
+---

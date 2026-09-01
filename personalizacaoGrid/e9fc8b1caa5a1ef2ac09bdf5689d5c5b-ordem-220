@@ -1,0 +1,38 @@
+countLinha
+D009_Id
+D049_Flag_Curva_ABC
+D001_Codigo_Produto
+	D049_Quantidade_Minima_Compra
+	D049_Flag_Nao_Comprar
+	D009_Quantidade_Comprar
+	D009_Flag_Cotar
+	D049_Flag_Tipo
+	D001_Descricao_Produto
+	substr(D082_Marca,1,12)
+	D009_Quantidade_Consumo
+	D009_Frequencia_Venda_Meses
+	D009_Frequencia_Venda
+	D009_Clientes_Consumo
+	D009_Quantidade_Comprar_Calculada
+	D009_Quantidade_Compra_Emergencia
+	D009_Quantidade_Minima_Estoque
+	D009_Quantidade_Estoque
+	Pedido
+	D009_Quantidade_OC
+	D009_Meses_MMF
+	D009_Meses_Compra
+	D009_Meses_Reposicao
+	D009_Data_Ultima_Venda
+	T001_Data_Lancamento
+	group_concat(distinct D004_Local)
+D037_Unidade
+infoCustoVendaProduto
+D009_Flag_Custo_Utilizado
+T001_Quantidade
+T001_Valor_Preco_Unitario
+datediff(curdate(),T001_Data_Lancamento)
+T001_Descricao_Operacao
+ultimaCompra.D024_Nome_Fantasia
+datediff(curdate(),D009_Data_Ultima_Venda)
+C007_Primeiro_Nome
+addColuna

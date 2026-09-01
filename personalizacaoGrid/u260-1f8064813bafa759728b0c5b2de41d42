@@ -1,0 +1,36 @@
+colunaValor [T007_Valor_Total_Produtos]
+colunaTitulo [Produtos]
+colunaOrdem [15]
+---
+colunaValor [D022_Nome_Empresa]
+colunaTitulo [Transportadora]
+colunaOrdem [18]
+---
+colunaValor [T007_Data_Entrega]
+colunaTitulo [Data Entrega]
+colunaOrdem [23]
+---
+colunaValor [CCe]
+colunaTitulo [CC-e]
+colunaOrdem [25]
+---
+colunaValor [observacoes]
+colunaOrdem [24]
+---
+colunaValor [T007_C007_Id_Vendedor_Interno]
+colunaTitulo [Vendedor]
+colunaOrdem [19]
+---
+colunaValor [Etiqueta]
+colunaOrdem [2]
+---
+colunaValor [T007_Data_Envio_XML]
+colunaTitulo [Mail]
+colunaOrdem [21]
+---
+colunaValor [docs]
+colunaOrdem [5]
+---
+colunaValor [T007_Valor_Total]
+colunaOrdem [16]
+---

@@ -1,0 +1,33 @@
+a:1:{i:0;a:13:{s:2:"id";s:13:"67938f00738b2";s:6:"titulo";s:13:"Ajuste Preço";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:0;s:4:"lote";s:1:"1";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:1819:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+    global $g;
+    
+    $T004_Id                      = $array['todosCampos']['T004_Id'];
+    $T004_Valor_Preco_Original    = $array['todosCampos']['T004_Valor_Preco_Original'];
+    $T004_Valor_Desconto_Unitario = $array['todosCampos']['T004_Valor_Desconto_Unitario'];
+    $T004_Valor_Preco_Unitario    = $array['todosCampos']['T004_Valor_Preco_Unitario'];
+    $T004_Quantidade              = $array['todosCampos']['T004_Quantidade'];
+    $T004_Valor_Total_Preco       = $array['todosCampos']['T004_Valor_Total_Preco'];
+
+    $precoCorreto = $T004_Valor_Preco_Original - $T004_Valor_Desconto_Unitario;
+    $precoCorreto = number_format($precoCorreto,$g['C004']['C004_Casas_Decimais_Preco'],'.','');
+    
+    $totalCalculado = $precoCorreto * $T004_Quantidade;
+    $totalCalculado = number_format($totalCalculado,2,'.','');
+    if($totalCalculado == $T004_Valor_Total_Preco){
+/*      mysqli_query("UPDATE T004 SET T004_Valor_Preco_Unitario = '{$precoCorreto}',
+                                T004_Percentual_Desconto  = if(T004_Valor_Preco_Original>0,(1-(T004_Valor_Preco_Unitario/T004_Valor_Preco_Original))*100,0)
+                        WHERE T004_Id = '{$T004_Id}'");  */
+    
+        return array('code' => true, 'data' => "Ok, Uni: {$precoCorreto} - Total Calc: {$totalCalculado} - Total Grav : {$T004_Valor_Total_Preco}");
+
+    } else {
+        return array('code' => false, 'data' => "Ok, Uni: {$precoCorreto} - Total Calc: {$totalCalculado} - Total Grav : {$T004_Valor_Total_Preco}");
+    }
+}";}}

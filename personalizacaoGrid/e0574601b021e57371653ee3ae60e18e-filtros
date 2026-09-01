@@ -1,0 +1,9 @@
+colunaValor [T075_Data_Previsao]
+titulo [Previsão chegada]
+exibir [S]
+tipo [data]
+---
+colunaValor [T007_Numero_Nota_Fiscal]
+titulo [NF-e]
+exibir [S]
+---

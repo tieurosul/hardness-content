@@ -1,0 +1,15 @@
+D001_Codigo_Produto
+D001_Descricao_Produto
+	D009_Quantidade_Estoque_Real
+	D009_Preco_1
+D005_Classificacao_Fiscal
+	IF('A'='A',D001_Foto,'A')
+D049_D082_Id
+	D001_Descricao_Ingles
+D009_IPV_1
+D009_IPV_3
+D009_IPT_2
+D009_IPT_3
+D009_IPT_4
+D001_Peso_Unitario_Kg
+D049_Valor_Preco_KG

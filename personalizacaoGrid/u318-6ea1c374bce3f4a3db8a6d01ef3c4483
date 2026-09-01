@@ -1,0 +1,84 @@
+colunaValor [T004_Descricao_Produto]
+colunaOrdem [6]
+---
+colunaValor [T004_Codigo_Substituto]
+colunaOrdem [27]
+---
+colunaValor [D049_Modelo]
+colunaOrdem [28]
+---
+colunaValor [T004_Item]
+colunaOrdem [2]
+---
+colunaValor [T004_Quantidade]
+colunaOrdem [4]
+---
+colunaValor [T004_Valor_Preco_Unitario]
+colunaOrdem [7]
+---
+colunaValor [T004_Percentual_Desconto]
+colunaOrdem [8]
+---
+colunaValor [T004_Valor_Preco_Original]
+colunaOrdem [9]
+---
+colunaValor [T004_Valor_Total_Preco]
+colunaOrdem [10]
+---
+colunaValor [T004_Observacao]
+colunaOrdem [11]
+---
+colunaValor [T004_Observacao_Entrega]
+colunaOrdem [34]
+---
+colunaValor [Pedido]
+colunaOrdem [3]
+---
+colunaValor [PrecoComIPIeST]
+colunaOrdem [12]
+---
+colunaValor [previsao]
+colunaOrdem [15]
+---
+colunaValor [SUBSTRING(D082_Marca,1,15)]
+colunaOrdem [16]
+---
+colunaValor [unPadrao.D037_Unidade]
+colunaOrdem [17]
+---
+colunaValor [T004_Valor_ICMS]
+colunaOrdem [19]
+---
+colunaValor [T004_Valor_IPI]
+colunaOrdem [20]
+---
+colunaValor [T004_Valor_PIS]
+colunaOrdem [22]
+---
+colunaValor [T004_Valor_COFINS]
+colunaOrdem [23]
+---
+colunaValor [T004_Valor_ST]
+colunaOrdem [21]
+---
+colunaValor [T004_Valor_Frete_Total]
+colunaOrdem [26]
+---
+colunaValor [D049_Flag_Tipo]
+colunaOrdem [29]
+---
+colunaValor [T004_Valor_IRPJ]
+colunaOrdem [24]
+---
+colunaValor [T004_Valor_CSLL]
+colunaOrdem [25]
+---
+colunaValor [D005_Classificacao_Fiscal]
+colunaOrdem [18]
+---
+colunaValor [T004A_T066_Id]
+colunaOrdem [14]
+---
+colunaValor [D006_Codigo_CFOP]
+colunaOrdem [13]
+---

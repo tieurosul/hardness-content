@@ -1,0 +1,2 @@
+T006_Valor_Preco_Sem_Desconto_Unitario	|	Preço Unit.
+(T006_Valor_Preco_Sem_Desconto_Unitario*T006_Quantidade)	|	Preço Total

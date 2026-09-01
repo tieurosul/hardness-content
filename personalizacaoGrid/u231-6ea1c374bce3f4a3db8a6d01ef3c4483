@@ -1,0 +1,29 @@
+colunaValor [T004_Observacao]
+colunaTitulo [Observação]
+colunaOrdem [15]
+---
+colunaValor [T004_Quantidade]
+colunaTitulo [Qtde]
+colunaOrdem [7]
+---
+colunaValor [SUBSTRING(D082_Marca,1,15)]
+colunaTitulo [Marca]
+colunaOrdem [5]
+---
+colunaValor [Pedido]
+colunaOrdem [6]
+---
+colunaValor [T004_Percentual_Desconto]
+colunaTitulo [% Desc]
+colunaOrdem [11]
+---
+colunaValor [PrecoComIPIeST]
+colunaOrdem [10]
+---
+colunaValor [T004_Valor_Base_ST]
+colunaTitulo [Base ST]
+colunaOrdem [14]
+---
+colunaValor [T004_Valor_Preco_Original]
+colunaOrdem [9]
+---

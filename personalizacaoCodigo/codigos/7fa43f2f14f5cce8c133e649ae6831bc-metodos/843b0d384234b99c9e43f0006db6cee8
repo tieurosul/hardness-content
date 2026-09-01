@@ -1,0 +1,51 @@
+a:5:{s:4:"nome";s:25:"relatorio analise credito";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"7fa43f2f14f5cce8c133e649ae6831bc";s:6:"codigo";s:2187:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+namespace hardness;
+
+$dataInicio = isset($_GET['DATAINICIAL']) ? $_GET['DATAINICIAL'] : date('Y-m-01');
+$dataFinal = isset($_GET['DATAFINAL']) ? $_GET['DATAFINAL'] : date('Y-m-d');
+
+$sql = "SELECT
+            T005_Id as 'num_pedido',
+            T005_T003_Id as 'num_orcamento',
+            GROUP_CONCAT(DISTINCT T007_Numero_Nota_Fiscal SEPARATOR ', ') as 'num_nf',
+            T005_Data_Emissao as 'data_emissao',
+            T005A_Data_Hora_Analise_Credito as 'data_analise_credito',
+            T005A_Data_Hora_Aprovacao_Credito as 'data_aprovacao_credito',
+            T005_D024_Id as 'cod_cliente',
+            SUBSTR(D024_Nome_Empresa, 1, 15) as 'nome_cliente',
+            GROUP_CONCAT( DISTINCT '', T005_Status_Pedido(T005_Flag_Status, 1), ' ', IF( T005_Flag_Status = 8, CONCAT(' ', T005_Observacao_Pedido_Perdido), if(T005_Flag_Status = 9, T005_Motivo_Nao_Liberado, '') ) ) as 'status_pedido',
+            UFCliente.D018_UF as 'uf_cliente',
+            D006_Codigo_CFOP as 'cfop_pedido',
+            T005_Valor_Total as 'valor_total_pedido',
+            Vendedor.C007_Primeiro_Nome as 'vendedor_pedido'
+        FROM T005
+            LEFT JOIN T005A ON T005_Id = T005A_T005_Id
+            LEFT JOIN T003 ON T003_Id = T005_T003_Id
+            LEFT JOIN T007 ON T007_T005_Id = T005_Id
+            LEFT JOIN D024 ON D024_Id = T005_D024_Id
+            LEFT JOIN D006 ON D006_Id = T005_D006_Id
+            LEFT JOIN D018 AS UFCliente ON UFCliente.D018_Id = D024_D018_Id
+            LEFT JOIN C007 AS Vendedor ON Vendedor.C007_Id = T005_C007_Id_Vendedor_Interno
+        WHERE
+            (T005A_Data_Hora_Analise_Credito >= '{$dataInicio} 00:00:00' AND T005A_Data_Hora_Analise_Credito <= '{$dataFinal} 23:59:59')
+            AND ( 
+                T005_C004_Id = '1'
+                AND (T005_T005_Id_Agrupado <= 0 OR T005_T005_Id_Agrupado IS NULL)
+            )
+        GROUP BY
+            T005_Id";
+
+$resultado = mysql_query($sql);
+if($erro = mysql_error()){
+    return $erro;
+}
+
+$linhas = array();
+
+while ($linha = mysql_fetch_assoc($resultado)) {
+    $linhas[] = $linha;
+}
+
+$json = json_encode($linhas);
+return $json;";s:3:"md5";s:32:"2e10266a73c3ad657ab4f337f9ea30cd";}

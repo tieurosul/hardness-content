@@ -1,0 +1,4 @@
+colunaValor [SUM(T007_Valor_Total_Produtos)]
+colunaTitulo [SUM(T007_Valor_Total_Produtos)]
+colunaCasasDecimais [2]
+---

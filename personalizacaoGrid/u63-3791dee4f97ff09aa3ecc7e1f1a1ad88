@@ -1,0 +1,46 @@
+colunaValor [T007_Numero_Nota_Fiscal]
+colunaTitulo [NF]
+colunaAlinhar [center]
+---
+colunaValor [T007_Data_Emissao]
+colunaTitulo [Data Emissão]
+callback [gCorrigeData]
+colunaAlinhar [center]
+---
+colunaValor [T008_Codigo_Produto]
+colunaTitulo [Cód. NF]
+colunaDimensao [S]
+colunaEditar [1]
+colunaExibir [S]
+---
+colunaValor [T008_Valor_Custo_Unitario]
+colunaExibir [S]
+colunaTitulo [T008_Valor_Custo_Unitario]
+---
+colunaValor [D009_Valor_Custo_Unitario]
+colunaExibir [S]
+colunaTitulo [D009_Valor_Custo_Unitario]
+---
+colunaValor [T008_Percentual_Margem]
+colunaExibir [S]
+colunaTitulo [T008_Percentual_Margem]
+---
+colunaValor [T008_Valor_Preco_Original]
+colunaExibir [S]
+colunaTitulo [T008_Valor_Preco_Original]
+---
+colunaValor [D009_Data_Ultima_Entrada]
+colunaExibir [S]
+colunaTitulo [D009_Data_Ultima_Entrada]
+callback [gCorrigeData]
+colunaOrdem [4]
+---
+colunaValor [datediff(T007_Data_Emissao,D009_Data_Ultima_Entrada)]
+colunaExibir [S]
+colunaTitulo [datediff]
+colunaOrdem [5]
+---
+colunaValor [D049_Flag_Tipo]
+colunaExibir [S]
+colunaTitulo [D049_Flag_Tipo]
+---

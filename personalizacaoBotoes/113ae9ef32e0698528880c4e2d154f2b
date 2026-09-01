@@ -1,0 +1,94 @@
+a:4:{i:0;a:14:{s:2:"id";s:13:"68c878b7de5e1";s:6:"titulo";s:15:"Atualizar Pesos";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:0;s:11:"desabilitar";b:1;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:1:"5";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:1087:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+
+    mysql_query('START TRANSACTION');
+    $sql = mysql_query("SELECT D001_Peso_Unitario_Kg FROM D001 WHERE D001_Id = '{$array['todosCampos']['D001_Id']}'");
+    $mD001 = mysql_fetch_array($sql);
+    if(mysql_error()) {
+        mysql_query("ROLLBACK");
+        return array('code' => false, 'data' => mysql_error());
+    }
+
+    mysql_query("UPDATE D001 SET D001_Peso_Unitario_Bruto = '{$mD001['D001_Peso_Unitario_Kg']}', D001_Quantidade_Tributavel = '{$mD001['D001_Peso_Unitario_Kg']}' WHERE D001_Id = '{$array['todosCampos']['D001_Id']}'");
+    if(mysql_error()) {
+        mysql_query("ROLLBACK");
+        return array('code' => false, 'data' => mysql_error());
+    }
+    
+    mysql_query("COMMIT");
+    return array('code' => true, 'data' => 'Pesos Atualizados!');
+}";s:14:"exibirCallback";s:332:"<?php
+namespace hardness;
+
+function callback($array) {
+    // retornar true ou false
+    // $array['{parametro}']
+    global $g;
+    return false;// desabilitando botÃ£o
+
+    $users = array(63,235,270,211,260,220,239,);
+    if(in_array($g['usuarioAtual'], $users)) {
+        return true;
+    } else {
+        return false;
+    }
+}";}i:1;a:14:{s:2:"id";s:13:"68e4fbc352a91";s:6:"titulo";s:23:"Preencher Data Cadastro";s:4:"tipo";s:6:"codigo";s:6:"exibir";b:0;s:11:"desabilitar";b:1;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:2:"10";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:1291:"<?php
+namespace hardness;
+
+function callback($array){
+    // $array['todosCampos']['{campo}']
+    // $array['camposForm']['{campo}']
+    // $array['{parametro}']
+    // return array('code' => true/false, 'data' => 'mensagem', 'janela' => 'url janela abrir ao final processo', 'janelaParametros' => 'parametros janela')
+
+    global $g;
+
+    if (!($array['todosCampos']['D049_Data_Cadastro'] > 0)) {
+
+        $sql = "SELECT
+                    T001_Data_Lancamento as 'Data'
+                FROM T001
+                    LEFT JOIN D009 ON D009_Id = T001_D009_Id
+                WHERE D009_Id = '{$array['todosCampos']['D009_Id']}'
+                ORDER BY T001_Data_Lancamento ASC, T001_Id ASC LIMIT 1";
+        
+        $sql = mysql_query($sql);
+
+        if (mysql_num_rows($sql) > 0) {
+            while ($T001 = mysql_fetch_assoc($sql)) {
+                $upt = "UPDATE D049 SET D049_Data_Cadastro = '{$T001['Data']}' WHERE D049_Id = '{$array['todosCampos']['D049_Id']}'";
+                mysql_query($upt);
+                if ($erro = mysql_error()) {
+                    return array('code' => false, 'data' => "Erro ao atualizar data do lançamento: {$erro}");
+                }
+            }
+        }
+    }
+
+    return array('code' => true, 'data' => 'Data Atualizada com sucesso'); 
+}";s:14:"exibirCallback";s:185:"<?php
+namespace hardness;
+
+function callback($array) {
+    // retornar true ou false
+    // $array['{parametro}']
+    global $g;
+    return ($g['usuarioAtual'] == 63) ? false : false;
+}";}i:2;a:13:{s:2:"id";s:13:"68e945ff423ca";s:6:"titulo";s:20:"Incluir Pre Cadastro";s:4:"tipo";s:8:"codigojs";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:1;s:4:"lote";s:1:"0";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:491:"<?php
+namespace hardness;
+
+function callback($array){
+    // Retornar código JS que será executado ao clicar no botão
+    global $g;
+    return <<<EOT
+        // Exemplo: abrirJanela
+        // abrirJanela(data, '{$g['divIdRoot']}', '{$g['divId']}', unique(), '', 'Título janela', 'URL', '&teste=1', [980,550]);
+        abrirJanela(true, "{$g['divIdRoot']}", "{$g['divId']}", unique(), '', 'Pré-cadastrar Produto', '/cad/cad002/content/cad002ContentPreCadastro/', '', [600,250]);
+EOT;
+}";}i:3;a:13:{s:2:"id";s:13:"69a82dfccb09b";s:6:"titulo";s:20:"Verifica Est Liquido";s:4:"tipo";s:6:"janela";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:20:"Verifica Est Liquido";s:13:"janelaTamanho";s:9:"[900,600]";s:16:"janelaParametros";s:0:"";s:10:"recarregar";b:0;s:4:"lote";s:0:"";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:9:"janelaUrl";s:62:"/sistema/personalizacao/grid/f0d2cdd97300646efd9deb09ef236a09/";}}

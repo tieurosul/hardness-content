@@ -1,0 +1,6 @@
+tab [geral]
+field [T140_Data_Validade]
+name [T140_Data_Validade]
+label [Data Validade]
+type [data]
+---

@@ -1,0 +1,24 @@
+colunaValor [T296_Valor_Custo_Unitario]
+colunaTitulo [Unitário ME]
+colunaOrdem [7]
+---
+colunaValor [T296_Quantidade]
+colunaTitulo [Quantidade]
+colunaOrdem [6]
+---
+colunaValor [T296_Valor_Total_Custo]
+colunaTitulo [Total ME]
+colunaOrdem [8]
+---
+colunaValor [T296_Codigo_Produto_Fornecedor]
+colunaTitulo [Cód.Forn]
+colunaOrdem [2]
+---
+colunaValor [D082_Marca]
+colunaTitulo [Marca]
+colunaOrdem [11]
+---
+colunaValor [T296_Valor_Custo_Final_Unitario]
+colunaTitulo [Custo unit R$]
+colunaOrdem [9]
+---

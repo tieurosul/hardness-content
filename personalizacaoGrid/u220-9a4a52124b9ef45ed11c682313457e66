@@ -1,0 +1,15 @@
+---
+colunaValor [T008_Codigo_Produto]
+colunaTitulo [Produto]
+callback [abrirJanela]
+style [font-weight:bold]
+colunaDimensao [S]
+---
+colunaValor [observacoes]
+colunaTitulo [Observações]
+colunaTipo [livre]
+callback [exibirObservacoesCelula]
+---
+colunaValor [Contato]
+colunaOrdem [7]
+---

@@ -1,0 +1,8 @@
+url [/cad/cad002/grid/locacao/]
+titulo [Ativas]
+parametros [&acaoId=[[acaoId]]]
+---
+url [/sistema/personalizacao/grid/af5f17cb2a1f374e15ef6f1c087b4005/]
+titulo [Inativas]
+parametros [&acaoId=[[acaoId]]]
+---

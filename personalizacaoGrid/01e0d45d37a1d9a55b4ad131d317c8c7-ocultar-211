@@ -1,0 +1,6 @@
+T006_Codigo_Substituto	|	Cód.Cli
+SUBSTRING(D082_Marca,1,15)	|	Marca
+T006_Item	|	It
+T006_Valor_Comissao	|	Comissão
+T006_Item_Pedido_Compra	|	Item.OC
+T006_Percentual_Comissao	|	%Comiss

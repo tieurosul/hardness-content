@@ -1,0 +1,19 @@
+T055_Adicao_Item	|	Item
+T055_Percentual_Acrescimo_Impostos	|	%Acréscimo
+T055_Valor_IPI	|	IPI R$
+T055_Valor_PIS	|	PIS R$
+T055_Valor_Imposto_Importacao	|	II R$
+T055_Valor_COFINS	|	COFINS R$
+T055_Valor_ICMS_Presumido	|	ICMS Pres. R$
+T055_Valor_ICMS_Pagar	|	ICMS Pagar R$
+T055_Valor_ICMS	|	ICMS R$
+T055_Cotacao_CC	|	Cotação CC
+T055_Aliquota_ICMS	|	%ICMS
+T055_Aliquota_ICMS_Presumido	|	%ICMS Recolher
+T055_Valor_Base_ICMS_Normal	|	Base ICMS R$
+T055_Valor_Base_Imposto_Importacao	|	Base II R$
+T055_Valor_Base_COFINS	|	Base COFINS R$
+T055_Valor_Base_IPI	|	Base IPI R$
+T055_Valor_Base_ICMS_Sem_Reducao	|	Base ICMS R$
+T055_Valor_Base_PIS	|	Base PIS R$
+T055_Valor_Total_Seguro	|	Seguro R$

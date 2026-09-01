@@ -1,0 +1,12 @@
+colunaValor [T293_Valor_VMLE]
+colunaExibir [S]
+colunaTitulo [Produtos ME]
+---
+colunaValor [T294_Valor_Total_Custo_Final]
+colunaTitulo [Custo R$]
+colunaCorDeFundo [#9dfb81ff,#7dc867]
+---
+colunaValor [T293_Data_Emissao]
+colunaExibir [S]
+colunaTitulo [Data DI]
+---

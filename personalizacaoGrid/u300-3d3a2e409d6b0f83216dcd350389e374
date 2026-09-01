@@ -1,0 +1,15 @@
+colunaValor [D083_Codigo_Barras]
+colunaOrdem [17]
+---
+colunaValor [D001_Codigo_Barras]
+colunaOrdem [16]
+---
+colunaValor [T066_Data_Balanco]
+colunaOrdem [15]
+---
+colunaValor [T066_Flag_Balanco]
+colunaOrdem [14]
+---
+colunaValor [T066_Quantidade_Balanco]
+colunaOrdem [13]
+---

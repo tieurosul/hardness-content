@@ -1,0 +1,12 @@
+colunaValor [D087_Descricao]
+colunaTitulo [Descrição]
+colunaOrdem [3]
+---
+colunaValor [D087_Data_Hora_UpLoad]
+colunaTitulo [Data UpLoad]
+colunaOrdem [5]
+---
+colunaValor [D087_Data_Validade]
+colunaTitulo [Validade]
+colunaOrdem [7]
+---

@@ -1,0 +1,12 @@
+colunaValor [T075_Data_Previsao]
+colunaTitulo [Previsão chegada]
+colunaCorDeFundo [#d6fed3ff,#abcba8]
+---
+colunaValor [foto]
+colunaExibir [S]
+colunaTitulo [Foto]
+---
+colunaValor [T007_Numero_Nota_Fiscal]
+colunaTitulo [NF-e]
+colunaCorDeFundo [#ea6c6cff,#bb5656]
+---

@@ -1,0 +1,102 @@
+tab [geral]
+field [D009_Valor_Custo_Importado]
+name [D009_Valor_Custo_Importado]
+label [Custo ME]
+type [moeda]
+value [0,00]
+reject [S]
+length [10, 15]
+disabled [S]
+---
+tab [geral]
+field [D001_Descricao_Ingles]
+name [D001_Descricao_Ingles]
+label [Descrição Inglês]
+type [text]
+length [64, 120]
+---
+tab [geral]
+field [D001_D005_Id]
+name [D001_D005_Id]
+label [NCM]
+type [pesquisa]
+pesquisa [array('D005',
+                'D005_Id',
+                'D005_Classificacao_Fiscal, D005_Flag_Aplicacao, D005_Observacao, D149_Aliquota_IPI',
+                "LEFT JOIN D149 ON D149_D005_Id=D005_Id AND D149_C004_Id='[[g-empresaAtual]]' WHERE D005_Flag_Ativo='S' ORDER BY D005_Classificacao_Fiscal, D005_Observacao")]
+---
+tab [geral]
+field [D001_Flag_Visualizar_Site]
+name [D001_Flag_Visualizar_Site]
+label [Item Site]
+type [select]
+style [float:right;]
+align [right]
+---
+tab [geral]
+field [D001A_Observacao_Logistica]
+name [D001A_Observacao_Logistica]
+label [Observação Logística]
+type [textarea]
+---
+tab [geral]
+field [D049_Data_Cadastro]
+name [D049_Data_Cadastro]
+label [Data Cadastro]
+disabled [disabled]
+reject [S]
+---
+tab [geral]
+field [D001A_Flag_Produto_Emite_Certificado]
+name [D001A_Flag_Produto_Emite_Certificado]
+label [Envia Documentos]
+type [select]
+style [float:right;]
+align [right]
+---
+tab [geral]
+field [D049A_Data_Alteracao]
+name [D049A_Data_Alteracao]
+label [Data Alteração]
+disabled [disabled]
+reject [S]
+---
+tab [geral]
+field [D001_D002_Id]
+name [D001_D002_Id]
+label [Classificação]
+restricao []
+type [select]
+---
+tab [geral]
+field [D049_Flag_Nao_Comprar]
+name [D049_Flag_Nao_Comprar]
+label [Mantém Estoque]
+reject [S]
+type [select]
+---
+tab [geral]
+field [D001A_Flag_Doc_Num_Serie]
+name [D001A_Flag_Doc_Num_Serie]
+label [Doc. Núm. Série]
+type [select]
+select [
+	array(
+		array('title' => '...', 'value' => '', 'selected' => true),
+		array('title' => 'Sim', 'value' => 'S'),
+		array('title' => 'Não', 'value' => 'N')
+	)]
+---
+tab [geral]
+field [D001A_FLAG_Inspecao_Amostragem]
+name [D001A_FLAG_Inspecao_Amostragem]
+label [Inspeção Amostragem]
+type [select]
+select [ 
+    array(
+        array('title' => '...', 'value'=>''),
+		array('title' => 'Sim', 'value'=>'S'),
+		array('title' => 'Não', 'value' =>'N')
+		)
+]
+---

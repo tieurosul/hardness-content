@@ -1,0 +1,4 @@
+colunaValor [group_concat(distinct substr(Vendedor.C007_Primeiro_Nome,1,10))]
+titulo [Vendedor]
+exibir [S]
+---

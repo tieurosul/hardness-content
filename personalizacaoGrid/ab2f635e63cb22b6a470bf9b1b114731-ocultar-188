@@ -1,0 +1,9 @@
+T003_Valor_Pendente	|	Val. Pend.
+liberou.C007_Primeiro_Nome	|	Analista comercial
+T219_T218_Id	|	Cotação
+T003_Flag_Alcada	|	Alcada
+externo.C007_Primeiro_Nome	|	Externo
+T003_IPV	|	IPV
+(T003_Valor_Desconto/T003_Valor_Total_Produtos_Sem_Desconto)*100	|	% Descto
+T003_Prazos(T003_Id)	|	Prazo
+Status	|	Status

@@ -1,0 +1,9 @@
+D049_Modelo	|	Sub-item
+D083_Codigo_Produto_Fornecedor	|	Cód.Cli
+D001_Aplicacao	|	Referência
+D005_Classificacao_Fiscal	|	NCM
+Estoque	|	Loja
+D009_Quantidade_Estoque_Fora	|	Fora
+D009_Quantidade_Estoque_Similar	|	Similar
+D009_Quantidade_OC	|	OC
+C007_Primeiro_Nome	|	Comprador

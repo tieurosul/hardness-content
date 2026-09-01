@@ -1,0 +1,7 @@
+nome [NId_Distinct]
+valor [N001_Id]
+titulo [Qtd N001_Id]
+exibir [S]
+totalizador [distinct]
+callbackParameter [0]
+---

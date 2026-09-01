@@ -1,0 +1,17 @@
+countLinha
+T001_Data_Lancamento
+IdCliente
+Cliente
+T001_Descricao_Operacao
+D006_Codigo_CFOP
+Preco
+T001_Quantidade
+T001_Flag_Operacao
+T001_Quantidade_Saldo
+T001_Quantidado_Saldo_Locacao
+T001_Quantidade_Saldo_Mes_Anterior
+T001_Valor_Custo_Mes_Anterior
+T001_Valor_Custo_Medio_Mes_Anterior
+T075_Numero_DI
+T001_T008_Id
+	addColuna

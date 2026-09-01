@@ -1,0 +1,44 @@
+colunaValor [T005_Id]
+titulo [Pedido]
+tipo [texto]
+---
+colunaValor [T007_Protocolo_Inutilizacao]
+titulo [Prot.Inutilização]
+tipo [texto]
+---
+colunaValor [D020_Nome_Cidade]
+titulo [Cidade Cliente]
+exibir [S]
+---
+colunaValor [T005_Data_Entrega]
+colunaTitulo [Prazo]
+callback [gCorrigeData]
+tipo[data]
+---
+colunaValor [GOB001_Observacao]
+titulo [Observação]
+tipo [texto]
+---
+colunaValor [D024_Cnpj_Matriz]
+titulo [CNPJ Matriz]
+tipo [texto]
+---
+colunaValor [D006_Flag_Venda_Compra_Outros]
+titulo [Tipo CFOP]
+exibir [S]
+tipo [text]
+---
+colunaValor [CASE WHEN (IF(T005A_Data_Agendamento = '0000-00-00' OR T005A_Data_Agendamento = '' OR T005A_Data_Agendamento IS NULL[[VIRGULA]] T007A_Data_Prazo_Transporte[[VIRGULA]]T005A_Data_Agendamento) = '0000-00-00') OR (T007_Data_Entrega = '0000-00-00') OR (IF(T005A_Data_Agendamento = '0000-00-00' OR T005A_Data_Agendamento = '' OR T005A_Data_Agendamento IS NULL[[VIRGULA]] T007A_Data_Prazo_Transporte[[VIRGULA]]T005A_Data_Agendamento) IS NULL) OR (T007_Data_Entrega IS NULL) THEN '-' WHEN T007_Data_Entrega <= IF(T005A_Data_Agendamento = '0000-00-00' OR T005A_Data_Agendamento = '' OR T005A_Data_Agendamento IS NULL[[VIRGULA]] T007A_Data_Prazo_Transporte[[VIRGULA]]T005A_Data_Agendamento) THEN 'DENTRO DO PRAZO' ELSE 'FORA DO PRAZO' END]
+titulo [Status Entrega]
+exibir [S]
+tipo [select]
+select [array(
+    array('title' => 'Todos', 'value' => ""), 
+    array('title' => 'DENTRO', 'value' => "SQL: LIKE 'DENTRO DO PRAZO'"), 
+    array('title' => 'FORA', 'value' => "SQL: LIKE 'FORA DO PRAZO'"), 
+)]
+---
+colunaValor [UsuarioGerouNF.C007_Nome]
+titulo [Gerou NF]
+exibir [S]
+---

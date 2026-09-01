@@ -1,0 +1,17 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['locacaoValidade']
+    // $array['totais']['Nome_Total']
+
+    $locacao = $array['todosCampos']['D004_Local'];
+    if($array['todosCampos']['T066A_Data_Validade'] > '0000-00-00'){
+        $locacao = $locacao .'<br>Val:'. gCorrigeData($array['todosCampos']['T066A_Data_Validade']);
+    }
+    
+    return $locacao;
+
+}

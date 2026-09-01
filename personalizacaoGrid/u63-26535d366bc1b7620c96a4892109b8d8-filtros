@@ -1,0 +1,8 @@
+colunaValor [usuario.C007_Login]
+titulo [Login]
+exibir [S]
+---
+colunaValor [usuario.C007_Email]
+titulo [C007_Email]
+exibir [S]
+---

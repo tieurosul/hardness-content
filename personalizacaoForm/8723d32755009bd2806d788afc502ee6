@@ -1,0 +1,10 @@
+tab [geral]
+field [D001_D005_Id]
+name [D001_D005_Id]
+label [NCM]
+type [pesquisa]
+pesquisa [array('D005',
+                'D005_Id',
+                'D005_Classificacao_Fiscal, D005_Flag_Aplicacao, D005_Observacao, D149_Aliquota_IPI',
+                "LEFT JOIN D149 ON D149_D005_Id=D005_Id AND D149_C004_Id='[[g-empresaAtual]]' WHERE D005_Flag_Ativo='S' ORDER BY D005_Classificacao_Fiscal, D005_Observacao")]
+---

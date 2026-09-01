@@ -1,0 +1,31 @@
+colunaValor [T005_Observacao_Comercial]
+colunaTitulo [Observação]
+colunaAlinhar [left]
+colunaDimensao [S]
+style [max-width:350px;min-width:350px;width:350px;white-space:normal;],
+colunaEditar [1]
+colunaCorDeFundo [#fde4a8ff,#cab686]
+---
+colunaValor [T005A_Percentual_Estoque_Disponivel_E_Ordem_Compra]
+colunaTitulo [Falta]
+colunaCorDeFundo [#f9aaaaff,#c78888]
+---
+colunaValor [D024_Nome_Fantasia]
+colunaTitulo [Nome Fantasia]
+colunaOrdem [10]
+---
+colunaValor [T003_Data_Emissao]
+colunaTitulo [Emissão Orc.]
+callback [gCorrigeData]
+colunaAlinhar [center]
+style [width:1%]
+colunaOrdem [4]
+---
+colunaValor [T005_Percentual_Margem]
+colunaTitulo [Margem]
+colunaOrdem [14]
+---
+colunaValor [T005A_Percentual_Ordem_Compra]
+colunaTitulo [OC]
+colunaOrdem [16]
+---

@@ -1,0 +1,35 @@
+colunaValor [D009_Id]
+titulo [D009_Id]
+---
+colunaValor [D001A_Flag_Produto_Emite_Certificado]
+titulo [Flag Produto Emite Certificado]
+exibir [S]
+---
+colunaValor [D001_Codigo_Barras]
+titulo [EAN]
+exibir [S]
+---
+colunaValor [D002_Id,D002_Descricao_Produto]
+titulo [Classificação]
+tipo [texto]
+---
+colunaValor [D001_Descricao_Ingles]
+titulo [Descrição Inglês]
+exibir [S]
+---
+colunaValor [D001_Id]
+titulo [D001_Id]
+exibir [S]
+---
+colunaValor [D001A_Id]
+titulo [D001A_Id]
+exibir [S]
+---
+colunaValor [D049_Id]
+titulo [D049_Id]
+exibir [S]
+---
+colunaValor [D009_Data_Reprocessa_Historico]
+titulo [D009_Data_Reprocessa_Historico]
+tipo [data]
+---

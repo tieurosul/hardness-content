@@ -1,0 +1,21 @@
+colunaValor [T015_C004_Id]
+colunaTitulo [T015_C004_Id]
+colunaAlinhar [center]
+colunaExibir []
+---
+colunaValor [T015_D032_Id]
+callback [personalizado-69f8af2d31411]
+---
+colunaValor [D032_Descricao]
+colunaExibir []
+colunaTitulo [D032_Descricao]
+---
+colunaValor [T015_D032_Id]
+colunaTitulo [Grupo]
+colunaEditar [S]
+colunaEditarTodos [S]
+colunaEditarGeraSelect [array('D032', 'D032_Id', 'D032_Id, D032_Descricao', "ORDER BY D032_Id", true)]
+colunaExibir [S]
+colunaMetrica [S]
+colunaDimensao [S]
+---

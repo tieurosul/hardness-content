@@ -1,0 +1,47 @@
+excluirLinha
+impressaoEtiqueta
+T014_Flag_Conferencia_Cega
+IF(Informada.D006_Flag_Venda_Compra_Outros="C",T225_T224_Id,T007_Numero_Nota_Fiscal)
+T014_Codigo_Produto
+D001_Codigo_Produto
+D001_Flag_Pre_Cadastro
+T014_T066_Id
+T014_Descricao_Produto
+D082_Marca
+T014_Classificacao_Fiscal
+T014_Flag_Origem_Produto
+T014_D006_Id
+if(D037_Unidade!=NULL,D037_Unidade,T014_Unidade)
+T014_Quantidade
+T014_Valor_Custo_Unitario
+T014_Valor_Total_Custo
+T014_Valor_ICMS
+T014_Valor_ICMS_Diferenca_Aliquotas
+T014_Valor_IPI
+T014_Valor_ICMS_Substituicao
+T014_Valor_PIS
+	D001_Codigo_Barras
+T014_Valor_COFINS
+	D083_Codigo_Barras
+	Original.D006_Codigo_CFOP
+T014_Valor_Desconto_Unitario*-1
+T014_Valor_Custo_Final_Unitario
+T014_Aliquota_ICMS
+T014_Aliquota_ICMS_Diferenca_Aliquotas
+T014_Percentual_Reducao_ICMS
+T014_Aliquota_IPI
+T014_ICMS_Inter_Estadual
+T014_Aliquota_ICMS_Interno
+T014_MVA_Ajustada
+T014_Aliquota_PIS
+T014_Aliquota_COFINS
+T014_Valor_Base_ICMS
+T014_Valor_Base_IPI
+T014_Valor_Base_ICMS_Substituicao
+T014_Valor_Base_PIS
+T014_Valor_Base_COFINS
+T014_Flag_Divergencia
+	D049_Modelo
+T225_Flag_Autorizado
+Duplicar
+T014_Id_Duplicado

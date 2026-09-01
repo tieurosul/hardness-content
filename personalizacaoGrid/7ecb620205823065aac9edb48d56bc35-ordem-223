@@ -1,0 +1,21 @@
+campoOpcoesAguardandoEntrega1
+campoOpcoesAguardandoEntrega2
+impressaoEtiqueta
+T005_Id
+T005_T275_Id
+T005_Estoque_BOX
+D024_Nome_Empresa
+T005_Data_Emissao
+T005_Data_Saida
+T005_Data_Entrega
+Tipo_Documento
+T007_Numero_Nota_Fiscal
+T005_Observacao_1
+D022_Nome_Empresa
+D006_Codigo_CFOP
+T005_Data_Hora_Almoxarifado
+Nome_Liberou
+Nome_Vendedor
+Nome_Conferiu
+	T007_Flag_Imprimir_Romaneio
+	retornarPedidoViaCupom

@@ -1,0 +1,35 @@
+colunaValor [T001_Valor_Custo_Unitario]
+colunaTitulo [Custo]
+colunaOrdem [9]
+---
+colunaValor [Preco]
+colunaOrdem [10]
+---
+colunaValor [T001_Quantidado_Saldo_Locacao]
+colunaTitulo [Saldo Loc.]
+colunaOrdem [17]
+---
+colunaValor [T001_Valor_Custo_Mes_Anterior]
+colunaTitulo [Custo mês anterior]
+colunaOrdem [31]
+---
+colunaValor [T001_Data_Lancamento]
+colunaTitulo [Data]
+colunaOrdem [2]
+---
+colunaValor [T001_Flag_MMF]
+colunaTitulo [F]
+colunaOrdem [11]
+---
+colunaValor [T001_Quantidade]
+colunaOrdem [7]
+---
+colunaValor [T001_Quantidade_Saldo]
+colunaOrdem [8]
+---
+colunaValor [T075_Numero_DI]
+colunaOrdem [34]
+---
+colunaValor [T001A_Numero_Lote]
+colunaOrdem [14]
+---

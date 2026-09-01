@@ -1,0 +1,74 @@
+a:5:{s:4:"nome";s:25:"envio do email automatico";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"16c13bb76c638465a18792996a793b08";s:6:"codigo";s:2620:"<?php
+global $g,$confUsuario;
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+$T003_Id         = $array['todosCampos']['T003_Id'];
+$C007_Id         = $array['todosCampos']['T003_C007_Id_Vendedor_Interno'];
+$C004_Id         = $array['todosCampos']['T003_C004_Id'];
+$dataEmissao     = $array['todosCampos']['T003_Data_Emissao'];
+$diasAposEmissao = $array['todosCampos']['D024_Dias_Envio_Email_Orc_Apos_Emissao'];
+$diasAntesVencer = $array['todosCampos']['D024_Dias_Envio_Email_Orc_Antes_Vencer'];
+$dataAtual       = date("Y-m-d");
+
+$g['usuarioAtual'] = $C007_Id;
+$g['empresaAtual'] = $C004_Id;
+
+require_once('bibliotecas/classes/INDEX.php');
+$INDEX = new INDEX();
+
+$INDEX->carragaVARSGlobal();
+
+//require_once("bibliotecas/confUsuario.php");
+//$g['urlRaiz']  = $confUsuario['urlRaiz'];
+//$g['pathRaiz'] = $confUsuario['pathRaiz'];
+
+if($g['C031']['enviarEmailOrcamentoAutomatico'] == 'N'){
+    return "Processo não habilitado na empresa {$g['empresaAtual']}";
+}
+
+$envioAposEmissao = false;
+$envioAntesVencer = false;
+
+// Vai verificar a quantidade de dias da data de emissao até o dia atual 
+$diferenca = strtotime($dataAtual) - strtotime($dataEmissao);
+$diasApos  = floor($diferenca / (60 * 60 * 24)); 
+
+// Se estiver dentro da data vai enviar o email após emissao
+if($diasAposEmissao > 0 && $diasApos == $diasAposEmissao){
+    $envioAposEmissao = true;
+}
+
+// Vai verificar a data de vencimento do orçamento 
+$diasMaxOrcamentoPendente = $g['C031']['diasMaxOrcamentoPendente'];
+$dataVencer = date('Y-m-d', strtotime("+".$diasMaxOrcamentoPendente."days",strtotime($dataEmissao)));
+$diferenca  = strtotime($dataVencer) - strtotime($dataAtual);
+$diasAntes  = floor($diferenca / (60 * 60 * 24)); 
+
+// Se estiver dentro da data vai enviar o email antes de vencer
+if($diasAntesVencer > 0 && $diasAntesVencer == $diasAntes){
+    $envioAntesVencer = true;
+}
+
+ // Se não tiver dentro do periodo para envio encerra
+if($envioAposEmissao === true && $envioAntesVencer === true){
+
+    require_once('bibliotecas/classes/VEN001.php');
+    $VEN001 = new VEN001();
+
+    $retorno = $VEN001->verificaEnviaEmailAutomatico($T003_Id);
+
+    if($retorno !== true){
+        return "Orçamento {$T003_Id}: Não foi possível enviar email - ".$retorno;
+    }
+
+    $retorno = $VEN001->enviaEmailAutomatico($T003_Id, $envioAposEmissao , $envioAntesVencer);
+    if($retorno !== true){
+        return "Orçamento {$T003_Id}: Não foi possível enviar email - ".$retorno;
+    }
+
+    return "Orçamento {$T003_Id}: enviado email automático";
+
+} else {
+    return "Orçamento {$T003_Id}: Não está dentro da data para envio automático";
+
+}";s:3:"md5";s:32:"b2c89a1358eeb2269149ebd2cc5ea672";}

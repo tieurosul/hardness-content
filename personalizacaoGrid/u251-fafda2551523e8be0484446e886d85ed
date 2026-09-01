@@ -1,0 +1,24 @@
+colunaValor [D024_D046_Id]
+colunaTitulo [Grupo]
+colunaOrdem [11]
+---
+colunaValor [D024_Nome_Fantasia]
+colunaTitulo [Nome Fatasia]
+---
+colunaValor [Supervisor]
+style [
+	
+]
+---
+colunaValor [D024_C007_Vendedor_Interno]
+colunaTitulo [Vendedor]
+colunaOrdem [10]
+---
+colunaValor [D024_CNPJ_Matriz]
+colunaTitulo [CNPJ Matriz]
+colunaOrdem [24]
+---
+colunaValor [D024_CPF]
+colunaTitulo [CPF]
+colunaOrdem [24]
+---

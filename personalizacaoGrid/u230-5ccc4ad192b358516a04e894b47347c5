@@ -1,0 +1,42 @@
+colunaValor[T015_D014_Id]
+colunaTitulo[Conta]
+colunaEditar[S]
+colunaEditarTodos[S]
+colunaEditarGeraSelect[array('D014', 'D014_Id', 'D014_Id, D014_SubConta', "ORDER BY D014_Id", true)]
+callback[campoMostraValorConta]
+callbackParameter[D014_SubConta]
+colunaExibir[S]
+---
+colunaValor [D014_SubConta]
+colunaTitulo [Conta]
+colunaExibir[]
+---
+colunaValor[T015_D032_Id]
+colunaTitulo[Grupo]
+colunaEditar[S]
+colunaEditarTodos[S]
+colunaEditarGeraSelect[array('D032', 'D032_Id', 'D032_Id, D032_Descricao', "ORDER BY D032_Id", true)]
+callback[campoMostraValorGrupo]
+callbackParameter[D032_Descricao]
+colunaExibir[S]
+---
+colunaValor [D032_Descricao]
+colunaTitulo [Conta]
+colunaExibir[]
+---
+colunaValor[T015_D073_Id]
+colunaTitulo[Centro Custo]
+colunaEditar[S]
+colunaEditarTodos[S]
+colunaEditarGeraSelect[array('D073', 'D073_Id', 'D073_Id, D073_Nome', "ORDER BY D073_Id", true)]
+callback[mostraCentroCusto]
+callbackParameter[D073_Nome]
+colunaExibir[S]
+---
+colunaValor [D073_Nome]
+colunaTitulo [Centro Custo]
+colunaExibir[]
+---
+colunaValor [D024_CNPJ]
+colunaTitulo [CNPJ]
+---

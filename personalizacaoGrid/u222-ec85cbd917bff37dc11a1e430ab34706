@@ -1,0 +1,64 @@
+colunaValor [D049_Flag_Curva_ABC]
+colunaTitulo [ABC(V)]
+colunaAlinhar [center]
+style [width:1%]
+callback [abrirNotificacao]
+colunaOrdem [15]
+---
+colunaValor [D009_Valor_Custo_Ultima_Compra]
+colunaOrdem [6]
+colunaTitulo [Custo Ult]
+---
+colunaValor [D001_D037_Id]
+colunaTitulo [Un]
+colunaOrdem [4]
+---
+colunaValor [T144_Url]
+colunaOrdem [14]
+---
+colunaValor [Custo]
+colunaOrdem [13]
+---
+colunaValor [D009_Preco_1]
+colunaOrdem [7]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Código]
+colunaOrdem [2]
+---
+colunaValor [D001_Flag_Ativo]
+colunaTitulo [Ativo]
+colunaOrdem [1]
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaTitulo [Estoque]
+colunaOrdem [8]
+---
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Descrição português]
+colunaOrdem [3]
+---
+colunaValor [D149_Aliquota_IPI]
+colunaTitulo [Aliq IPI]
+colunaOrdem [13]
+---
+colunaValor [D049_D082_Id]
+colunaTitulo [Marca]
+colunaOrdem [13]
+---
+colunaValor [D001_D005_Id]
+colunaOrdem [13]
+---
+colunaValor [D001_Flag_Pre_Cadastro]
+colunaTitulo [Pré]
+colunaOrdem [14]
+---
+colunaValor [D001_Descricao_Ingles]
+colunaOrdem [15]
+---
+colunaValor [CustoME]
+colunaOrdem [14]
+---
+colunaValor [D009_Valor_Preco_Tabela]
+colunaOrdem [9]
+---

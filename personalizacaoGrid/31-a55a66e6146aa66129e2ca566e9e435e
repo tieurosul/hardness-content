@@ -1,0 +1,22 @@
+colunaValor [D009_Flag_Imprimir_Etiqueta]
+colunaTitulo [Imprimir]
+callback [validaCampoImprimir]
+style [width:50px]
+colunaAlinhar [center]
+colunaEditarTodos [1]
+colunaExibir [S]
+---
+colunaValor [D049_Data_Validade]
+colunaTitulo [Validade]
+colunaEditar [S]
+callback [gCorrigeData]
+colunaExibir [S]
+style [width:1%;]
+---
+colunaValor [D049_Data_Fabricacao]
+colunaTitulo [Fabricação]
+colunaEditar [S]
+callback [gCorrigeData]
+colunaExibir [S]
+style [width:1%;]
+---

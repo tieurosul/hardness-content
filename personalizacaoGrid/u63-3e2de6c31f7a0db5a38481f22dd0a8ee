@@ -1,0 +1,9 @@
+colunaValor [T005A_Data_Hora_Etapa_Expedicao]
+colunaTitulo [Etapa Expedicao]
+colunaExibir [S]
+callback [gCorrigeData]
+---
+colunaValor [T005_C007_Id_Separou]
+colunaTitulo [C007 sep]
+colunaExibir [S]
+---

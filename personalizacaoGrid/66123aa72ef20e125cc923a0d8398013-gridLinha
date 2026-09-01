@@ -1,0 +1,21 @@
+<?php
+namespace hardness;
+
+function gridLinha($array) {
+   global $g;
+   if ($array['todosCampos']['round(D009_Quantidade_Comprar_Calculada,0)']<0) {
+      //return 'linhaCinza';
+   }
+   if ($array['todosCampos']['D049_Flag_Nao_Comprar']=='S') {
+      return 'linhaError';
+   }
+   if ($array['todosCampos']['D001_Flag_Pre_Cadastro']=='S') {
+      return 'linhaVermelho';
+   }
+   if ($array['todosCampos']['D009_Frequencia_Venda'] == 1) {
+      return 'linhaPink';
+   }
+   if ($array['todosCampos']['D009_Clientes_Consumo'] == 1) {
+      return 'linhaPink';
+   }
+}

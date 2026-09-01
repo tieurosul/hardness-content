@@ -1,0 +1,29 @@
+colunaValor [D009_Data_Ultima_Saida]
+titulo [Ult.Saida]
+exibir [S]
+tipo [data]
+---
+colunaValor [D009_Flag_Custo_Utilizado]
+titulo [D009_Flag_Custo_Utilizado]
+exibir [S]
+---
+colunaValor [D009_Preco_1]
+titulo [Preço 1]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D009_Preco_4]
+titulo [Preço 4]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D009_IPT_3]
+titulo [IPT 3]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D009_ICF_1]
+titulo [ICF]
+exibir [S]
+tipo [numero]
+---

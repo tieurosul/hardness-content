@@ -1,0 +1,9 @@
+T005_Flag_Dividido	|	Div
+T005_Ordem_Compra	|	OC.  Cli
+T005_Prazos(T005_Id)	|	Prazo
+T005_Percentual_Estoque_Disponivel	|	Estoque
+T005_Valor_Frete	|	Frete
+T005_IPV	|	IPV
+liberouOrcamento.C007_Primeiro_Nome	|	Analista comercial orçamento
+externo.C007_Primeiro_Nome	|	Externo
+Supervisor	|	Supervisor

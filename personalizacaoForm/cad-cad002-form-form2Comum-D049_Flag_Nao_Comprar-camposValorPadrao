@@ -1,0 +1,12 @@
+<?php
+/**
+* camposValorPadrao
+* 
+* Defina valores padrão para campos no formulário de inclusão.
+*/
+
+// Criar/modificar valor padrão: 
+//$conf['camposValorPadrao']['D049_Flag_Nao_Comprar'] = date('d/m/Y');
+
+// Remover valor padrão:
+//unset($conf['camposValorPadrao']['D049_Flag_Nao_Comprar']);

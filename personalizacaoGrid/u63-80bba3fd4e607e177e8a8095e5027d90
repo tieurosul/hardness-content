@@ -1,0 +1,19 @@
+colunaValor [T007_Id]
+colunaTitulo [T007_Id]
+colunaExibir []
+chavePrimaria [1]
+---
+colunaValor [D024_Nome_Empresa]
+colunaTitulo [Razao Social]
+style [width: 1%]
+---
+colunaValor [D024_CNPJ_Matriz]
+colunaTitulo [CNPJ]
+style [width: 1%]
+---
+colunaValor [T007_Valor_Total]
+colunaTitulo [Total]
+colunaAlinhar [right]
+colunaCasasDecimais [2]
+style [background:var(--celula-amarelo-claro)]
+---

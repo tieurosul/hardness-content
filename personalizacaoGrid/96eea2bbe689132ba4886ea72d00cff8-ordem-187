@@ -1,0 +1,26 @@
+R001_Data
+crm001_Dia_Semana
+R001_Clientes_Nr
+R001_Clientes_Novos
+R001_Clientes_Ativos
+R001_Clientes_Contatos
+	R001_Clientes_Inativos
+R001_Orcamentos_Nr
+R001_Orcamentos_Clientes
+R001_Orcamentos_Itens
+R001_Orcamentos_Valor_Total
+R001_Pedidos_Nr
+R001_Pedidos_Clientes
+R001_Pedidos_Itens
+R001_Pedidos_Valor_Total
+R001_Faturados_Nr
+R001_Faturados_Clientes
+R001_Faturados_Itens
+R001_Faturados_Valor_Total
+R001_Faturados_IPV
+R001_Devolucoes_Nr
+R001_Devolucoes_Clientes
+R001_Devolucoes_Valor_Total
+R001_Compras_Nr
+R001_Compras_Clientes
+R001_Compras_Valor_Total

@@ -1,0 +1,12 @@
+colunaValor [abrirCertificado]
+colunaOrdem [6]
+---
+colunaValor [T140_Data_Validade]
+colunaOrdem [4]
+---
+colunaValor [visualizarArquivo]
+colunaOrdem [5]
+---
+colunaValor [IF(T140_Link != "", T140_Link, T140_Nome_Arquivo)]
+colunaOrdem [3]
+---

@@ -1,0 +1,33 @@
+colunaValor [LinkProduto]
+colunaTitulo [Link]
+colunaOrdem [27]
+---
+colunaValor [T004_Valor_Custo_Unitario]
+colunaExibir [S]
+colunaTitulo [Custo]
+colunaOrdem [20]
+---
+colunaValor [T004_Percentual_Margem]
+colunaTitulo [%Marg]
+colunaAlinhar [right]
+style [width:1%;background-color: var(--celula-verde);]
+colunaCasasDecimais [2]
+colunaExibir [S]
+colunaExibirNivel [4]
+colunaOrdem [23]
+---
+colunaValor [T004_Valor_Lucro]
+colunaTitulo [R$ Lucro]
+colunaCasasDecimais [4]
+colunaAlinhar [right]
+colunaExibirNivel [4]
+colunaExibir [S]
+colunaOrdem [24]
+---
+colunaValor [T004_Observacao]
+colunaTitulo [Observação]
+colunaOrdem [6]
+---
+colunaValor [PrecoComIPIeST]
+colunaOrdem [22]
+---

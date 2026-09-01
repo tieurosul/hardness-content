@@ -1,0 +1,32 @@
+colunaValor [D001A_Codigo_IMPA]
+colunaOrdem [1]
+---
+colunaValor [D001_Flag_Ativo]
+colunaTitulo [Ativo]
+colunaOrdem [6]
+---
+colunaValor [D049_D082_Id]
+colunaTitulo [Marca]
+colunaOrdem [8]
+---
+colunaValor [flagNaoCompra]
+colunaOrdem [9]
+---
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Código]
+colunaOrdem [4]
+---
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Descrição]
+colunaOrdem [7]
+---
+colunaValor [D009_Quantidade_Estoque]
+colunaTitulo [Físico]
+colunaOrdem [10]
+---
+colunaValor [Pedido]
+colunaOrdem [11]
+---
+colunaValor [D001_Flag_Visualizar_Site]
+colunaOrdem [16]
+---

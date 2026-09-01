@@ -1,0 +1,14 @@
+colunaValor [usuario.C007_Data_Alteracao_Senha]
+colunaTitulo [Alteração senha]
+colunaOrdem [8]
+---
+colunaValor [supervisor.C007_Primeiro_Nome]
+colunaTitulo [Supervisor]
+colunaOrdem [7]
+---
+colunaValor [usuario.C021_Nome_Perfil]
+colunaOrdem [5]
+---
+colunaValor [usuario.C007_Email]
+colunaOrdem [4]
+---

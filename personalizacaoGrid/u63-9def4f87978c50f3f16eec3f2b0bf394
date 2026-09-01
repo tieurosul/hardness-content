@@ -1,0 +1,9 @@
+colunaValor [T013_Id]
+colunaTitulo [T013_Id]
+colunaExibir [S]
+colunaOrdem [1]
+---
+colunaValor [RNE001_Numero_Protocolo]
+colunaTitulo [RNE001_Numero_Protocolo]
+colunaExibir [S]
+---

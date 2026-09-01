@@ -1,0 +1,24 @@
+colunaValor [T055_Valor_COFINS]
+colunaTitulo [COFINS R$]
+colunaOrdem [35]
+---
+colunaValor [T055_Aliquota_COFINS]
+colunaTitulo [%COFINS]
+colunaOrdem [39]
+---
+colunaValor [T055_Aliquota_IPI]
+colunaTitulo [%IPI]
+colunaOrdem [39]
+---
+colunaValor [T055_Valor_Adicao]
+colunaTitulo [Adição]
+colunaOrdem [4]
+---
+colunaValor [T055_Aliquota_Imposto_Importacao]
+colunaTitulo [%II]
+colunaOrdem [39]
+---
+colunaValor [T055_Aliquota_ICMS]
+colunaTitulo [%ICMS]
+colunaOrdem [19]
+---

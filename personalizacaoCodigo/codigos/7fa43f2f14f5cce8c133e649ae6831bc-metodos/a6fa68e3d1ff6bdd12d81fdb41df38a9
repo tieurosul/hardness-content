@@ -1,0 +1,49 @@
+a:5:{s:4:"nome";s:17:"validade produtos";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"7fa43f2f14f5cce8c133e649ae6831bc";s:6:"codigo";s:1893:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+namespace hardness;
+
+$dataInicio = isset($_GET['DATAINICIAL']) ? $_GET['DATAINICIAL'] : date('Y-m-01');
+$dataFinal = isset($_GET['DATAFINAL']) ? $_GET['DATAFINAL'] : date('Y-m-d');
+
+$colunas = "SELECT  D001_Codigo_Produto as `cod_produto`,
+                    D001_Descricao_Produto as `descricao_produto`,
+                    D082_Marca as `marca_produto`,
+                    D004_Local as `locacao_produto`,
+                    T066A_Data_Validade as `validdade_produto`,
+                    datediff(T066A_Data_Validade, curdate()) as `dias_vencer`,
+                    T066_Quantidade_Estoque as `estoque_produto`,
+                    D009_Quantidade_Pedido_Por_Locacao(T066_D009_Id, T066_Id) as `pedidos_produto`,
+                    T066_Quantidade_Estoque_Liquido as `estoque_liquido_produto`,
+                    D009_Data_Ultima_Entrada as `ult_entrada_produto` ";
+
+$from = 'T066';
+
+$extra = "  LEFT JOIN T066A ON T066_Id = T066A_T066_Id
+            LEFT JOIN D004 ON D004_Id = T066_D004_Id
+            LEFT JOIN D009 ON D009_Id = T066_D009_Id
+            LEFT JOIN D049 ON D049_Id = D009_D049_Id
+            LEFT JOIN D001 ON D001_Id = D049_D001_Id
+            LEFT JOIN D001A ON D001_Id = D001A_D001_Id
+            LEFT JOIN D082 ON D082_Id = D049_D082_Id ";
+
+$where = "  (T066A_Data_Validade >= '{$dataInicio}' AND T066A_Data_Validade <= '{$dataFinal}')
+            AND D009_C004_Id = '1'
+            AND D001A_Flag_Validade = 'S'
+            AND D001_Flag_Ativo != 'N'
+            AND D001_Flag_Pre_Cadastro != 'S'";
+
+$query = $colunas . ' FROM ' . $from . ' ' . $extra . ' WHERE ' . $where;
+
+$resultado = mysql_query($query);
+if($erro = mysql_error()){
+    return $erro;
+}
+
+$linhas = array();
+
+while ($linha = mysql_fetch_assoc($resultado)) {
+    $linhas[] = $linha;
+}
+  
+$json = json_encode($linhas);
+return $json;";s:3:"md5";s:32:"5cf037a8c94b964caa6587e23ce7273d";}

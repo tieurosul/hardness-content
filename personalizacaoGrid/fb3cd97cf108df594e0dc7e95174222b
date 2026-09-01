@@ -1,0 +1,16 @@
+colunaValor [excluir]
+colunaTitulo []
+callback [gExcluirLinha]
+callbackParameter [array('P002_Id')]
+colunaTipo [livre]
+colunaOrdem [1]
+---
+colunaValor [P002_Id]
+colunaTitulo [Id]
+chavePrimaria [S]
+style [width: 1%;]
+---
+colunaValor [P002_Tipo_Orcamento]
+colunaTitulo [Tipo Orçamento]
+colunaEditar [S]
+---

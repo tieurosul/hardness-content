@@ -1,0 +1,14 @@
+colunaValor [(SELECT COUNT(*) FROM RMA002 WHERE RMA002_RMA001_Id = RMA001_Id)]
+colunaExibir [S]
+colunaTitulo [ITENS]
+---
+colunaValor [T182_Id]
+colunaTitulo [T182_Id]
+chavePrimaria [S]
+colunaExibir [S]
+colunaOrdem [2]
+---
+colunaValor [T182_Id]
+colunaExibir [S]
+colunaTitulo [ID]
+---

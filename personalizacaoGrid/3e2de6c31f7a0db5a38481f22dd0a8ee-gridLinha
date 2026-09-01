@@ -1,0 +1,18 @@
+<?php
+namespace hardness;
+
+function gridLinha($array) {
+    // $array['todosCampos']['CAMPO']
+    // return 'linhaCinza';
+    // return 'background-color: green; color: white;';
+
+    if ($array['todosCampos']['T005A_Data_Hora_Etapa_Expedicao'] > 0){
+        $timestamp = strtotime($array['todosCampos']['T005A_Data_Hora_Etapa_Expedicao']);
+        $agora = time();
+        ($agora - $timestamp) > 86400;
+        
+        if (($agora - $timestamp) > 86400){
+            return 'background-color: var(--celula-amarelo);';
+        }
+    }
+}

@@ -1,0 +1,12 @@
+colunaValor [T005A_Id]
+colunaTitulo [T005A_Id]
+chavePrimaria [1]
+colunaExibir []
+---
+colunaValor [T005A_Data_Hora_Analise_Credito]
+colunaTitulo [Análise Crédito]
+colunaExibir [S]
+colunaOrdem [6]
+callback [gCorrigeData]
+colunaAlinhar [center]
+---

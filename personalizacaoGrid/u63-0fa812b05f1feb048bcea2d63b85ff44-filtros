@@ -1,0 +1,24 @@
+colunaValor [D009_Id]
+titulo [D009_Id]
+exibir [S]
+---
+colunaValor [D009_Preco_1]
+titulo [D009_Preco_1]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D009_Preco_2]
+titulo [D009_Preco_2]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D009_IPT_4]
+titulo [D009_IPT_4]
+exibir [S]
+tipo [numero]
+---
+colunaValor [D009_IPT_3]
+titulo [D009_IPT_3]
+exibir [S]
+tipo [numero]
+---

@@ -1,0 +1,11 @@
+colunaValor [LinkProduto]
+colunaTitulo [Link]
+colunaOrdem [26]
+---
+colunaValor [PrecoComIPIeST]
+colunaOrdem [49]
+---
+colunaValor [SUBSTRING(D082_Marca,1,15)]
+colunaTitulo [Marca]
+colunaOrdem [7]
+---

@@ -1,0 +1,66 @@
+colunaValor [D014_Id]
+colunaTitulo [Id]
+---
+colunaValor [D014_SubConta]
+colunaTitulo [Conta]
+---
+colunaValor [(select sum(T018_Valor_Pago) from T018 where T018_D014_Id=D014_Id and T018_Ano='2021' and T018_Mes='01')]
+colunaTitulo [01/2021]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---
+colunaValor [(select sum(T018_Valor_Pago) from T018 where T018_D014_Id=D014_Id and T018_Ano='2021' and T018_Mes='02')]
+colunaTitulo [01/2021]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---
+colunaValor [(select sum(T018_Valor_Pago) from T018 where T018_D014_Id=D014_Id and T018_Ano='2021' and T018_Mes='03')]
+colunaTitulo [01/2021]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---
+colunaValor [(select sum(T018_Valor_Pago) from T018 where T018_D014_Id=D014_Id and T018_Ano='2021' and T018_Mes='04')]
+colunaTitulo [01/2021]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---
+colunaValor [(select sum(T018_Valor_Pago) from T018 where T018_D014_Id=D014_Id and T018_Ano='2021' and T018_Mes='05')]
+colunaTitulo [02/2021]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---
+colunaValor [(select sum(T018_Valor_Pago) from T018 where T018_D014_Id=D014_Id and T018_Ano='2021' and T018_Mes='06')]
+colunaTitulo [03/2021]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---
+colunaValor [(select sum(T018_Valor_Pago) from T018 where T018_D014_Id=D014_Id and T018_Ano='2021' and T018_Mes='07')]
+colunaTitulo [04/2021]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---
+colunaValor [(select sum(T018_Valor_Pago) from T018 where T018_D014_Id=D014_Id and T018_Ano='2021' and T018_Mes='08')]
+colunaTitulo [05/2021]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---
+colunaValor [(select sum(T018_Valor_Pago) from T018 where T018_D014_Id=D014_Id and T018_Ano='2021' and T018_Mes='09')]
+colunaTitulo [06/2021]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---
+colunaValor [(select sum(T018_Valor_Pago) from T018 where T018_D014_Id=D014_Id and T018_Ano='2021' and T018_Mes='10')]
+colunaTitulo [07/2021]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---
+colunaValor [(select sum(T018_Valor_Pago) from T018 where T018_D014_Id=D014_Id and T018_Ano='2021' and T018_Mes='11')]
+colunaTitulo [08/2021]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---
+colunaValor [(select sum(T018_Valor_Pago) from T018 where T018_D014_Id=D014_Id and T018_Ano='2021' and T018_Mes='12')]
+colunaTitulo [09/2021]
+colunaCasasDecimais [2]
+colunaAlinhar [right]
+---

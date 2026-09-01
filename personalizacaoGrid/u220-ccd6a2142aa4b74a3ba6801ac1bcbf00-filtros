@@ -1,0 +1,16 @@
+colunaValor [D024_D021_Id]
+titulo [Representante]
+exibir [S]
+---
+colunaValor [D085_Data]
+titulo [Contato]
+tipo [data]
+---
+colunaValor [D013_Telefone_2]
+titulo [Telefone 2]
+exibir [S]
+---
+colunaValor [D013_Celular]
+titulo [Celular]
+exibir [S]
+---

@@ -1,0 +1,1 @@
+a:5:{s:18:"D024_Nome_Fantasia";s:3:"263";s:7:"Contato";s:3:"153";s:30:"substr(D024_Nome_Empresa,1,15)";s:3:"100";s:22:"T005_Id_Pedido_Externo";s:2:"43";s:105:"IF(DiasFaltantes_T005_Prazo_Entrega = 0 AND T005_Flag_Status = 5, 'OK', DiasFaltantes_T005_Prazo_Entrega)";s:2:"54";}

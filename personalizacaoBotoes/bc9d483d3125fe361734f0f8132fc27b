@@ -1,0 +1,12 @@
+a:1:{i:0;a:13:{s:2:"id";s:13:"68e0063acef87";s:6:"titulo";s:14:"Imprimir todas";s:4:"tipo";s:8:"codigojs";s:6:"exibir";b:1;s:11:"desabilitar";b:0;s:12:"janelaTitulo";s:0:"";s:13:"janelaTamanho";s:0:"";s:16:"janelaParametros";s:19:"&D009_Id=[[acaoId]]";s:10:"recarregar";b:0;s:4:"lote";s:1:"0";s:7:"urlForm";s:0:"";s:7:"posicao";s:8:"esquerda";s:8:"callback";s:372:"<?php
+namespace hardness;
+
+function callback($array){
+    // Retornar código JS que será executado ao clicar no botão
+    global $g;
+    return <<<EOT
+        // Exemplo: abrirJanela
+        // abrirJanela(data, '{$g['divIdRoot']}', '{$g['divId']}', unique(), '', 'Título janela', 'URL', '&teste=1', [980,550]);
+        opcaoEtiquetaLote("{$array['D009_Id']}");
+EOT;
+}";}}

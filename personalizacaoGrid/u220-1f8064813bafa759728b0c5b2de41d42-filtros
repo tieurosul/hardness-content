@@ -1,0 +1,30 @@
+colunaValor [T005_Id]
+titulo [Pedido]
+tipo [texto]
+---
+colunaValor [T007_Protocolo_Inutilizacao]
+titulo [Prot.Inutilização]
+tipo [texto]
+---
+colunaValor [(SELECT GROUP_CONCAT(DISTINCT(D001_Codigo_Produto)) as Codigo_Produto
+                                                  FROM T008 
+                                                  LEFT JOIN D009 ON D009_Id=T008_D009_Id 
+                                                  LEFT JOIN D049 ON D049_Id=D009_D049_Id 
+                                                  LEFT JOIN D082 ON D082_Id=D049_D082_Id 
+                                                  LEFT JOIN D001 ON D001_Id=D049_D001_Id 
+                                                  WHERE T008_T007_Id=T007_Id)]
+titulo [Codigo Produto]
+tipo [texto]
+---
+colunaValor [D020_Nome_Cidade]
+titulo [Cidade Cliente]
+exibir [S]
+---
+colunaValor [T005_Data_Entrega]
+titulo [Prazo entrega]
+exibir [S]
+---
+colunaValor [T007_Data_Entrega]
+titulo [Data Entrega]
+exibir [S]
+---

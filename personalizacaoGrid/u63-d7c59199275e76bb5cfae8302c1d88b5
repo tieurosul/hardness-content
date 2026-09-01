@@ -1,0 +1,9 @@
+colunaValor [T303_Id]
+chavePrimaria [1]
+colunaExibir []
+---
+colunaValor [T140_D001_Id]
+colunaExibir [S]
+colunaTitulo [T140_D001_Id]
+colunaEditarTodos [S]
+---

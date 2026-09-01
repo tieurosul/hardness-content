@@ -1,0 +1,1 @@
+a:4:{s:38:"T003_Valor_Total_Produtos_Sem_Desconto";s:3:"163";s:212:"IFNULL(IF(T003_Status_Retorno_Email='RETORNAR',CONCAT('<font style="color: var(--BGVermelho)">',T003_Status_Retorno_Email,'</font>'),T003_Status_Retorno_Email), '<font style="color: var(--BGVermelho)">--</font>')";s:2:"44";s:16:"T003_Valor_Total";s:2:"62";s:7:"T139_Id";s:2:"25";}

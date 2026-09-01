@@ -1,0 +1,1 @@
+a:7:{s:21:"T015_Numero_Documento";s:3:"234";s:17:"D024_Nome_Empresa";s:3:"364";s:21:"T015_Numero_Duplicata";s:3:"114";s:20:"T015_Flag_Reparcelar";s:2:"32";s:8:"Parcelas";s:2:"16";s:70:"IF(D154_Id>0,CONCAT(D154_Descricao," - ",D014_SubConta),D014_SubConta)";s:3:"152";s:9:"D073_Nome";s:2:"76";}

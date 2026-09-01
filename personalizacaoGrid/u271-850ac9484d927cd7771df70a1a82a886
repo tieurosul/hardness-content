@@ -1,0 +1,15 @@
+colunaValor [D024_Nome_Empresa]
+colunaOrdem [7]
+---
+colunaValor [T019_Complemento]
+colunaTitulo [Complemento]
+colunaOrdem [6]
+---
+colunaValor [T019_Saldo]
+colunaTitulo [Saldo]
+colunaOrdem [11]
+---
+colunaValor [IF(D027_Id > 0, D027_Portador, D031_Portador)]
+colunaTitulo [Portador]
+colunaOrdem [10]
+---

@@ -1,0 +1,25 @@
+colunaValor [T238_Id]
+colunaTitulo [T238_Id]
+chavePrimaria [S]
+style [width: 1%;]
+---
+colunaValor [T238_T005_Id]
+colunaTitulo [T238_T005_Id]
+style [width: 1%;]
+---
+colunaValor [T238_T006_Id]
+colunaTitulo [T238_T006_Id]
+style [width: 1%;]
+---
+colunaValor [T238_T066_Id]
+colunaTitulo [T238_T066_Id]
+style [width: 1%;]
+---
+colunaValor [T238_D004_Id]
+colunaTitulo [T238_D004_Id]
+style [width: 1%;]
+---
+colunaValor [T238_Quantidade_Separacao]
+colunaTitulo [T238_Quantidade_Separacao]
+style [width: 1%;]
+---

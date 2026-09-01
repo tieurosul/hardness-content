@@ -1,0 +1,4 @@
+colunaValor [IF(D013_Flag_Ativo = 'S', 'SIM', 'NÃO')]
+titulo [Ativo]
+exibir [S]
+---

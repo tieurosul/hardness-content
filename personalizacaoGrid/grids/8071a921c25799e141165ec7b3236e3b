@@ -1,0 +1,18 @@
+a:11:{s:4:"nome";s:24:"verifica sugestao compra";s:6:"modulo";s:0:"";s:5:"opcao";s:0:"";s:6:"estilo";s:6:"normal";s:3:"md5";s:32:"ad91d7c2a820a2d4adfbeae77085892c";s:4:"from";s:4:"D009";s:5:"extra";s:295:"LEFT JOIN D049 ON D049_Id = D009_D049_Id
+  LEFT JOIN D001 ON D001_Id = D049_D001_Id
+ WHERE D009_C004_Id = 1
+   AND D001_Flag_Ativo != 'N'
+   AND D009_Quantidade_Compra_Emergencia > 0
+   AND D009_Quantidade_Comprar_Calculada <= D009_Quantidade_Compra_Emergencia
+   AND D049_Flag_Nao_Comprar = 'N'";s:4:"grid";a:4:{i:0;a:2:{s:11:"colunaValor";s:19:"D001_Codigo_Produto";s:12:"colunaTitulo";s:19:"D001_Codigo_Produto";}i:1;a:2:{s:11:"colunaValor";s:7:"D009_Id";s:12:"colunaTitulo";s:7:"D009_Id";}i:2;a:2:{s:11:"colunaValor";s:33:"D009_Quantidade_Comprar_Calculada";s:12:"colunaTitulo";s:33:"D009_Quantidade_Comprar_Calculada";}i:3;a:2:{s:11:"colunaValor";s:33:"D009_Quantidade_Compra_Emergencia";s:12:"colunaTitulo";s:33:"D009_Quantidade_Compra_Emergencia";}}s:3:"sql";s:436:"SELECT D001_Codigo_Produto,
+       D009_Id,
+       D009_Quantidade_Comprar_Calculada,
+       D009_Quantidade_Compra_Emergencia
+  FROM D009
+  LEFT JOIN D049 ON D049_Id = D009_D049_Id
+  LEFT JOIN D001 ON D001_Id = D049_D001_Id
+ WHERE D009_C004_Id = 1
+   AND D001_Flag_Ativo != 'N'
+   AND D009_Quantidade_Compra_Emergencia > 0
+   AND D009_Quantidade_Comprar_Calculada <= D009_Quantidade_Compra_Emergencia
+   AND D049_Flag_Nao_Comprar = 'N'";s:10:"clickhouse";b:0;s:12:"criadoViaSQL";b:1;}

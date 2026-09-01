@@ -1,0 +1,18 @@
+nome [Quantidade_]
+valor [T296_Quantidade]
+titulo [Quantidade]
+exibir [S]
+totalizador [soma]
+---
+nome [Peso_Kg_total_]
+valor [T296_Peso_Kg_Liquido_Total]
+titulo [Peso Kg total]
+exibir [S]
+totalizador [soma]
+---
+nome [Total_ME_]
+valor [T296_Valor_Total_Custo]
+titulo [ Total ME]
+exibir [S]
+totalizador [soma]
+---

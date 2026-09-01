@@ -1,0 +1,26 @@
+excluirLinha
+T075_Id
+T075_Data_Inicio_Demurrage
+T075_Data_Emissao_DI
+	T075_Orgao_Desembaraco
+T075_Data_Previsao
+T075_Data_Estoque
+T075_Numero_DI
+	T007_Data_Emissao
+T075_Ordem_Compra
+T007_Numero_Nota_Fiscal
+T075_Data_Embarque
+T075_Data_Licenca_Importacao
+T075_D024_Id
+Fornecedor
+Produtos_Real
+T055_Valor_Total_Preco_Nota_Fiscal
+T055_Valor_Total_Custo_Final
+C007_Primeiro_Nome
+checklist
+T075_Codigo_URF_Entrada
+T075_Codigo_URF_Despacho
+T075_Codigo_Incoterms
+T075_Condicao_Mercadoria
+T075_Enquadramento_Material_Usado
+T075_Operacao_Enquadramento_Material_Usado

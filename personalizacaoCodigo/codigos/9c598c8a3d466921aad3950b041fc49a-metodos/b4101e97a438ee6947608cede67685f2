@@ -1,0 +1,45 @@
+a:5:{s:4:"nome";s:20:"etiqueta 100x40 lote";s:9:"descricao";s:0:"";s:8:"codigoId";s:32:"9c598c8a3d466921aad3950b041fc49a";s:6:"codigo";s:1792:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+global $g;
+
+$where = ($array['T066_Id'] > 0) ? "D009_Id = '{$array['D009_Id']}' AND T066_Id = '{$array['T066_Id']}'" : "D009_Id = '{$array['D009_Id']}'";
+
+$sql = "SELECT 
+            D009_Id,
+            D001_Codigo_Produto,
+            D001_Codigo_Barras,
+            D001_Descricao_Produto,
+            T066A_Numero_Lote,
+            D004_Local,
+            T066A_Data_Validade,
+            D146_Descricao 
+        FROM T066 
+            LEFT JOIN D009 ON D009_Id = T066_D009_Id
+            LEFT JOIN D049 ON D049_Id = D009_D049_Id
+            LEFT JOIN D001 ON D001_Id = D049_D001_Id
+            LEFT JOIN D004 ON D004_Id = T066_D004_Id
+            LEFT JOIN D146 ON D146_Id = D004_D146_Id
+            LEFT JOIN T066A ON T066_Id = T066A_T066_Id 
+        WHERE {$where}";
+
+log("sql: ".$sql);
+$array = array();
+$result = mysql_query($sql);
+
+while ($dados = mysql_fetch_assoc($result)) {
+    $dados['D001_Codigo_Barras']  = (empty($dados['D001_Codigo_Barras'])) ? $dados['D001_Codigo_Produto'] : $dados['D001_Codigo_Barras'];
+    $dados['T066A_Data_Validade'] = gCorrigeData($dados['T066A_Data_Validade']);
+
+    $array['loop'][] = [
+        'D001_Codigo_Barras'       => $dados['D001_Codigo_Barras'],
+        'D001_Descricao_Produto_1' => substr($dados['D001_Descricao_Produto'], 0, 80),
+        'D001_Descricao_Produto_2' => substr($dados['D001_Descricao_Produto'], 28, 40),
+        'codigo'                   => $dados['D001_Codigo_Produto'],
+        'lote'                     => $dados['T066A_Numero_Lote'],
+        'validade'                 => $dados['T066A_Data_Validade'],
+        'D004_Local'               => $dados['D004_Local'],
+        'D146_Descricao'           => $dados['D146_Descricao'],
+    ];
+}
+
+return $array;";s:3:"md5";s:32:"b3e22920a6fd721fcc64d2218b60b36d";}

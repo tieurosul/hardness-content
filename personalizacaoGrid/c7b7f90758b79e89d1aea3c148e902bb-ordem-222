@@ -1,0 +1,19 @@
+campoOpcoesSeparacao2
+	campoOpcoesSeparacao1
+campoOpcoesSeparacao3
+impressaoEtiqueta
+T005_Id
+T005_Estoque_BOX
+D024_Nome_Empresa
+T005_Data_Emissao
+	D006_Codigo_CFOP
+T005_Data_Saida
+T005_Data_Entrega
+Tipo_Documento
+T005_Observacao_1
+D022_Nome_Empresa
+T005_Data_Hora_Almoxarifado
+Nome_Liberou
+Nome_Vendedor
+Nome_Separou
+Divergencia

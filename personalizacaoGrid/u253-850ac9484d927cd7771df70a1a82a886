@@ -1,0 +1,12 @@
+colunaValor [D024_Nome_Empresa]
+colunaOrdem [11]
+---
+colunaValor [T019_Valor_Lancamento]
+colunaExibir [S]
+colunaTitulo [Valor]
+colunaOrdem [7]
+---
+colunaValor [T019_Complemento]
+colunaTitulo [Complemento]
+colunaOrdem [5]
+---

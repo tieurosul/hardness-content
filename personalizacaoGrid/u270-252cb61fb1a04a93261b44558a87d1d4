@@ -1,0 +1,6 @@
+colunaValor [D018_UF]
+colunaOrdem [7]
+---
+colunaValor [CONCAT(EstHist.D004_Local, ' - ', LocacaoHist.T066_Id)]
+colunaOrdem [9]
+---

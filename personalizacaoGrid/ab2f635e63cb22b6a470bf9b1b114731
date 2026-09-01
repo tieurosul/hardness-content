@@ -1,0 +1,8 @@
+colunaValor [T003_Flag_Acp]
+colunaTitulo [Tipo Doc.]
+colunaExibir [S]
+---
+colunaValor [P002_Tipo_Orcamento]
+colunaTitulo [Tipo Orç]
+style [width: 1%;]
+---

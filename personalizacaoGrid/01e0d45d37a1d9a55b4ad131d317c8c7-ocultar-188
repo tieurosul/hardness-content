@@ -1,0 +1,13 @@
+T006_Quantidade_OP	|	OP
+D009_Quantidade_Estoque_Similar	|	Similar
+D009_Quantidade_Estoque_Fora	|	Fora
+T006_Valor_Custo_Unitario	|	Custo
+T218_Id	|	Cotação
+T006_Valor_IRPJ	|	IRPJ R$
+T006_Aliquota_COFINS	|	COFINS
+T006_Aliquota_IRPJ	|	IRPJ
+T006_Valor_Comissao	|	Comissão
+T006_Valor_Base_IPI	|	Base IPI
+D004_Local	|	Locação
+D049_Modelo	|	Sub-item
+T006_Valor_Total_Preco	|	Total

@@ -1,0 +1,18 @@
+colunaValor [D001_Descricao_Ingles]
+colunaTitulo [Descrição Inglês]
+style [font-weight:bold]
+---
+colunaValor [IF('A'='A',D001_Foto,'A')]
+colunaTitulo [IMPA/FANN]
+colunaEditar [1]
+colunaExibir[S]
+---
+colunaValor [D009_Valor_Preco_Tabela]
+colunaTitulo [Custo Manual R$]
+colunaAlinhar [right]
+colunaCasasDecimais [5]
+style [width: 1%]
+colunaEditar [1]
+colunaEditarTodos [1]
+colunaExibir [1]
+---

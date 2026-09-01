@@ -1,0 +1,47 @@
+colunaValor [D024_Id]
+colunaTitulo [D024_Id]
+colunaExibir []
+chavePrimaria [1]
+---
+colunaValor [D024_Nome_Empresa]
+colunaTitulo [Razao Social]
+style [width: 1%]
+---
+colunaValor [D024_CNPJ_Matriz]
+colunaTitulo [CNPJ]
+style [width: 1%]
+---
+colunaValor [SUM(T008_D009_Id)]
+colunaTitulo [Pdt Vendidos]
+colunaAlinhar [right]
+colunaCasasDecimais [0]
+style [width: 1%; background:var(--celula-amarelo-claro);]
+---
+colunaValor [SUM(T007_Valor_Total)]
+colunaTitulo [Total]
+colunaAlinhar [right]
+colunaCasasDecimais [2]
+style [width: 1%; background:var(--celula-amarelo-claro);]
+---
+colunaValor [GROUP_CONCAT(DISTINCT T007_Numero_Nota_Fiscal ORDER BY T007_Numero_Nota_Fiscal SEPARATOR ', ')]
+colunaTitulo [NFs]
+style [max-width: 100px;]
+colunaTipo [livre]
+colunaExibir []
+---
+colunaValor [CASE 
+    WHEN COUNT(DISTINCT T007_Numero_Nota_Fiscal) > 5 THEN 
+        CONCAT(
+            SUBSTRING_INDEX(
+                GROUP_CONCAT(DISTINCT T007_Numero_Nota_Fiscal ORDER BY T007_Numero_Nota_Fiscal SEPARATOR ', '),
+                ', ',
+                5
+            ),
+            ', ...'
+        )
+    ELSE 
+        GROUP_CONCAT(DISTINCT T007_Numero_Nota_Fiscal ORDER BY T007_Numero_Nota_Fiscal SEPARATOR ', ')
+END]
+colunaTitulo [NFs]
+style [max-width: 100px;]
+---

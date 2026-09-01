@@ -1,0 +1,51 @@
+colunaValor [D009_Flag_Cotar]
+colunaTitulo [Solicitar<BR> Compra]
+---
+colunaValor [D049_Flag_Nao_Comprar]
+colunaTitulo [N <BR>Comprar?]
+---
+colunaValor [D049_Flag_Tipo]
+colunaTitulo [TP]
+colunaCorDeFundo []
+---
+colunaValor [D009_Id]
+colunaTitulo [ID]
+chavePrimaria [1]
+colunaExibir []
+---
+colunaValor [D009_Flag_Custo_Utilizado]
+colunaExibir [S]
+colunaTitulo [D009 Id]
+---
+colunaValor [D009_Quantidade_Consumo]
+colunaTitulo [Ven<BR>dido]
+colunaCorDeFundo []
+---
+colunaValor [D009_Quantidade_OC]
+colunaTitulo [Qtde<BR>OC]
+colunaCorDeFundo [#f8feb6ff,#c6cb91]
+---
+colunaValor [D009_Meses_Compra]
+colunaTitulo [Meses<BR> Compra]
+---
+colunaValor [D009_Meses_MMF]
+colunaTitulo [Meses<BR>MMF]
+---
+colunaValor [D009_Meses_Compra]
+colunaTitulo [Meses<BR>Compra]
+---
+colunaValor [D009_Meses_Reposicao]
+colunaTitulo [Meses<BR>Reposição]
+---
+colunaValor [D009A_Quantidade_Meses_Estoque]
+colunaTitulo [Meses<br>Estq]
+colunaCorDeFundo [#c8fafeff,#a0c8cb]
+---
+colunaValor [Pedido]
+colunaTitulo [Estq<br>Líquido]
+colunaCorDeFundo [#b9fed5ff,#94cbaa]
+---
+colunaValor [D009A_Pedido_Minimo]
+colunaTitulo [Ped Minimo / MOQ]
+callback [gCorrigeNumero]
+---

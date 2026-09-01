@@ -1,0 +1,45 @@
+colunaValor [D001_Descricao_Produto,D001_Descricao_Ingles]
+titulo [Produto]
+tipo [texto]
+---
+colunaValor [D001_Codigo_Produto]
+titulo [Código Prod.]
+tipo [texto]
+---
+colunaValor [D082_Marca]
+titulo [Marca]
+tipo [texto]
+---
+colunaValor [C008_Tipo]
+titulo [Tipo]
+tipo [select]
+---
+colunaValor [D005_Classificacao_Fiscal]
+titulo [NCM]
+tipo [texto]
+---
+colunaValor [D009_Quantidade_Estoque]
+titulo [Qte.Estoque]
+tipo [numero]
+---
+colunaValor [D001_Flag_Pre_Cadastro]
+titulo [Pré-Cadastro]
+tipo [select]
+naoGerarExtra []
+---
+colunaValor [D004_Local]
+titulo [Locação]
+tipo [texto]
+---
+colunaValor [(select T055_Valor_Custo_Final_Unitario from T055 where T055_D009_Id=D009_Id and T055_Valor_Custo_Final_Unitario>0 order by T055_Id desc  limit 1)]
+titulo [Custo R$]
+tipo[moeda]
+---
+colunaValor [(select T055_Valor_Custo_Unitario from T055 where T055_D009_Id=D009_Id and T055_Valor_Custo_Unitario>0 order by T055_Id desc  limit 1)]
+titulo [Custo ME]
+tipo[moeda]
+---
+colunaValor [D009_Preco_1]
+titulo [Preço 1]
+tipo [moeda]
+---

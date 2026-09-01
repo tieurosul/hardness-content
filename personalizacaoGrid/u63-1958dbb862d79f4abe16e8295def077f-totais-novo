@@ -1,0 +1,14 @@
+nome [PIS_Distinct]
+valor [D149_Aliquota_PIS]
+titulo [Qtd %PIS]
+exibir [S]
+totalizador [distinct]
+callbackParameter [0]
+---
+nome [COFINS_Distinct]
+valor [D149_Aliquota_COFINS]
+titulo [Qtd %COFINS]
+exibir [S]
+totalizador [distinct]
+callbackParameter [0]
+---

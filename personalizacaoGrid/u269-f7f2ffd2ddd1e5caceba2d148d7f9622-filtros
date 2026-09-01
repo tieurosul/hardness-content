@@ -1,0 +1,16 @@
+colunaValor [T140_Id]
+titulo [Id]
+exibir []
+---
+colunaValor [T140_Certificadora]
+titulo [Certificadora]
+exibir []
+---
+colunaValor [IF(T140_Link != "", T140_Link, T140_Nome_Arquivo)]
+titulo [Arquivo]
+exibir []
+---
+colunaValor [T140_Tipo_Certificado]
+titulo [Tipo]
+exibir []
+---

@@ -1,0 +1,21 @@
+<?php
+/**
+* restricaoIncluirUpdate
+* 
+* Código PHP para validar um campo de uma tabela na hora de Incluir ou Atualizar.
+* Para ver variáveis e funções disponíveis dentro do código, veja:
+* 		http://flycker/wiki/index.php?title=Restri%C3%A7%C3%B5es_de_Campos
+* Dica: utilize unset() para remover uma restrição definida global.
+*/
+
+// Criar/modificar restrição:
+/*
+$conf['restricaoIncluirUpdate']['D049_Flag_Nao_Comprar'] = <<<'EOT'
+	// Código PHP de validação
+	// $retorno = true; (OK)
+	// $retorno = 'string'; (ERRO)
+EOT;
+*/
+
+// Remover restrição:
+unset($conf['restricaoIncluirUpdate']['D049_Flag_Nao_Comprar']);

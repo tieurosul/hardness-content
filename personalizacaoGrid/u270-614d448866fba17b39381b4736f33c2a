@@ -1,0 +1,14 @@
+colunaValor [D001_Codigo_Produto]
+colunaTitulo [Código]
+colunaOrdem [4]
+---
+colunaValor [D001_Descricao_Produto]
+colunaTitulo [Produto]
+colunaOrdem [5]
+---
+colunaValor [locacoes]
+colunaOrdem [3]
+---
+colunaValor [subItem]
+colunaOrdem [6]
+---

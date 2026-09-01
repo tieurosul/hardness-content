@@ -1,0 +1,15 @@
+colunaValor [T005_Id]
+callback [abrirJanela]
+callbackParameter [array('Pedido','/ven/ven002/content/ven002content02/', 'T005_Id')]
+---
+colunaValor [T007_Flag_Imprimir_Romaneio]
+colunaTitulo [GR]
+colunaEditar [S]
+colunaEditarTodos [S]
+callback [gCheckbox]
+callbackParameter [array('T007_Flag_Imprimir_Romaneio', 'N|S')]
+colunaAlinhar [center]
+colunaEditarTipo [flag]
+colunaEditarExtra [N|S]
+colunaOrdem [2]
+---

@@ -1,0 +1,8 @@
+colunaValor [T007_Numero_Nota_Fiscal]
+titulo [Nota Fiscal]
+tipo [texto]
+---
+colunaValor [T268_Codigo_Rastreio]
+titulo [Cód. Rastreio]
+tipo [texto]
+---

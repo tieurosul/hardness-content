@@ -1,0 +1,4 @@
+LEFT JOIN T303 ON T140_Id = T303_T140_Id
+WHERE (T140_D001_Id = '[[r_acaoId]]' OR T303_D001_Id = '[[r_acaoId]]')
+    AND T140_Tipo_Documento != '1'
+GROUP BY T140_Id

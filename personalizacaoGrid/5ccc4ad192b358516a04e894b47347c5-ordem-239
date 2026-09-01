@@ -1,0 +1,30 @@
+countLinha
+campoExclusao
+T015_Id
+T015_Numero_Documento
+T015_Flag_Baixar_Lote
+	T015_Valor_Duplicata
+T015_Flag_Reparcelar
+D024_Id
+D024_Nome_Empresa
+IF(D154_Id>0,CONCAT(D154_Descricao," - ",D014_SubConta),D014_SubConta)
+	T015_D031_Id
+	T015_Valor_Total
+T015_Numero_Duplicata
+Parcelas
+T015_Data_Emissao
+Prazo
+T015_Data_Vencimento
+T015_Data_Pagamento
+	T015_Valor_Saldo
+T015_Valor_Juros
+T015_Valor_Desconto
+T015_Valor_Pago
+	T015_D032_Id
+C004_Nome_Abreviado
+T015_Observacao
+T015_Codigo_Barras
+T015_D014_Id
+T015_D073_Id
+D024_CNPJ
+addColuna

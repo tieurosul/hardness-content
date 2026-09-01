@@ -1,0 +1,8 @@
+nome [totalRegistro]
+titulo [totalRegistro]
+tipo [sql]
+valor [D009_Id]
+exibir [S]
+totalizador [distinct]
+callbackParameter [0]
+---

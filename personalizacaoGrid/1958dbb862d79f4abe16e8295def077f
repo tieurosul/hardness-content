@@ -1,0 +1,10 @@
+colunaValor [D149_Flag_Parana_Competitivo]
+colunaExibir [S]
+colunaTitulo [PR Competitivo]
+colunaEditarGeraSelect [array(array('title'=> '...', 'value' => ''),
+                              array('title'=> 'Sim', 'value' => 'S'),
+                              array('title'=> 'Não', 'value' => 'N'))]
+colunaEditarTodos [S]
+colunaEditar [S]
+colunaAlinhar [center]
+---

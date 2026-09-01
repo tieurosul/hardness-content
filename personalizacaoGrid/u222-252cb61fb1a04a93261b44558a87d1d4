@@ -1,0 +1,67 @@
+colunaValor [T008_Quantidade]
+colunaOrdem [5]
+colunaTitulo [Qtd]
+---
+colunaValor [Custo]
+colunaTitulo [Custo]
+colunaOrdem [6]
+---
+colunaValor [T008_Valor_Preco_Sem_Desconto_Unitario]
+colunaTitulo [Preço]
+colunaOrdem [7]
+---
+colunaValor [T008_Valor_Total_Preco_Sem_Desconto]
+colunaTitulo [Subtotal]
+colunaOrdem [8]
+---
+colunaValor [T007_Data_Emissao]
+colunaTitulo [Emissão]
+colunaOrdem [12]
+---
+colunaValor [T007_Numero_Nota_Fiscal]
+colunaTitulo [NF]
+colunaOrdem [15]
+---
+colunaValor [D024_Nome_Fantasia]
+colunaTitulo [Nome Fantasia]
+colunaOrdem [9]
+---
+colunaValor [Danfe]
+colunaOrdem [15]
+---
+colunaValor [D006_Codigo_CFOP]
+colunaTitulo [CFOP]
+colunaOrdem [15]
+---
+colunaValor [T005_Id]
+colunaOrdem [15]
+---
+colunaValor [T005_T003_Id]
+colunaOrdem [15]
+---
+colunaValor [Vendedor.C007_Primeiro_Nome]
+colunaTitulo [Vendedor]
+colunaOrdem [15]
+---
+colunaValor [T008_Classificacao_Fiscal]
+colunaTitulo [NCM]
+colunaOrdem [15]
+---
+colunaValor [D082_Marca]
+colunaTitulo [Marca]
+colunaOrdem [15]
+---
+colunaValor [T008_Flag_Situacao_Tributaria]
+colunaTitulo [ST]
+colunaOrdem [15]
+---
+colunaValor [D018_UF]
+colunaOrdem [14]
+---
+colunaValor [T008_Aliquota_ICMS]
+colunaTitulo [% ICMS]
+colunaOrdem [15]
+---
+colunaValor [CONCAT(EstHist.D004_Local, ' - ', LocacaoHist.T066_Id)]
+colunaOrdem [10]
+---

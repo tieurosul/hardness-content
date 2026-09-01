@@ -1,0 +1,78 @@
+<?php
+namespace hardness;
+
+function visualizarArquivo($array, $param){
+	global $g, $confUsuario;
+	$acaoId     = isset($param[0]) ? $array['todosCampos'][$param[0]] : '';
+	$arquivo    = isset($param[1]) ? $param[1] : '';
+	$urlArquivo = isset($param[2]) ? $param[2] : '';
+
+	if(empty($urlArquivo)){
+		//Verifica o tipo do arquivo (documento de cliente, documentos de produtos...)
+		switch ($arquivo) {
+			case 'documentoCliente':
+				$result = mysql_query("SELECT D087_D024_Id, D087_Nome_Arquivo FROM D087 WHERE D087_Id ='{$acaoId}'");
+				$row = mysql_fetch_assoc($result);
+				$pathinfo = pathinfo($row['D087_Nome_Arquivo']);
+				$urlArquivo = "{$confUsuario['urlRaiz']}/hardness3/{$g['pathDados']}documentos/D024_" . str_repeat('0',5-strlen($row['D087_D024_Id'])) . $row['D087_D024_Id']."/{$acaoId}.{$pathinfo['extension']}";
+			break;
+
+			case 'documentoProduto':
+				$result = mysql_query("SELECT T140_Nome_Arquivo,T140_Link FROM T140 WHERE T140_Id = '{$acaoId}'");
+				$row = mysql_fetch_assoc($result);
+				$pathinfo = pathinfo($row['T140_Nome_Arquivo']);
+				if(!empty($row['T140_Link'])){
+					$urlLink = $row['T140_Link'];
+				} else {
+					$urlArquivo = "{$confUsuario['urlRaiz']}/hardness3/{$g['pathDados']}certificados/{$acaoId}.{$pathinfo['extension']}";
+				}
+			break;
+
+			case 'fotoProduto':
+				$result = mysql_query("SELECT T172_Nome_Arquivo, T172_Link_Video FROM T172 WHERE T172_Id = '{$acaoId}'");
+				$row = mysql_fetch_assoc($result);
+				if(!empty($row['T172_Nome_Arquivo'])){
+					$row['T172_Nome_Arquivo'] = pathinfo($row['T172_Nome_Arquivo']);
+					$urlArquivo = "{$confUsuario['urlRaiz']}/hardness3/{$g['pathDados']}produtos/{$array['todosCampos']['T172_D001_Id']}/fotos/{$array['todosCampos']['T172_Id']}.{$row['T172_Nome_Arquivo']['extension']}";
+				} elseif(!empty($row['T172_Link_Video'])){
+					$urlVideo = $row['T172_Link_Video'];
+				}
+
+			break;
+
+			case 'documentoOrcamento':
+				$result = mysql_query("SELECT T188_Nome_Arquivo FROM T188 WHERE T188_Id = '{$acaoId}'");
+				$row = mysql_fetch_assoc($result);
+				$pathinfo = pathinfo($row['T188_Nome_Arquivo']);
+				$urlArquivo = "{$confUsuario['urlRaiz']}/hardness3/{$g['pathDados']}orcamento/{$acaoId}.{$pathinfo['extension']}";
+			break;
+
+			case 'documentoPedido':
+				$result = mysql_query("SELECT T167_Nome_Arquivo FROM T167 WHERE T167_Id = '{$acaoId}'");
+				$row = mysql_fetch_assoc($result);
+				$pathinfo = pathinfo($row['T167_Nome_Arquivo']);
+				$urlArquivo = "{$confUsuario['urlRaiz']}/hardness3/{$g['pathDados']}pedido/{$acaoId}.{$pathinfo['extension']}";
+			break;
+
+			case 'documentoNF':
+				// DNF001 é a tabela do app de documentos nota fiscal 
+				$result = mysql_query("SELECT DNF001_Arquivo, DNF001_Link FROM DNF001 WHERE DNF001_Id = '{$acaoId}'");
+				$row = mysql_fetch_assoc($result);
+				$pathinfo = pathinfo($row['DNF001_Arquivo']);
+				if(!empty($row['DNF001_Link'])){
+					$urlLink = $row['DNF001_Link'];
+				} else {
+					$urlArquivo = "{$confUsuario['urlRaiz']}/hardness3/{$g['pathDados']}anexosNF/{$acaoId}.{$pathinfo['extension']}";
+				}
+			break;
+		}
+	}
+
+	if(empty($urlArquivo) && empty($urlVideo) && empty($urlLink)){
+		return 'Erro';
+	}
+
+	log("URL ARQUIVO: {$urlArquivo}");
+	
+	return "<a href=\"#\" onclick=\"abrirJanela(false, '{$g['divIdRoot']}', '{$g['divId']}', unique(), '', 'Visualização de arquivo', '/sistema/funcoes/visualizarArquivo/visualizacao/', '&urlArquivo={$urlArquivo}&urlVideo={$urlVideo}&urlLink={$urlLink}', [1000,700]); return false;\">Visualizar</a>";
+}

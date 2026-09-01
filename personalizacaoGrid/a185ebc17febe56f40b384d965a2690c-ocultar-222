@@ -1,0 +1,12 @@
+vendedor.C007_Primeiro_Nome	|	Vendedor
+NF	|	NF
+D049_Modelo	|	Sub-item
+T004_Numero_Pedido_Compra	|	Num.OC
+T006_Valor_Comissao	|	Comissão
+T004_Observacao	|	Observação
+T004_Codigo_Substituto	|	Cód.Cli
+T004_Percentual_Comissao	|	%Comiss
+T004_Percentual_Reducao_ICMS	|	% Red
+T004_Valor_Base_ST	|	Base ST
+D024_Id	|	Código
+T004_Valor_Preco_Sem_Desconto_Unitario	|	Custo

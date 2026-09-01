@@ -1,0 +1,7 @@
+nome [Empresa_Count]
+valor [substr(D024_Nome_Empresa,1,40)]
+titulo [Registros]
+exibir [S]
+totalizador [count]
+callbackParameter [0]
+---

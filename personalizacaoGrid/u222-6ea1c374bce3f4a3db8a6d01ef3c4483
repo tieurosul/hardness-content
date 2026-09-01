@@ -1,0 +1,138 @@
+colunaValor [T004_Observacao]
+colunaTitulo [Observação]
+colunaOrdem [34]
+---
+colunaValor [T004_Aliquota_IPI]
+colunaTitulo [%IPI]
+colunaOrdem [42]
+---
+colunaValor [(round(T004_Valor_ST,2)/(round(T004_Valor_Total_Preco,2)+round(T004_Valor_IPI,2)))*100]
+colunaTitulo [%ST]
+colunaOrdem [17]
+---
+colunaValor [T004_Aliquota_PIS]
+colunaTitulo [%PIS]
+colunaOrdem [20]
+---
+colunaValor [T004_Aliquota_IRPJ]
+colunaTitulo [%IRPJ]
+colunaOrdem [18]
+---
+colunaValor [T004_Aliquota_COFINS]
+colunaTitulo [%COFINS]
+colunaOrdem [22]
+---
+colunaValor [T004_Aliquota_CSLL]
+colunaTitulo [%CSLL]
+colunaOrdem [23]
+---
+colunaValor [D009_Quantidade_OC]
+colunaTitulo [OC]
+colunaOrdem [10]
+---
+colunaValor [T004_Valor_Partilha_ICMS_Destino]
+colunaTitulo [Difal Dest R$]
+colunaOrdem [54]
+---
+colunaValor [T004_Valor_ICMS_Desonerado]
+colunaTitulo [ICMS Deson. R$]
+colunaOrdem [54]
+---
+colunaValor [T004A_Valor_FCP_ST]
+colunaTitulo [FCP ST R$]
+colunaOrdem [54]
+---
+colunaValor [T004A_Valor_FCP]
+colunaTitulo [FCP R$]
+colunaOrdem [54]
+---
+colunaValor [T004_ICMS_Inter_Estadual]
+colunaTitulo [ICMS IE]
+colunaOrdem [29]
+---
+colunaValor [T004_ST_ICMS_Interno]
+colunaTitulo [ICMS Int]
+colunaOrdem [30]
+---
+colunaValor [T004_Valor_Partilha_ICMS_Origem]
+colunaTitulo [Difal Orig R$]
+colunaOrdem [52]
+---
+colunaValor [T004_Flag_ST]
+colunaTitulo [ST]
+colunaOrdem [31]
+---
+colunaValor [T004_Valor_CSLL]
+colunaTitulo [CSLL R$]
+colunaOrdem [21]
+---
+colunaValor [T004_Valor_ICMS_Credito]
+colunaTitulo [Valor ICM Créd]
+colunaOrdem [51]
+---
+colunaValor [T004_Aliquota_ICMS_Credito]
+colunaTitulo [%ICM Créd]
+colunaOrdem [50]
+---
+colunaValor [T004A_Valor_Base_FCP]
+colunaTitulo [Base FCP]
+colunaOrdem [50]
+---
+colunaValor [T004A_Valor_Base_FCP_ST]
+colunaTitulo [Base FCP ST]
+colunaOrdem [45]
+---
+colunaValor [T004_Valor_Base_Partilha_ICMS]
+colunaTitulo [Base Difal]
+colunaOrdem [26]
+---
+colunaValor [T004_Preco_Pauta_ST]
+colunaTitulo [Pauta]
+colunaOrdem [51]
+---
+colunaValor [T004_Valor_Frete_Total]
+colunaTitulo [Frete R$]
+colunaOrdem [24]
+---
+colunaValor [T004_Percentual_Partilha_ICMS_Origem]
+colunaTitulo [%Difal Orig]
+colunaOrdem [51]
+---
+colunaValor [T004_Percentual_Reducao_ICMS]
+colunaTitulo [%Red]
+colunaOrdem [44]
+---
+colunaValor [T004A_Percentual_FCP]
+colunaTitulo [%FCP]
+colunaOrdem [42]
+---
+colunaValor [T004A_Percentual_Reducao_PIS]
+colunaTitulo [%Red PIS]
+colunaOrdem [42]
+---
+colunaValor [T004A_Percentual_Reducao_COFINS]
+colunaTitulo [%Red COFINS]
+colunaOrdem [42]
+---
+colunaValor [T004_Percentual_Partilha_ICMS_Destino]
+colunaTitulo [%Difal Dest]
+colunaOrdem [41]
+---
+colunaValor [T004_Numero_Pedido_Compra]
+colunaTitulo [Num.OC]
+colunaOrdem [35]
+---
+colunaValor [T004A_T066_Id]
+colunaTitulo [Locação]
+colunaOrdem [36]
+---
+colunaValor [PrecoComIPIeST]
+colunaOrdem [15]
+---
+colunaValor [previsao]
+colunaOrdem [36]
+---
+colunaValor [T006_T005_Id]
+colunaTitulo [Ped]
+colunaOrdem [34]
+---

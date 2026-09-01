@@ -1,0 +1,12 @@
+left join T295 on T295_Id=T296_T295_Id
+left join D024 as FORNECEDOR on FORNECEDOR.D024_Id=T295_D024_Id
+left join D119 on D119_Id=T295_D119_Id
+left join D118 on D118_Id=T295_D118_Id
+left join D044 on D044_Id=T295_D044_Id
+left join C007 on C007_Id=T295_C007_Id
+left join D009 on D009_Id=T296_D009_Id
+left join D049 on D049_Id=D009_D049_Id
+left join D001 on D001_Id=D049_D001_Id
+left join D005 on D005_Id=T296_D005_Id
+LEFT JOIN D009A ON D009_Id = D009A_D009_Id
+WHERE T295_C004_Id='[[g-empresaAtual]]'

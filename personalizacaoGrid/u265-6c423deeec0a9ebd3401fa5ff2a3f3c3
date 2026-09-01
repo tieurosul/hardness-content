@@ -1,0 +1,12 @@
+colunaValor [D049_Modelo]
+colunaOrdem [5]
+---
+colunaValor [retornaPrecoVenda]
+colunaOrdem [14]
+---
+colunaValor [D001_Observacao_Compra]
+colunaOrdem [3]
+---
+colunaValor [Pedido]
+colunaOrdem [6]
+---

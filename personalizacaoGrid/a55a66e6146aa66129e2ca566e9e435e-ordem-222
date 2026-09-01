@@ -1,0 +1,18 @@
+impressaoEtiqueta
+D001_Codigo_Produto
+D001_Descricao_Produto
+	D049_Data_Validade
+D082_Marca
+D037_Unidade
+	Pedido
+D009_Quantidade_Estoque
+(D009_Quantidade_Estoque/$estoque)*100
+(D009_Quantidade_Estoque_Liquido/$estoqueLiquido)*100
+D009_Quantidade_Estoque_Loja
+D009_Quantidade_OC
+	D009_Flag_Imprimir_Etiqueta
+D009_Quantidade_Estoque_Fora
+D001_Peso_Unitario_Kg
+D001_Peso_Unitario_Bruto
+D049_Data_Fabricacao
+	D001_Codigo_Barras

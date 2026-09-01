@@ -1,0 +1,27 @@
+left join D024 on D024_Id=T003_D024_Id
+left join D018 as UFCliente on UFCliente.D018_Id=D024_D018_Id
+left join D020 on D020_Id=D024_D020_Id
+left join D013 on D013_Id=T003_D013_Id
+left join T004 on T004_T003_Id=T003_Id
+left join T006 on T006_T004_Id=T004_Id
+left join C007 as Vendedor on Vendedor.C007_Id=T003_C007_Id_Vendedor_Interno
+left join C007 as Externo on Externo.C007_Id=T003_C007_Id_Vendedor_Externo
+left join C007 as Liberou on Liberou.C007_Id=T003_Liberou_Alcada_C007_Id
+left join C007 as Supervisor on Supervisor.C007_Id=Vendedor.C007_C007_Id
+left join C007 as Supervisor2 on Supervisor2.C007_Id=Vendedor.C007_C007_Id_2
+left join C007 as Substituto on Substituto.C007_Id=Vendedor.C007_Id_Vendedor_Substituto
+left join T005 on T005_T003_Id=T003_Id and T005_Flag_Status!='8'
+left join T007 on T007_T005_Id=T005_Id
+left join D006 on D006_Id=T003_D006_Id
+left join T139 on T139_T003_Id=T003_Id 
+left join T219 on T004_Id=T219_T004_Id
+left join D085 on D085_T003_Id=T003_Id
+left join D021 on D021_Id=T003_D021_Id
+left join D022 on D022_Id=T003_D022_Id
+left join T003A on T003_Id = T003A_T003_Id
+left join D018 as UFFaturamento on UFFaturamento.D018_Id=D022_D018_Id
+left join D148 on D148_Id=T003_D148_Id_Entrega
+left join D018 as UFClienteEntrega on UFClienteEntrega.D018_Id=D148_D018_Id
+left join P002 on P002_Id = T003A_P002_Id
+where T003_C004_Id='[[g-empresaAtual]]' 
+group by T003_Id

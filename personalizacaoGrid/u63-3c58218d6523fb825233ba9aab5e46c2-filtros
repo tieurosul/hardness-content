@@ -1,0 +1,12 @@
+colunaValor [descarregamentoD018.D018_UF descarregamentoUF]
+titulo [Descarreg.]
+exibir [S]
+---
+colunaValor [T276_Id]
+titulo [Id]
+exibir [S]
+---
+colunaValor [T276_Chave_Acesso_MDFe]
+titulo [Chave de Acesso]
+exibir [S]
+---

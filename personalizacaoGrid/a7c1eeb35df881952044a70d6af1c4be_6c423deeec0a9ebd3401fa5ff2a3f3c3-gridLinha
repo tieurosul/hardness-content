@@ -1,0 +1,11 @@
+<?php
+namespace hardness;
+
+function gridLinha($array) {
+    // $array['todosCampos']['CAMPO']
+    // return 'linhaCinza';
+    // return 'background-color: green; color: white;';
+    if ($array['todosCampos']['Pedido']<=0) {
+        return 'linhaVermelho';
+    }
+}

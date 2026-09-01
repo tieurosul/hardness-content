@@ -1,0 +1,3 @@
+-- JOIN
+left join T144 on T144_D001_Id=D001_Id
+left join D049A on D049A_D049_Id=D049_Id

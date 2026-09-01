@@ -1,0 +1,5 @@
+colunaValor [(T006_Valor_Preco_Sem_Desconto_Unitario*T006_Quantidade)]
+colunaTitulo [Subtotal]
+colunaOrdem [7]
+colunaCasasDecimais [2]
+---

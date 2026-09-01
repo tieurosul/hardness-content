@@ -1,0 +1,30 @@
+countLinha
+excluirLinha
+T055_Valor_Adicao
+T055_Codigo_Produto
+T055_Descricao_Produto
+	T055_Quantidade
+	T055_Valor_Custo_Unitario
+	T055_Valor_Total_Custo
+	D009_Preco_1
+	D009_Valor_Custo_Ultima_Compra
+	T055_Valor_Preco_Unitario_Nota_Fiscal
+D082_Marca
+D005_Classificacao_Fiscal
+T055_Peso_Kg_Liquido_Unitario
+	T270_Numero_LI
+T055_T066_Id
+T055_Valor_Total_Frete
+	T055_Valor_Custo_Final_Unitario
+T055_Valor_Total_Seguro
+T055_Valor_Total_Despesas
+T055_Valor_Total_Despesas_Aduaneira
+T055_Valor_Aduaneira
+T055_Valor_Total_AFRMM
+T055_Aliquota_Imposto_Importacao
+T055_Aliquota_IPI
+T055_Aliquota_PIS
+T055_Aliquota_COFINS
+T055_Flag_Calculo_Manual
+T055_Flag_Frete
+addColuna

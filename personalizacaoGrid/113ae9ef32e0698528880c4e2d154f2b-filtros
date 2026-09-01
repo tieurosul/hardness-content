@@ -1,0 +1,108 @@
+colunaValor [D001_Flag_Ecommerce]
+titulo [E-co]
+exibir [S]
+tipo [texto]
+---
+colunaValor [D009A_Data_Ultimo_Orcamento]
+titulo [Últ.Orcamento]
+tipo [data]
+---
+colunaValor [D001_Flag_Visualizar_Site]
+titulo [Item Site (S/N)]
+---
+colunaValor [D001_Peso_Unitario_Bruto]
+titulo [Tem Peso Bruto?]
+tipo [select]
+select [array(
+    array('title' => 'Todos', 'value' => ""), 
+    array('title' => 'Não', 'value' => "SQL: = ''"), 
+    array('title' => 'Sim', 'value' => "SQL: != ''"), 
+)]
+---
+colunaValor [D001A_Altura]
+titulo [Tem Medidas?]
+tipo [select]
+select [array(
+    array('title' => 'Todos', 'value' => ""), 
+    array('title' => 'Não', 'value' => "SQL: = '' OR D001A_Largura = '' OR D001A_Comprimento = ''"), 
+    array('title' => 'Sim', 'value' => "SQL: != '' AND D001A_Largura != '' AND D001A_Comprimento != ''"), 
+)]
+---
+colunaValor [D001A_Flag_Produto_Emite_Certificado]
+titulo [Flag Produto Emite Certificado]
+exibir [S]
+---
+colunaValor [T144_Url]
+titulo [link]
+exibir [S]
+---
+colunaValor [IF((SELECT T172_Id FROM T172 WHERE T172_D001_Id = D001_Id LIMIT 1 ) > 0[[VIRGULA]] 'S'[[VIRGULA]]IF((SELECT T144_Id FROM T144 WHERE T144_D001_Id = D001_Id LIMIT 1) > 0[[VIRGULA]] 'S'[[VIRGULA]] 'N'))]
+titulo [Tem Foto?]
+tipo [select]
+select [array(
+    array('title' => 'Todos', 'value' => ""),
+    array('title' => 'Não', 'value' => "SQL: = 'N'"),
+    array('title' => 'Sim', 'value' => "SQL: = 'S'"),
+)]
+---
+colunaValor [D001A_Flag_Doc_Num_Serie]
+titulo [Doc. Núm. Série]
+tipo [select]
+select [array(
+    array('title' => 'Todos', 'value' => ""),
+    array('title' => 'Sim', 'value' => "SQL: = 'S'"),
+    array('title' => 'Não', 'value' => "SQL: = 'N'"),
+)]
+---
+colunaValor [D001A_Codigo_IMPA]
+titulo [Cód. IMPA]
+tipo [numero]
+---
+colunaValor [D002_Id,D002_Descricao_Produto]
+titulo [Sub-grupo]
+tipo [texto]
+exibir []
+---
+colunaValor [D002_Descricao_Produto]
+titulo [Classificação]
+tipo [texto]
+---
+colunaValor [D002_Id]
+titulo [Id. Class]
+tipo [numero]
+---
+colunaValor [D001_Descricao_Ingles]
+titulo [Descrição Inglês]
+exibir [S]
+---
+colunaValor [D001_Descricao_Produto, D001_Descricao_Ingles]
+titulo [Descrição]
+tipo [texto]
+---
+colunaValor [D001_Descricao_Produto]
+titulo [Descrição]
+tipo [texto]
+exibir []
+---
+colunaValor [P005_Flag_Tipo]
+titulo [tipo?]
+tipo [select]
+select [array(
+    array('title' => 'Todos', 'value' => ""), 
+    array('title' => 'Não', 'value' => "SQL: = ''"), 
+    array('title' => 'Sim', 'value' => "SQL: != ''"), 
+)]
+---
+colunaValor [D001A_FLAG_Inspecao_Amostragem]
+titulo [Inspeção]
+tipo [select]
+select [array(
+    array('title' => 'Todos', 'value' => ""),
+    array('title' => 'Sim', 'value' => "SQL: = 'S'"),
+    array('title' => 'Não', 'value' => "SQL: = 'N'"),
+)]
+---
+colunaValor [D149_Flag_Parana_Competitivo]
+titulo [PR Competitivo]
+exibir [S]
+---

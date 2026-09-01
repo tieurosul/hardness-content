@@ -1,0 +1,47 @@
+colunaValor [LinkProduto]
+colunaTitulo [Link]
+colunaAlinhar [center]
+colunaTipo [livre]
+callback [campoLinkProduto]
+colunaExibir[S]
+---
+colunaValor [previsao]
+colunaExibir [S]
+---
+colunaValor [(T004_Valor_Total_Preco + T004_Valor_IPI + T004_Valor_ST) as PrecoComIPIeST]
+colunaExibir [S]
+colunaTitulo [Preço com IPI e ST R$]
+colunaCasasDecimais [4]
+colunaAlinhar [right]
+---
+colunaValor [T004_Valor_Custo_Unitario]
+colunaTitulo [Custo]
+colunaAlinhar [right]
+colunaCasasDecimais [4]
+style [width:1%]
+colunaExibir []
+---
+colunaValor [T004A_T066_Id]
+colunaTitulo [Lote]
+callback [T004A_T066_Id_Local]
+colunaExibirNivel [2]
+---
+colunaValor [T066A_Numero_Lote]
+colunaExibir []
+---
+colunaValor [T066A_Data_Validade]
+colunaExibir []
+---
+colunaValor [locacao]
+colunaTitulo [Lote]
+colunaTipo [livre]
+callback [personalizado-6a3e7bfbd1e6a]
+---
+colunaValor [D004_Local]
+colunaTitulo [Local]
+colunaExibir []
+---
+colunaValor [T066_Quantidade_Estoque_Liquido]
+colunaTitulo [Est Liquido]
+colunaExibir []
+---

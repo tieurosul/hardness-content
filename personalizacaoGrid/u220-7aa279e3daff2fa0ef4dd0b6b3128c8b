@@ -1,0 +1,4 @@
+colunaValor [IF(D154_Id>0,CONCAT(D154_Descricao," - ",D014_SubConta),D014_SubConta)]
+colunaTitulo [Conta]
+colunaOrdem [26]
+---

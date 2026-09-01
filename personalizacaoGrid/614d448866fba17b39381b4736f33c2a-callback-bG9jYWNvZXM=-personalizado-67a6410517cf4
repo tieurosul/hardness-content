@@ -1,0 +1,18 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['locacoes']
+    // $array['totais']['Nome_Total']
+
+    $D004 = mysql_query("SELECT GROUP_CONCAT(DISTINCT D004_Local SEPARATOR '; ') as locacoes
+                           FROM T066
+                      LEFT JOIN D004 ON D004_Id = T066_D004_Id
+                          WHERE T066_D009_Id = '{$array['todosCampos']['D009_Id']}'");
+        
+    $mD004 = mysql_fetch_array($D004);
+
+    return $mD004['locacoes'];
+}

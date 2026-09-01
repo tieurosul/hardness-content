@@ -1,0 +1,31 @@
+Contato	|	Contato
+T007_Valor_Total_Produtos	|	Produtos
+T007_Percentual_Comissao	|	%Comissão
+T007_Valor_Total_Comissao	|	Comissão
+T007_Valor_Total_PIS	|	PIS
+T007_Valor_Total_COFINS	|	COFINS
+T007_Percentual_Comissao_Representante	|	%Comissão
+T007_Valor_Comissao_Representante	|	Comissão R$
+D024_Nome_Fantasia	|	Nome Fantasia
+T007_Numero_Protocolo_Nfe	|	Protocolo NFe
+T007_Numero_Protocolo_Cancelamento_Nfe	|	Prot. Cancel
+T007_Valor_Despesas_Acessorias	|	Despesas
+T007_Valor_Total+T007_Valor_Total_IPI	|	Total+IPI
+T007_Valor_Frete	|	Frete
+T005_T003_Id	|	Orç
+T007_Data_Entrega	|	Data Entrega
+T007_Chave_Acesso_Nfe	|	Chave Acesso
+T007_Prazos(T007_Id)	|	Prazo
+UFClienteEntrega.D018_UF	|	UF Entrega
+imprimirMinutaDeDespacho	|	Minuta
+impressaoEtiqueta	|	
+T007_Flag_Marcado	|	MDF-e
+excluirLinha	|	
+T007_Cliente_Endereco	|	Rua
+T007_Cliente_Endereco_Numero	|	Número
+T007_Cliente_Bairro	|	Bairro
+T007_Cliente_CEP	|	CEP
+T007_Valor_ICMS_Substituicao_Retencao	|	ST
+T007_Valor_Total_ICMS	|	ICMS
+T007_Valor_Total_IPI	|	IPI
+D024_Cnpj	|	CNPJ

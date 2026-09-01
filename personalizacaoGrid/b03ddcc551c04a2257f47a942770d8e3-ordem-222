@@ -1,0 +1,22 @@
+Não Liberar
+T005_Flag_Aguardar_Liberacao
+	Retornar
+validaCampoExtratoCliente
+T005_Data_Emissao
+T005_Id
+	Liberar
+D024_Nome_Empresa
+	D024_Observacao_Administracao
+D024_Flag_Curva_ABC
+D024_Flag_Classe
+Tipo_Documento
+T005_Valor_Total
+outrosPedidos
+Vencido
+Vencer
+D024_Valor_Limite
+saldoLimite
+formaPagamento
+T005_Motivo_Pedido_Liberacao
+T005_Observacao_Comercial
+D024_Observacao_Financeiro

@@ -1,0 +1,6 @@
+colunaValor [group_concat(distinct substr(IFNULL(VendedorSaida.C007_Primeiro_Nome, Vendedor.C007_Primeiro_Nome),1,10))]
+colunaOrdem [19]
+---
+colunaValor [Cancelar]
+colunaOrdem [11]
+---

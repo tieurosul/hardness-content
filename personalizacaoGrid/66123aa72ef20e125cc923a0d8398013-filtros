@@ -1,0 +1,9 @@
+colunaValor [fornecedorD049.D024_Nome_Empresa,fornecedorD049.D024_Nome_Fantasia]
+titulo [Fornecedor]
+tipo [texto]
+---
+colunaValor [fornecedor.D024_Nome_Empresa,fornecedor.D024_Nome_Fantasia]
+titulo [Fornecedor]
+tipo [texto]
+exibir []
+---

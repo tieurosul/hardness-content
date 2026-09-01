@@ -1,0 +1,5 @@
+left join D059 on D059_Id=D006_D059_Id
+left join D014 on D014_Id=D006_D014_Id
+LEFT JOIN D154 ON D154_Id=D014_D154_Id
+left join D073 on D073_Id=D006_D073_Id
+WHERE D006_Flag_Inativo='N'

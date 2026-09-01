@@ -1,0 +1,11 @@
+colunaValor [T005_Observacao_1]
+colunaTitulo [Observação]
+colunaOrdem [13]
+---
+colunaValor [D022_Nome_Empresa]
+colunaTitulo [Transportadora]
+colunaOrdem [12]
+---
+colunaValor [Nome_Vendedor]
+colunaOrdem [14]
+---

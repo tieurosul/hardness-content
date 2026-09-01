@@ -1,0 +1,27 @@
+countLinha
+T013_Data_Emissao
+T013_Numero_Nota_Fiscal
+substr(D024_Nome_Empresa,1,20)
+T014_Codigo_Produto
+D001_Codigo_Produto
+D001_Descricao_Produto
+T014_Descricao_Produto
+D082_Marca
+D037_Unidade
+	T014_Classificacao_Fiscal
+T014_D006_Id
+T014_Quantidade
+T014_Valor_Custo_Unitario
+T014_Valor_Total_Custo
+T014_Valor_Total_Desconto
+T014_Valor_ICMS_Substituicao
+T014_Valor_Frete
+T014_Valor_IPI
+T014_Valor_ICMS
+T014_Aliquota_ICMS
+T014_Percentual_Reducao_ICMS
+T014_Aliquota_IPI
+T224_Id
+D024_CNPJ
+rowData
+addColuna

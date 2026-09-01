@@ -1,0 +1,8 @@
+colunaValor [T140_Id]
+titulo [Id]
+exibir [S]
+---
+colunaValor [T140_Nome_Arquivo]
+titulo [Arquivo]
+exibir [S]
+---

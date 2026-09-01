@@ -1,0 +1,22 @@
+impressaoEtiqueta
+	D001_Flag_Ativo
+D001_Flag_Pre_Cadastro
+	D001_Codigo_Produto
+D001_Descricao_Produto
+D049_D082_Id
+D001_D037_Id
+D009_Quantidade_Estoque
+Pedido
+D009_Quantidade_Estoque_Fora
+D009_Quantidade_Estoque_Similar
+D009_Quantidade_OC
+	D049_Flag_Curva_ABC
+infoCustoVendaProduto
+	ifnull(D069_D070_Id,"_")
+	D009_Quantidade_Estoque_Loja
+	D001_Codigo_Barras
+	D001_D005_Id
+	D049_Origem_Mercadoria
+D009_Data_Ultima_Entrada
+D009_Data_Ultima_Venda
+D009_C007_Id_Comprador

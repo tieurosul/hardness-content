@@ -1,0 +1,243 @@
+a:5:{s:4:"nome";s:16:"buscar documento";s:9:"descricao";s:46:"busca as notas fiscais emitidas para a empresa";s:8:"codigoId";s:32:"8a22da3ae92078bb423968004209d62a";s:6:"codigo";s:10338:"<?php
+// $g, $array['{parametro}'], executarCodigo(id, vars[])
+
+// Verifica se existe retorno salvo da ultima importação, se existir é porque deu erro
+// Se existir um retorno que deu erro de processamento no sistema
+// Vai executar ele e não consultar no SEFAZ novamente, se não vai dar consumo indevido
+executarCodigo('9f02acade457503e72e86113a7219550');
+
+$RNE005 = mysql_query("SELECT RNE005_Id,
+                              RNE005_Arquivo_XML
+                         FROM RNE005
+                        WHERE RNE005_C004_Id = '{$g['empresaAtual']}'
+                          AND RNE005_Flag_Erro = 'S'
+                     ORDER BY RNE005_Id DESC
+                        LIMIT 1;");
+
+if(mysql_num_rows($RNE005) > 0){
+
+    $mRNE005 = mysql_fetch_array($RNE005);
+
+    $dom = new \DOMDocument();
+    $dom->loadXML($mRNE005['RNE005_Arquivo_XML']);
+
+    $node      = $dom->getElementsByTagName('retDistDFeInt')->item(0);
+    $lote      = $node->getElementsByTagName('loteDistDFeInt')->item(0);
+    $ultimoNSU = $node->getElementsByTagName('ultNSU')->item(0)->nodeValue;
+    $maxNSU    = $node->getElementsByTagName('maxNSU')->item(0)->nodeValue;
+    $cStat     = $node->getElementsByTagName('cStat')->item(0)->nodeValue;
+    $xMotivo   = $node->getElementsByTagName('xMotivo')->item(0)->nodeValue;
+    $dhResp    = $node->getElementsByTagName('dhResp')->item(0)->nodeValue;
+    $ultimoNSU = $node->getElementsByTagName('ultNSU')->item(0)->nodeValue;
+    $maxNSU    = $node->getElementsByTagName('maxNSU')->item(0)->nodeValue;
+    //Atualizar ultimo NSU
+     mysql_query("INSERT INTO RNE002 (RNE002_Ultimo_NSU,
+                                     RNE002_Maior_NSU,
+                                     RNE002_C004_Id) 
+                               VALUES
+                                    ('{$ultimoNSU}',
+                                     '{$maxNSU}', 
+                                     '{$g['empresaAtual']}')
+                 ON DUPLICATE KEY UPDATE RNE002_Ultimo_NSU = '{$ultimoNSU}', RNE002_Maior_NSU = '{$maxNSU}'");
+
+    // Documentos, pode ser de nota ou evento, limite de 50 por consulta
+    $docs  = $lote->getElementsByTagName('docZip');
+    foreach ($docs as $doc) {
+
+        $numNSU = $doc->getAttribute('NSU');
+        $schema = explode('_', $doc->getAttribute('schema'))[0];
+        $content = gzdecode(base64_decode($doc->nodeValue));
+        // $retorno = $this->processaRetorno($numNSU, $schema, $content);
+        $retorno = executarCodigo('a398d427a8a630b3f50bcf9b2626d579', [
+            'numNSU' => $numNSU,
+            'schema' => $schema,
+            'content' => $content
+        ]);
+
+        if ($retorno !== true) {
+            return $retorno;
+        }
+    }
+
+    mysqli_query("UPDATE RNE005 SET RNE005_Flag_Erro      = 'N',
+                                    RNE005_NSU_Consultado = '{$ultimoNSU}',  
+                                    RNE005_Data_Hora      = NOW(), 
+                                    RNE005_C007_Id        = '{$g['usuarioAtual']}',  
+                                    RNE005_Maior_NSU      = '{$maxNSU}',   
+                                    RNE005_Ultimo_NSU     = '{$ultimoNSU}',  
+                                    RNE005_C004_Id        = '{$g['empresaAtual']}',   
+                                    RNE005_Status         = '{$cStat}', 
+                                    RNE005_Motivo         = '{$xMotivo}'
+                              WHERE RNE005_Id = '{$mRNE005['RNE005_Id']}'");
+
+    return "Atualizado com sucesso!";
+} 
+
+$tools = executarCodigo('5161dc984952fb9a5d8f5d18009f4004');
+
+if ($tools->tpAmb === 2) {
+    return "A busca de notas só funciona em ambiente de produção!";
+}
+
+$RNE002 = mysql_query("SELECT RNE002_Ultimo_NSU, 
+                              RNE002_Maior_NSU 
+                         FROM RNE002 
+                        WHERE RNE002_C004_Id = '{$g['empresaAtual']}'");
+
+$mRNE002 = mysql_fetch_array($RNE002);
+
+$ultimoNSUBase = (int)ltrim($mRNE002['RNE002_Ultimo_NSU'], '0');
+$ultimoNSU     = $ultimoNSUBase;
+$maxNSU        = $ultimoNSU;
+$loopLimit     = 10;
+$count         = 0;
+
+while ($ultimoNSU <= $maxNSU) {
+    $count++;
+    if ($count > $loopLimit) {
+        break;
+    }
+
+    global $g;
+
+    try {
+        $resp = $tools->sefazDistDFe($ultimoNSU);
+    } catch (\Exception $e) {
+        return "Erro ao comunicar com a SEFAZ, tente novamente mais tarde. Erro: {$e->getMessage()}";
+    } 
+    
+    $dom = new \DOMDocument();
+    $dom->loadXML($resp);
+    $node      = $dom->getElementsByTagName('retDistDFeInt')->item(0);
+    $cStat     = $node->getElementsByTagName('cStat')->item(0)->nodeValue;
+    $xMotivo   = $node->getElementsByTagName('xMotivo')->item(0)->nodeValue;
+    $dhResp    = $node->getElementsByTagName('dhResp')->item(0)->nodeValue;
+    $ultimoNSU = $node->getElementsByTagName('ultNSU')->item(0)->nodeValue;
+    $maxNSU    = $node->getElementsByTagName('maxNSU')->item(0)->nodeValue;
+    $lote      = $node->getElementsByTagName('loteDistDFeInt')->item(0);
+
+    $caminho = "{$g['pathDados']}/logs/resp.txt";
+
+    $h = fopen($caminho, "a");
+    fwrite($h, date('d/m/Y H:i:s') . "\n\n");
+    fwrite($h, $dom->saveXML() . "\n\n");
+    fclose($h);
+
+    //Grava histórico da consulta
+    mysql_query("INSERT INTO RNE005 (RNE005_NSU_Consultado, 
+                                     RNE005_Data_Hora,
+                                     RNE005_C007_Id,
+                                     RNE005_Maior_NSU, 
+                                     RNE005_Ultimo_NSU, 
+                                     RNE005_C004_Id, 
+                                     RNE005_Status,
+                                     RNE005_Motivo)
+                              VALUES
+                                    ('{$ultimoNSUBase}', 
+                                     NOW(), 
+                                     '{$g['usuarioAtual']}', 
+                                     '{$maxNSU}', 
+                                     '{$ultimoNSU}',
+                                     '{$g['empresaAtual']}', 
+                                     '{$cStat}', 
+                                     '{$xMotivo}')");
+    
+    $RNE005_Id = $g['mysqlLastId'];
+
+    //137 - Nenhum documento localizado
+    //656 - Consumo Indevido
+    if (in_array($cStat, ['137', '656'])) {
+        mysql_query("INSERT INTO RNE002 (RNE002_Ultima_Consulta,
+                                         RNE002_C007_Id,
+                                         RNE002_C004_Id) 
+                                  VALUES(
+                                         NOW(),
+                                         '{$g['usuarioAtual']}',
+                                         '{$g['empresaAtual']}')
+                      ON DUPLICATE KEY UPDATE RNE002_Ultima_Consulta = NOW(), RNE002_C007_Id = '{$g['usuarioAtual']}'");
+
+        return "<b>{$cStat} - {$xMotivo}.</b><br>Por favor, evite consultas em outros sistemas.";
+    }
+
+    //138 - Documentos localizados               
+    if ($cStat !=  138) {
+        return "{$cStat} - {$xMotivo}.";
+    }
+
+    //Atualizar ultimo NSU
+    mysql_query("INSERT INTO RNE002 (RNE002_Ultimo_NSU,
+                                     RNE002_Maior_NSU,
+                                     RNE002_C004_Id) 
+                              VALUES
+                                    ('{$ultimoNSU}',
+                                     '{$maxNSU}', 
+                                     '{$g['empresaAtual']}')
+                 ON DUPLICATE KEY UPDATE RNE002_Ultimo_NSU = '{$ultimoNSU}', RNE002_Maior_NSU = '{$maxNSU}'");
+
+    if (empty($lote)) {
+        continue;
+    }
+
+    // Documentos, pode ser de nota ou evento, limite de 50 por consulta
+    $docs = $lote->getElementsByTagName('docZip');
+    foreach ($docs as $doc) {
+        $numNSU  = $doc->getAttribute('NSU');
+        $schema  = explode('_', $doc->getAttribute('schema'))[0];
+        $content = gzdecode(base64_decode($doc->nodeValue));
+        // $retorno = $this->processaRetorno($numNSU, $schema, $content);
+        $retorno = executarCodigo('a398d427a8a630b3f50bcf9b2626d579', [
+            'numNSU' => $numNSU,
+            'schema' => $schema,
+            'content' => $content
+        ]);
+
+        if ($retorno !== true) {
+
+            // Se deu erro, salva o arquivo de retorno e será utilizado na proxima importacao
+            // Verifica se inseriu o RNE005, se nao incluiu vai salvar com o numero da empresa
+            // Tem casos na Guimepa em que esta cortando a conexao com o banco
+            if($RNE005_Id > 0){
+                $caminhoArquivo = $g['pathDados'] . '/tmp/arquivoRetornoErroRadarNFe/' . $RNE005_Id . '_RetornoComErro';
+            } else{
+                $caminhoArquivo = $g['pathDados'] . '/tmp/arquivoRetornoErroRadarNFe/' . 'empresa_' . $g['empresaAtual'] . '_RetornoComErro';
+            }
+            
+            // Cria a pasta se ela não existir
+            if (!file_exists(dirname($caminhoArquivo))) {
+                mkdir(dirname($caminhoArquivo), 0777, true);
+            }
+
+            // Salva o conteúdo do arquivo
+            file_put_contents($caminhoArquivo, $resp);
+                        
+            // Se der erro salva o arquivo XML na ultima consulta, porque quando pesquisar novamente
+            // vai processar esse mesmo arquivo XML, para não dar consumo indevido no Sefaz
+            // o retorno deles já veio, se consultar novamente vai dar erro
+            mysqli_query("UPDATE RNE005 
+                             SET RNE005_Flag_Erro   = 'S',
+                                 RNE005_Arquivo_XML = '{$resp}' 
+                           WHERE RNE005_Id = '{$RNE005_Id}'");
+
+            if(!empty($retorno['data'])) {
+                return $retorno['data']."<br><br>Houve um erro ao processar o retorno, foi salvo o retorno do Sefaz, tente importar novamente por favor";
+            }
+
+            return $retorno."<br><br>Houve um erro ao processar o retorno, foi salvo o retorno do Sefaz, tente importar novamente por favor";
+        }
+    }
+
+    if ($ultimoNSU == $maxNSU) {
+        break;
+    }
+
+    $ultimoNSUBase = $ultimoNSU;
+
+    sleep(2);
+}
+
+if($ultimoNSU < $maxNSU) {
+    $documentosRestantes = $maxNSU - $ultimoNSU;
+    $aviso = "<br /><font color='red'>Ainda tem {$documentosRestantes} documentos restantes para consultar</font>";
+}
+
+return "Atualizado com sucesso! {$aviso}";";s:3:"md5";s:32:"3b0b08dd4925ef8b51662c2afecc3d3d";}

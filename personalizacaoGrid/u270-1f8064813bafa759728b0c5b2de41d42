@@ -1,0 +1,132 @@
+colunaValor [D022_Nome_Empresa]
+colunaTitulo [Transportadora]
+colunaOrdem [20]
+---
+colunaValor [T007_Data_Entrega]
+colunaTitulo [Data Entrega]
+colunaOrdem [21]
+---
+colunaValor [Contato]
+colunaOrdem [42]
+---
+colunaValor [T005_Data_Entrega]
+colunaOrdem [42]
+---
+colunaValor [T007_Quantidade_Volumes]
+colunaOrdem [42]
+---
+colunaValor [T007_Peso_Bruto]
+colunaOrdem [16]
+---
+colunaValor [T007_Valor_Total]
+colunaTitulo [Total]
+colunaOrdem [15]
+---
+colunaValor [T007_Valor_Total_Produtos]
+colunaTitulo [Produtos]
+colunaOrdem [42]
+---
+colunaValor [UFCliente.D018_UF]
+colunaTitulo [UF]
+colunaOrdem [18]
+---
+colunaValor [D006_Codigo_CFOP]
+colunaTitulo [CFOP]
+colunaOrdem [9]
+---
+colunaValor [UFFaturamento.D018_UF]
+colunaTitulo [UF Faturamento]
+colunaOrdem [48]
+---
+colunaValor [Danfe]
+colunaTitulo [Danfe]
+colunaOrdem [13]
+---
+colunaValor [T007_Flag_Frete]
+colunaOrdem [42]
+---
+colunaValor [D020_Nome_Cidade]
+colunaOrdem [19]
+---
+colunaValor [T007_Data_Envio_XML]
+colunaTitulo [Mail]
+colunaOrdem [42]
+---
+colunaValor [Status_Entrega]
+colunaOrdem [39]
+---
+colunaValor [T007A_Data_Prazo_Transporte]
+colunaOrdem [22]
+---
+colunaValor [CCe]
+colunaTitulo [CC-e]
+colunaOrdem [42]
+---
+colunaValor [Damdfe]
+colunaOrdem [42]
+---
+colunaValor [IFNULL(UFClienteEntrega.D018_Prazo_Transporte,UFCliente.D018_Prazo_Transporte)]
+colunaOrdem [39]
+---
+colunaValor [T007_Data_Emissao]
+colunaTitulo [Emissão]
+colunaOrdem [6]
+---
+colunaValor [T005A_Data_Agendamento]
+colunaOrdem [23]
+---
+colunaValor [T007_Percentual_Comissao]
+colunaTitulo [%Comissão]
+colunaOrdem [42]
+---
+colunaValor [T007_Valor_Total_Comissao]
+colunaOrdem [29]
+---
+colunaValor [T007_Percentual_Comissao_Representante]
+colunaTitulo [%Comissão]
+colunaOrdem [49]
+---
+colunaValor [T007_D021_Id]
+colunaTitulo [Representante]
+colunaOrdem [33]
+---
+colunaValor [T007_Valor_Total_ICMS]
+colunaTitulo [ICM]
+colunaOrdem [35]
+---
+colunaValor [T007_Valor_Total_PIS]
+colunaTitulo [PIS]
+colunaOrdem [32]
+---
+colunaValor [T007_Valor_Total_COFINS]
+colunaTitulo [COFINS]
+colunaOrdem [42]
+---
+colunaValor [T007_Numero_Protocolo_Nfe]
+colunaTitulo [Protocolo NFe]
+colunaOrdem [42]
+---
+colunaValor [T007_Numero_Protocolo_Cancelamento_Nfe]
+colunaTitulo [Prot. Cancel]
+colunaOrdem [29]
+---
+colunaValor [T007_Chave_Acesso_Nfe]
+colunaTitulo [Chave Acesso]
+colunaOrdem [41]
+---
+colunaValor [Teste_Status_Entrega]
+colunaOrdem [40]
+---
+colunaValor [Etiqueta]
+colunaOrdem [37]
+---
+colunaValor [T007_Cliente_CEP]
+colunaTitulo [CEP]
+colunaOrdem [33]
+---
+colunaValor [observacoes]
+colunaOrdem [34]
+---
+colunaValor [docs]
+colunaOrdem [5]
+---

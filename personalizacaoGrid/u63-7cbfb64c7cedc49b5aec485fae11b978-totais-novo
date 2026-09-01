@@ -1,0 +1,7 @@
+nome [DAYOFWEEKTDataVencimento_Count]
+valor [DAYOFWEEK(T002_Data_Vencimento)]
+titulo [Registros]
+exibir [S]
+totalizador [count]
+callbackParameter [0]
+---

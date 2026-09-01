@@ -1,0 +1,8 @@
+<?php
+/**
+ * Código executado para preencher o valor (value) do campo 
+ * Variáveis:
+ *      $g, $array['todosCampos'], $array['{parametro}']
+ */
+// Exemplo
+//return "Valor do campo";

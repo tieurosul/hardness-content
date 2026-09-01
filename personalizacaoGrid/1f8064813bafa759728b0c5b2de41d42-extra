@@ -1,0 +1,10 @@
+-- JOIN
+LEFT JOIN T005A ON T005_Id = T005A_T005_Id
+left join D020 as Cidade on Cidade.D020_Id=D024_D020_Id
+LEFT JOIN GOB001 ON GOB001_Id_Estrangeiro = T007_Id AND GOB001_Tabela_Estrangeira = 'T007'  
+LEFT JOIN T178 ON T178_T005_Id = T005_Id AND T178_Descricao LIKE 'Gerou nota fiscal%'
+LEFT JOIN C007 AS UsuarioGerouNF ON UsuarioGerouNF.C007_Id = T178_C007_Id
+-- WHERE
+T007_Flag_Emitida_Recebida!='R'
+-- GROUP BY
+group by T007_Id

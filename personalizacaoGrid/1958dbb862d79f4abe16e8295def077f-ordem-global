@@ -1,0 +1,26 @@
+D005_Flag_Ativo
+D149_Id
+D005_Id
+	D149_Remover
+D005_Classificacao_Fiscal
+D005_Flag_Aplicacao
+D149_Codigo_CEST
+D149_Aliquota_IPI
+D149_Aliquota_PIS
+D149_Aliquota_COFINS
+D149_Valor_VA
+D149_Flag_ST
+D149_Aliquota_IRPJ
+D149_Aliquota_CSLL
+D149_Percentual_Trib_Transparencia
+D149_Imposto_Importacao
+D149_Importacao_IPI
+D149_Importacao_PIS
+D149_Importacao_COFINS
+D005_Observacao
+D149_Observacao
+D149_Regras_MVA
+D149_Regras_MVA_Compra
+D149_UF_ST
+D149_UF_ST_Compras
+rowData

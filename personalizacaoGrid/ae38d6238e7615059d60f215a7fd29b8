@@ -1,0 +1,10 @@
+colunaValor [D002_Flag_Visualizar_Site]
+colunaTitulo [Exibe para Vendedor?]
+colunaEditar [S]
+colunaEditarTodos [S]
+callback [gCheckbox]
+callbackParameter [array('D002_Flag_Visualizar_Site', 'N|S')]
+colunaAlinhar [center]
+colunaEditarTipo [flag]
+colunaEditarExtra [N|S]
+---

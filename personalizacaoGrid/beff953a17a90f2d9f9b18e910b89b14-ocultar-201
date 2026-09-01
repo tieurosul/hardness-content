@@ -1,0 +1,13 @@
+T001_Flag_Operacao	|
+T001_Flag_Atualiza_Custo	|	C
+T001_Flag_MMF	|	F
+T001_Aliquota_ICMS	|	%ICMS
+T001_Aliquota_IPI	|	%IPI
+T001_Percentual_ST	|	%ST
+T001_Percentual_Frete	|	%Frete
+T001_Percentual_Custo_Financeiro	|	%C.F.
+T001_Valor_ICMS	|	ICMS R$
+T001_Valor_IPI	|	IPI R$
+T001_Valor_ST	|	ST R$
+T001_Valor_Frete	|	Frete R$
+T001_Valor_Custo_Financeiro	|	C.F. R$

@@ -1,0 +1,21 @@
+<?php
+namespace hardness;
+
+
+$valorTotal = $g['sqlAuto']->pegarSqlCampo("count(*)", $from, $extra);
+			$valorTotal1 = gCorrigeNumero($g['sqlAuto']->pegarSqlCampo("sum(T008_Quantidade) Total", $from, $extra));
+			$valorTotal2 = gCorrigeNumero($g['sqlAuto']->pegarSqlCampo("sum(T008_Valor_Total_Preco_Sem_Desconto)", $from, gInsertExtraWhere($extra, " T007_Flag_Cancelada != 'S'")));
+			$valorTotal3 = gCorrigeNumero($g['sqlAuto']->pegarSqlCampo("sum(T008_Valor_Total_Preco_Sem_Desconto+T008_Valor_IPI)", $from, gInsertExtraWhere($extra, " T007_Flag_Cancelada != 'S'")));
+
+			
+			echo <<<EOT
+				<div class="buttonsBottomTop">
+					<span class="item" style="text-align:right">Itens<br><input type="text" value="{$valorTotal}" class="whiteBg" id="" size="11" readonly></span>
+					<span class="item" style="text-align:right">Quantidade total<br><input type="text" value="{$valorTotal1}" class="whiteBg" id="" size="11" readonly></span>
+					<span class="item" style="text-align:right">Total sem IPI<br><input type="text" value="{$valorTotal2}" class="whiteBg" id="" size="11" readonly></span>
+<span class="item" style="text-align:right">Valor Total<br><input type="text" value="{$valorTotal3}" class="whiteBg" id="" size="11" readonly></span>
+					<div style="clear:both;"></div>
+				</div>
+EOT;
+
+?>

@@ -1,0 +1,18 @@
+impressaoEtiqueta
+D001_Codigo_Produto
+D001_Codigo_Barras
+D083_Codigo_Barras
+D001_Descricao_Produto
+D037_Unidade
+D004_Local
+T066_Quantidade_Balanco
+	T066_Data_Balanco
+	T066_Quantidade_Estoque
+D009_Quantidade_Estoque
+Pedido
+D009_Quantidade_Estoque_Fora
+D009_Quantidade_OC
+substr(D082_Marca,1,15)
+	T066_Flag_Balanco
+D049_D024_Id
+D009_Frequencia_Venda

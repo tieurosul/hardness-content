@@ -1,0 +1,23 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['T007_Flag_Frete']
+    // $array['totais']['Nome_Total']
+
+        if($array['todosCampos']['T007_Flag_Frete'] == 0){
+            return "0 - REMETENTE";
+        }else if($array['todosCampos']['T007_Flag_Frete'] == 1){
+            return "1 - DESTINATÁRIO";
+        }else if($array['todosCampos']['T007_Flag_Frete'] == 2){
+            return "2 - TERCEIROS";
+        }else if($array['todosCampos']['T007_Flag_Frete'] == 3){
+            return "3 - PRÓPRIO REMETENTE";
+        }else if($array['todosCampos']['T007_Flag_Frete'] == 4){
+            return "4 - PRÓPRIO DESTINATÁRIO";
+        }else if($array['todosCampos']['T007_Flag_Frete'] == 9){
+            return " 9 - SEM FRETE";
+        }
+}

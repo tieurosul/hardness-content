@@ -1,0 +1,26 @@
+colunaValor [D001_Id]
+titulo [D001_Id]
+---
+colunaValor [D009_Id]
+titulo [D009_Id]
+---
+colunaValor [D001_Codigo_Produto]
+titulo [Cod.]
+---
+colunaValor [D001_Descricao_Produto]
+titulo [Desc.]
+---
+colunaValor [D002_Descricao_Produto]
+titulo [Classificação]
+---
+colunaValor [D001_Flag_Visualizar_Site]
+titulo [Item Site (S/N)]
+---
+colunaValor [T140_Link]
+titulo [Link Doc]
+exibir []
+---
+colunaValor [T140_Nome_Arquivo]
+titulo [Nome Doc]
+exibir []
+---

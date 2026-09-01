@@ -1,0 +1,5 @@
+D049_Modelo	|	Sub-item
+D009_Flag_Custo_Utilizado	|	D009 Id
+T004_Valor_Preco_Tabela	|	Forn
+T004_Percentual_Margem	|	%Marg
+(T004_Valor_Lucro/((T004_Valor_Custo_Unitario*T004_IPV)*T004_Quantidade))*100	|	% Lucro

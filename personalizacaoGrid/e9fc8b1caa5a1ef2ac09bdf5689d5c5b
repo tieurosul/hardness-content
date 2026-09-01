@@ -1,0 +1,23 @@
+colunaValor [D009_Meses_MMF]
+colunaTitulo [Quant. Meses de Histórico]
+colunaAlinhar [center]
+colunaEditar [1]
+colunaEditarTodos [1]
+---
+colunaValor [D009_Meses_Compra]
+colunaTitulo [Quant. Meses de Estoque]
+colunaAlinhar [center]
+colunaEditar [1]
+colunaEditarTodos [1]
+---
+colunaValor [D009_Meses_Reposicao]
+colunaTitulo [Quant. Meses para Reposição]
+colunaAlinhar [center]
+colunaEditar [1]
+colunaEditarTodos [1]
+style [border-right:1px dashed silver]
+---
+colunaValor [D009A_Pedido_Minimo]
+colunaTitulo [Ped Minimo / MOQ]
+callback [gCorrigeNumero]
+---

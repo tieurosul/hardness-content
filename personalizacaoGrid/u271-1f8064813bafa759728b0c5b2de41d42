@@ -1,0 +1,18 @@
+colunaValor [XML]
+colunaTitulo [XML]
+colunaOrdem [26]
+---
+colunaValor [T007_Numero_Nota_Fiscal]
+colunaTitulo [T007_Numero_Nota_Fiscal]
+colunaOrdem [5]
+colunaCongelar [S]
+---
+colunaValor [T007_Valor_Total_Partilha_ICMS_Destino]
+colunaOrdem [21]
+---
+colunaValor [T007_Valor_Total_FCP]
+colunaOrdem [21]
+---
+colunaValor [T007_Chave_Acesso_Nfe]
+colunaOrdem [9]
+---

@@ -1,0 +1,25 @@
+colunaValor [T014_Quantidade]
+colunaTitulo [Quantidade]
+colunaOrdem [10]
+---
+colunaValor [T014_Valor_Custo_Unitario]
+colunaTitulo [Preço unit.]
+colunaOrdem [11]
+---
+colunaValor [T014_Descricao_Produto]
+colunaTitulo [Descrição produto nota]
+colunaOrdem [9]
+---
+colunaValor [D001A_Altura]
+colunaOrdem [13]
+---
+colunaValor [D001A_Largura]
+colunaOrdem [12]
+---
+colunaValor [D001A_Comprimento]
+colunaOrdem [14]
+---
+colunaValor [T014_T066_Id]
+colunaTitulo [Locação]
+colunaOrdem [7]
+---

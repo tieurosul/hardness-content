@@ -1,0 +1,4 @@
+liberou.C007_Primeiro_Nome	|	Analista comercial
+if(T139_Id>0,'Ok','<font style="color:red">--</font>')	|	Mail
+IFNULL(IF(T003_Status_Retorno_Email='RETORNAR',CONCAT('<font style="color:red">',T003_Status_Retorno_Email,'</font>'),T003_Status_Retorno_Email), '<font style="color:red">--</font>')	|	Agenda
+T003_Flag_Alcada	|	Alcada

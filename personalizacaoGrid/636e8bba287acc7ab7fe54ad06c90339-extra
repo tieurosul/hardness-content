@@ -1,0 +1,30 @@
+left join T256 ON T006_Id=T256_T006_Id
+left join T005 on T005_Id=T006_T005_Id
+left join D024 on D024_Id=T005_D024_Id
+left join D018 on D018_Id=D024_D018_Id
+left join D037 on D037_Id=T006_D037_Id
+left join D009 on D009_Id=T006_D009_Id
+left join D049 on D049_Id=D009_D049_Id
+left join D082 on D082_Id=D049_D082_Id
+left join D001 on D001_Id=D049_D001_Id
+left join D006 on D006_Id=T006_D006_Id
+left join D005 on D005_Id=T006_D005_Id
+LEFT JOIN T066 on T066_D009_Id=D009_Id
+LEFT JOIN D004 on D004_Id=T066_D004_Id
+LEFT JOIN T004 ON T004_Id=T006_T004_Id
+left join T219 ON T219_Id=T006_T219_Id
+left join T218 ON T218_Id=T219_T218_Id
+left join T225 on T219_Id=T225_T219_Id
+left join T224 on T224_Id=T225_T224_Id
+left join T007 ON T007_T005_Id=T005_Id
+left join T003 ON T003_Id=T005_T003_Id
+left join C007 as Vendedor on Vendedor.C007_Id=T005_C007_Id_Vendedor_Interno
+left join C007 as Liberou on Liberou.C007_Id=T005_Liberou_Alcada_C007_Id
+left join C007 as Supervisor on Supervisor.C007_Id=Vendedor.C007_C007_Id
+left join C007 as Supervisor2 on Supervisor2.C007_Id=Vendedor.C007_C007_Id_2
+left join D022 on D022_Id=T006_D022_Id
+left join T208 on T208_Id=T006_T208_Id
+where (T005_C004_Id='[[g-empresaAtual]]' 
+and (T005_T005_Id_Agrupado<=0 or T005_T005_Id_Agrupado is null))
+group by T006_Id 
+order by T005_Id desc

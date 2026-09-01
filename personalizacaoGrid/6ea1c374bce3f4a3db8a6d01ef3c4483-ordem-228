@@ -1,0 +1,19 @@
+excluirCheckbox
+T004_Item
+	D006_Codigo_CFOP
+T004_Codigo_Produto
+T004_Descricao_Produto
+SUBSTRING(D082_Marca,1,15)
+D037_Unidade
+Pedido
+T004_Quantidade
+T004_Quantidade_Confirmada
+T004_Valor_Preco_Original
+	T004_Valor_Preco_Unitario
+T004_Percentual_Desconto
+	T004_Aliquota_IPI
+	D004_Local
+	T004_Observacao
+infoCustoVendaProduto
+T004_Observacao_Entrega
+LinkProduto

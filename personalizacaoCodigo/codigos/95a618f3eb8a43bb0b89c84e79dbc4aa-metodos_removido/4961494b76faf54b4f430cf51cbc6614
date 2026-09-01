@@ -1,0 +1,32 @@
+a:5:{s:4:"nome";s:17:"consultar produto";s:9:"descricao";s:15:"ETIQUETA 100X50";s:8:"codigoId";s:32:"95a618f3eb8a43bb0b89c84e79dbc4aa";s:6:"codigo";s:1206:"<?php
+global $confUsuario;
+// $g, $array[var], executarCodigo(id, vars[])
+
+if ($array['D001_Id']>0) {
+	$sql = "select D001_Id from D001 where D001_Id='{$array['D001_Id']}'";
+} else {
+	$sql = base64_decode($array['sql']);
+}
+
+$produtos = mysql_query($sql);
+$array = array();
+
+while ($mProdutos = mysql_fetch_array($produtos)) {
+
+    $D001 = mysql_query("SELECT D001_Codigo_Barras, 
+                                D001_Descricao_Produto,
+                                D001_Codigo_Produto 
+                           FROM D001 
+                          WHERE D001_Id = '{$mProdutos['D001_Id']}'");						  
+    $mD001 = mysql_fetch_assoc($D001);
+
+	$mD001['D001_Codigo_Barras'] = (empty($mD001['D001_Codigo_Barras'])) ? $mD001['D001_Codigo_Produto'] : $mD001['D001_Codigo_Barras'];
+    
+    $array['loop'][] = array('D001_Codigo_Barras'       => $mD001['D001_Codigo_Barras'],
+                             'D001_Descricao_Produto_1' => substr($mD001['D001_Descricao_Produto'], 0, 80),
+                             'D001_Descricao_Produto_2' => substr($mD001['D001_Descricao_Produto'], 28, 40),
+                             'codigo'                   => $mD001['D001_Codigo_Produto'],
+    );	
+}
+
+return $array;";s:3:"md5";s:32:"a5df51938e41e975ffd804e9ea6171fc";}

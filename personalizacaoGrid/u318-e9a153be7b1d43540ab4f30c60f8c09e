@@ -1,0 +1,21 @@
+colunaValor [Status2]
+colunaOrdem [7]
+---
+colunaValor [NF]
+colunaOrdem [4]
+---
+colunaValor [substr(D024_Nome_Empresa,1,15)]
+colunaOrdem [5]
+---
+colunaValor [T005_T003_Id]
+colunaOrdem [6]
+---
+colunaValor [T005_Valor_Total]
+colunaOrdem [8]
+---
+colunaValor [Vendedor.C007_Primeiro_Nome]
+colunaOrdem [9]
+---
+colunaValor [Contato]
+colunaOrdem [10]
+---

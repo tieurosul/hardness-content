@@ -1,0 +1,28 @@
+	T005_Id
+	T005_T003_Id
+	T005_Data_Emissao
+T005_D024_Id
+substr(D024_Nome_Empresa,1,15)
+D018_UF
+	T005_Valor_Total
+	Status2
+	D006_Codigo_CFOP
+T005_Valor_Total_Produtos_Sem_Desconto
+(T005_Valor_Desconto/T005_Valor_Total_Produtos_Sem_Desconto)*100
+T005_Valor_Desconto
+	T005_Data_Entrega
+T005_Percentual_Margem
+	Contato
+	NF
+vendedor.C007_Primeiro_Nome
+	campoCancelamento
+T005_Percentual_Comissao
+T005_Valor_Total_Comissao
+T005_Percentual_Comissao_Manual
+T005_D021_Id
+T005_Percentual_Comissao_Representante
+T005_Valor_Comissao_Representante
+T005_Observacao_Comercial
+T005_Flag_Alcada
+liberou.C007_Primeiro_Nome
+	DividirPedidoCliente

@@ -1,0 +1,7 @@
+nome [Preo_Total_Count]
+valor [T008_Valor_Total_Preco_Sem_Desconto]
+titulo [Registros]
+exibir [S]
+totalizador [count]
+callbackParameter [0]
+---

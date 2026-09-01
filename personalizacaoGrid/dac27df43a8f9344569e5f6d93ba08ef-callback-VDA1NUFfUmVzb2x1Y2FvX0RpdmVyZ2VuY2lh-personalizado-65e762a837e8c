@@ -1,0 +1,16 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['T055A_Resolucao_Divergencia']
+    // $array['totais']['Nome_Total']
+
+    $descricao  =  $array['campoAtual'];
+    $caracteres = strlen($descricao);
+    if($caracteres > 20){
+        $descricao = substr($descricao,0,20)."<br>".substr($descricao,20,20)."<br>".substr($descricao,40,20);
+    }
+    return $descricao;
+}

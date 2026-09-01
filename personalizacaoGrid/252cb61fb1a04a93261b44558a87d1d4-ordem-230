@@ -1,0 +1,31 @@
+T007_Numero_Nota_Fiscal
+T007_Data_Emissao
+T008_Descricao_Produto
+D082_Marca
+D006_Codigo_CFOP
+D037_Unidade
+T008_Quantidade
+	Custo
+T008_Valor_Preco_Sem_Desconto_Unitario
+T008_Valor_Total_Preco_Sem_Desconto
+Vendedor.C007_Primeiro_Nome
+	D024_Nome_Fantasia
+T008_Classificacao_Fiscal
+T008_Flag_Situacao_Tributaria
+T008_Aliquota_ICMS
+T008_Aliquota_IPI
+T008_Aliquota_PIS
+T008_Aliquota_COFINS
+T008_Valor_ICMS
+T008_Valor_IPI
+T008_Valor_PIS
+T008_Valor_COFINS
+	T008_Valor_ICMS_Substituicao_Retencao
+T008_Peso_Unitario
+T008_Peso_Total
+D004_Local
+T005_T003_Id
+T005_Id
+Danfe
+D018_UF
+T075_Numero_DI

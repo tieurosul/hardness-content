@@ -1,0 +1,14 @@
+<?php
+namespace hardness;
+
+function callback($array, $params = null) {
+    // seu código
+    // $array['campoAtual']
+    // $array['todosCampos']['D001_Flag_Visualizar_Site']
+    // $array['totais']['Nome_Total']
+    if($array['campoAtual'] == 'S'){
+        return 'SIM';
+    } else {
+        return 'NÃO';
+    }
+}
