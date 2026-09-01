@@ -1,7 +1,10 @@
 # Runtime / environment-specific (not versioned)
-tmp/
-logs/
-usuarios/
+tmp/*
+!tmp/.gitkeep
+logs/*
+!logs/.gitkeep
+usuarios/*
+!usuarios/.gitkeep
 *.log
 *.serialized
 
