@@ -8,7 +8,7 @@ namespace hardness;
  * Usage:
  *   php migrate.php status
  *   php migrate.php migrate
- *   php migrate.php migrate --only=001_api_frete_c031.php
+ *   php migrate.php migrate --only=001_api_frete_c031.sql
  *
  * Optional:
  *   --conf=/path/to/site-confUsuario.php  (skip HTTP_HOST lookup)
@@ -34,10 +34,11 @@ $contentRoot = __DIR__;
 chdir($hardnessRoot);
 
 $GLOBALS['g'] = array();
+global $g;
+$g =& $GLOBALS['g'];
 bootstrapHardness($hardnessRoot, $options);
 
 require_once $contentRoot . '/lib/Migrator.php';
-require_once $hardnessRoot . '/scripts/atualizacaoBase-funcoes.php';
 
 $connection = isset($GLOBALS['g']['conexaoBanco']) ? $GLOBALS['g']['conexaoBanco'] : null;
 if (!$connection) {
@@ -45,7 +46,7 @@ if (!$connection) {
     exit(1);
 }
 
-$migrator = new Migrator($contentRoot . '/migrations', $connection);
+$migrator = new \Migrator($contentRoot . '/migrations', $connection);
 
 try {
     $migrator->ensureLedgerTable();
@@ -112,12 +113,21 @@ function resolveHardnessRoot($options)
 
 function bootstrapHardness($hardnessRoot, $options)
 {
+    global $g;
+
+    if (!function_exists(__NAMESPACE__ . '\\log')) {
+        function log($message)
+        {
+        }
+    }
+
     if (!empty($options['conf'])) {
         if (!file_exists($options['conf'])) {
             throw new \RuntimeException('Config file not found: ' . $options['conf']);
         }
         require_once $options['conf'];
         $root = isset($confUsuario['pathRaiz']) ? rtrim($confUsuario['pathRaiz'], '/') : $hardnessRoot;
+        chdir($root);
         require_once $root . '/bibliotecas/conexaoBanco.php';
         return;
     }
@@ -147,7 +157,7 @@ Options:
 Examples:
   php migrate.php status
   php migrate.php migrate
-  php migrate.php migrate --only=001_api_frete_c031.php
+  php migrate.php migrate --only=001_api_frete_c031.sql
   php migrate.php migrate --conf=/var/www/sites/localhost-confUsuario.php
 
 TXT;

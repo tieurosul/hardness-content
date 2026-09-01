@@ -186,12 +186,26 @@ SQL;
             throw new RuntimeException("Unable to read SQL migration: {$path}");
         }
 
-        $statements = preg_split('/;\s*\n/', $sql);
-        foreach ($statements as $statement) {
-            $statement = trim($statement);
-            if ($statement === '' || strpos($statement, '--') === 0) {
+        // Strip line comments; split on semicolon at end of statement.
+        $lines = preg_split('/\R/', $sql);
+        $buffer = '';
+        foreach ($lines as $line) {
+            $trimmed = trim($line);
+            if ($trimmed === '' || strpos($trimmed, '--') === 0) {
                 continue;
             }
+            $buffer .= $line . "\n";
+            if (substr(rtrim($line), -1) === ';') {
+                $statement = trim($buffer);
+                $buffer = '';
+                if ($statement !== '') {
+                    $this->query($statement);
+                }
+            }
+        }
+
+        $statement = trim($buffer);
+        if ($statement !== '') {
             $this->query($statement);
         }
     }

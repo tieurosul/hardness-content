@@ -4,28 +4,26 @@ Tenant customizations and database migrations for Hardness ERP database **e998**
 
 Remote: `git@github.com:Eurosul-Projects/hardness-content.git`
 
-This directory is deployed as a symlink:
-
-```text
-hardness3/dados_usuarios/e998  →  ~/Projects/hardness-content
-```
+This directory **is** the git repository root and maps to `hardness3/dados_usuarios/e998/` in Hardness.
 
 ## One-time setup
 
-```bash
-git clone git@github.com:Eurosul-Projects/hardness-content.git ~/Projects/hardness-content
+### Option A — Clone directly (recommended for Docker)
 
-# Backup existing folder if needed, then replace with symlink
+```bash
 rm -rf /path/to/hardness3/dados_usuarios/e998
-ln -sfn ~/Projects/hardness-content /path/to/hardness3/dados_usuarios/e998
+git clone git@github.com:Eurosul-Projects/hardness-content.git /path/to/hardness3/dados_usuarios/e998
 ```
 
-Production example:
+### Option B — Symlink from separate clone (Linux production)
 
 ```bash
 git clone git@github.com:Eurosul-Projects/hardness-content.git /opt/hardness-content
+rm -rf /var/www/.../hardness3/dados_usuarios/e998
 ln -sfn /opt/hardness-content /var/www/.../hardness3/dados_usuarios/e998
 ```
+
+On Docker for Mac, prefer Option A (symlinks can fail on bind mounts).
 
 ## Migrations
 
@@ -34,7 +32,7 @@ Migrations live in `migrations/` with names like `001_description.php`.
 Applied migrations are recorded in `E998_Migration`.
 
 ```bash
-cd /path/to/hardness-content
+cd /path/to/hardness3/dados_usuarios/e998
 
 # List pending/applied
 php migrate.php status
@@ -43,7 +41,7 @@ php migrate.php status
 php migrate.php migrate
 
 # Apply one migration
-php migrate.php migrate --only=001_api_frete_c031.php
+php migrate.php migrate --only=001_api_frete_c031.sql
 ```
 
 If `confUsuario.php` cannot resolve the site from CLI, pass the site config:
@@ -64,6 +62,8 @@ php migrate.php status --hardness-root=/path/to/hardness3
 
 ```php
 <?php
+namespace hardness;
+
 return function () {
     adicionarConfGlobal('myKey', 'default', 'Description shown in CAD058 grid.');
 };
@@ -75,8 +75,8 @@ Use `INSERT ... WHERE NOT EXISTS` or `CREATE TABLE IF NOT EXISTS`.
 
 ## Deploy checklist
 
-1. `git pull` in the clone path (`~/Projects/hardness-content` or `/opt/hardness-content`)
-2. `php migrate.php migrate`
+1. `git pull` in `dados_usuarios/e998/` (or symlink target)
+2. `php migrate.php migrate --conf=/var/www/sites/{site}-confUsuario.php`
 3. Smoke test the affected Hardness screens
 
 Core Hardness updates (`atualizacaoBase`) remain separate from this repo.
