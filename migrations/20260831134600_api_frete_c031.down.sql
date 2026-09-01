@@ -1,2 +1,0 @@
-DELETE FROM C031
-WHERE C031_Campo = 'apiFreteUrl';
