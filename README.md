@@ -35,7 +35,9 @@ php migrate.php up
 php migrate.php down
 ```
 
-Pair each `NNN_name.sql` with `NNN_name.down.sql` for rollback.
+Pair each `YYYYMMDD_HHMMSS_name.sql` with `YYYYMMDD_HHMMSS_name.down.sql`.
+
+New files: `date +%Y%m%d_%H%M%S`_description.sql
 
 ## Deploy checklist
 

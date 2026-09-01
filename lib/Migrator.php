@@ -48,7 +48,7 @@ SQL;
         $names = array();
         foreach ($files as $file) {
             $base = basename($file);
-            if (preg_match('/^\d{3}_(?!.+\.down\.(php|sql)$).+\.(php|sql)$/', $base)) {
+            if (preg_match('/^\d{8}_\d{6}_(?!.+\.down\.(php|sql)$).+\.(php|sql)$/', $base)) {
                 $names[] = $base;
             }
         }
@@ -124,6 +124,9 @@ SQL;
 
         $count = 0;
         foreach ($pending as $name) {
+            if (in_array($name, $this->getAppliedMigrations(), true)) {
+                continue;
+            }
             $this->runMigration($name);
             $count++;
         }

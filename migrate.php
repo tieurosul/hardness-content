@@ -166,7 +166,10 @@ Options:
   --hardness-root=PATH           Hardness3 root directory
 
 Down migrations:
-  Pair each migration with a down file, e.g. 001_foo.sql + 001_foo.down.sql
+  Pair each migration with a down file, e.g. 20260901_120000_foo.sql + 20260901_120000_foo.down.sql
+
+New migration filename:
+  YYYYMMDD_HHMMSS_description.sql  (use: date +%Y%m%d_%H%M%S)
 
 Examples:
   php migrate.php status
