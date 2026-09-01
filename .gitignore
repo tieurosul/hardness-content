@@ -1,0 +1,11 @@
+# Runtime / environment-specific (not versioned)
+tmp/
+logs/
+usuarios/
+*.log
+*.serialized
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
