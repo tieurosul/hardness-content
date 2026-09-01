@@ -8,6 +8,7 @@ namespace hardness;
  * Usage:
  *   php migrate.php status
  *   php migrate.php migrate
+ *   php migrate.php rollback
  *   php migrate.php migrate --only=001_api_frete_c031.sql
  *
  * Optional:
@@ -57,9 +58,17 @@ try {
             break;
 
         case 'migrate':
+        case 'up':
             $only = isset($options['only']) ? $options['only'] : null;
             $count = $migrator->migrate($only);
             echo "Done. Applied {$count} migration(s).\n";
+            break;
+
+        case 'rollback':
+        case 'down':
+            $only = isset($options['only']) ? $options['only'] : null;
+            $count = $migrator->rollback($only);
+            echo "Done. Rolled back {$count} migration(s).\n";
             break;
 
         default:
@@ -147,18 +156,22 @@ e998 Hardness migrations
 
 Commands:
   status                         List applied and pending migrations
-  migrate                        Apply all pending migrations
-  migrate --only=FILE            Apply a single pending migration
+  migrate | up                   Apply all pending migrations
+  migrate | up --only=FILE       Apply one pending migration
+  rollback | down                Roll back the last applied migration
+  rollback | down --only=FILE    Roll back one applied migration
 
 Options:
   --conf=PATH                    Site confUsuario.php (CLI environments)
   --hardness-root=PATH           Hardness3 root directory
 
+Down migrations:
+  Pair each migration with a down file, e.g. 001_foo.sql + 001_foo.down.sql
+
 Examples:
   php migrate.php status
-  php migrate.php migrate
-  php migrate.php migrate --only=001_api_frete_c031.sql
-  php migrate.php migrate --conf=/var/www/sites/localhost-confUsuario.php
+  php migrate.php up --conf=/var/www/sites/localhost-confUsuario.php
+  php migrate.php down --conf=/var/www/sites/localhost-confUsuario.php
 
 TXT;
 }

@@ -48,7 +48,7 @@ SQL;
         $names = array();
         foreach ($files as $file) {
             $base = basename($file);
-            if (preg_match('/^\d{3}_.+\.(php|sql)$/', $base)) {
+            if (preg_match('/^\d{3}_(?!.+\.down\.(php|sql)$).+\.(php|sql)$/', $base)) {
                 $names[] = $base;
             }
         }
@@ -129,6 +129,104 @@ SQL;
         }
 
         return $count;
+    }
+
+    /**
+     * Roll back the last applied migration, or one named with --only.
+     *
+     * @param string|null $only Applied migration filename
+     * @return int Number of migrations rolled back
+     */
+    public function rollback($only = null)
+    {
+        $applied = $this->getAppliedMigrationsOrdered();
+        if (count($applied) === 0) {
+            throw new RuntimeException('No migrations to roll back.');
+        }
+
+        if ($only !== null) {
+            if (!in_array($only, array_column($applied, 'name'), true)) {
+                throw new RuntimeException("Migration not applied: {$only}");
+            }
+            $targets = array(array('name' => $only));
+        } else {
+            $last = end($applied);
+            $targets = array($last);
+        }
+
+        $count = 0;
+        foreach ($targets as $target) {
+            $this->runRollback($target['name']);
+            $count++;
+        }
+
+        return $count;
+    }
+
+    /**
+     * @return array<int, array{name:string, applied_at:string}>
+     */
+    private function getAppliedMigrationsOrdered()
+    {
+        $rows = array();
+        $result = $this->query(
+            'SELECT E998_Migration_Name AS name, E998_Migration_Applied_At AS applied_at
+             FROM E998_Migration
+             ORDER BY E998_Migration_Applied_At ASC, E998_Migration_Id ASC'
+        );
+        while ($row = $this->fetchAssoc($result)) {
+            $rows[] = $row;
+        }
+        return $rows;
+    }
+
+    private function runRollback($name)
+    {
+        $downPath = $this->resolveDownMigrationPath($name);
+        if ($downPath === null) {
+            throw new RuntimeException(
+                "No down migration for {$name}. Add {$this->downFilename($name)} in migrations/."
+            );
+        }
+
+        echo "Rolling back {$name}...\n";
+
+        $this->query('START TRANSACTION');
+
+        try {
+            $ext = pathinfo($downPath, PATHINFO_EXTENSION);
+            if ($ext === 'php') {
+                $this->runPhpMigration($downPath);
+            } elseif ($ext === 'sql') {
+                $this->runSqlMigration($downPath);
+            } else {
+                throw new RuntimeException("Unsupported down migration type: {$downPath}");
+            }
+
+            $escapedName = $this->escape($name);
+            $this->query("DELETE FROM E998_Migration WHERE E998_Migration_Name = '{$escapedName}'");
+
+            $this->query('COMMIT');
+            echo "Rolled back {$name}\n";
+        } catch (Exception $e) {
+            $this->query('ROLLBACK');
+            throw $e;
+        }
+    }
+
+    private function downFilename($name)
+    {
+        return preg_replace('/\.(sql|php)$/', '.down.$1', $name);
+    }
+
+    /**
+     * @return string|null
+     */
+    private function resolveDownMigrationPath($name)
+    {
+        $downName = $this->downFilename($name);
+        $path = $this->migrationsDir . '/' . $downName;
+        return is_file($path) ? $path : null;
     }
 
     private function runMigration($name)

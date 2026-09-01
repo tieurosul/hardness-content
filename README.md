@@ -27,51 +27,15 @@ On Docker for Mac, prefer Option A (symlinks can fail on bind mounts).
 
 ## Migrations
 
-Migrations live in `migrations/` with names like `001_description.php`.
-
-Applied migrations are recorded in `E998_Migration`.
+See `.cursor/rules/e998-migrations.mdc` for the full workflow.
 
 ```bash
-cd /path/to/hardness3/dados_usuarios/e998
-
-# List pending/applied
 php migrate.php status
-
-# Apply all pending
-php migrate.php migrate
-
-# Apply one migration
-php migrate.php migrate --only=001_api_frete_c031.sql
+php migrate.php up
+php migrate.php down
 ```
 
-If `confUsuario.php` cannot resolve the site from CLI, pass the site config:
-
-```bash
-php migrate.php migrate --conf=/var/www/sites/localhost-confUsuario.php
-```
-
-Optional Hardness root override:
-
-```bash
-php migrate.php status --hardness-root=/path/to/hardness3
-```
-
-## Authoring a migration
-
-### PHP (preferred for C031 globals)
-
-```php
-<?php
-namespace hardness;
-
-return function () {
-    adicionarConfGlobal('myKey', 'default', 'Description shown in CAD058 grid.');
-};
-```
-
-### SQL (idempotent only)
-
-Use `INSERT ... WHERE NOT EXISTS` or `CREATE TABLE IF NOT EXISTS`.
+Pair each `NNN_name.sql` with `NNN_name.down.sql` for rollback.
 
 ## Deploy checklist
 
