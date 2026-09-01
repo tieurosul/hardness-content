@@ -48,7 +48,7 @@ SQL;
         $names = array();
         foreach ($files as $file) {
             $base = basename($file);
-            if (preg_match('/^\d{8}_\d{6}_(?!.+\.down\.(php|sql)$).+\.(php|sql)$/', $base)) {
+            if (preg_match('/^\d{14}_(?!.+\.down\.(php|sql)$).+\.(php|sql)$/', $base)) {
                 $names[] = $base;
             }
         }

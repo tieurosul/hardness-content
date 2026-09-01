@@ -35,9 +35,9 @@ php migrate.php up
 php migrate.php down
 ```
 
-Pair each `YYYYMMDD_HHMMSS_name.sql` with `YYYYMMDD_HHMMSS_name.down.sql`.
+Pair each `YYYYMMDDHHMMSS_name.sql` with `YYYYMMDDHHMMSS_name.down.sql`.
 
-New files: `date +%Y%m%d_%H%M%S`_description.sql
+New files: `date +%Y%m%d%H%M%S`_description.sql
 
 ## Deploy checklist
 
