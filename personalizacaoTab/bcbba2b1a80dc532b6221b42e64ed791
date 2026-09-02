@@ -1,0 +1,5 @@
+url [/ven/ven001/content/ven001ContentFrete/]
+titulo [Frete]
+parametros [&acaoId=[[acaoId]]]
+carregarAoClicar [S]
+---
